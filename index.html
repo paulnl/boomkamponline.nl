@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoomkampOnline - Websites. SEO. AI. ZZP.</title>
+  <meta name="description" content="Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Websites, SEO, AI-implementatie en ZZP-verhuur.">
+  <meta property="og:title" content="BoomkampOnline - Websites. SEO. AI. Beschikbaar als ZZP'er.">
+  <meta property="og:description" content="Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Van website bouwen tot AI-advies.">
+  <meta property="og:image" content="https://boomkamponline.nl/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="nl_NL">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231A1A2E'/%3E%3Ctext x='50' y='68' font-family='Inter,sans-serif' font-size='56' font-weight='800' fill='%23FF6B00' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #1A1A2E;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: #FF6B00; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section {
+      padding: 80px 0;
+    }
+    .section-label {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FF6B00;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1A1A2E;
+    }
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: #555;
+      max-width: 640px;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: transform 0.3s;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1A1A2E;
+    }
+    .logo .badge {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+    .nav { display: flex; gap: 28px; align-items: center; }
+    .nav a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #333;
+      transition: color 0.2s;
+    }
+    .nav a:hover { color: #FF6B00; text-decoration: none; }
+    .nav-cta {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #e05e00; text-decoration: none; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #1A1A2E;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      background: linear-gradient(135deg, #fafafa 0%, #fff 50%, #fff4ed 100%);
+    }
+    .hero-content { max-width: 680px; }
+    .hero-greeting {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #FF6B00;
+      margin-bottom: 12px;
+    }
+    .hero-name {
+      font-size: 3.25rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      color: #1A1A2E;
+    }
+    .hero-tagline {
+      font-size: 1.375rem;
+      color: #555;
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      background: #FF6B00;
+      color: #fff;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 10px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .hero-cta:hover {
+      background: #e05e00;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+    .hero-cta svg {
+      margin-left: 8px;
+    }
+
+    /* ===== DIENSTEN ===== */
+    .diensten {
+      background: #fff;
+    }
+    .diensten-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .dienst-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 32px 24px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .dienst-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+    }
+    .dienst-icon {
+      width: 48px;
+      height: 48px;
+      background: #FFF0E6;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .dienst-icon svg { width: 24px; height: 24px; stroke: #FF6B00; fill: none; stroke-width: 2; }
+    .dienst-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .dienst-desc {
+      font-size: 0.9375rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ===== OVER MIJ ===== */
+    .over-mij { background: #f9fafb; }
+    .over-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    .over-foto {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #eee, #ddd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 0.875rem;
+      overflow: hidden;
+    }
+    .over-foto-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e8e8e8;
+      color: #999;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .over-content h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .over-content p {
+      font-size: 1.0625rem;
+      color: #444;
+      margin-bottom: 16px;
+      max-width: 680px;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: #fff; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 40px;
+    }
+    .contact-info h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .contact-info p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 8px;
+    }
+    .contact-info a { color: #FF6B00; font-weight: 500; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #333;
+    }
+    .form-group label .optional {
+      font-weight: 400;
+      color: #999;
+      font-size: 0.8125rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      border: 1.5px solid #ddd;
+      border-radius: 10px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fff;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #FF6B00;
+      box-shadow: 0 0 0 3px rgba(255,107,0,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .btn-submit {
+      background: #FF6B00;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-submit:hover { background: #e05e00; transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-status {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.9375rem;
+      display: none;
+    }
+    .form-status.success { display: block; background: #e6f7ed; color: #1a7a3a; border: 1px solid #b8e6cc; }
+    .form-status.error { display: block; background: #fde8e8; color: #b91c1c; border: 1px solid #f5c6c6; }
+    .form-status.loading { display: block; background: #f0f0f0; color: #666; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: #1A1A2E;
+      color: #ccc;
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.9375rem;
+    }
+    .footer a { color: #FF6B00; }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(8px);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        border-bottom: 1px solid #eee;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      .nav.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .hero-name { font-size: 2.25rem; }
+      .hero-tagline { font-size: 1.125rem; }
+      .section-title { font-size: 1.625rem; }
+      .section { padding: 60px 0; }
+      .over-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .over-foto { margin: 0 auto; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-name { font-size: 1.875rem; }
+      .hero { padding: 100px 0 60px; }
+      .diensten-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="BoomkampOnline home">
+        BoomkampOnline<span class="badge">.NL</span>
+      </a>
+      <nav class="nav" id="main-nav" role="navigation" aria-label="Hoofdnavigatie">
+        <a href="#diensten">Diensten</a>
+        <a href="#over-mij">Over mij</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero" aria-label="Introductie">
+    <div class="container hero-content">
+      <p class="hero-greeting fade-up">Hallo, ik ben</p>
+      <h1 class="hero-name fade-up">Paul Boomkamp</h1>
+      <p class="hero-tagline fade-up">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
+      <a href="#contact" class="hero-cta fade-up">
+        Neem contact op
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== DIENSTEN ===== -->
+  <section class="section diensten" id="diensten" aria-label="Diensten">
+    <div class="container">
+      <span class="section-label fade-up">Diensten</span>
+      <h2 class="section-title fade-up">Wat ik voor je kan doen</h2>
+      <p class="section-subtitle fade-up">Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.</p>
+      <div class="diensten-grid">
+        <article class="dienst-card fade-up">
+          <div class="dienst-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="dienst-title">Website bouwen</h3>
+          <p class="dienst-desc">Van scratch of via WordPress/TYPO3. Modern, snel en gebruiksvriendelijk — afgestemd op jouw wensen.</p>
+        </article>
+        <article class="dienst-card fade-up">
+          <div class="dienst-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="dienst-title">SEO optimalisatie</h3>
+          <p class="dienst-desc">Word beter vindbaar in Google. Van technische SEO tot content-optimalisatie en snelheidsverbeteringen.</p>
+        </article>
+        <article class="dienst-card fade-up">
+          <div class="dienst-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10h-10V2z"/><path d="M22 12A10 10 0 0 0 12 2v10h10z"/></svg>
+          </div>
+          <h3 class="dienst-title">AI advies &amp; implementatie</h3>
+          <p class="dienst-desc">Automatiseer processen met AI. Van chatbots tot slimme workflows met n8n, LLM's en maatwerk integraties.</p>
+        </article>
+        <article class="dienst-card fade-up">
+          <div class="dienst-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="dienst-title">ZZP verhuur</h3>
+          <p class="dienst-desc">Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij afspraken en projecten.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OVER MIJ ===== -->
+  <section class="section over-mij" id="over-mij" aria-label="Over mij">
+    <div class="container">
+      <span class="section-label fade-up">Over mij</span>
+      <h2 class="section-title fade-up">Wie is Paul Boomkamp?</h2>
+      <div class="over-grid">
+        <div class="over-foto fade-up" aria-label="Profiel foto Paul Boomkamp">
+          <div class="over-foto-placeholder">PB</div>
+        </div>
+        <div class="over-content fade-up">
+          <h3>Ruim 25 jaar ervaring in webdevelopment en systeembeheer</h3>
+          <p>
+            Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites,
+            het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen.
+            Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.
+          </p>
+          <p>
+            Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren,
+            of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact" aria-label="Contact">
+    <div class="container">
+      <span class="section-label fade-up">Contact</span>
+      <h2 class="section-title fade-up">Neem contact op</h2>
+      <p class="section-subtitle fade-up">Heb je een vraag of wil je een project bespreken? Stuur me een bericht en ik neem binnen 24 uur contact met je op.</p>
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <h3>Gegevens</h3>
+          <p>📧 <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a></p>
+          <p>📱 <a href="tel:+31623493326">+31 6 23493326</a></p>
+          <p style="margin-top: 16px; color: #777;">📍 Raalte, Nederland</p>
+          <p style="margin-top: 24px; font-size: 0.9375rem; color: #888;">
+            Beschikbaar voor projecten, detachering en freelance opdrachten.
+          </p>
+        </div>
+        <form class="fade-up" id="contact-form" novalidate aria-label="Contactformulier">
+          <div class="form-group">
+            <label for="naam">Naam <span aria-hidden="true">*</span></label>
+            <input type="text" id="naam" name="naam" required autocomplete="name" placeholder="Jouw naam" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jouw@email.nl" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="telefoon">Telefoon <span class="optional">(optioneel)</span></label>
+            <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" placeholder="+31 6 12345678">
+          </div>
+          <div class="form-group">
+            <label for="dienst">Dienst <span aria-hidden="true">*</span></label>
+            <select id="dienst" name="dienst" required aria-required="true">
+              <option value="" disabled selected>Kies een dienst</option>
+              <option value="Website bouwen">Website bouwen</option>
+              <option value="SEO optimalisatie">SEO optimalisatie</option>
+              <option value="AI advies & implementatie">AI advies &amp; implementatie</option>
+              <option value="ZZP verhuur">ZZP verhuur</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="bericht">Bericht <span aria-hidden="true">*</span></label>
+            <textarea id="bericht" name="bericht" required placeholder="Waar kan ik je mee helpen?" aria-required="true"></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submit-btn">Verstuur bericht</button>
+          <div class="form-status" id="form-status" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <span>&copy; 2025 Paul Boomkamp</span>
+      <span><a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a> · boomkamponline.nl</span>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ===== HAMBURGER MENU =====
+      var hamburger = document.getElementById('hamburger');
+      var nav = document.getElementById('main-nav');
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+          var open = nav.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', open);
+          hamburger.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+        });
+        document.querySelectorAll('#main-nav a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            nav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.setAttribute('aria-label', 'Menu openen');
+          });
+        });
+      }
+
+      // ===== SCROLL ANIMATIONS (Intersection Observer) =====
+      var animateElements = document.querySelectorAll('.fade-up');
+      if ('IntersectionObserver' in window && animateElements.length) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        animateElements.forEach(function(el) { observer.observe(el); });
+      } else {
+        animateElements.forEach(function(el) { el.classList.add('visible'); });
+      }
+
+      // ===== CONTACT FORM =====
+      var form = document.getElementById('contact-form');
+      var statusEl = document.getElementById('form-status');
+      var submitBtn = document.getElementById('submit-btn');
+      var WEBHOOK_URL = 'https://n8n.synapsisai.nl/webhook/boomkamponline-contact';
+
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          // Basic client-side validation
+          var naam = document.getElementById('naam').value.trim();
+          var email = document.getElementById('email').value.trim();
+          var dienst = document.getElementById('dienst').value;
+          var bericht = document.getElementById('bericht').value.trim();
+
+          if (!naam || !email || !dienst || !bericht) {
+            statusEl.className = 'form-status error';
+            statusEl.textContent = 'Vul alle verplichte velden in.';
+            return;
+          }
+
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            statusEl.className = 'form-status error';
+            statusEl.textContent = 'Voer een geldig emailadres in.';
+            return;
+          }
+
+          var telefoon = document.getElementById('telefoon').value.trim();
+
+          // Build payload
+          var payload = {
+            naam: naam,
+            email: email,
+            telefoon: telefoon || null,
+            dienst: dienst,
+            bericht: bericht,
+            timestamp: new Date().toISOString()
+          };
+
+          // Loading state
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Versturen...';
+          statusEl.className = 'form-status loading';
+          statusEl.textContent = 'Bericht wordt verzonden...';
+
+          // POST to n8n webhook
+          fetch(WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          })
+          .then(function(response) {
+            if (!response.ok) throw new Error('Netwerkfout: ' + response.status);
+            return response.json();
+          })
+          .then(function(data) {
+            statusEl.className = 'form-status success';
+            statusEl.textContent = 'Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.';
+            form.reset();
+          })
+          .catch(function(error) {
+            statusEl.className = 'form-status error';
+            statusEl.textContent = 'Er ging iets mis. Probeer het later opnieuw of stuur een email naar paul@boomkamponline.nl.';
+          })
+          .finally(function() {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Verstuur bericht';
+          });
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>
