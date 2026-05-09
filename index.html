@@ -272,80 +272,227 @@
     }
 
     /* ===== CONTACT ===== */
-    .contact { background: #fff; }
+    .contact {
+      background: linear-gradient(180deg, #fff 0%, #fafafa 100%);
+    }
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1.6fr;
       gap: 48px;
       margin-top: 40px;
+      align-items: start;
     }
-    .contact-info h3 {
-      font-size: 1.25rem;
+
+    /* --- Contact info sidebar --- */
+    .contact-info-card {
+      background: #1A1A2E;
+      border-radius: 16px;
+      padding: 36px 32px;
+      color: #ccc;
+      position: sticky;
+      top: 96px;
+    }
+    .contact-info-card h3 {
+      font-size: 1.125rem;
       font-weight: 700;
-      margin-bottom: 16px;
+      color: #fff;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .contact-info p {
+    .contact-info-card h3::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 20px;
+      background: #FF6B00;
+      border-radius: 2px;
+    }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 20px;
+      font-size: 0.9375rem;
+    }
+    .contact-info-item .icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,107,0,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 1rem;
-      color: #555;
-      margin-bottom: 8px;
     }
-    .contact-info a { color: #FF6B00; font-weight: 500; }
-    .form-group { margin-bottom: 20px; }
+    .contact-info-item a {
+      color: #FF6B00;
+      font-weight: 500;
+    }
+    .contact-info-item a:hover { color: #ff8533; }
+    .contact-info-availability {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.875rem;
+      color: #999;
+      line-height: 1.5;
+    }
+    .contact-info-availability strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* --- Form card --- */
+    .form-card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    /* --- Form grid --- */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 20px;
+    }
+    .form-grid .form-group { margin: 0; }
+    .form-grid .full-width {
+      grid-column: 1 / -1;
+    }
+
     .form-group label {
       display: block;
-      font-size: 0.875rem;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: #333;
-    }
-    .form-group label .optional {
-      font-weight: 400;
-      color: #999;
       font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+      color: #555;
+    }
+    .form-group label .required-star {
+      color: #FF6B00;
+      margin-left: 2px;
     }
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      padding: 12px 16px;
-      font-size: 1rem;
+      padding: 13px 16px;
+      font-size: 0.9375rem;
       font-family: 'Inter', sans-serif;
-      border: 1.5px solid #ddd;
+      color: #1A1A2E;
+      border: 1.5px solid #e0e0e0;
       border-radius: 10px;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.25s, box-shadow 0.25s;
       background: #fff;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .form-group input:hover,
+    .form-group select:hover,
+    .form-group textarea:hover {
+      border-color: #ccc;
     }
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
       outline: none;
       border-color: #FF6B00;
-      box-shadow: 0 0 0 3px rgba(255,107,0,0.12);
+      box-shadow: 0 0 0 4px rgba(255,107,0,0.1);
     }
-    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #bbb;
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* --- Custom select --- */
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 40px;
+      cursor: pointer;
+    }
+    .form-group select:focus {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23FF6B00' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    /* --- Submit button --- */
     .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
       background: #FF6B00;
       color: #fff;
       font-size: 1rem;
       font-weight: 600;
-      padding: 14px 32px;
+      padding: 16px 32px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+      font-family: 'Inter', sans-serif;
     }
-    .btn-submit:hover { background: #e05e00; transform: translateY(-1px); }
-    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .btn-submit:hover {
+      background: #e05e00;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,107,0,0.25);
+    }
+    .btn-submit:active {
+      transform: translateY(0);
+    }
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+    .btn-submit svg {
+      transition: transform 0.25s;
+    }
+    .btn-submit:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* --- Form status --- */
     .form-status {
       margin-top: 16px;
-      padding: 12px 16px;
-      border-radius: 8px;
+      padding: 14px 18px;
+      border-radius: 10px;
       font-size: 0.9375rem;
       display: none;
+      line-height: 1.5;
     }
-    .form-status.success { display: block; background: #e6f7ed; color: #1a7a3a; border: 1px solid #b8e6cc; }
-    .form-status.error { display: block; background: #fde8e8; color: #b91c1c; border: 1px solid #f5c6c6; }
-    .form-status.loading { display: block; background: #f0f0f0; color: #666; }
+    .form-status.success {
+      display: block;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+    .form-status.error {
+      display: block;
+      background: #fef2f2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+    .form-status.loading {
+      display: block;
+      background: #f5f5f5;
+      color: #666;
+      border: 1px solid #e5e5e5;
+    }
 
     /* ===== FOOTER ===== */
     .footer {
@@ -407,12 +554,18 @@
       }
       .over-foto { margin: 0 auto; }
       .contact-grid { grid-template-columns: 1fr; }
+      .contact-info-card { position: static; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 24px 20px; }
+      .contact-info-card { padding: 28px 24px; }
     }
 
     @media (max-width: 480px) {
       .hero-name { font-size: 1.875rem; }
       .hero { padding: 100px 0 60px; }
       .diensten-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 20px 16px; }
+      .contact-info-card { padding: 24px 20px; }
     }
   </style>
 </head>
@@ -524,77 +677,105 @@
       <h2 class="section-title fade-up" data-i18n="contact.title">Neem contact op</h2>
       <p class="section-subtitle fade-up" data-i18n="contact.subtitle">Heb je een vraag of wil je een project bespreken? Stuur me een bericht en ik neem binnen 24 uur contact met je op.</p>
       <div class="contact-grid">
-        <div class="contact-info fade-up">
-          <h3 data-i18n="contact.info.title">Gegevens</h3>
-          <p>📧 <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a></p>
-          <p>📱 <a href="tel:+31623493326">+31 6 23493326</a></p>
-          <p style="margin-top: 16px; color: #777;" data-i18n="contact.info.location">📍 Raalte, Nederland</p>
-          <p style="margin-top: 24px; font-size: 0.9375rem; color: #888;" data-i18n="contact.info.availability">
-            Beschikbaar voor projecten, detachering en freelance opdrachten.
-          </p>
+        <div class="contact-info-card fade-up">
+          <h3 data-i18n="contact.info.title">Contactgegevens</h3>
+          <div class="contact-info-item">
+            <div class="icon">📧</div>
+            <div>
+              <div style="font-size:0.8125rem;color:#999;margin-bottom:2px;" data-i18n="contact.info.email_label">Email</div>
+              <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">📱</div>
+            <div>
+              <div style="font-size:0.8125rem;color:#999;margin-bottom:2px;" data-i18n="contact.info.phone_label">Telefoon</div>
+              <a href="tel:+31623493326">+31 6 23493326</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon">📍</div>
+            <div>
+              <div style="font-size:0.8125rem;color:#999;margin-bottom:2px;" data-i18n="contact.info.location_label">Locatie</div>
+              <span data-i18n="contact.info.location">Raalte, Nederland</span>
+            </div>
+          </div>
+          <div class="contact-info-availability">
+            <strong data-i18n="contact.info.availability_title">Beschikbaar</strong>
+            <span data-i18n="contact.info.availability">Voor projecten, detachering en freelance opdrachten.</span>
+          </div>
         </div>
-        <form class="fade-up" id="contact-form" novalidate>
-          <div class="form-group">
-            <label for="bedrijfsnaam"><span data-i18n="contact.form.company">Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
-            <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" required data-i18n-placeholder="contact.form.company_placeholder" placeholder="Uw bedrijfsnaam" aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="contactpersoon"><span data-i18n="contact.form.contactperson">Naam contactpersoon</span> <span aria-hidden="true">*</span></label>
-            <input type="text" id="contactpersoon" name="contactpersoon" required autocomplete="name" data-i18n-placeholder="contact.form.contactperson_placeholder" placeholder="Voor- en achternaam" aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="email"><span data-i18n="contact.form.email">Email</span> <span aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.form.email_placeholder" placeholder="jouw@email.nl" aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="telefoon_bedrijf"><span data-i18n="contact.form.phone_company">Telefoon bedrijf</span></label>
-            <input type="tel" id="telefoon_bedrijf" name="telefoon_bedrijf" autocomplete="tel" data-i18n-placeholder="contact.form.phone_company_placeholder" placeholder="+31 6 12345678">
-          </div>
-          <div class="form-group">
-            <label for="telefoon_contact"><span data-i18n="contact.form.phone_contact">Telefoon contactpersoon</span> <span aria-hidden="true">*</span></label>
-            <input type="tel" id="telefoon_contact" name="telefoon_contact" required autocomplete="tel" data-i18n-placeholder="contact.form.phone_contact_placeholder" placeholder="+31 6 12345678" aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="woonplaats"><span data-i18n="contact.form.city">Woonplaats</span> <span aria-hidden="true">*</span></label>
-            <input type="text" id="woonplaats" name="woonplaats" required autocomplete="address-level2" data-i18n-placeholder="contact.form.city_placeholder" placeholder="Plaatsnaam" aria-required="true">
-          </div>
-          <div class="form-group">
-            <label for="branche"><span data-i18n="contact.form.industry">Branche</span> <span aria-hidden="true">*</span></label>
-            <select id="branche" name="branche" required aria-required="true">
-              <option value="" disabled selected data-i18n="contact.form.industry_placeholder">Kies uw branche</option>
-              <option value="IT & Technologie" data-i18n="contact.form.industry_opt1">IT &amp; Technologie</option>
-              <option value="Zorg & Welzijn" data-i18n="contact.form.industry_opt2">Zorg &amp; Welzijn</option>
-              <option value="Onderwijs" data-i18n="contact.form.industry_opt3">Onderwijs</option>
-              <option value="Retail & E-commerce" data-i18n="contact.form.industry_opt4">Retail &amp; E-commerce</option>
-              <option value="Bouw & Vastgoed" data-i18n="contact.form.industry_opt5">Bouw &amp; Vastgoed</option>
-              <option value="Financieel & Verzekeringen" data-i18n="contact.form.industry_opt6">Financieel &amp; Verzekeringen</option>
-              <option value="Horeca & Recreatie" data-i18n="contact.form.industry_opt7">Horeca &amp; Recreatie</option>
-              <option value="Transport & Logistiek" data-i18n="contact.form.industry_opt8">Transport &amp; Logistiek</option>
-              <option value="Overheid & Non-profit" data-i18n="contact.form.industry_opt9">Overheid &amp; Non-profit</option>
-              <option value="Overig" data-i18n="contact.form.industry_opt10">Overig</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="reden"><span data-i18n="contact.form.reason">Waarvoor belt u?</span> <span aria-hidden="true">*</span></label>
-            <select id="reden" name="reden" required aria-required="true">
-              <option value="" disabled selected data-i18n="contact.form.reason_placeholder">Kies een reden</option>
-              <option value="Nieuwe website" data-i18n="contact.form.reason_opt1">Nieuwe website</option>
-              <option value="Website onderhoud" data-i18n="contact.form.reason_opt2">Website onderhoud</option>
-              <option value="SEO optimalisatie" data-i18n="contact.form.reason_opt3">SEO optimalisatie</option>
-              <option value="AI implementatie" data-i18n="contact.form.reason_opt4">AI implementatie</option>
-              <option value="ZZP verhuur / Detachering" data-i18n="contact.form.reason_opt5">ZZP verhuur / Detachering</option>
-              <option value="Automation & Workflows" data-i18n="contact.form.reason_opt6">Automation &amp; Workflows</option>
-              <option value="Adviestraject" data-i18n="contact.form.reason_opt7">Adviestraject</option>
-              <option value="Overig" data-i18n="contact.form.reason_opt8">Overig</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="bericht"><span data-i18n="contact.form.message">Bericht</span> <span aria-hidden="true">*</span></label>
-            <textarea id="bericht" name="bericht" required data-i18n-placeholder="contact.form.message_placeholder" placeholder="Waar kan ik je mee helpen?" aria-required="true"></textarea>
-          </div>
-          <button type="submit" class="btn-submit" id="submit-btn" data-i18n="contact.form.submit">Verstuur bericht</button>
-          <div class="form-status" id="form-status" role="status"></div>
-        </form>
+        <div class="form-card fade-up">
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="bedrijfsnaam"><span data-i18n="contact.form.company">Bedrijfsnaam</span><span class="required-star" aria-hidden="true">*</span></label>
+                <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" required data-i18n-placeholder="contact.form.company_placeholder" placeholder="Uw bedrijfsnaam" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="contactpersoon"><span data-i18n="contact.form.contactperson">Contactpersoon</span><span class="required-star" aria-hidden="true">*</span></label>
+                <input type="text" id="contactpersoon" name="contactpersoon" required autocomplete="name" data-i18n-placeholder="contact.form.contactperson_placeholder" placeholder="Voor- en achternaam" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="email"><span data-i18n="contact.form.email">Email</span><span class="required-star" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.form.email_placeholder" placeholder="jouw@email.nl" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="telefoon_bedrijf"><span data-i18n="contact.form.phone_company">Telefoon bedrijf</span></label>
+                <input type="tel" id="telefoon_bedrijf" name="telefoon_bedrijf" autocomplete="tel" data-i18n-placeholder="contact.form.phone_company_placeholder" placeholder="+31 6 12345678">
+              </div>
+              <div class="form-group">
+                <label for="telefoon_contact"><span data-i18n="contact.form.phone_contact">Telefoon contactpersoon</span><span class="required-star" aria-hidden="true">*</span></label>
+                <input type="tel" id="telefoon_contact" name="telefoon_contact" required autocomplete="tel" data-i18n-placeholder="contact.form.phone_contact_placeholder" placeholder="+31 6 12345678" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="woonplaats"><span data-i18n="contact.form.city">Woonplaats</span><span class="required-star" aria-hidden="true">*</span></label>
+                <input type="text" id="woonplaats" name="woonplaats" required autocomplete="address-level2" data-i18n-placeholder="contact.form.city_placeholder" placeholder="Plaatsnaam" aria-required="true">
+              </div>
+              <div class="form-group">
+                <label for="branche"><span data-i18n="contact.form.industry">Branche</span><span class="required-star" aria-hidden="true">*</span></label>
+                <select id="branche" name="branche" required aria-required="true">
+                  <option value="" disabled selected data-i18n="contact.form.industry_placeholder">Kies uw branche</option>
+                  <option value="IT & Technologie" data-i18n="contact.form.industry_opt1">IT &amp; Technologie</option>
+                  <option value="Zorg & Welzijn" data-i18n="contact.form.industry_opt2">Zorg &amp; Welzijn</option>
+                  <option value="Onderwijs" data-i18n="contact.form.industry_opt3">Onderwijs</option>
+                  <option value="Retail & E-commerce" data-i18n="contact.form.industry_opt4">Retail &amp; E-commerce</option>
+                  <option value="Bouw & Vastgoed" data-i18n="contact.form.industry_opt5">Bouw &amp; Vastgoed</option>
+                  <option value="Financieel & Verzekeringen" data-i18n="contact.form.industry_opt6">Financieel &amp; Verzekeringen</option>
+                  <option value="Horeca & Recreatie" data-i18n="contact.form.industry_opt7">Horeca &amp; Recreatie</option>
+                  <option value="Transport & Logistiek" data-i18n="contact.form.industry_opt8">Transport &amp; Logistiek</option>
+                  <option value="Overheid & Non-profit" data-i18n="contact.form.industry_opt9">Overheid &amp; Non-profit</option>
+                  <option value="Overig" data-i18n="contact.form.industry_opt10">Overig</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="reden"><span data-i18n="contact.form.reason">Waarvoor belt u?</span><span class="required-star" aria-hidden="true">*</span></label>
+                <select id="reden" name="reden" required aria-required="true">
+                  <option value="" disabled selected data-i18n="contact.form.reason_placeholder">Kies een reden</option>
+                  <option value="Nieuwe website" data-i18n="contact.form.reason_opt1">Nieuwe website</option>
+                  <option value="Website onderhoud" data-i18n="contact.form.reason_opt2">Website onderhoud</option>
+                  <option value="SEO optimalisatie" data-i18n="contact.form.reason_opt3">SEO optimalisatie</option>
+                  <option value="AI implementatie" data-i18n="contact.form.reason_opt4">AI implementatie</option>
+                  <option value="ZZP verhuur / Detachering" data-i18n="contact.form.reason_opt5">ZZP verhuur / Detachering</option>
+                  <option value="Automation & Workflows" data-i18n="contact.form.reason_opt6">Automation &amp; Workflows</option>
+                  <option value="Adviestraject" data-i18n="contact.form.reason_opt7">Adviestraject</option>
+                  <option value="Overig" data-i18n="contact.form.reason_opt8">Overig</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="bericht"><span data-i18n="contact.form.message">Bericht</span><span class="required-star" aria-hidden="true">*</span></label>
+                <textarea id="bericht" name="bericht" required data-i18n-placeholder="contact.form.message_placeholder" placeholder="Waar kan ik u mee helpen? Beschrijf uw vraag of project." aria-required="true"></textarea>
+              </div>
+              <div class="full-width">
+                <button type="submit" class="btn-submit" id="submit-btn">
+                  <span data-i18n="contact.form.submit">Verstuur bericht</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <div class="form-status" id="form-status" role="status"></div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -643,9 +824,13 @@
           'contact.label': 'Contact',
           'contact.title': 'Neem contact op',
           'contact.subtitle': 'Heb je een vraag of wil je een project bespreken? Stuur me een bericht en ik neem binnen 24 uur contact met je op.',
-          'contact.info.title': 'Gegevens',
-          'contact.info.location': '📍 Raalte, Nederland',
-          'contact.info.availability': 'Beschikbaar voor projecten, detachering en freelance opdrachten.',
+          'contact.info.title': 'Contactgegevens',
+          'contact.info.email_label': 'Email',
+          'contact.info.phone_label': 'Telefoon',
+          'contact.info.location_label': 'Locatie',
+          'contact.info.location': 'Raalte, Nederland',
+          'contact.info.availability_title': 'Beschikbaar',
+          'contact.info.availability': 'Voor projecten, detachering en freelance opdrachten.',
           'contact.form.company': 'Bedrijfsnaam',
           'contact.form.company_placeholder': 'Uw bedrijfsnaam',
           'contact.form.contactperson': 'Naam contactpersoon',
@@ -722,9 +907,13 @@
           'contact.label': 'Contact',
           'contact.title': 'Get in touch',
           'contact.subtitle': 'Do you have a question or want to discuss a project? Send me a message and I\'ll get back to you within 24 hours.',
-          'contact.info.title': 'Details',
-          'contact.info.location': '📍 Raalte, Netherlands',
-          'contact.info.availability': 'Available for projects, secondment and freelance assignments.',
+          'contact.info.title': 'Contact details',
+          'contact.info.email_label': 'Email',
+          'contact.info.phone_label': 'Phone',
+          'contact.info.location_label': 'Location',
+          'contact.info.location': 'Raalte, Netherlands',
+          'contact.info.availability_title': 'Available',
+          'contact.info.availability': 'For projects, secondment and freelance assignments.',
           'contact.form.company': 'Company name',
           'contact.form.company_placeholder': 'Your company name',
           'contact.form.contactperson': 'Contact person',
@@ -801,9 +990,13 @@
           'contact.label': 'Kontakt',
           'contact.title': 'Kontakt aufnehmen',
           'contact.subtitle': 'Haben Sie eine Frage oder möchten Sie ein Projekt besprechen? Senden Sie mir eine Nachricht und ich melde mich innerhalb von 24 Stunden bei Ihnen.',
-          'contact.info.title': 'Angaben',
-          'contact.info.location': '📍 Raalte, Niederlande',
-          'contact.info.availability': 'Verfügbar für Projekte, Personalleasing und freiberufliche Aufträge.',
+          'contact.info.title': 'Kontaktangaben',
+          'contact.info.email_label': 'E-Mail',
+          'contact.info.phone_label': 'Telefon',
+          'contact.info.location_label': 'Standort',
+          'contact.info.location': 'Raalte, Niederlande',
+          'contact.info.availability_title': 'Verfügbar',
+          'contact.info.availability': 'Für Projekte, Personalleasing und freiberufliche Aufträge.',
           'contact.form.company': 'Unternehmensname',
           'contact.form.company_placeholder': 'Ihr Unternehmen',
           'contact.form.contactperson': 'Ansprechpartner',
@@ -1031,8 +1224,13 @@
             timestamp: new Date().toISOString()
           };
 
+          var submitBtnText = submitBtn.querySelector('span');
           submitBtn.disabled = true;
-          submitBtn.textContent = translations[currentLang]['contact.form.submitting'];
+          if (submitBtnText) {
+            submitBtnText.textContent = translations[currentLang]['contact.form.submitting'];
+          } else {
+            submitBtn.textContent = translations[currentLang]['contact.form.submitting'];
+          }
           statusEl.className = 'form-status loading';
           statusEl.textContent = translations[currentLang]['contact.form.loading'];
 
@@ -1056,7 +1254,11 @@
           })
           .finally(function() {
             submitBtn.disabled = false;
-            submitBtn.textContent = translations[currentLang]['contact.form.submit'];
+            if (submitBtnText) {
+              submitBtnText.textContent = translations[currentLang]['contact.form.submit'];
+            } else {
+              submitBtn.textContent = translations[currentLang]['contact.form.submit'];
+            }
           });
         });
       }
