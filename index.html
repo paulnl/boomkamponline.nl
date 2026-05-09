@@ -535,25 +535,57 @@
         </div>
         <form class="fade-up" id="contact-form" novalidate>
           <div class="form-group">
-            <label for="naam"><span data-i18n="contact.form.name">Naam</span> <span aria-hidden="true">*</span></label>
-            <input type="text" id="naam" name="naam" required autocomplete="name" data-i18n-placeholder="contact.form.name_placeholder" placeholder="Jouw naam" aria-required="true">
+            <label for="bedrijfsnaam"><span data-i18n="contact.form.company">Bedrijfsnaam</span> <span aria-hidden="true">*</span></label>
+            <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" required data-i18n-placeholder="contact.form.company_placeholder" placeholder="Uw bedrijfsnaam" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="contactpersoon"><span data-i18n="contact.form.contactperson">Naam contactpersoon</span> <span aria-hidden="true">*</span></label>
+            <input type="text" id="contactpersoon" name="contactpersoon" required autocomplete="name" data-i18n-placeholder="contact.form.contactperson_placeholder" placeholder="Voor- en achternaam" aria-required="true">
           </div>
           <div class="form-group">
             <label for="email"><span data-i18n="contact.form.email">Email</span> <span aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.form.email_placeholder" placeholder="jouw@email.nl" aria-required="true">
           </div>
           <div class="form-group">
-            <label for="telefoon"><span data-i18n="contact.form.phone">Telefoon</span> <span class="optional" data-i18n="contact.form.optional">(optioneel)</span></label>
-            <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" data-i18n-placeholder="contact.form.phone_placeholder" placeholder="+31 6 12345678">
+            <label for="telefoon_bedrijf"><span data-i18n="contact.form.phone_company">Telefoon bedrijf</span></label>
+            <input type="tel" id="telefoon_bedrijf" name="telefoon_bedrijf" autocomplete="tel" data-i18n-placeholder="contact.form.phone_company_placeholder" placeholder="+31 6 12345678">
           </div>
           <div class="form-group">
-            <label for="dienst"><span data-i18n="contact.form.service">Dienst</span> <span aria-hidden="true">*</span></label>
-            <select id="dienst" name="dienst" required aria-required="true">
-              <option value="" disabled selected data-i18n="contact.form.service_placeholder">Kies een dienst</option>
-              <option value="Website bouwen" data-i18n="contact.form.option1">Website bouwen</option>
-              <option value="SEO optimalisatie" data-i18n="contact.form.option2">SEO optimalisatie</option>
-              <option value="AI advies & implementatie" data-i18n="contact.form.option3">AI advies &amp; implementatie</option>
-              <option value="ZZP verhuur" data-i18n="contact.form.option4">ZZP verhuur</option>
+            <label for="telefoon_contact"><span data-i18n="contact.form.phone_contact">Telefoon contactpersoon</span> <span aria-hidden="true">*</span></label>
+            <input type="tel" id="telefoon_contact" name="telefoon_contact" required autocomplete="tel" data-i18n-placeholder="contact.form.phone_contact_placeholder" placeholder="+31 6 12345678" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="woonplaats"><span data-i18n="contact.form.city">Woonplaats</span> <span aria-hidden="true">*</span></label>
+            <input type="text" id="woonplaats" name="woonplaats" required autocomplete="address-level2" data-i18n-placeholder="contact.form.city_placeholder" placeholder="Plaatsnaam" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="branche"><span data-i18n="contact.form.industry">Branche</span> <span aria-hidden="true">*</span></label>
+            <select id="branche" name="branche" required aria-required="true">
+              <option value="" disabled selected data-i18n="contact.form.industry_placeholder">Kies uw branche</option>
+              <option value="IT & Technologie" data-i18n="contact.form.industry_opt1">IT &amp; Technologie</option>
+              <option value="Zorg & Welzijn" data-i18n="contact.form.industry_opt2">Zorg &amp; Welzijn</option>
+              <option value="Onderwijs" data-i18n="contact.form.industry_opt3">Onderwijs</option>
+              <option value="Retail & E-commerce" data-i18n="contact.form.industry_opt4">Retail &amp; E-commerce</option>
+              <option value="Bouw & Vastgoed" data-i18n="contact.form.industry_opt5">Bouw &amp; Vastgoed</option>
+              <option value="Financieel & Verzekeringen" data-i18n="contact.form.industry_opt6">Financieel &amp; Verzekeringen</option>
+              <option value="Horeca & Recreatie" data-i18n="contact.form.industry_opt7">Horeca &amp; Recreatie</option>
+              <option value="Transport & Logistiek" data-i18n="contact.form.industry_opt8">Transport &amp; Logistiek</option>
+              <option value="Overheid & Non-profit" data-i18n="contact.form.industry_opt9">Overheid &amp; Non-profit</option>
+              <option value="Overig" data-i18n="contact.form.industry_opt10">Overig</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reden"><span data-i18n="contact.form.reason">Waarvoor belt u?</span> <span aria-hidden="true">*</span></label>
+            <select id="reden" name="reden" required aria-required="true">
+              <option value="" disabled selected data-i18n="contact.form.reason_placeholder">Kies een reden</option>
+              <option value="Nieuwe website" data-i18n="contact.form.reason_opt1">Nieuwe website</option>
+              <option value="Website onderhoud" data-i18n="contact.form.reason_opt2">Website onderhoud</option>
+              <option value="SEO optimalisatie" data-i18n="contact.form.reason_opt3">SEO optimalisatie</option>
+              <option value="AI implementatie" data-i18n="contact.form.reason_opt4">AI implementatie</option>
+              <option value="ZZP verhuur / Detachering" data-i18n="contact.form.reason_opt5">ZZP verhuur / Detachering</option>
+              <option value="Automation & Workflows" data-i18n="contact.form.reason_opt6">Automation &amp; Workflows</option>
+              <option value="Adviestraject" data-i18n="contact.form.reason_opt7">Adviestraject</option>
+              <option value="Overig" data-i18n="contact.form.reason_opt8">Overig</option>
             </select>
           </div>
           <div class="form-group">
@@ -614,19 +646,40 @@
           'contact.info.title': 'Gegevens',
           'contact.info.location': '📍 Raalte, Nederland',
           'contact.info.availability': 'Beschikbaar voor projecten, detachering en freelance opdrachten.',
-          'contact.form.name': 'Naam',
-          'contact.form.name_placeholder': 'Jouw naam',
+          'contact.form.company': 'Bedrijfsnaam',
+          'contact.form.company_placeholder': 'Uw bedrijfsnaam',
+          'contact.form.contactperson': 'Naam contactpersoon',
+          'contact.form.contactperson_placeholder': 'Voor- en achternaam',
           'contact.form.email': 'Email',
           'contact.form.email_placeholder': 'jouw@email.nl',
-          'contact.form.phone': 'Telefoon',
-          'contact.form.optional': '(optioneel)',
-          'contact.form.phone_placeholder': '+31 6 12345678',
-          'contact.form.service': 'Dienst',
-          'contact.form.service_placeholder': 'Kies een dienst',
-          'contact.form.option1': 'Website bouwen',
-          'contact.form.option2': 'SEO optimalisatie',
-          'contact.form.option3': 'AI advies & implementatie',
-          'contact.form.option4': 'ZZP verhuur',
+          'contact.form.phone_company': 'Telefoon bedrijf',
+          'contact.form.phone_company_placeholder': '+31 6 12345678',
+          'contact.form.phone_contact': 'Telefoon contactpersoon',
+          'contact.form.phone_contact_placeholder': '+31 6 12345678',
+          'contact.form.city': 'Woonplaats',
+          'contact.form.city_placeholder': 'Plaatsnaam',
+          'contact.form.industry': 'Branche',
+          'contact.form.industry_placeholder': 'Kies uw branche',
+          'contact.form.industry_opt1': 'IT & Technologie',
+          'contact.form.industry_opt2': 'Zorg & Welzijn',
+          'contact.form.industry_opt3': 'Onderwijs',
+          'contact.form.industry_opt4': 'Retail & E-commerce',
+          'contact.form.industry_opt5': 'Bouw & Vastgoed',
+          'contact.form.industry_opt6': 'Financieel & Verzekeringen',
+          'contact.form.industry_opt7': 'Horeca & Recreatie',
+          'contact.form.industry_opt8': 'Transport & Logistiek',
+          'contact.form.industry_opt9': 'Overheid & Non-profit',
+          'contact.form.industry_opt10': 'Overig',
+          'contact.form.reason': 'Waarvoor belt u?',
+          'contact.form.reason_placeholder': 'Kies een reden',
+          'contact.form.reason_opt1': 'Nieuwe website',
+          'contact.form.reason_opt2': 'Website onderhoud',
+          'contact.form.reason_opt3': 'SEO optimalisatie',
+          'contact.form.reason_opt4': 'AI implementatie',
+          'contact.form.reason_opt5': 'ZZP verhuur / Detachering',
+          'contact.form.reason_opt6': 'Automation & Workflows',
+          'contact.form.reason_opt7': 'Adviestraject',
+          'contact.form.reason_opt8': 'Overig',
           'contact.form.message': 'Bericht',
           'contact.form.message_placeholder': 'Waar kan ik je mee helpen?',
           'contact.form.submit': 'Verstuur bericht',
@@ -672,19 +725,40 @@
           'contact.info.title': 'Details',
           'contact.info.location': '📍 Raalte, Netherlands',
           'contact.info.availability': 'Available for projects, secondment and freelance assignments.',
-          'contact.form.name': 'Name',
-          'contact.form.name_placeholder': 'Your name',
+          'contact.form.company': 'Company name',
+          'contact.form.company_placeholder': 'Your company name',
+          'contact.form.contactperson': 'Contact person',
+          'contact.form.contactperson_placeholder': 'First and last name',
           'contact.form.email': 'Email',
           'contact.form.email_placeholder': 'your@email.com',
-          'contact.form.phone': 'Phone',
-          'contact.form.optional': '(optional)',
-          'contact.form.phone_placeholder': '+31 6 12345678',
-          'contact.form.service': 'Service',
-          'contact.form.service_placeholder': 'Choose a service',
-          'contact.form.option1': 'Website building',
-          'contact.form.option2': 'SEO optimization',
-          'contact.form.option3': 'AI consulting & implementation',
-          'contact.form.option4': 'Freelance rental',
+          'contact.form.phone_company': 'Company phone',
+          'contact.form.phone_company_placeholder': '+31 6 12345678',
+          'contact.form.phone_contact': 'Contact person phone',
+          'contact.form.phone_contact_placeholder': '+31 6 12345678',
+          'contact.form.city': 'City',
+          'contact.form.city_placeholder': 'City name',
+          'contact.form.industry': 'Industry',
+          'contact.form.industry_placeholder': 'Choose your industry',
+          'contact.form.industry_opt1': 'IT & Technology',
+          'contact.form.industry_opt2': 'Healthcare & Welfare',
+          'contact.form.industry_opt3': 'Education',
+          'contact.form.industry_opt4': 'Retail & E-commerce',
+          'contact.form.industry_opt5': 'Construction & Real Estate',
+          'contact.form.industry_opt6': 'Finance & Insurance',
+          'contact.form.industry_opt7': 'Hospitality & Recreation',
+          'contact.form.industry_opt8': 'Transport & Logistics',
+          'contact.form.industry_opt9': 'Government & Non-profit',
+          'contact.form.industry_opt10': 'Other',
+          'contact.form.reason': 'Reason for calling',
+          'contact.form.reason_placeholder': 'Choose a reason',
+          'contact.form.reason_opt1': 'New website',
+          'contact.form.reason_opt2': 'Website maintenance',
+          'contact.form.reason_opt3': 'SEO optimization',
+          'contact.form.reason_opt4': 'AI implementation',
+          'contact.form.reason_opt5': 'Freelance rental / Secondment',
+          'contact.form.reason_opt6': 'Automation & Workflows',
+          'contact.form.reason_opt7': 'Consulting',
+          'contact.form.reason_opt8': 'Other',
           'contact.form.message': 'Message',
           'contact.form.message_placeholder': 'How can I help you?',
           'contact.form.submit': 'Send message',
@@ -730,19 +804,40 @@
           'contact.info.title': 'Angaben',
           'contact.info.location': '📍 Raalte, Niederlande',
           'contact.info.availability': 'Verfügbar für Projekte, Personalleasing und freiberufliche Aufträge.',
-          'contact.form.name': 'Name',
-          'contact.form.name_placeholder': 'Ihr Name',
+          'contact.form.company': 'Unternehmensname',
+          'contact.form.company_placeholder': 'Ihr Unternehmen',
+          'contact.form.contactperson': 'Ansprechpartner',
+          'contact.form.contactperson_placeholder': 'Vor- und Nachname',
           'contact.form.email': 'E-Mail',
           'contact.form.email_placeholder': 'ihre@email.de',
-          'contact.form.phone': 'Telefon',
-          'contact.form.optional': '(optional)',
-          'contact.form.phone_placeholder': '+31 6 12345678',
-          'contact.form.service': 'Dienstleistung',
-          'contact.form.service_placeholder': 'Wählen Sie eine Leistung',
-          'contact.form.option1': 'Website-Entwicklung',
-          'contact.form.option2': 'SEO-Optimierung',
-          'contact.form.option3': 'KI-Beratung & Implementierung',
-          'contact.form.option4': 'Freelancer-Verleih',
+          'contact.form.phone_company': 'Telefon Unternehmen',
+          'contact.form.phone_company_placeholder': '+31 6 12345678',
+          'contact.form.phone_contact': 'Telefon Ansprechpartner',
+          'contact.form.phone_contact_placeholder': '+31 6 12345678',
+          'contact.form.city': 'Wohnort',
+          'contact.form.city_placeholder': 'Stadt',
+          'contact.form.industry': 'Branche',
+          'contact.form.industry_placeholder': 'Wählen Sie Ihre Branche',
+          'contact.form.industry_opt1': 'IT & Technologie',
+          'contact.form.industry_opt2': 'Gesundheit & Soziales',
+          'contact.form.industry_opt3': 'Bildung',
+          'contact.form.industry_opt4': 'Einzelhandel & E-Commerce',
+          'contact.form.industry_opt5': 'Bau & Immobilien',
+          'contact.form.industry_opt6': 'Finanzen & Versicherungen',
+          'contact.form.industry_opt7': 'Gastronomie & Freizeit',
+          'contact.form.industry_opt8': 'Transport & Logistik',
+          'contact.form.industry_opt9': 'Öffentliche Hand & Non-Profit',
+          'contact.form.industry_opt10': 'Sonstiges',
+          'contact.form.reason': 'Grund des Anrufs',
+          'contact.form.reason_placeholder': 'Wählen Sie einen Grund',
+          'contact.form.reason_opt1': 'Neue Website',
+          'contact.form.reason_opt2': 'Website-Wartung',
+          'contact.form.reason_opt3': 'SEO-Optimierung',
+          'contact.form.reason_opt4': 'KI-Implementierung',
+          'contact.form.reason_opt5': 'Freelancer-Verleih / Personalleasing',
+          'contact.form.reason_opt6': 'Automation & Workflows',
+          'contact.form.reason_opt7': 'Beratung',
+          'contact.form.reason_opt8': 'Sonstiges',
           'contact.form.message': 'Nachricht',
           'contact.form.message_placeholder': 'Wie kann ich Ihnen helfen?',
           'contact.form.submit': 'Nachricht senden',
@@ -899,14 +994,18 @@
         form.addEventListener('submit', function(e) {
           e.preventDefault();
 
-          var t = translations[currentLang]['contact.form'];
-
-          var naam = document.getElementById('naam').value.trim();
+          var bedrijfsnaam = document.getElementById('bedrijfsnaam').value.trim();
+          var contactpersoon = document.getElementById('contactpersoon').value.trim();
           var email = document.getElementById('email').value.trim();
-          var dienst = document.getElementById('dienst').value;
+          var telefoonBedrijf = document.getElementById('telefoon_bedrijf').value.trim();
+          var telefoonContact = document.getElementById('telefoon_contact').value.trim();
+          var woonplaats = document.getElementById('woonplaats').value.trim();
+          var branche = document.getElementById('branche').value;
+          var reden = document.getElementById('reden').value;
           var bericht = document.getElementById('bericht').value.trim();
 
-          if (!naam || !email || !dienst || !bericht) {
+          // Required fields check
+          if (!bedrijfsnaam || !contactpersoon || !email || !telefoonContact || !woonplaats || !branche || !reden || !bericht) {
             statusEl.className = 'form-status error';
             statusEl.textContent = translations[currentLang]['contact.form.error_required'];
             return;
@@ -918,13 +1017,15 @@
             return;
           }
 
-          var telefoon = document.getElementById('telefoon').value.trim();
-
           var payload = {
-            naam: naam,
+            bedrijfsnaam: bedrijfsnaam,
+            contactpersoon: contactpersoon,
             email: email,
-            telefoon: telefoon || null,
-            dienst: dienst,
+            telefoon_bedrijf: telefoonBedrijf || null,
+            telefoon_contact: telefoonContact,
+            woonplaats: woonplaats,
+            branche: branche,
+            reden: reden,
             bericht: bericht,
             taal: currentLang,
             timestamp: new Date().toISOString()
