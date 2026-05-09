@@ -211,13 +211,80 @@
 
     /* ===== HERO ===== */
     .hero {
+      position: relative;
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding: 120px 0 80px;
-      background: linear-gradient(135deg, #fafafa 0%, #fff 50%, #fff4ed 100%);
+      background: linear-gradient(160deg, #fafafa 0%, #fff 40%, #fff4ed 100%);
+      overflow: hidden;
     }
-    .hero-content { max-width: 680px; }
+    /* Decorative blobs */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+    }
+    .hero-blob--orange {
+      width: 500px;
+      height: 500px;
+      background: #FF6B00;
+      top: -150px;
+      right: -100px;
+      opacity: 0.15;
+    }
+    .hero-blob--dark {
+      width: 400px;
+      height: 400px;
+      background: #1A1A2E;
+      bottom: -120px;
+      left: -80px;
+      opacity: 0.06;
+    }
+    .hero-blob--accent {
+      width: 300px;
+      height: 300px;
+      background: #FF6B00;
+      bottom: 20%;
+      right: 10%;
+      opacity: 0.08;
+      filter: blur(100px);
+    }
+    /* Dot pattern overlay */
+    .hero-dots {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.35;
+      background-image: radial-gradient(#FF6B00 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    /* Decorative grid lines */
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.03;
+      background-image:
+        linear-gradient(to right, #1A1A2E 1px, transparent 1px),
+        linear-gradient(to bottom, #1A1A2E 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
     .hero-greeting {
       font-size: 1rem;
       font-weight: 600;
@@ -225,11 +292,17 @@
       margin-bottom: 12px;
     }
     .hero-name {
-      font-size: 3.25rem;
+      font-size: 3.5rem;
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 16px;
       color: #1A1A2E;
+    }
+    .hero-name .highlight {
+      background: linear-gradient(135deg, #FF6B00, #ff8533);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     .hero-tagline {
       font-size: 1.375rem;
@@ -240,21 +313,66 @@
     .hero-cta {
       display: inline-flex;
       align-items: center;
+      gap: 10px;
       background: #FF6B00;
       color: #fff;
       font-size: 1.0625rem;
       font-weight: 600;
       padding: 14px 32px;
       border-radius: 10px;
-      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 16px rgba(255,107,0,0.25);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
     .hero-cta:hover {
       background: #e05e00;
       text-decoration: none;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(255,107,0,0.35);
     }
     .hero-cta svg {
-      margin-left: 8px;
+      transition: transform 0.25s;
+    }
+    .hero-cta:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Floating decorative card shape */
+    .hero-card-decoration {
+      position: absolute;
+      z-index: 1;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 280px;
+      height: 200px;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.8);
+      border-radius: 24px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.06);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      padding: 32px;
+    }
+    .hero-card-decoration .stat {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #FF6B00;
+      line-height: 1;
+    }
+    .hero-card-decoration .stat-label {
+      font-size: 0.875rem;
+      color: #666;
+      text-align: center;
+    }
+    .hero-card-decoration .stat-label span {
+      color: #1A1A2E;
+      font-weight: 600;
     }
 
     /* ===== DIENSTEN ===== */
@@ -666,14 +784,25 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero" aria-label="Introductie">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-blob hero-blob--orange"></div>
+      <div class="hero-blob hero-blob--dark"></div>
+      <div class="hero-blob hero-blob--accent"></div>
+      <div class="hero-dots"></div>
+      <div class="hero-grid"></div>
+    </div>
     <div class="container hero-content">
       <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
-      <h1 class="hero-name fade-up">Paul Boomkamp</h1>
+      <h1 class="hero-name fade-up"><span class="highlight">Paul Boomkamp</span></h1>
       <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
       <a href="#contact" class="hero-cta fade-up" data-i18n="hero.cta">
-        Neem contact op
+        <span>Neem contact op</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
+    </div>
+    <div class="hero-card-decoration fade-up" aria-hidden="true">
+      <div class="stat">25+</div>
+      <div class="stat-label">Jaar ervaring in <span>webdevelopment</span></div>
     </div>
   </section>
 
@@ -780,8 +909,8 @@
           <form id="contact-form" novalidate>
             <div class="form-grid">
               <div class="form-group">
-                <label for="bedrijfsnaam"><span data-i18n="contact.form.company">Bedrijfsnaam</span><span class="required-star" aria-hidden="true">*</span></label>
-                <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" required data-i18n-placeholder="contact.form.company_placeholder" placeholder="Uw bedrijfsnaam" aria-required="true">
+                <label for="bedrijfsnaam"><span data-i18n="contact.form.company">Bedrijfsnaam</span></label>
+                <input type="text" id="bedrijfsnaam" name="bedrijfsnaam" data-i18n-placeholder="contact.form.company_placeholder" placeholder="Uw bedrijfsnaam">
               </div>
               <div class="form-group">
                 <label for="contactpersoon"><span data-i18n="contact.form.contactperson">Contactpersoon</span><span class="required-star" aria-hidden="true">*</span></label>
@@ -1281,7 +1410,7 @@
           var bericht = document.getElementById('bericht').value.trim();
 
           // Required fields check
-          if (!bedrijfsnaam || !contactpersoon || !email || !telefoonContact || !woonplaats || !branche || !reden || !bericht) {
+          if (!contactpersoon || !email || !telefoonContact || !woonplaats || !branche || !reden || !bericht) {
             statusEl.className = 'form-status error';
             statusEl.textContent = translations[currentLang]['contact.form.error_required'];
             return;
