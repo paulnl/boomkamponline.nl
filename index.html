@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BoomkampOnline - Websites. SEO. AI. ZZP.</title>
-  <meta name="description" content="Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Websites, SEO, AI-implementatie en ZZP-verhuur.">
-  <meta property="og:title" content="BoomkampOnline - Websites. SEO. AI. Beschikbaar als ZZP'er.">
-  <meta property="og:description" content="Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Van website bouwen tot AI-advies.">
+  <title data-i18n="meta.title">BoomkampOnline - Websites. SEO. AI. ZZP.</title>
+  <meta name="description" data-i18n="meta.description" content="Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Websites, SEO, AI-implementatie en ZZP-verhuur.">
+  <meta property="og:title" data-i18n="meta.ogtitle" content="BoomkampOnline - Websites. SEO. AI. Beschikbaar als ZZP'er.">
+  <meta property="og:description" data-i18n="meta.ogdescription" content="Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Van website bouwen tot AI-advies.">
   <meta property="og:image" content="https://boomkamponline.nl/og-image.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="nl_NL">
+  <meta property="og:locale" content="nl_NL" id="og-locale">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -74,14 +74,16 @@
       align-items: center;
       justify-content: space-between;
       height: 64px;
+      gap: 16px;
     }
     .logo {
       font-size: 1.25rem;
       font-weight: 800;
       color: #1A1A2E;
+      flex-shrink: 0;
     }
 
-    .nav { display: flex; gap: 28px; align-items: center; }
+    .nav { display: flex; gap: 20px; align-items: center; }
     .nav a {
       font-size: 0.9375rem;
       font-weight: 500;
@@ -115,6 +117,38 @@
       background: #1A1A2E;
       border-radius: 2px;
       transition: 0.3s;
+    }
+
+    /* ===== LANGUAGE SWITCHER ===== */
+    .lang-switcher {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid #ddd;
+      border-radius: 6px;
+      background: transparent;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #999;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      line-height: 1;
+    }
+    .lang-btn:hover { border-color: #FF6B00; color: #FF6B00; }
+    .lang-btn.active {
+      background: #FF6B00;
+      border-color: #FF6B00;
+      color: #fff;
     }
 
     /* ===== HERO ===== */
@@ -166,9 +200,7 @@
     }
 
     /* ===== DIENSTEN ===== */
-    .diensten {
-      background: #fff;
-    }
+    .diensten { background: #fff; }
     .diensten-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -225,11 +257,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #aaa;
-      font-size: 0.875rem;
       overflow: hidden;
     }
-
     .over-content h3 {
       font-size: 1.5rem;
       font-weight: 700;
@@ -396,10 +425,15 @@
         <img src="images/logo-full-dark.png" alt="BoomkampOnline" height="32" style="height:32px; width:auto;">
       </a>
       <nav class="nav" id="main-nav" role="navigation" aria-label="Hoofdnavigatie">
-        <a href="#diensten">Diensten</a>
-        <a href="#over-mij">Over mij</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+        <a href="#diensten" data-i18n="nav.services">Diensten</a>
+        <a href="#over-mij" data-i18n="nav.about">Over mij</a>
+        <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="nl" aria-label="Nederlands" title="Nederlands">NL</button>
+        <button class="lang-btn" data-lang="en" aria-label="English" title="English">EN</button>
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">DE</button>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Menu openen" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -409,10 +443,10 @@
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero" aria-label="Introductie">
     <div class="container hero-content">
-      <p class="hero-greeting fade-up">Hallo, ik ben</p>
+      <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
       <h1 class="hero-name fade-up">Paul Boomkamp</h1>
-      <p class="hero-tagline fade-up">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
-      <a href="#contact" class="hero-cta fade-up">
+      <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
+      <a href="#contact" class="hero-cta fade-up" data-i18n="hero.cta">
         Neem contact op
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
@@ -422,37 +456,37 @@
   <!-- ===== DIENSTEN ===== -->
   <section class="section diensten" id="diensten" aria-label="Diensten">
     <div class="container">
-      <span class="section-label fade-up">Diensten</span>
-      <h2 class="section-title fade-up">Wat ik voor je kan doen</h2>
-      <p class="section-subtitle fade-up">Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.</p>
+      <span class="section-label fade-up" data-i18n="services.label">Diensten</span>
+      <h2 class="section-title fade-up" data-i18n="services.title">Wat ik voor je kan doen</h2>
+      <p class="section-subtitle fade-up" data-i18n="services.subtitle">Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.</p>
       <div class="diensten-grid">
         <article class="dienst-card fade-up">
           <div class="dienst-icon">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="dienst-title">Website bouwen</h3>
-          <p class="dienst-desc">Van scratch of via WordPress/TYPO3. Modern, snel en gebruiksvriendelijk — afgestemd op jouw wensen.</p>
+          <h3 class="dienst-title" data-i18n="services.card1.title">Website bouwen</h3>
+          <p class="dienst-desc" data-i18n="services.card1.desc">Van scratch of via WordPress/TYPO3. Modern, snel en gebruiksvriendelijk — afgestemd op jouw wensen.</p>
         </article>
         <article class="dienst-card fade-up">
           <div class="dienst-icon">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
           </div>
-          <h3 class="dienst-title">SEO optimalisatie</h3>
-          <p class="dienst-desc">Word beter vindbaar in Google. Van technische SEO tot content-optimalisatie en snelheidsverbeteringen.</p>
+          <h3 class="dienst-title" data-i18n="services.card2.title">SEO optimalisatie</h3>
+          <p class="dienst-desc" data-i18n="services.card2.desc">Word beter vindbaar in Google. Van technische SEO tot content-optimalisatie en snelheidsverbeteringen.</p>
         </article>
         <article class="dienst-card fade-up">
           <div class="dienst-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10h-10V2z"/><path d="M22 12A10 10 0 0 0 12 2v10h10z"/></svg>
           </div>
-          <h3 class="dienst-title">AI advies &amp; implementatie</h3>
-          <p class="dienst-desc">Automatiseer processen met AI. Van chatbots tot slimme workflows met n8n, LLM's en maatwerk integraties.</p>
+          <h3 class="dienst-title" data-i18n="services.card3.title">AI advies &amp; implementatie</h3>
+          <p class="dienst-desc" data-i18n="services.card3.desc">Automatiseer processen met AI. Van chatbots tot slimme workflows met n8n, LLM's en maatwerk integraties.</p>
         </article>
         <article class="dienst-card fade-up">
           <div class="dienst-icon">
             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="dienst-title">ZZP verhuur</h3>
-          <p class="dienst-desc">Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij afspraken en projecten.</p>
+          <h3 class="dienst-title" data-i18n="services.card4.title">ZZP verhuur</h3>
+          <p class="dienst-desc" data-i18n="services.card4.desc">Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij afspraken en projecten.</p>
         </article>
       </div>
     </div>
@@ -461,20 +495,20 @@
   <!-- ===== OVER MIJ ===== -->
   <section class="section over-mij" id="over-mij" aria-label="Over mij">
     <div class="container">
-      <span class="section-label fade-up">Over mij</span>
-      <h2 class="section-title fade-up">Wie is Paul Boomkamp?</h2>
+      <span class="section-label fade-up" data-i18n="about.label">Over mij</span>
+      <h2 class="section-title fade-up" data-i18n="about.title">Wie is Paul Boomkamp?</h2>
       <div class="over-grid">
-        <div class="over-foto fade-up" aria-label="Profiel foto Paul Boomkamp">
+        <div class="over-foto fade-up">
           <img src="images/paul.png" alt="Paul Boomkamp" style="width:100%;height:100%;object-fit:cover;">
         </div>
         <div class="over-content fade-up">
-          <h3>Ruim 25 jaar ervaring in webdevelopment en systeembeheer</h3>
-          <p>
+          <h3 data-i18n="about.subtitle">Ruim 25 jaar ervaring in webdevelopment en systeembeheer</h3>
+          <p data-i18n="about.p1">
             Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites,
             het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen.
             Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren,
             of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee.
           </p>
@@ -486,47 +520,47 @@
   <!-- ===== CONTACT ===== -->
   <section class="section contact" id="contact" aria-label="Contact">
     <div class="container">
-      <span class="section-label fade-up">Contact</span>
-      <h2 class="section-title fade-up">Neem contact op</h2>
-      <p class="section-subtitle fade-up">Heb je een vraag of wil je een project bespreken? Stuur me een bericht en ik neem binnen 24 uur contact met je op.</p>
+      <span class="section-label fade-up" data-i18n="contact.label">Contact</span>
+      <h2 class="section-title fade-up" data-i18n="contact.title">Neem contact op</h2>
+      <p class="section-subtitle fade-up" data-i18n="contact.subtitle">Heb je een vraag of wil je een project bespreken? Stuur me een bericht en ik neem binnen 24 uur contact met je op.</p>
       <div class="contact-grid">
         <div class="contact-info fade-up">
-          <h3>Gegevens</h3>
+          <h3 data-i18n="contact.info.title">Gegevens</h3>
           <p>📧 <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a></p>
           <p>📱 <a href="tel:+31623493326">+31 6 23493326</a></p>
-          <p style="margin-top: 16px; color: #777;">📍 Raalte, Nederland</p>
-          <p style="margin-top: 24px; font-size: 0.9375rem; color: #888;">
+          <p style="margin-top: 16px; color: #777;" data-i18n="contact.info.location">📍 Raalte, Nederland</p>
+          <p style="margin-top: 24px; font-size: 0.9375rem; color: #888;" data-i18n="contact.info.availability">
             Beschikbaar voor projecten, detachering en freelance opdrachten.
           </p>
         </div>
-        <form class="fade-up" id="contact-form" novalidate aria-label="Contactformulier">
+        <form class="fade-up" id="contact-form" novalidate>
           <div class="form-group">
-            <label for="naam">Naam <span aria-hidden="true">*</span></label>
-            <input type="text" id="naam" name="naam" required autocomplete="name" placeholder="Jouw naam" aria-required="true">
+            <label for="naam"><span data-i18n="contact.form.name">Naam</span> <span aria-hidden="true">*</span></label>
+            <input type="text" id="naam" name="naam" required autocomplete="name" data-i18n-placeholder="contact.form.name_placeholder" placeholder="Jouw naam" aria-required="true">
           </div>
           <div class="form-group">
-            <label for="email">Email <span aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jouw@email.nl" aria-required="true">
+            <label for="email"><span data-i18n="contact.form.email">Email</span> <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" data-i18n-placeholder="contact.form.email_placeholder" placeholder="jouw@email.nl" aria-required="true">
           </div>
           <div class="form-group">
-            <label for="telefoon">Telefoon <span class="optional">(optioneel)</span></label>
-            <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" placeholder="+31 6 12345678">
+            <label for="telefoon"><span data-i18n="contact.form.phone">Telefoon</span> <span class="optional" data-i18n="contact.form.optional">(optioneel)</span></label>
+            <input type="tel" id="telefoon" name="telefoon" autocomplete="tel" data-i18n-placeholder="contact.form.phone_placeholder" placeholder="+31 6 12345678">
           </div>
           <div class="form-group">
-            <label for="dienst">Dienst <span aria-hidden="true">*</span></label>
+            <label for="dienst"><span data-i18n="contact.form.service">Dienst</span> <span aria-hidden="true">*</span></label>
             <select id="dienst" name="dienst" required aria-required="true">
-              <option value="" disabled selected>Kies een dienst</option>
-              <option value="Website bouwen">Website bouwen</option>
-              <option value="SEO optimalisatie">SEO optimalisatie</option>
-              <option value="AI advies & implementatie">AI advies &amp; implementatie</option>
-              <option value="ZZP verhuur">ZZP verhuur</option>
+              <option value="" disabled selected data-i18n="contact.form.service_placeholder">Kies een dienst</option>
+              <option value="Website bouwen" data-i18n="contact.form.option1">Website bouwen</option>
+              <option value="SEO optimalisatie" data-i18n="contact.form.option2">SEO optimalisatie</option>
+              <option value="AI advies & implementatie" data-i18n="contact.form.option3">AI advies &amp; implementatie</option>
+              <option value="ZZP verhuur" data-i18n="contact.form.option4">ZZP verhuur</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="bericht">Bericht <span aria-hidden="true">*</span></label>
-            <textarea id="bericht" name="bericht" required placeholder="Waar kan ik je mee helpen?" aria-required="true"></textarea>
+            <label for="bericht"><span data-i18n="contact.form.message">Bericht</span> <span aria-hidden="true">*</span></label>
+            <textarea id="bericht" name="bericht" required data-i18n-placeholder="contact.form.message_placeholder" placeholder="Waar kan ik je mee helpen?" aria-required="true"></textarea>
           </div>
-          <button type="submit" class="btn-submit" id="submit-btn">Verstuur bericht</button>
+          <button type="submit" class="btn-submit" id="submit-btn" data-i18n="contact.form.submit">Verstuur bericht</button>
           <div class="form-status" id="form-status" role="status"></div>
         </form>
       </div>
@@ -545,6 +579,282 @@
     (function() {
       'use strict';
 
+      // ===== TRANSLATIONS =====
+      var translations = {
+        nl: {
+          'meta.title': 'BoomkampOnline - Websites. SEO. AI. ZZP.',
+          'meta.description': 'Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Websites, SEO, AI-implementatie en ZZP-verhuur.',
+          'meta.ogtitle': 'BoomkampOnline - Websites. SEO. AI. Beschikbaar als ZZP\'er.',
+          'meta.ogdescription': 'Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Van website bouwen tot AI-advies.',
+          'nav.services': 'Diensten',
+          'nav.about': 'Over mij',
+          'nav.contact': 'Contact',
+          'hero.greeting': 'Hallo, ik ben',
+          'hero.tagline': 'Websites. SEO. AI. Beschikbaar als ZZP\'er.',
+          'hero.cta': 'Neem contact op',
+          'services.label': 'Diensten',
+          'services.title': 'Wat ik voor je kan doen',
+          'services.subtitle': 'Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.',
+          'services.card1.title': 'Website bouwen',
+          'services.card1.desc': 'Van scratch of via WordPress/TYPO3. Modern, snel en gebruiksvriendelijk — afgestemd op jouw wensen.',
+          'services.card2.title': 'SEO optimalisatie',
+          'services.card2.desc': 'Word beter vindbaar in Google. Van technische SEO tot content-optimalisatie en snelheidsverbeteringen.',
+          'services.card3.title': 'AI advies & implementatie',
+          'services.card3.desc': 'Automatiseer processen met AI. Van chatbots tot slimme workflows met n8n, LLM\'s en maatwerk integraties.',
+          'services.card4.title': 'ZZP verhuur',
+          'services.card4.desc': 'Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij afspraken en projecten.',
+          'about.label': 'Over mij',
+          'about.title': 'Wie is Paul Boomkamp?',
+          'about.subtitle': 'Ruim 25 jaar ervaring in webdevelopment en systeembeheer',
+          'about.p1': 'Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites, het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen. Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.',
+          'about.p2': 'Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren, of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee.',
+          'contact.label': 'Contact',
+          'contact.title': 'Neem contact op',
+          'contact.subtitle': 'Heb je een vraag of wil je een project bespreken? Stuur me een bericht en ik neem binnen 24 uur contact met je op.',
+          'contact.info.title': 'Gegevens',
+          'contact.info.location': '📍 Raalte, Nederland',
+          'contact.info.availability': 'Beschikbaar voor projecten, detachering en freelance opdrachten.',
+          'contact.form.name': 'Naam',
+          'contact.form.name_placeholder': 'Jouw naam',
+          'contact.form.email': 'Email',
+          'contact.form.email_placeholder': 'jouw@email.nl',
+          'contact.form.phone': 'Telefoon',
+          'contact.form.optional': '(optioneel)',
+          'contact.form.phone_placeholder': '+31 6 12345678',
+          'contact.form.service': 'Dienst',
+          'contact.form.service_placeholder': 'Kies een dienst',
+          'contact.form.option1': 'Website bouwen',
+          'contact.form.option2': 'SEO optimalisatie',
+          'contact.form.option3': 'AI advies & implementatie',
+          'contact.form.option4': 'ZZP verhuur',
+          'contact.form.message': 'Bericht',
+          'contact.form.message_placeholder': 'Waar kan ik je mee helpen?',
+          'contact.form.submit': 'Verstuur bericht',
+          'contact.form.submitting': 'Versturen...',
+          'contact.form.loading': 'Bericht wordt verzonden...',
+          'contact.form.success': 'Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.',
+          'contact.form.error_required': 'Vul alle verplichte velden in.',
+          'contact.form.error_email': 'Voer een geldig emailadres in.',
+          'contact.form.error_generic': 'Er ging iets mis. Probeer het later opnieuw of stuur een email naar paul@boomkamponline.nl.',
+          'hamburger.open': 'Menu openen',
+          'hamburger.close': 'Menu sluiten'
+        },
+        en: {
+          'meta.title': 'BoomkampOnline - Websites. SEO. AI. Freelancer.',
+          'meta.description': 'Paul Boomkamp - Freelance web developer and AI consultant. Websites, SEO, AI implementation and freelance services.',
+          'meta.ogtitle': 'BoomkampOnline - Websites. SEO. AI. Available as a freelancer.',
+          'meta.ogdescription': 'Paul Boomkamp - Freelance web developer and AI consultant. From building websites to AI advice.',
+          'nav.services': 'Services',
+          'nav.about': 'About me',
+          'nav.contact': 'Contact',
+          'hero.greeting': 'Hello, I\'m',
+          'hero.tagline': 'Websites. SEO. AI. Available as a freelancer.',
+          'hero.cta': 'Get in touch',
+          'services.label': 'Services',
+          'services.title': 'What I can do for you',
+          'services.subtitle': 'From building a new website to AI consulting — I work as a freelancer and am happy to help you think things through.',
+          'services.card1.title': 'Website building',
+          'services.card1.desc': 'From scratch or via WordPress/TYPO3. Modern, fast and user-friendly — tailored to your needs.',
+          'services.card2.title': 'SEO optimization',
+          'services.card2.desc': 'Get found better in Google. From technical SEO to content optimization and speed improvements.',
+          'services.card3.title': 'AI consulting & implementation',
+          'services.card3.desc': 'Automate processes with AI. From chatbots to smart workflows with n8n, LLMs and custom integrations.',
+          'services.card4.title': 'Freelance rental',
+          'services.card4.desc': 'Temporarily available as a programmer, helpdesk employee or for support with appointments and projects.',
+          'about.label': 'About me',
+          'about.title': 'Who is Paul Boomkamp?',
+          'about.subtitle': 'Over 25 years of experience in web development and system management',
+          'about.p1': 'As a freelance web developer and AI consultant, I help businesses build websites, improve their online visibility and implement smart AI solutions. My experience ranges from PHP, Laravel and WordPress to n8n, IoT and server management.',
+          'about.p2': 'Whether you need a new website, want to automate existing processes, or are looking for an experienced programmer — feel free to get in touch. I\'m happy to help you think things through.',
+          'contact.label': 'Contact',
+          'contact.title': 'Get in touch',
+          'contact.subtitle': 'Do you have a question or want to discuss a project? Send me a message and I\'ll get back to you within 24 hours.',
+          'contact.info.title': 'Details',
+          'contact.info.location': '📍 Raalte, Netherlands',
+          'contact.info.availability': 'Available for projects, secondment and freelance assignments.',
+          'contact.form.name': 'Name',
+          'contact.form.name_placeholder': 'Your name',
+          'contact.form.email': 'Email',
+          'contact.form.email_placeholder': 'your@email.com',
+          'contact.form.phone': 'Phone',
+          'contact.form.optional': '(optional)',
+          'contact.form.phone_placeholder': '+31 6 12345678',
+          'contact.form.service': 'Service',
+          'contact.form.service_placeholder': 'Choose a service',
+          'contact.form.option1': 'Website building',
+          'contact.form.option2': 'SEO optimization',
+          'contact.form.option3': 'AI consulting & implementation',
+          'contact.form.option4': 'Freelance rental',
+          'contact.form.message': 'Message',
+          'contact.form.message_placeholder': 'How can I help you?',
+          'contact.form.submit': 'Send message',
+          'contact.form.submitting': 'Sending...',
+          'contact.form.loading': 'Message is being sent...',
+          'contact.form.success': 'Thank you for your message! I\'ll get back to you as soon as possible.',
+          'contact.form.error_required': 'Please fill in all required fields.',
+          'contact.form.error_email': 'Please enter a valid email address.',
+          'contact.form.error_generic': 'Something went wrong. Please try again later or send an email to paul@boomkamponline.nl.',
+          'hamburger.open': 'Open menu',
+          'hamburger.close': 'Close menu'
+        },
+        de: {
+          'meta.title': 'BoomkampOnline - Websites. SEO. KI. Freelancer.',
+          'meta.description': 'Paul Boomkamp - Freelance Webentwickler und KI-Berater. Websites, SEO, KI-Implementierung und Freelancer-Verleih.',
+          'meta.ogtitle': 'BoomkampOnline - Websites. SEO. KI. Verfügbar als Freelancer.',
+          'meta.ogdescription': 'Paul Boomkamp - Freelance Webentwickler und KI-Berater. Vom Website-Bau bis zur KI-Beratung.',
+          'nav.services': 'Leistungen',
+          'nav.about': 'Über mich',
+          'nav.contact': 'Kontakt',
+          'hero.greeting': 'Hallo, ich bin',
+          'hero.tagline': 'Websites. SEO. KI. Verfügbar als Freelancer.',
+          'hero.cta': 'Kontakt aufnehmen',
+          'services.label': 'Leistungen',
+          'services.title': 'Was ich für Sie tun kann',
+          'services.subtitle': 'Vom Bau einer neuen Website bis zur KI-Beratung — ich arbeite als Freelancer und denke gerne mit Ihnen mit.',
+          'services.card1.title': 'Website-Entwicklung',
+          'services.card1.desc': 'Von Grund auf oder via WordPress/TYPO3. Modern, schnell und benutzerfreundlich — abgestimmt auf Ihre Wünsche.',
+          'services.card2.title': 'SEO-Optimierung',
+          'services.card2.desc': 'Werden Sie besser in Google gefunden. Von technischer SEO bis zur Inhaltsoptimierung und Geschwindigkeitsverbesserungen.',
+          'services.card3.title': 'KI-Beratung & Implementierung',
+          'services.card3.desc': 'Automatisieren Sie Prozesse mit KI. Von Chatbots bis zu intelligenten Workflows mit n8n, LLMs und maßgeschneiderten Integrationen.',
+          'services.card4.title': 'Freelancer-Verleih',
+          'services.card4.desc': 'Vorübergehend verfügbar als Programmierer, Helpdesk-Mitarbeiter oder zur Unterstützung bei Terminen und Projekten.',
+          'about.label': 'Über mich',
+          'about.title': 'Wer ist Paul Boomkamp?',
+          'about.subtitle': 'Über 25 Jahre Erfahrung in Webentwicklung und Systemverwaltung',
+          'about.p1': 'Als freiberuflicher Webentwickler und KI-Berater helfe ich Unternehmen beim Aufbau von Websites, der Verbesserung ihrer Online-Sichtbarkeit und der Implementierung intelligenter KI-Lösungen. Meine Erfahrung reicht von PHP, Laravel und WordPress bis zu n8n, IoT und Serververwaltung.',
+          'about.p2': 'Ob Sie eine neue Website benötigen, bestehende Prozesse automatisieren möchten oder einen erfahrenen Programmierer suchen — nehmen Sie gerne Kontakt auf. Ich denke gerne mit Ihnen mit.',
+          'contact.label': 'Kontakt',
+          'contact.title': 'Kontakt aufnehmen',
+          'contact.subtitle': 'Haben Sie eine Frage oder möchten Sie ein Projekt besprechen? Senden Sie mir eine Nachricht und ich melde mich innerhalb von 24 Stunden bei Ihnen.',
+          'contact.info.title': 'Angaben',
+          'contact.info.location': '📍 Raalte, Niederlande',
+          'contact.info.availability': 'Verfügbar für Projekte, Personalleasing und freiberufliche Aufträge.',
+          'contact.form.name': 'Name',
+          'contact.form.name_placeholder': 'Ihr Name',
+          'contact.form.email': 'E-Mail',
+          'contact.form.email_placeholder': 'ihre@email.de',
+          'contact.form.phone': 'Telefon',
+          'contact.form.optional': '(optional)',
+          'contact.form.phone_placeholder': '+31 6 12345678',
+          'contact.form.service': 'Dienstleistung',
+          'contact.form.service_placeholder': 'Wählen Sie eine Leistung',
+          'contact.form.option1': 'Website-Entwicklung',
+          'contact.form.option2': 'SEO-Optimierung',
+          'contact.form.option3': 'KI-Beratung & Implementierung',
+          'contact.form.option4': 'Freelancer-Verleih',
+          'contact.form.message': 'Nachricht',
+          'contact.form.message_placeholder': 'Wie kann ich Ihnen helfen?',
+          'contact.form.submit': 'Nachricht senden',
+          'contact.form.submitting': 'Senden...',
+          'contact.form.loading': 'Nachricht wird gesendet...',
+          'contact.form.success': 'Danke für Ihre Nachricht! Ich melde mich so schnell wie möglich bei Ihnen.',
+          'contact.form.error_required': 'Bitte füllen Sie alle Pflichtfelder aus.',
+          'contact.form.error_email': 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+          'contact.form.error_generic': 'Etwas ist schiefgelaufen. Bitte versuchen Sie es später noch einmal oder senden Sie eine E-Mail an paul@boomkamponline.nl.',
+          'hamburger.open': 'Menü öffnen',
+          'hamburger.close': 'Menü schließen'
+        }
+      };
+
+      // ===== DETECT LANGUAGE =====
+      function detectLanguage() {
+        var stored = localStorage.getItem('boomkamponline-lang');
+        if (stored && translations[stored]) return stored;
+        var browserLang = (navigator.language || navigator.userLanguage || '').substring(0, 2);
+        if (translations[browserLang]) return browserLang;
+        return 'nl';
+      }
+
+      var currentLang = detectLanguage();
+
+      // ===== APPLY TRANSLATIONS =====
+      function applyLanguage(lang) {
+        if (!translations[lang]) lang = 'nl';
+        currentLang = lang;
+        localStorage.setItem('boomkamponline-lang', lang);
+
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+
+        // Update og:locale
+        var localeMap = { nl: 'nl_NL', en: 'en_US', de: 'de_DE' };
+        var ogLocale = document.getElementById('og-locale');
+        if (ogLocale) ogLocale.content = localeMap[lang] || 'nl_NL';
+
+        // Update all data-i18n elements
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+          var key = el.getAttribute('data-i18n');
+          var text = translations[lang][key];
+          if (text !== undefined) {
+            // Handle elements with child nodes (like the CTA button with SVG)
+            // Only replace text if the key exists in translations
+            if (el.tagName === 'META') {
+              el.setAttribute('content', text);
+            } else if (el.tagName === 'TITLE') {
+              el.textContent = text;
+            } else if (el.tagName === 'OPTION') {
+              el.textContent = text;
+            } else if (el.tagName === 'LABEL') {
+              // For labels we use a span inside, handled separately
+            } else {
+              // For normal elements, only change text if it's a direct text node
+              // We use a simpler approach: set innerHTML for elements without complex children
+              // But preserve child elements like SVG, spans with aria-hidden, etc.
+              var childNodes = el.childNodes;
+              var hasOnlyText = true;
+              for (var i = 0; i < childNodes.length; i++) {
+                if (childNodes[i].nodeType === 1 && childNodes[i].tagName !== 'SPAN' && childNodes[i].tagName !== 'SVG' && childNodes[i].tagName !== 'use' && childNodes[i].tagName !== 'path' && childNodes[i].tagName !== 'line' && childNodes[i].tagName !== 'polyline' && childNodes[i].tagName !== 'circle' && childNodes[i].tagName !== 'rect') {
+                  hasOnlyText = false;
+                  break;
+                }
+              }
+              if (hasOnlyText) {
+                el.innerHTML = text;
+              }
+            }
+          }
+        });
+
+        // Update data-i18n-placeholder elements
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+          var key = el.getAttribute('data-i18n-placeholder');
+          var text = translations[lang][key];
+          if (text !== undefined) {
+            el.setAttribute('placeholder', text);
+          }
+        });
+
+        // Update lang switcher buttons
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        // Update hamburger aria-label
+        var hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+          var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-label', isOpen ? translations[lang]['hamburger.close'] : translations[lang]['hamburger.open']);
+        }
+
+        // Update nav aria-label
+        var nav = document.getElementById('main-nav');
+        if (nav) {
+          var navLabels = { nl: 'Hoofdnavigatie', en: 'Main navigation', de: 'Hauptnavigation' };
+          nav.setAttribute('aria-label', navLabels[lang]);
+        }
+      }
+
+      // ===== LANGUAGE SWITCHER EVENTS =====
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var lang = this.getAttribute('data-lang');
+          if (lang !== currentLang) {
+            applyLanguage(lang);
+          }
+        });
+      });
+
       // ===== HAMBURGER MENU =====
       var hamburger = document.getElementById('hamburger');
       var nav = document.getElementById('main-nav');
@@ -552,13 +862,13 @@
         hamburger.addEventListener('click', function() {
           var open = nav.classList.toggle('open');
           hamburger.setAttribute('aria-expanded', open);
-          hamburger.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+          hamburger.setAttribute('aria-label', open ? translations[currentLang]['hamburger.close'] : translations[currentLang]['hamburger.open']);
         });
         document.querySelectorAll('#main-nav a').forEach(function(link) {
           link.addEventListener('click', function() {
             nav.classList.remove('open');
             hamburger.setAttribute('aria-expanded', 'false');
-            hamburger.setAttribute('aria-label', 'Menu openen');
+            hamburger.setAttribute('aria-label', translations[currentLang]['hamburger.open']);
           });
         });
       }
@@ -583,13 +893,14 @@
       var form = document.getElementById('contact-form');
       var statusEl = document.getElementById('form-status');
       var submitBtn = document.getElementById('submit-btn');
-      var WEBHOOK_URL = 'https://n8n.synapsisai.nl/webhook/boomkamponline-contact';
+      var WEBHOOK_URL = 'https://n8n.synapsisai.nl/webhook-test/beb1ca46-b6a4-4afd-afb7-75367472088f';
 
       if (form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
 
-          // Basic client-side validation
+          var t = translations[currentLang]['contact.form'];
+
           var naam = document.getElementById('naam').value.trim();
           var email = document.getElementById('email').value.trim();
           var dienst = document.getElementById('dienst').value;
@@ -597,35 +908,33 @@
 
           if (!naam || !email || !dienst || !bericht) {
             statusEl.className = 'form-status error';
-            statusEl.textContent = 'Vul alle verplichte velden in.';
+            statusEl.textContent = translations[currentLang]['contact.form.error_required'];
             return;
           }
 
           if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             statusEl.className = 'form-status error';
-            statusEl.textContent = 'Voer een geldig emailadres in.';
+            statusEl.textContent = translations[currentLang]['contact.form.error_email'];
             return;
           }
 
           var telefoon = document.getElementById('telefoon').value.trim();
 
-          // Build payload
           var payload = {
             naam: naam,
             email: email,
             telefoon: telefoon || null,
             dienst: dienst,
             bericht: bericht,
+            taal: currentLang,
             timestamp: new Date().toISOString()
           };
 
-          // Loading state
           submitBtn.disabled = true;
-          submitBtn.textContent = 'Versturen...';
+          submitBtn.textContent = translations[currentLang]['contact.form.submitting'];
           statusEl.className = 'form-status loading';
-          statusEl.textContent = 'Bericht wordt verzonden...';
+          statusEl.textContent = translations[currentLang]['contact.form.loading'];
 
-          // POST to n8n webhook
           fetch(WEBHOOK_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -635,21 +944,24 @@
             if (!response.ok) throw new Error('Netwerkfout: ' + response.status);
             return response.json();
           })
-          .then(function(data) {
+          .then(function() {
             statusEl.className = 'form-status success';
-            statusEl.textContent = 'Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.';
+            statusEl.textContent = translations[currentLang]['contact.form.success'];
             form.reset();
           })
-          .catch(function(error) {
+          .catch(function() {
             statusEl.className = 'form-status error';
-            statusEl.textContent = 'Er ging iets mis. Probeer het later opnieuw of stuur een email naar paul@boomkamponline.nl.';
+            statusEl.textContent = translations[currentLang]['contact.form.error_generic'];
           })
           .finally(function() {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Verstuur bericht';
+            submitBtn.textContent = translations[currentLang]['contact.form.submit'];
           });
         });
       }
+
+      // ===== APPLY INITIAL LANGUAGE =====
+      applyLanguage(currentLang);
 
     })();
   </script>
