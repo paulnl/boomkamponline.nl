@@ -291,18 +291,17 @@
       color: #FF6B00;
       margin-bottom: 12px;
     }
-    .hero-name {
-      position: relative;
-      font-size: 3.5rem;
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 16px;
-      color: #1A1A2E;
-      display: inline-block;
-      padding: 0.15em 0.3em;
-      background-size: contain;
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/banner_top.png');
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
+      opacity: 0.18;
+      pointer-events: none;
+      z-index: 0;
     }
     .hero-name .highlight {
       background: linear-gradient(135deg, #FF6B00, #ff8533);
@@ -799,7 +798,7 @@
     </div>
     <div class="container hero-content">
       <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
-      <h1 class="hero-name fade-up" style="background-image:url('images/banner_top.png');">
+      <h1 class="hero-name fade-up">
         <span class="highlight">Paul Boomkamp</span>
       </h1>
       <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
