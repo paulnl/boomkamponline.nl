@@ -30,8 +30,6 @@
       currentLang = detectLanguage();
       renderServices();
       renderWerkwijze();
-      renderSelectOptions('branche', 'sector_options');
-      renderSelectOptions('reden', 'reason_options');
       applyLanguage(currentLang);
       bindEvents();
       observeFadeElements();
@@ -210,8 +208,7 @@
     // Re-render dynamic content
     renderServices();
     renderWerkwijze();
-    renderSelectOptions('branche', 'sector_options');
-    renderSelectOptions('reden', 'reason_options');
+    // Opties zijn statisch in HTML met data-i18n — worden vertaald door de handler hierboven
 
     // Language switcher buttons
     document.querySelectorAll('.lang-btn').forEach(function (btn) {

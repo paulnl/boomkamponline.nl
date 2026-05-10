@@ -135,7 +135,22 @@
         "submit": "Bericht versturen",
         "success": "Bedankt voor je bericht. Ik neem binnen één werkdag contact met je op.",
         "error": "Er ging iets mis. Probeer het opnieuw of stuur een e-mail naar paul@boomkamponline.nl.",
-        "loading": "Bezig met versturen..."
+        "loading": "Bezig met versturen...",
+        "sector_opt_0": "Detailhandel",
+        "sector_opt_1": "Zakelijke dienstverlening",
+        "sector_opt_2": "Zorg & welzijn",
+        "sector_opt_3": "Onderwijs",
+        "sector_opt_4": "Technologie & IT",
+        "sector_opt_5": "Bouw & vastgoed",
+        "sector_opt_6": "Horeca & toerisme",
+        "sector_opt_7": "Overheid & non-profit",
+        "sector_opt_8": "Anders",
+        "reason_opt_0": "Nieuwe website laten bouwen",
+        "reason_opt_1": "Bestaande website verbeteren",
+        "reason_opt_2": "SEO & vindbaarheid",
+        "reason_opt_3": "AI advies of implementatie",
+        "reason_opt_4": "ZZP / detachering",
+        "reason_opt_5": "Iets anders"
       }
     },
     "hamburger": {
@@ -286,7 +301,22 @@
         "submit": "Send message",
         "success": "Thank you for your message. I'll get back to you within one business day.",
         "error": "Something went wrong. Please try again or email paul@boomkamponline.nl.",
-        "loading": "Sending..."
+        "loading": "Sending...",
+        "sector_opt_0": "Retail",
+        "sector_opt_1": "Business services",
+        "sector_opt_2": "Healthcare & wellbeing",
+        "sector_opt_3": "Education",
+        "sector_opt_4": "Technology & IT",
+        "sector_opt_5": "Construction & real estate",
+        "sector_opt_6": "Hospitality & tourism",
+        "sector_opt_7": "Government & non-profit",
+        "sector_opt_8": "Other",
+        "reason_opt_0": "Build a new website",
+        "reason_opt_1": "Improve existing website",
+        "reason_opt_2": "SEO & visibility",
+        "reason_opt_3": "AI advice or implementation",
+        "reason_opt_4": "Freelance / secondment",
+        "reason_opt_5": "Something else"
       }
     },
     "hamburger": {
@@ -437,7 +467,22 @@
         "submit": "Nachricht senden",
         "success": "Vielen Dank für Ihre Nachricht. Ich melde mich innerhalb eines Werktages bei Ihnen.",
         "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder senden Sie eine E-Mail an paul@boomkamponline.nl.",
-        "loading": "Wird gesendet..."
+        "loading": "Wird gesendet...",
+        "sector_opt_0": "Einzelhandel",
+        "sector_opt_1": "Unternehmensdienstleistungen",
+        "sector_opt_2": "Gesundheit & Soziales",
+        "sector_opt_3": "Bildung",
+        "sector_opt_4": "Technologie & IT",
+        "sector_opt_5": "Bau & Immobilien",
+        "sector_opt_6": "Gastgewerbe & Tourismus",
+        "sector_opt_7": "Öffentlicher Sektor & Non-Profit",
+        "sector_opt_8": "Sonstiges",
+        "reason_opt_0": "Neue Website erstellen lassen",
+        "reason_opt_1": "Bestehende Website verbessern",
+        "reason_opt_2": "SEO & Sichtbarkeit",
+        "reason_opt_3": "KI-Beratung oder -Implementierung",
+        "reason_opt_4": "Freiberufler / Arbeitnehmerüberlassung",
+        "reason_opt_5": "Sonstiges"
       }
     },
     "hamburger": {
