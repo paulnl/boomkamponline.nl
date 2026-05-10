@@ -4,7 +4,7 @@
   var contentData = null;
   var currentLang = 'nl';
   var STORAGE_KEY = 'boomkamponline-lang';
-  var WEBHOOK_URL = 'https://n8n.synapsisai.nl/webhook-test/beb1ca46-b6a4-4afd-afb7-75367472088f';
+  var WEBHOOK_URL = 'https://n8n.synapsisai.nl/webhook/beb1ca46-b6a4-4afd-afb7-75367472088f';
 
   // Service card icons — remain the same across languages
   var SERVICE_ICONS = [
@@ -30,7 +30,7 @@
       currentLang = detectLanguage();
       renderServices();
       renderWerkwijze();
-      renderSelectOptions('branche', 'industry_options');
+      renderSelectOptions('branche', 'sector_options');
       renderSelectOptions('reden', 'reason_options');
       applyLanguage(currentLang);
       bindEvents();
@@ -187,10 +187,30 @@
       if (text !== undefined) el.setAttribute('placeholder', text);
     });
 
+    // ----- data-i18n-attr → any attribute -----
+    // Format: data-i18n-attr="attributeName:dot.separated.key"
+    document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+      var val = el.getAttribute('data-i18n-attr');
+      var colonPos = val.indexOf(':');
+      if (colonPos === -1) return;
+      var attr = val.substring(0, colonPos);
+      var key = val.substring(colonPos + 1);
+      var text = getNested(t, key);
+      if (text !== undefined) el.setAttribute(attr, text);
+    });
+
+    // ----- Meta tags expliciet bijwerken (redundant met data-i18n-attr, maar veilig) -----
+    document.querySelector('meta[name="description"]')
+      ?.setAttribute('content', t.meta.description);
+    document.querySelector('meta[property="og:title"]')
+      ?.setAttribute('content', t.meta.ogtitle);
+    document.querySelector('meta[property="og:description"]')
+      ?.setAttribute('content', t.meta.ogdescription);
+
     // Re-render dynamic content
     renderServices();
     renderWerkwijze();
-    renderSelectOptions('branche', 'industry_options');
+    renderSelectOptions('branche', 'sector_options');
     renderSelectOptions('reden', 'reason_options');
 
     // Language switcher buttons
@@ -293,14 +313,14 @@
         // Required fields (only contactpersoon, email, bericht)
         if (!contactpersoon || !email || !bericht) {
           statusEl.className = 'form-status error';
-          statusEl.textContent = t ? getNested(t, 'contact.form.error_required') : 'Vul alle verplichte velden in.';
+          statusEl.textContent = t ? getNested(t, 'contact.form.error') : 'Vul alle verplichte velden in.';
           return;
         }
 
         // Email validation
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
           statusEl.className = 'form-status error';
-          statusEl.textContent = t ? getNested(t, 'contact.form.error_email') : 'Voer een geldig emailadres in.';
+          statusEl.textContent = t ? getNested(t, 'contact.form.error') : 'Voer een geldig emailadres in.';
           return;
         }
 
@@ -321,28 +341,36 @@
         var submitBtnSpan = submitBtn.querySelector('span');
         submitBtn.disabled = true;
         if (submitBtnSpan) {
-          submitBtnSpan.textContent = t ? getNested(t, 'contact.form.submitting') : 'Versturen...';
+          submitBtnSpan.textContent = t ? getNested(t, 'contact.form.loading') : 'Versturen...';
         }
         statusEl.className = 'form-status loading';
         statusEl.textContent = t ? getNested(t, 'contact.form.loading') : 'Bericht wordt verzonden...';
 
-        fetch(WEBHOOK_URL, {
+        var webhookUrl = WEBHOOK_URL;
+        // Als WEBHOOK_URL nog /webhook-test/ bevat, corrigeer naar /webhook/
+        webhookUrl = webhookUrl.replace('/webhook-test/', '/webhook/');
+
+        fetch(webhookUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         })
           .then(function (response) {
-            if (!response.ok) throw new Error('Netwerkfout: ' + response.status);
-            return response.json();
+            if (!response.ok) throw new Error('HTTP ' + response.status);
+            // Probeer JSON, fallback naar text
+            return response.text().then(function (text) {
+              try { return JSON.parse(text); } catch (_) { return text; }
+            });
           })
           .then(function () {
             statusEl.className = 'form-status success';
-            statusEl.textContent = t ? getNested(t, 'contact.form.success_message') : 'Bedankt voor je bericht!';
+            statusEl.textContent = t ? getNested(t, 'contact.form.success') : 'Bedankt voor je bericht!';
             form.reset();
           })
-          .catch(function () {
+          .catch(function (err) {
+            console.error('[BoomkampOnline] Form submit error:', err);
             statusEl.className = 'form-status error';
-            statusEl.textContent = t ? getNested(t, 'contact.form.error_generic') : 'Er ging iets mis. Probeer het later opnieuw.';
+            statusEl.textContent = t ? getNested(t, 'contact.form.error') : 'Er ging iets mis. Probeer het later opnieuw.';
           })
           .finally(function () {
             submitBtn.disabled = false;
