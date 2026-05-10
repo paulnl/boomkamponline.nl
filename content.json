@@ -1,0 +1,368 @@
+{
+  "nl": {
+    "meta": {
+      "title": "BoomkampOnline - Websites. SEO. AI. ZZP.",
+      "description": "Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Websites, SEO, AI-implementatie en ZZP-verhuur.",
+      "og_title": "BoomkampOnline - Websites. SEO. AI. Beschikbaar als ZZP'er.",
+      "og_description": "Paul Boomkamp - Freelance webontwikkelaar en AI-consultant. Van website bouwen tot AI-advies."
+    },
+    "nav": {
+      "services": "Diensten",
+      "about": "Over mij",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hallo, ik ben",
+      "tagline": "Websites. SEO. AI. Beschikbaar als ZZP'er.",
+      "cta_button": "Neem contact op"
+    },
+    "services": {
+      "label": "Diensten",
+      "title": "Wat ik voor je kan doen",
+      "subtitle": "Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.",
+      "items": [
+        {
+          "title": "Website bouwen",
+          "description": "Van scratch of via WordPress/TYPO3. Modern, snel en gebruiksvriendelijk — afgestemd op jouw wensen."
+        },
+        {
+          "title": "SEO optimalisatie",
+          "description": "Word beter vindbaar in Google. Van technische SEO tot content-optimalisatie en snelheidsverbeteringen."
+        },
+        {
+          "title": "AI advies &amp; implementatie",
+          "description": "Automatiseer processen met AI. Van chatbots tot slimme workflows met n8n, LLM's en maatwerk integraties."
+        },
+        {
+          "title": "ZZP verhuur",
+          "description": "Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij afspraken en projecten."
+        }
+      ]
+    },
+    "about": {
+      "label": "Over mij",
+      "title": "Wie is Paul Boomkamp?",
+      "subtitle": "Ruim 25 jaar ervaring in webdevelopment en systeembeheer",
+      "body_html": "<p>Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites, het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen. Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.</p><p>Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren, of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee.</p>"
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Neem contact op",
+      "subtitle": "Heb je een vraag of wil je een project bespreken? Stuur me een bericht en ik neem binnen 24 uur contact met je op.",
+      "info": {
+        "title": "Contactgegevens",
+        "email_label": "Email",
+        "phone_label": "Telefoon",
+        "whatsapp_label": "WhatsApp",
+        "discord_label": "Discord",
+        "location_label": "Locatie",
+        "location": "Wereldwijd",
+        "availability_title": "Beschikbaar",
+        "availability": "Voor projecten, detachering en freelance opdrachten."
+      },
+      "form": {
+        "company": "Bedrijfsnaam",
+        "company_placeholder": "Uw bedrijfsnaam",
+        "contactperson": "Naam contactpersoon",
+        "contactperson_placeholder": "Voor- en achternaam",
+        "email": "Email",
+        "email_placeholder": "jouw@email.nl",
+        "phone_company": "Telefoon bedrijf",
+        "phone_company_placeholder": "+31 6 12345678",
+        "phone_contact": "Telefoon contactpersoon",
+        "phone_contact_placeholder": "+31 6 12345678",
+        "city": "Woonplaats",
+        "city_placeholder": "Plaatsnaam",
+        "industry": "Branche",
+        "industry_placeholder": "Kies uw branche",
+        "industry_options": [
+          "IT &amp; Technologie",
+          "Zorg &amp; Welzijn",
+          "Onderwijs",
+          "Retail &amp; E-commerce",
+          "Bouw &amp; Vastgoed",
+          "Financieel &amp; Verzekeringen",
+          "Horeca &amp; Recreatie",
+          "Transport &amp; Logistiek",
+          "Overheid &amp; Non-profit",
+          "Overig"
+        ],
+        "reason": "Waarvoor belt u?",
+        "reason_placeholder": "Kies een reden",
+        "reason_options": [
+          "Nieuwe website",
+          "Website onderhoud",
+          "SEO optimalisatie",
+          "AI implementatie",
+          "ZZP verhuur / Detachering",
+          "Automation &amp; Workflows",
+          "Adviestraject",
+          "Overig"
+        ],
+        "message": "Bericht",
+        "message_placeholder": "Waar kan ik u mee helpen? Beschrijf uw vraag of project.",
+        "submit": "Verstuur bericht",
+        "submitting": "Versturen...",
+        "loading": "Bericht wordt verzonden...",
+        "success_message": "Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.",
+        "error_required": "Vul alle verplichte velden in.",
+        "error_email": "Voer een geldig emailadres in.",
+        "error_generic": "Er ging iets mis. Probeer het later opnieuw of stuur een email naar paul@boomkamponline.nl."
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 Paul Boomkamp",
+      "tagline": "paul@boomkamponline.nl · boomkamponline.nl"
+    },
+    "hamburger": {
+      "open": "Menu openen",
+      "close": "Menu sluiten"
+    },
+    "nav_label": "Hoofdnavigatie",
+    "og_locale": "nl_NL"
+  },
+  "en": {
+    "meta": {
+      "title": "BoomkampOnline - Websites. SEO. AI. Freelancer.",
+      "description": "Paul Boomkamp - Freelance web developer and AI consultant. Websites, SEO, AI implementation and freelance services.",
+      "og_title": "BoomkampOnline - Websites. SEO. AI. Available as a freelancer.",
+      "og_description": "Paul Boomkamp - Freelance web developer and AI consultant. From building websites to AI advice."
+    },
+    "nav": {
+      "services": "Services",
+      "about": "About me",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hello, I'm",
+      "tagline": "Websites. SEO. AI. Available as a freelancer.",
+      "cta_button": "Get in touch"
+    },
+    "services": {
+      "label": "Services",
+      "title": "What I can do for you",
+      "subtitle": "From building a new website to AI consulting — I work as a freelancer and am happy to help you think things through.",
+      "items": [
+        {
+          "title": "Website building",
+          "description": "From scratch or via WordPress/TYPO3. Modern, fast and user-friendly — tailored to your needs."
+        },
+        {
+          "title": "SEO optimization",
+          "description": "Get found better in Google. From technical SEO to content optimization and speed improvements."
+        },
+        {
+          "title": "AI consulting &amp; implementation",
+          "description": "Automate processes with AI. From chatbots to smart workflows with n8n, LLMs and custom integrations."
+        },
+        {
+          "title": "Freelance rental",
+          "description": "Temporarily available as a programmer, helpdesk employee or for support with appointments and projects."
+        }
+      ]
+    },
+    "about": {
+      "label": "About me",
+      "title": "Who is Paul Boomkamp?",
+      "subtitle": "Over 25 years of experience in web development and system management",
+      "body_html": "<p>As a freelance web developer and AI consultant, I help businesses build websites, improve their online visibility and implement smart AI solutions. My experience ranges from PHP, Laravel and WordPress to n8n, IoT and server management.</p><p>Whether you need a new website, want to automate existing processes, or are looking for an experienced programmer — feel free to get in touch. I'm happy to help you think things through.</p>"
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Get in touch",
+      "subtitle": "Do you have a question or want to discuss a project? Send me a message and I'll get back to you within 24 hours.",
+      "info": {
+        "title": "Contact details",
+        "email_label": "Email",
+        "phone_label": "Phone",
+        "whatsapp_label": "WhatsApp",
+        "discord_label": "Discord",
+        "location_label": "Location",
+        "location": "Worldwide",
+        "availability_title": "Available",
+        "availability": "For projects, secondment and freelance assignments."
+      },
+      "form": {
+        "company": "Company name",
+        "company_placeholder": "Your company name",
+        "contactperson": "Contact person",
+        "contactperson_placeholder": "First and last name",
+        "email": "Email",
+        "email_placeholder": "your@email.com",
+        "phone_company": "Company phone",
+        "phone_company_placeholder": "+31 6 12345678",
+        "phone_contact": "Contact person phone",
+        "phone_contact_placeholder": "+31 6 12345678",
+        "city": "City",
+        "city_placeholder": "City name",
+        "industry": "Industry",
+        "industry_placeholder": "Choose your industry",
+        "industry_options": [
+          "IT &amp; Technology",
+          "Healthcare &amp; Welfare",
+          "Education",
+          "Retail &amp; E-commerce",
+          "Construction &amp; Real Estate",
+          "Finance &amp; Insurance",
+          "Hospitality &amp; Recreation",
+          "Transport &amp; Logistics",
+          "Government &amp; Non-profit",
+          "Other"
+        ],
+        "reason": "Reason for calling",
+        "reason_placeholder": "Choose a reason",
+        "reason_options": [
+          "New website",
+          "Website maintenance",
+          "SEO optimization",
+          "AI implementation",
+          "Freelance rental / Secondment",
+          "Automation &amp; Workflows",
+          "Consulting",
+          "Other"
+        ],
+        "message": "Message",
+        "message_placeholder": "How can I help you? Describe your question or project.",
+        "submit": "Send message",
+        "submitting": "Sending...",
+        "loading": "Message is being sent...",
+        "success_message": "Thank you for your message! I'll get back to you as soon as possible.",
+        "error_required": "Please fill in all required fields.",
+        "error_email": "Please enter a valid email address.",
+        "error_generic": "Something went wrong. Please try again later or send an email to paul@boomkamponline.nl."
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 Paul Boomkamp",
+      "tagline": "paul@boomkamponline.nl · boomkamponline.nl"
+    },
+    "hamburger": {
+      "open": "Open menu",
+      "close": "Close menu"
+    },
+    "nav_label": "Main navigation",
+    "og_locale": "en_US"
+  },
+  "de": {
+    "meta": {
+      "title": "BoomkampOnline - Websites. SEO. KI. Freelancer.",
+      "description": "Paul Boomkamp - Freelance Webentwickler und KI-Berater. Websites, SEO, KI-Implementierung und Freelancer-Verleih.",
+      "og_title": "BoomkampOnline - Websites. SEO. KI. Verfügbar als Freelancer.",
+      "og_description": "Paul Boomkamp - Freelance Webentwickler und KI-Berater. Vom Website-Bau bis zur KI-Beratung."
+    },
+    "nav": {
+      "services": "Leistungen",
+      "about": "Über mich",
+      "contact": "Kontakt"
+    },
+    "hero": {
+      "greeting": "Hallo, ich bin",
+      "tagline": "Websites. SEO. KI. Verfügbar als Freelancer.",
+      "cta_button": "Kontakt aufnehmen"
+    },
+    "services": {
+      "label": "Leistungen",
+      "title": "Was ich für Sie tun kann",
+      "subtitle": "Vom Bau einer neuen Website bis zur KI-Beratung — ich arbeite als Freelancer und denke gerne mit Ihnen mit.",
+      "items": [
+        {
+          "title": "Website-Entwicklung",
+          "description": "Von Grund auf oder via WordPress/TYPO3. Modern, schnell und benutzerfreundlich — abgestimmt auf Ihre Wünsche."
+        },
+        {
+          "title": "SEO-Optimierung",
+          "description": "Werden Sie besser in Google gefunden. Von technischer SEO bis zur Inhaltsoptimierung und Geschwindigkeitsverbesserungen."
+        },
+        {
+          "title": "KI-Beratung &amp; Implementierung",
+          "description": "Automatisieren Sie Prozesse mit KI. Von Chatbots bis zu intelligenten Workflows mit n8n, LLMs und maßgeschneiderten Integrationen."
+        },
+        {
+          "title": "Freelancer-Verleih",
+          "description": "Vorübergehend verfügbar als Programmierer, Helpdesk-Mitarbeiter oder zur Unterstützung bei Terminen und Projekten."
+        }
+      ]
+    },
+    "about": {
+      "label": "Über mich",
+      "title": "Wer ist Paul Boomkamp?",
+      "subtitle": "Über 25 Jahre Erfahrung in Webentwicklung und Systemverwaltung",
+      "body_html": "<p>Als freiberuflicher Webentwickler und KI-Berater helfe ich Unternehmen beim Aufbau von Websites, der Verbesserung ihrer Online-Sichtbarkeit und der Implementierung intelligenter KI-Lösungen. Meine Erfahrung reicht von PHP, Laravel und WordPress bis zu n8n, IoT und Serververwaltung.</p><p>Ob Sie eine neue Website benötigen, bestehende Prozesse automatisieren möchten oder einen erfahrenen Programmierer suchen — nehmen Sie gerne Kontakt auf. Ich denke gerne mit Ihnen mit.</p>"
+    },
+    "contact": {
+      "label": "Kontakt",
+      "title": "Kontakt aufnehmen",
+      "subtitle": "Haben Sie eine Frage oder möchten Sie ein Projekt besprechen? Senden Sie mir eine Nachricht und ich melde mich innerhalb von 24 Stunden bei Ihnen.",
+      "info": {
+        "title": "Kontaktangaben",
+        "email_label": "E-Mail",
+        "phone_label": "Telefon",
+        "whatsapp_label": "WhatsApp",
+        "discord_label": "Discord",
+        "location_label": "Standort",
+        "location": "Weltweit",
+        "availability_title": "Verfügbar",
+        "availability": "Für Projekte, Personalleasing und freiberufliche Aufträge."
+      },
+      "form": {
+        "company": "Unternehmensname",
+        "company_placeholder": "Ihr Unternehmen",
+        "contactperson": "Ansprechpartner",
+        "contactperson_placeholder": "Vor- und Nachname",
+        "email": "E-Mail",
+        "email_placeholder": "ihre@email.de",
+        "phone_company": "Telefon Unternehmen",
+        "phone_company_placeholder": "+31 6 12345678",
+        "phone_contact": "Telefon Ansprechpartner",
+        "phone_contact_placeholder": "+31 6 12345678",
+        "city": "Wohnort",
+        "city_placeholder": "Stadt",
+        "industry": "Branche",
+        "industry_placeholder": "Wählen Sie Ihre Branche",
+        "industry_options": [
+          "IT &amp; Technologie",
+          "Gesundheit &amp; Soziales",
+          "Bildung",
+          "Einzelhandel &amp; E-Commerce",
+          "Bau &amp; Immobilien",
+          "Finanzen &amp; Versicherungen",
+          "Gastronomie &amp; Freizeit",
+          "Transport &amp; Logistik",
+          "Öffentliche Hand &amp; Non-Profit",
+          "Sonstiges"
+        ],
+        "reason": "Grund des Anrufs",
+        "reason_placeholder": "Wählen Sie einen Grund",
+        "reason_options": [
+          "Neue Website",
+          "Website-Wartung",
+          "SEO-Optimierung",
+          "KI-Implementierung",
+          "Freelancer-Verleih / Personalleasing",
+          "Automation &amp; Workflows",
+          "Beratung",
+          "Sonstiges"
+        ],
+        "message": "Nachricht",
+        "message_placeholder": "Wie kann ich Ihnen helfen? Beschreiben Sie Ihre Frage oder Ihr Projekt.",
+        "submit": "Nachricht senden",
+        "submitting": "Senden...",
+        "loading": "Nachricht wird gesendet...",
+        "success_message": "Danke für Ihre Nachricht! Ich melde mich so schnell wie möglich bei Ihnen.",
+        "error_required": "Bitte füllen Sie alle Pflichtfelder aus.",
+        "error_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "error_generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später noch einmal oder senden Sie eine E-Mail an paul@boomkamponline.nl."
+      }
+    },
+    "footer": {
+      "copyright": "© 2025 Paul Boomkamp",
+      "tagline": "paul@boomkamponline.nl · boomkamponline.nl"
+    },
+    "hamburger": {
+      "open": "Menü öffnen",
+      "close": "Menü schließen"
+    },
+    "nav_label": "Hauptnavigation",
+    "og_locale": "de_DE"
+  }
+}
