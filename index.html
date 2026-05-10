@@ -291,7 +291,10 @@
       line-height: 1;
     }
     .lang-btn:hover { color: #555; }
-    .lang-btn.active {
+    /* Actieve taal via data-attribute op html (robust) */
+    html[data-current-lang="nl"] .lang-btn[data-lang="nl"],
+    html[data-current-lang="en"] .lang-btn[data-lang="en"],
+    html[data-current-lang="de"] .lang-btn[data-lang="de"] {
       background: #FF6B00;
       color: #fff;
       box-shadow: 0 1px 3px rgba(0,0,0,0.15);
@@ -933,7 +936,7 @@
         <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="nl" aria-label="Nederlands" title="Nederlands" onclick="switchLang('nl')">NL</button>
+        <button class="lang-btn" data-lang="nl" aria-label="Nederlands" title="Nederlands" onclick="switchLang('nl')">NL</button>
         <button class="lang-btn" data-lang="en" aria-label="English" title="English" onclick="switchLang('en')">EN</button>
         <button class="lang-btn" data-lang="de" aria-label="Deutsch" title="Deutsch" onclick="switchLang('de')">DE</button>
       </div>

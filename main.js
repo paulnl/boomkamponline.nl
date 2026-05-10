@@ -36,6 +36,7 @@
     } catch (err) {
       console.error('[BoomkampOnline] Failed to load content.json:', err);
       document.documentElement.lang = 'nl';
+      document.documentElement.setAttribute('data-current-lang', 'nl');
       bindEvents(); // still bind UI events so page is interactive
       observeFadeElements();
     }
@@ -210,12 +211,8 @@
     renderWerkwijze();
     // Opties zijn statisch in HTML met data-i18n — worden vertaald door de handler hierboven
 
-    // Language switcher buttons — verwijder active van alle, voeg toe aan geselecteerde
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.classList.remove('active');
-    });
-    var activeBtn = document.querySelector('.lang-btn[data-lang="' + lang + '"]');
-    if (activeBtn) activeBtn.classList.add('active');
+    // Huidige taal bijwerken op html element (CSS gebruikt data-current-lang voor oranje markering)
+    document.documentElement.setAttribute('data-current-lang', lang);
 
     // Hamburger aria-label
     var hamburger = document.getElementById('hamburger');
@@ -240,12 +237,8 @@
     if (contentData && contentData[lang] && lang !== currentLang) {
       applyLanguage(lang);
     }
-    // Forceer active class — verwijder van alle, voeg toe aan geselecteerde
-    document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.classList.remove('active');
-    });
-    var selected = document.querySelector('.lang-btn[data-lang="' + lang + '"]');
-    if (selected) selected.classList.add('active');
+    // Fallback: zet data-current-lang (CSS gebruikt dit voor oranje markering)
+    document.documentElement.setAttribute('data-current-lang', lang);
   };
 
   // =====================================================================
