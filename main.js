@@ -65,23 +65,29 @@
   // =====================================================================
   // RENDER SERVICES CARDS
   // =====================================================================
+  var ICON_MAP = {
+    monitor: '<polyline points="23 7 13 17 8 12 1 19"/><polyline points="16 7 23 7 23 14"/>',
+    search: '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
+    cpu: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>',
+    user: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'
+  };
   function renderServices() {
-    var grid = document.getElementById('services-grid');
+    var grid = document.getElementById('diensten-grid');
     if (!grid) return;
     grid.innerHTML = '';
     if (!contentData || !contentData[currentLang]) return;
 
-    var items = contentData[currentLang].services.items;
-    if (!items) return;
+    var items = contentData[currentLang].diensten.items;
+    if (!items || !Array.isArray(items)) return;
 
-    items.forEach(function (item, i) {
-      var icon = SERVICE_ICONS[i] || SERVICE_ICONS[0];
+    items.forEach(function (item) {
+      var iconSvg = ICON_MAP[item.icon] || '';
       var article = document.createElement('article');
       article.className = 'dienst-card fade-up';
       article.innerHTML =
-        '<div class="dienst-icon">' + icon + '</div>' +
-        '<h3 class="dienst-title">' + item.title + '</h3>' +
-        '<p class="dienst-desc">' + item.description + '</p>';
+        '<div class="dienst-icon"><svg viewBox="0 0 24 24">' + iconSvg + '</svg></div>' +
+        '<div class="dienst-title">' + item.title + '</div>' +
+        '<div class="dienst-desc">' + item.description + '</div>';
       grid.appendChild(article);
       if (window.fadeObserver) {
         window.fadeObserver.observe(article);

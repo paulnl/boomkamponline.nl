@@ -19,6 +19,12 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://boomkamponline.nl/">
 
+  <!-- Hreflang meertalig -->
+  <link rel="alternate" hreflang="nl" href="https://boomkamponline.nl/">
+  <link rel="alternate" hreflang="en" href="https://boomkamponline.nl/?lang=en">
+  <link rel="alternate" hreflang="de" href="https://boomkamponline.nl/?lang=de">
+  <link rel="alternate" hreflang="x-default" href="https://boomkamponline.nl/">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://boomkamponline.nl/">
@@ -36,12 +42,6 @@
   <meta name="twitter:description" content="Meer dan 25 jaar ervaring in webontwikkeling, SEO en AI.">
   <meta name="twitter:image" content="https://boomkamponline.nl/images/og-image.jpg">
 
-  <!-- Hreflang meertalig -->
-  <link rel="alternate" hreflang="nl" href="https://boomkamponline.nl/">
-  <link rel="alternate" hreflang="en" href="https://boomkamponline.nl/?lang=en">
-  <link rel="alternate" hreflang="de" href="https://boomkamponline.nl/?lang=de">
-  <link rel="alternate" hreflang="x-default" href="https://boomkamponline.nl/">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -56,25 +56,17 @@
         "@type": "Person",
         "@id": "https://boomkamponline.nl/#person",
         "name": "Paul Boomkamp",
-        "jobTitle": "Freelance Webontwikkelaar &amp; AI-consultant",
+        "jobTitle": "Freelance Webontwikkelaar & AI-consultant",
         "url": "https://boomkamponline.nl",
         "email": "paul@boomkamponline.nl",
         "telephone": "+31623493326",
-        "image": "https://boomkamponline.nl/images/paul-boomkamp.jpg",
+        "image": "https://boomkamponline.nl/images/paul.png",
         "sameAs": [
-          "https://www.linkedin.com/in/paulboomkamp",
           "https://github.com/paulnl"
         ],
         "knowsAbout": [
-          "Webontwikkeling",
-          "WordPress",
-          "TYPO3",
-          "Laravel",
-          "PHP",
-          "SEO",
-          "Kunstmatige intelligentie",
-          "n8n automatisering",
-          "Systeembeheer"
+          "Webontwikkeling", "WordPress", "TYPO3", "Laravel", "PHP",
+          "SEO", "Kunstmatige intelligentie", "n8n automatisering", "Systeembeheer"
         ],
         "knowsLanguage": ["nl", "en", "de"]
       },
@@ -83,12 +75,13 @@
         "@id": "https://boomkamponline.nl/#business",
         "name": "BoomkampOnline.NL",
         "url": "https://boomkamponline.nl",
-        "logo": "https://boomkamponline.nl/images/logo-icon-light.png",
+        "logo": "https://boomkamponline.nl/images/logo-full-dark.png",
         "image": "https://boomkamponline.nl/images/og-image.jpg",
         "description": "Freelance webontwikkeling, SEO en AI-consultancy door Paul Boomkamp. Meer dan 25 jaar ervaring.",
         "founder": { "@id": "https://boomkamponline.nl/#person" },
         "email": "paul@boomkamponline.nl",
         "telephone": "+31623493326",
+        "vatID": "90600805",
         "areaServed": ["NL", "DE", "BE"],
         "availableLanguage": ["Dutch", "English", "German"],
         "serviceType": [
@@ -299,6 +292,44 @@
       line-height: 1;
     }
     .lang-btn:hover { color: #555; }
+    /* ===== HERO FUNCTION ===== */
+    .hero-function {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #888;
+      margin: -8px 0 16px;
+    }
+
+    /* ===== REFERENTIES ===== */
+    .referenties { background: #fff; padding: 48px 0; }
+    .tech-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .tech-item {
+      background: #f5f5f5;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #1A1A2E;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .tech-item:hover {
+      background: #fff0e6;
+      border-color: #FF6B00;
+      color: #FF6B00;
+    }
+
+    /* ===== FOOTER SEP ===== */
+    .footer-sep {
+      margin: 0 8px;
+      color: rgba(255,255,255,0.2);
+    }
+
     /* Actieve taal via data-attribute op html (robust) */
     html[data-current-lang="nl"] .lang-btn[data-lang="nl"],
     html[data-current-lang="en"] .lang-btn[data-lang="en"],
@@ -967,6 +998,7 @@
       <h1 class="hero-name fade-up">
         <span class="highlight">Paul Boomkamp</span>
       </h1>
+      <p class="hero-function fade-up" data-i18n="hero.function">Freelance Webontwikkelaar &amp; AI-consultant</p>
       <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
       <a href="#contact" class="hero-cta fade-up">
         <span data-i18n="hero.cta_button">Neem contact op</span>
@@ -994,10 +1026,11 @@
   <!-- ===== DIENSTEN ===== -->
   <section class="section diensten" id="diensten" aria-label="Diensten">
     <div class="container">
-      <span class="section-label fade-up" data-i18n="services.label">Diensten</span>
-      <h2 class="section-title fade-up" data-i18n="services.title">Wat ik voor je kan doen</h2>
-      <p class="section-subtitle fade-up" data-i18n="services.subtitle">Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.</p>
-      <div class="diensten-grid" id="services-grid">
+      <span class="section-label fade-up" data-i18n="diensten.label">Diensten</span>
+      <h2 class="section-title fade-up" data-i18n="diensten.title">Wat ik voor je kan doen</h2>
+      <p class="section-subtitle fade-up" data-i18n="diensten.subtitle">Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.</p>
+      <div class="diensten-grid" id="diensten-grid">
+        <!-- Dynamisch gevuld door main.js -->
       </div>
     </div>
   </section>
@@ -1033,6 +1066,23 @@
     </div>
   </section>
 
+  <!-- ===== REFERENTIES ===== -->
+  <section class="section referenties" id="referenties">
+    <div class="container">
+      <span class="section-label" data-i18n="referenties.label">Ervaring met</span>
+      <div class="tech-grid">
+        <div class="tech-item">WordPress</div>
+        <div class="tech-item">TYPO3</div>
+        <div class="tech-item">Laravel</div>
+        <div class="tech-item">PHP</div>
+        <div class="tech-item">n8n</div>
+        <div class="tech-item">AI / LLM</div>
+        <div class="tech-item">Cloudflare</div>
+        <div class="tech-item">Linux</div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== OVER MIJ ===== -->
   <section class="section over-mij" id="over-mij" aria-label="Over mij">
     <div class="container">
@@ -1044,8 +1094,9 @@
         </div>
         <div class="over-content fade-up">
           <h3 data-i18n="about.subtitle">Ruim 25 jaar ervaring in webdevelopment en systeembeheer</h3>
-          <p data-i18n="about.body_p1">Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites, het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen. Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.</p>
-          <p data-i18n="about.body_p2">Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren, of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee.</p>
+          <p data-i18n="about.body_p1">Ik ben Paul — zelfstandig webontwikkelaar en AI-consultant. Ik werk vanuit de Filipijnen voor klanten in Nederland en daarbuiten. Websites bouwen, servers beheren en processen automatiseren: dat is waar ik elke dag mee bezig ben.</p>
+          <p data-i18n="about.body_p2">Mijn achtergrond ligt in PHP, Laravel, WordPress en TYPO3. De afgelopen jaren ben ik me steeds meer gaan specialiseren in AI-automatisering — van slimme workflows met n8n tot het bouwen van AI-agents voor praktische bedrijfstoepassingen.</p>
+          <p data-i18n="about.body_p3">Ik werk het liefst direct met de opdrachtgever. Geen tussenpersonen, geen vage offertes. Gewoon duidelijk afspreken wat er nodig is en het dan ook goed doen.</p>
         </div>
       </div>
     </div>
@@ -1186,8 +1237,10 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span data-i18n="footer.copyright">&copy; 2025 Paul Boomkamp</span>
+        <span data-i18n="footer.copyright">&copy; 2025 Paul Boomkamp – BoomkampOnline.NL</span>
+        <span class="footer-sep">&middot;</span>
         <span data-i18n="footer.kvk">KvK: 90600805</span>
+        <span class="footer-sep">&middot;</span>
         <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
       </div>
     </div>

@@ -14,10 +14,11 @@
     "hero": {
       "greeting": "Hallo, ik ben",
       "name": "Paul Boomkamp",
-      "tagline": "Ik bouw websites, verbeter je vindbaarheid en help je slimmer werken met AI.",
+      "tagline": "Ik bouw websites die werken, zorg dat je gevonden wordt en help je slimmer werken met AI.",
       "cta": "Laten we kennismaken",
       "badge_number": "25+",
-      "badge_label": "jaar ervaring in webdevelopment"
+      "badge_label": "jaar ervaring in webdevelopment",
+      "function": "Freelance Webontwikkelaar & AI-consultant"
     },
     "diensten": {
       "label": "Wat ik doe",
@@ -50,7 +51,7 @@
       "label": "Over mij",
       "title": "Wie is Paul Boomkamp?",
       "subtitle": "Ruim 25 jaar ervaring in webdevelopment en systeembeheer",
-      "body_html": "<p>Ik ben Paul — zelfstandig webontwikkelaar en AI-consultant vanuit de Filipijnen, met klanten in Nederland en daarbuiten. Ik bouw websites, beheer servers en help bedrijven om slimmer te werken met technologie.</p><p>Mijn achtergrond ligt in PHP, Laravel, WordPress en TYPO3. De afgelopen jaren ben ik me steeds meer gaan richten op AI-automatisering: van het bouwen van slimme workflows met n8n tot het implementeren van AI-agents voor praktische bedrijfstoepassingen.</p><p>Ik werk het liefst voor mensen die weten wat ze willen, maar niet altijd weten hoe ze het moeten aanpakken. Dan kom ik het beste tot mijn recht.</p>",
+      "body_html": "<p>Ik ben Paul — zelfstandig webontwikkelaar en AI-consultant. Ik werk vanuit de Filipijnen voor klanten in Nederland en daarbuiten. Websites bouwen, servers beheren en processen automatiseren: dat is waar ik elke dag mee bezig ben.</p><p>Mijn achtergrond ligt in PHP, Laravel, WordPress en TYPO3. De afgelopen jaren ben ik me steeds meer gaan specialiseren in AI-automatisering — van slimme workflows met n8n tot het bouwen van AI-agents voor praktische bedrijfstoepassingen.</p><p>Ik werk het liefst direct met de opdrachtgever. Geen tussenpersonen, geen vage offertes. Gewoon duidelijk afspreken wat er nodig is en het dan ook goed doen.</p>",
       "experience_years": "25+",
       "experience_label": "jaar ervaring"
     },
@@ -176,9 +177,10 @@
       "label": "Over mij",
       "title": "Wie is Paul Boomkamp?",
       "subtitle": "Ruim 25 jaar ervaring in webdevelopment en systeembeheer",
-      "body_html": "<p>Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites, het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen. Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.</p><p>Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren, of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee.</p>",
-      "body_p1": "Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites, het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen. Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.",
-      "body_p2": "Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren, of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee."
+      "body_html": "<p>Ik ben Paul — zelfstandig webontwikkelaar en AI-consultant. Ik werk vanuit de Filipijnen voor klanten in Nederland en daarbuiten. Websites bouwen, servers beheren en processen automatiseren: dat is waar ik elke dag mee bezig ben.</p><p>Mijn achtergrond ligt in PHP, Laravel, WordPress en TYPO3. De afgelopen jaren ben ik me steeds meer gaan specialiseren in AI-automatisering — van slimme workflows met n8n tot het bouwen van AI-agents voor praktische bedrijfstoepassingen.</p><p>Ik werk het liefst direct met de opdrachtgever. Geen tussenpersonen, geen vage offertes. Gewoon duidelijk afspreken wat er nodig is en het dan ook goed doen.</p>",
+      "body_p1": "Ik ben Paul — zelfstandig webontwikkelaar en AI-consultant. Ik werk vanuit de Filipijnen voor klanten in Nederland en daarbuiten. Websites bouwen, servers beheren en processen automatiseren: dat is waar ik elke dag mee bezig ben.",
+      "body_p2": "Mijn achtergrond ligt in PHP, Laravel, WordPress en TYPO3. De afgelopen jaren ben ik me steeds meer gaan specialiseren in AI-automatisering — van slimme workflows met n8n tot het bouwen van AI-agents voor praktische bedrijfstoepassingen.",
+      "body_p3": "Ik werk het liefst direct met de opdrachtgever. Geen tussenpersonen, geen vage offertes. Gewoon duidelijk afspreken wat er nodig is en het dan ook goed doen."
     },
     "services": {
       "label": "Diensten",
@@ -202,6 +204,9 @@
           "description": "Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij applicatiebeheer."
         }
       ]
+    },
+    "referenties": {
+      "label": "Ervaring met"
     }
   },
   "en": {
@@ -219,10 +224,11 @@
     "hero": {
       "greeting": "Hi, I'm",
       "name": "Paul Boomkamp",
-      "tagline": "I build websites, improve your online visibility and help you work smarter with AI.",
+      "tagline": "I build websites that work, make sure you get found, and help you work smarter with AI.",
       "cta": "Let's talk",
       "badge_number": "25+",
-      "badge_label": "years of web development experience"
+      "badge_label": "years of web development experience",
+      "function": "Freelance Web Developer & AI Consultant"
     },
     "diensten": {
       "label": "What I do",
@@ -255,7 +261,7 @@
       "label": "About me",
       "title": "Who is Paul Boomkamp?",
       "subtitle": "Over 25 years of experience in web development and system administration",
-      "body_html": "<p>I'm Paul — an independent web developer and AI consultant based in the Philippines, working with clients in the Netherlands and beyond. I build websites, manage servers and help businesses work smarter with technology.</p><p>My background is in PHP, Laravel, WordPress and TYPO3. Over the past few years I've increasingly focused on AI automation: from building smart workflows with n8n to implementing AI agents for practical business use.</p><p>I work best with people who know what they want but aren't always sure how to get there. That's where I can make a real difference.</p>",
+      "body_html": "<p>I'm Paul — an independent web developer and AI consultant based in the Philippines, working with clients in the Netherlands and beyond. Building websites, managing servers and automating processes is what I do every day.</p><p>My background is in PHP, Laravel, WordPress and TYPO3. Over the past few years I've increasingly specialised in AI automation — from smart workflows with n8n to building AI agents for practical business applications.</p><p>I prefer working directly with the client. No middlemen, no vague proposals. Just clear agreements about what's needed and then getting it done properly.</p>",
       "experience_years": "25+",
       "experience_label": "years of experience"
     },
@@ -380,10 +386,11 @@
     "about": {
       "label": "About me",
       "title": "Who is Paul Boomkamp?",
-      "subtitle": "Over 25 years of experience in web development and system management",
-      "body_html": "<p>As a freelance web developer and AI consultant, I help businesses build websites, improve their online visibility and implement smart AI solutions. My experience ranges from PHP, Laravel and WordPress to n8n, IoT and server management.</p><p>Whether you need a new website, want to automate existing processes, or are looking for an experienced programmer — feel free to get in touch. I'm happy to help you think things through.</p>",
-      "body_p1": "As a freelance web developer and AI consultant, I help businesses build websites, improve their online visibility and implement smart AI solutions. My experience ranges from PHP, Laravel and WordPress to n8n, IoT and server management.",
-      "body_p2": "Whether you need a new website, want to automate existing processes, or are looking for an experienced programmer — feel free to get in touch. I'm happy to help you think things through."
+      "subtitle": "Over 25 years of experience in web development and system administration",
+      "body_html": "<p>I'm Paul — an independent web developer and AI consultant based in the Philippines, working with clients in the Netherlands and beyond. Building websites, managing servers and automating processes is what I do every day.</p><p>My background is in PHP, Laravel, WordPress and TYPO3. Over the past few years I've increasingly specialised in AI automation — from smart workflows with n8n to building AI agents for practical business applications.</p><p>I prefer working directly with the client. No middlemen, no vague proposals. Just clear agreements about what's needed and then getting it done properly.</p>",
+      "body_p1": "I'm Paul — an independent web developer and AI consultant based in the Philippines, working with clients in the Netherlands and beyond. Building websites, managing servers and automating processes is what I do every day.",
+      "body_p2": "My background is in PHP, Laravel, WordPress and TYPO3. Over the past few years I've increasingly specialised in AI automation — from smart workflows with n8n to building AI agents for practical business applications.",
+      "body_p3": "I prefer working directly with the client. No middlemen, no vague proposals. Just clear agreements about what's needed and then getting it done properly."
     },
     "services": {
       "label": "Services",
@@ -407,6 +414,9 @@
           "description": "Temporarily available as a programmer, helpdesk employee or for support with application management."
         }
       ]
+    },
+    "referenties": {
+      "label": "Experience with"
     }
   },
   "de": {
@@ -424,10 +434,11 @@
     "hero": {
       "greeting": "Hallo, ich bin",
       "name": "Paul Boomkamp",
-      "tagline": "Ich entwickle Websites, verbessere Ihre Auffindbarkeit und helfe Ihnen, mit KI effizienter zu arbeiten.",
+      "tagline": "Ich entwickle funktionierende Websites, sorge für Ihre Auffindbarkeit und helfe Ihnen, intelligenter mit KI zu arbeiten.",
       "cta": "Jetzt Kontakt aufnehmen",
       "badge_number": "25+",
-      "badge_label": "Jahre Erfahrung in der Webentwicklung"
+      "badge_label": "Jahre Erfahrung in der Webentwicklung",
+      "function": "Freelance Webentwickler & KI-Berater"
     },
     "diensten": {
       "label": "Meine Leistungen",
@@ -460,7 +471,7 @@
       "label": "Über mich",
       "title": "Wer ist Paul Boomkamp?",
       "subtitle": "Über 25 Jahre Erfahrung in Webentwicklung und Systemverwaltung",
-      "body_html": "<p>Ich bin Paul — selbstständiger Webentwickler und KI-Berater mit Sitz auf den Philippinen, tätig für Kunden in den Niederlanden und darüber hinaus. Ich entwickle Websites, verwalte Server und helfe Unternehmen, intelligenter mit Technologie zu arbeiten.</p><p>Mein Hintergrund liegt in PHP, Laravel, WordPress und TYPO3. In den letzten Jahren habe ich mich zunehmend auf KI-Automatisierung spezialisiert: vom Aufbau intelligenter Workflows mit n8n bis zur Implementierung von KI-Agenten für praktische Unternehmensanwendungen.</p><p>Am besten arbeite ich für Menschen, die wissen, was sie wollen, aber nicht immer wissen, wie sie es umsetzen sollen. Genau dort kann ich den Unterschied machen.</p>",
+      "body_html": "<p>Ich bin Paul — selbstständiger Webentwickler und KI-Berater mit Sitz auf den Philippinen, tätig für Kunden in den Niederlanden und darüber hinaus. Websites entwickeln, Server verwalten und Prozesse automatisieren — das ist mein Alltag.</p><p>Mein Hintergrund liegt in PHP, Laravel, WordPress und TYPO3. In den letzten Jahren habe ich mich zunehmend auf KI-Automatisierung spezialisiert — von intelligenten Workflows mit n8n bis hin zur Entwicklung von KI-Agenten für praktische Unternehmensanwendungen.</p><p>Ich arbeite am liebsten direkt mit dem Auftraggeber zusammen. Keine Zwischenhändler, keine unklaren Angebote. Klare Absprachen darüber, was gebraucht wird — und dann gute Arbeit leisten.</p>",
       "experience_years": "25+",
       "experience_label": "Jahre Erfahrung"
     },
@@ -586,9 +597,10 @@
       "label": "Über mich",
       "title": "Wer ist Paul Boomkamp?",
       "subtitle": "Über 25 Jahre Erfahrung in Webentwicklung und Systemverwaltung",
-      "body_html": "<p>Als freiberuflicher Webentwickler und KI-Berater helfe ich Unternehmen beim Aufbau von Websites, der Verbesserung ihrer Online-Sichtbarkeit und der Implementierung intelligenter KI-Lösungen. Meine Erfahrung reicht von PHP, Laravel und WordPress bis zu n8n, IoT und Serververwaltung.</p><p>Ob Sie eine neue Website benötigen, bestehende Prozesse automatisieren möchten oder einen erfahrenen Programmierer suchen — nehmen Sie gerne Kontakt auf. Ich denke gerne mit Ihnen mit.</p>",
-      "body_p1": "Als freiberuflicher Webentwickler und KI-Berater helfe ich Unternehmen beim Aufbau von Websites, der Verbesserung ihrer Online-Sichtbarkeit und der Implementierung intelligenter KI-Lösungen. Meine Erfahrung reicht von PHP, Laravel und WordPress bis zu n8n, IoT und Serververwaltung.",
-      "body_p2": "Ob Sie eine neue Website benötigen, bestehende Prozesse automatisieren möchten oder einen erfahrenen Programmierer suchen — nehmen Sie gerne Kontakt auf. Ich denke gerne mit Ihnen mit."
+      "body_html": "<p>Ich bin Paul — selbstständiger Webentwickler und KI-Berater mit Sitz auf den Philippinen, tätig für Kunden in den Niederlanden und darüber hinaus. Websites entwickeln, Server verwalten und Prozesse automatisieren — das ist mein Alltag.</p><p>Mein Hintergrund liegt in PHP, Laravel, WordPress und TYPO3. In den letzten Jahren habe ich mich zunehmend auf KI-Automatisierung spezialisiert — von intelligenten Workflows mit n8n bis hin zur Entwicklung von KI-Agenten für praktische Unternehmensanwendungen.</p><p>Ich arbeite am liebsten direkt mit dem Auftraggeber zusammen. Keine Zwischenhändler, keine unklaren Angebote. Klare Absprachen darüber, was gebraucht wird — und dann gute Arbeit leisten.</p>",
+      "body_p1": "Ich bin Paul — selbstständiger Webentwickler und KI-Berater mit Sitz auf den Philippinen, tätig für Kunden in den Niederlanden und darüber hinaus. Websites entwickeln, Server verwalten und Prozesse automatisieren — das ist mein Alltag.",
+      "body_p2": "Mein Hintergrund liegt in PHP, Laravel, WordPress und TYPO3. In den letzten Jahren habe ich mich zunehmend auf KI-Automatisierung spezialisiert — von intelligenten Workflows mit n8n bis hin zur Entwicklung von KI-Agenten für praktische Unternehmensanwendungen.",
+      "body_p3": "Ich arbeite am liebsten direkt mit dem Auftraggeber zusammen. Keine Zwischenhändler, keine unklaren Angebote. Klare Absprachen darüber, was gebraucht wird — und dann gute Arbeit leisten."
     },
     "services": {
       "label": "Leistungen",
@@ -612,6 +624,9 @@
           "description": "Vorübergehend verfügbar als Programmierer, Helpdesk-Mitarbeiter oder zur Unterstützung bei der Anwendungsverwaltung."
         }
       ]
+    },
+    "referenties": {
+      "label": "Erfahrung mit"
     }
   }
 }
