@@ -79,7 +79,15 @@
           "title": "Oplevering & nazorg",
           "description": "Na oplevering ben ik bereikbaar voor vragen. Ik verdwijn niet zodra het project klaar is."
         }
-      ]
+      ],
+      "step_0_title": "Kennismaken",
+      "step_0_desc": "We bespreken wat je nodig hebt, wat je al hebt en waar je naartoe wil. Dat duurt meestal 30 minuten.",
+      "step_1_title": "Plan van aanpak",
+      "step_1_desc": "Ik maak een concreet voorstel — wat ik doe, hoe lang het duurt en wat het kost. Geen verrassingen achteraf.",
+      "step_2_title": "Uitvoering",
+      "step_2_desc": "Ik ga aan de slag. Je houdt zicht op de voortgang en we schakelen snel als er iets verandert.",
+      "step_3_title": "Oplevering & nazorg",
+      "step_3_desc": "Na oplevering ben ik bereikbaar voor vragen. Ik verdwijn niet zodra het project klaar is."
     },
     "contact": {
       "label": "Contact",
@@ -245,7 +253,15 @@
           "title": "Delivery & aftercare",
           "description": "After delivery I remain available for questions. I don't disappear once the project is done."
         }
-      ]
+      ],
+      "step_0_title": "Introduction",
+      "step_0_desc": "We discuss what you need, what you already have and where you want to go. Usually takes about 30 minutes.",
+      "step_1_title": "Plan of action",
+      "step_1_desc": "I draw up a concrete proposal — what I'll do, how long it takes and what it costs. No surprises later.",
+      "step_2_title": "Execution",
+      "step_2_desc": "I get to work. You keep track of progress and we switch quickly if anything changes.",
+      "step_3_title": "Delivery & aftercare",
+      "step_3_desc": "After delivery I remain available for questions. I don't disappear once the project is done."
     },
     "contact": {
       "label": "Contact",
@@ -411,7 +427,15 @@
           "title": "Übergabe & Nachbetreuung",
           "description": "Nach der Übergabe stehe ich für Fragen zur Verfügung. Ich verschwinde nicht, sobald das Projekt abgeschlossen ist."
         }
-      ]
+      ],
+      "step_0_title": "Kennenlernen",
+      "step_0_desc": "Wir besprechen, was Sie brauchen, was Sie bereits haben und wohin Sie wollen. Das dauert in der Regel etwa 30 Minuten.",
+      "step_1_title": "Maßnahmenplan",
+      "step_1_desc": "Ich erstelle einen konkreten Vorschlag — was ich tue, wie lange es dauert und was es kostet. Keine Überraschungen im Nachhinein.",
+      "step_2_title": "Umsetzung",
+      "step_2_desc": "Ich lege los. Sie behalten den Überblick über den Fortschritt und wir reagieren schnell, wenn sich etwas ändert.",
+      "step_3_title": "Übergabe & Nachbetreuung",
+      "step_3_desc": "Nach der Übergabe stehe ich für Fragen zur Verfügung. Ich verschwinde nicht, sobald das Projekt abgeschlossen ist."
     },
     "contact": {
       "label": "Kontakt",
