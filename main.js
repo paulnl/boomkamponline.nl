@@ -210,10 +210,12 @@
     renderWerkwijze();
     // Opties zijn statisch in HTML met data-i18n — worden vertaald door de handler hierboven
 
-    // Language switcher buttons
+    // Language switcher buttons — verwijder active van alle, voeg toe aan geselecteerde
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      btn.classList.remove('active');
     });
+    var activeBtn = document.querySelector('.lang-btn[data-lang="' + lang + '"]');
+    if (activeBtn) activeBtn.classList.add('active');
 
     // Hamburger aria-label
     var hamburger = document.getElementById('hamburger');
@@ -238,10 +240,12 @@
     if (contentData && contentData[lang] && lang !== currentLang) {
       applyLanguage(lang);
     }
-    // Forceer active class op de juiste knop (fallback)
+    // Forceer active class — verwijder van alle, voeg toe aan geselecteerde
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      btn.classList.remove('active');
     });
+    var selected = document.querySelector('.lang-btn[data-lang="' + lang + '"]');
+    if (selected) selected.classList.add('active');
   };
 
   // =====================================================================
