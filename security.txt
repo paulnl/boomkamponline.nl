@@ -5,7 +5,6 @@
 
 # Contactinformatie voor het melden van beveiligingslekken
 Contact: mailto:paul@boomkamponline.nl
-Contact: https://boomkamponline.nl/contact
 
 # Vervaldatum — na deze datum is de inhoud niet meer geldig
 Expires: 2027-05-10T00:00:00.000Z
