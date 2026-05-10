@@ -148,6 +148,9 @@
     currentLang = lang;
     localStorage.setItem(STORAGE_KEY, lang);
 
+    // Huidige taal op html zetten (vóór render functies, zodat CSS altijd klopt)
+    document.documentElement.setAttribute('data-current-lang', lang);
+
     var t = contentData[lang];
     if (!t) return;
 
@@ -211,9 +214,7 @@
     renderWerkwijze();
     // Opties zijn statisch in HTML met data-i18n — worden vertaald door de handler hierboven
 
-    // Huidige taal bijwerken op html element (CSS gebruikt data-current-lang voor oranje markering)
-    document.documentElement.setAttribute('data-current-lang', lang);
-    console.log('[BoomkampOnline] applyLanguage: data-current-lang set to', lang);
+    // data-current-lang is al aan het begin van deze functie gezet
 
     // Hamburger aria-label
     var hamburger = document.getElementById('hamburger');
@@ -235,13 +236,11 @@
   // GLOBAL switchLang — called from inline onclick if needed
   // =====================================================================
   window.switchLang = function (lang) {
-    console.log('[BoomkampOnline] switchLang called with:', lang, 'currentLang:', currentLang);
     if (contentData && contentData[lang] && lang !== currentLang) {
       applyLanguage(lang);
     }
     // Fallback: zet data-current-lang (CSS gebruikt dit voor oranje markering)
     document.documentElement.setAttribute('data-current-lang', lang);
-    console.log('[BoomkampOnline] data-current-lang set to:', document.documentElement.getAttribute('data-current-lang'));
   };
 
   // =====================================================================

@@ -179,6 +179,29 @@
       "body_html": "<p>Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites, het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen. Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.</p><p>Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren, of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee.</p>",
       "body_p1": "Als freelance webontwikkelaar en AI-consultant help ik bedrijven met het bouwen van websites, het verbeteren van hun online vindbaarheid en het implementeren van slimme AI-oplossingen. Mijn ervaring varieert van PHP, Laravel en WordPress tot n8n, IoT en serverbeheer.",
       "body_p2": "Of je nu een nieuwe website nodig hebt, bestaande processen wilt automatiseren, of tijdelijk een ervaren programmeur zoekt — neem gerust contact op. Ik denk graag met je mee."
+    },
+    "services": {
+      "label": "Diensten",
+      "title": "Wat ik voor je kan doen",
+      "subtitle": "Van het bouwen van een nieuwe website tot AI-advies — ik werk als freelance webontwikkelaar en denk graag met je mee.",
+      "items": [
+        {
+          "title": "Website bouwen",
+          "description": "Van scratch of via WordPress/TYPO3. Modern, snel en gebruiksvriendelijk — afgestemd op jouw doelgroep."
+        },
+        {
+          "title": "SEO optimalisatie",
+          "description": "Word beter vindbaar in Google. Van technische SEO tot content-optimalisatie en snelheidsoptimalisatie."
+        },
+        {
+          "title": "AI advies & implementatie",
+          "description": "Automatiseer processen met AI. Van chatbots tot slimme workflows met n8n, LLM's en maatwerk integraties."
+        },
+        {
+          "title": "ZZP verhuur",
+          "description": "Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij applicatiebeheer."
+        }
+      ]
     }
   },
   "en": {
@@ -361,6 +384,29 @@
       "body_html": "<p>As a freelance web developer and AI consultant, I help businesses build websites, improve their online visibility and implement smart AI solutions. My experience ranges from PHP, Laravel and WordPress to n8n, IoT and server management.</p><p>Whether you need a new website, want to automate existing processes, or are looking for an experienced programmer — feel free to get in touch. I'm happy to help you think things through.</p>",
       "body_p1": "As a freelance web developer and AI consultant, I help businesses build websites, improve their online visibility and implement smart AI solutions. My experience ranges from PHP, Laravel and WordPress to n8n, IoT and server management.",
       "body_p2": "Whether you need a new website, want to automate existing processes, or are looking for an experienced programmer — feel free to get in touch. I'm happy to help you think things through."
+    },
+    "services": {
+      "label": "Services",
+      "title": "What I can do for you",
+      "subtitle": "From building a new website to AI consulting — I work as a freelance web developer and I'm happy to help you think things through.",
+      "items": [
+        {
+          "title": "Website building",
+          "description": "From scratch or via WordPress/TYPO3. Modern, fast and user-friendly — tailored to your target audience."
+        },
+        {
+          "title": "SEO optimization",
+          "description": "Get found better in Google. From technical SEO to content optimization and speed optimization."
+        },
+        {
+          "title": "AI consulting & implementation",
+          "description": "Automate processes with AI. From chatbots to smart workflows with n8n, LLMs and custom integrations."
+        },
+        {
+          "title": "Freelance rental",
+          "description": "Temporarily available as a programmer, helpdesk employee or for support with application management."
+        }
+      ]
     }
   },
   "de": {
@@ -543,6 +589,29 @@
       "body_html": "<p>Als freiberuflicher Webentwickler und KI-Berater helfe ich Unternehmen beim Aufbau von Websites, der Verbesserung ihrer Online-Sichtbarkeit und der Implementierung intelligenter KI-Lösungen. Meine Erfahrung reicht von PHP, Laravel und WordPress bis zu n8n, IoT und Serververwaltung.</p><p>Ob Sie eine neue Website benötigen, bestehende Prozesse automatisieren möchten oder einen erfahrenen Programmierer suchen — nehmen Sie gerne Kontakt auf. Ich denke gerne mit Ihnen mit.</p>",
       "body_p1": "Als freiberuflicher Webentwickler und KI-Berater helfe ich Unternehmen beim Aufbau von Websites, der Verbesserung ihrer Online-Sichtbarkeit und der Implementierung intelligenter KI-Lösungen. Meine Erfahrung reicht von PHP, Laravel und WordPress bis zu n8n, IoT und Serververwaltung.",
       "body_p2": "Ob Sie eine neue Website benötigen, bestehende Prozesse automatisieren möchten oder einen erfahrenen Programmierer suchen — nehmen Sie gerne Kontakt auf. Ich denke gerne mit Ihnen mit."
+    },
+    "services": {
+      "label": "Leistungen",
+      "title": "Was ich für Sie tun kann",
+      "subtitle": "Vom Bau einer neuen Website bis zur KI-Beratung — ich arbeite als freiberuflicher Webentwickler und denke gerne mit Ihnen mit.",
+      "items": [
+        {
+          "title": "Website-Entwicklung",
+          "description": "Von Grund auf oder via WordPress/TYPO3. Modern, schnell und benutzerfreundlich — zugeschnitten auf Ihre Zielgruppe."
+        },
+        {
+          "title": "SEO-Optimierung",
+          "description": "Werden Sie besser in Google gefunden. Von technischer SEO bis zur Inhaltsoptimierung und Geschwindigkeitsoptimierung."
+        },
+        {
+          "title": "KI-Beratung & Implementierung",
+          "description": "Automatisieren Sie Prozesse mit KI. Von Chatbots bis zu intelligenten Workflows mit n8n, LLMs und maßgeschneiderten Integrationen."
+        },
+        {
+          "title": "Freelancer-Verleih",
+          "description": "Vorübergehend verfügbar als Programmierer, Helpdesk-Mitarbeiter oder zur Unterstützung bei der Anwendungsverwaltung."
+        }
+      ]
     }
   }
 }
