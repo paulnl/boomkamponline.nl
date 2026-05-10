@@ -631,18 +631,17 @@
       gap: 8px;
     }
 
-    /* ===== HERO TWO-COLUMN ===== */
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: center;
-      width: 100%;
-    }
-    .hero-visual img {
-      width: 100%;
-      height: auto;
-      max-width: 560px;
+    /* ===== HERO BANNER BACKGROUND ===== */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/banner-top01.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      z-index: 0;
     }
 
     /* ===== HERO STATS ===== */
@@ -804,8 +803,6 @@
         opacity: 1;
         pointer-events: auto;
       }
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
       .hero-name { font-size: 2.25rem; }
       .hero-tagline { font-size: 1.125rem; }
       .section-title { font-size: 1.625rem; }
@@ -866,37 +863,30 @@
       <div class="hero-blob hero-blob--accent"></div>
       <div class="hero-grid"></div>
     </div>
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-content">
-          <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
-          <h1 class="hero-name fade-up">
-            <span class="highlight">Paul Boomkamp</span>
-          </h1>
-          <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
-          <a href="#contact" class="hero-cta fade-up">
-            <span data-i18n="hero.cta_button">Neem contact op</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <div class="hero-stats fade-up">
-            <div class="hero-stat">
-              <span class="hero-stat-number" data-i18n="hero.badge_number">25+</span>
-              <span class="hero-stat-label" data-i18n="hero.badge_label">jaar ervaring</span>
-            </div>
-            <div class="hero-stat-divider"></div>
-            <div class="hero-stat">
-              <span class="hero-stat-number">50+</span>
-              <span class="hero-stat-label">projecten afgerond</span>
-            </div>
-            <div class="hero-stat-divider"></div>
-            <div class="hero-stat">
-              <span class="hero-stat-number">3</span>
-              <span class="hero-stat-label">talen</span>
-            </div>
-          </div>
+    <div class="container hero-content">
+      <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
+      <h1 class="hero-name fade-up">
+        <span class="highlight">Paul Boomkamp</span>
+      </h1>
+      <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
+      <a href="#contact" class="hero-cta fade-up">
+        <span data-i18n="hero.cta_button">Neem contact op</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <div class="hero-stats fade-up">
+        <div class="hero-stat">
+          <span class="hero-stat-number" data-i18n="hero.badge_number">25+</span>
+          <span class="hero-stat-label" data-i18n="hero.badge_label">jaar ervaring</span>
         </div>
-        <div class="hero-visual fade-up">
-          <img src="images/banner-top01.png" alt="Webdevelopment en AI illustratie" width="600" height="500" loading="eager">
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">50+</span>
+          <span class="hero-stat-label">projecten afgerond</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">3</span>
+          <span class="hero-stat-label">talen</span>
         </div>
       </div>
     </div>
