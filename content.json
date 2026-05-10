@@ -14,7 +14,9 @@
     "hero": {
       "greeting": "Hallo, ik ben",
       "tagline": "Websites. SEO. AI. Beschikbaar als ZZP'er.",
-      "cta_button": "Neem contact op"
+      "cta_button": "Neem contact op",
+      "badge_number": "25+",
+      "badge_label": "jaar ervaring"
     },
     "services": {
       "label": "Diensten",
@@ -36,6 +38,33 @@
         {
           "title": "ZZP verhuur",
           "description": "Tijdelijk beschikbaar als programmeur, helpdesk-medewerker of voor ondersteuning bij afspraken en projecten."
+        }
+      ]
+    },
+    "werkwijze": {
+      "label": "Werkwijze",
+      "title": "Zo werk ik",
+      "subtitle": "Geen grote verhalen, gewoon doen.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Kennismaking",
+          "description": "We bespreken jouw wensen, doelen en budget vrijblijvend."
+        },
+        {
+          "number": "02",
+          "title": "Plan van aanpak",
+          "description": "Ik maak een duidelijk plan met heldere afspraken en transparante kosten."
+        },
+        {
+          "number": "03",
+          "title": "Realisatie",
+          "description": "Ik bouw, implementeer of automatiseer — met oog voor kwaliteit en detail."
+        },
+        {
+          "number": "04",
+          "title": "Oplevering & support",
+          "description": "Na oplevering sta ik klaar voor vragen, updates en verdere ondersteuning."
         }
       ]
     },
@@ -111,8 +140,9 @@
       }
     },
     "footer": {
+      "tagline": "Freelance webontwikkelaar & AI-consultant",
       "copyright": "© 2025 Paul Boomkamp",
-      "tagline": "paul@boomkamponline.nl · boomkamponline.nl"
+      "kvk": "KvK: 90600805"
     },
     "hamburger": {
       "open": "Menu openen",
@@ -136,7 +166,9 @@
     "hero": {
       "greeting": "Hello, I'm",
       "tagline": "Websites. SEO. AI. Available as a freelancer.",
-      "cta_button": "Get in touch"
+      "cta_button": "Get in touch",
+      "badge_number": "25+",
+      "badge_label": "years of experience"
     },
     "services": {
       "label": "Services",
@@ -158,6 +190,33 @@
         {
           "title": "Freelance rental",
           "description": "Temporarily available as a programmer, helpdesk employee or for support with appointments and projects."
+        }
+      ]
+    },
+    "werkwijze": {
+      "label": "How I work",
+      "title": "My approach",
+      "subtitle": "No big stories, just getting things done.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Introduction",
+          "description": "We discuss your wishes, goals and budget without obligation."
+        },
+        {
+          "number": "02",
+          "title": "Plan of action",
+          "description": "I create a clear plan with transparent costs and agreements."
+        },
+        {
+          "number": "03",
+          "title": "Realization",
+          "description": "I build, implement or automate — with an eye for quality and detail."
+        },
+        {
+          "number": "04",
+          "title": "Delivery & support",
+          "description": "After delivery I'm available for questions, updates and further support."
         }
       ]
     },
@@ -233,8 +292,9 @@
       }
     },
     "footer": {
+      "tagline": "Freelance web developer & AI consultant",
       "copyright": "© 2025 Paul Boomkamp",
-      "tagline": "paul@boomkamponline.nl · boomkamponline.nl"
+      "kvk": "KvK: 90600805"
     },
     "hamburger": {
       "open": "Open menu",
@@ -258,7 +318,9 @@
     "hero": {
       "greeting": "Hallo, ich bin",
       "tagline": "Websites. SEO. KI. Verfügbar als Freelancer.",
-      "cta_button": "Kontakt aufnehmen"
+      "cta_button": "Kontakt aufnehmen",
+      "badge_number": "25+",
+      "badge_label": "Jahre Erfahrung"
     },
     "services": {
       "label": "Leistungen",
@@ -280,6 +342,33 @@
         {
           "title": "Freelancer-Verleih",
           "description": "Vorübergehend verfügbar als Programmierer, Helpdesk-Mitarbeiter oder zur Unterstützung bei Terminen und Projekten."
+        }
+      ]
+    },
+    "werkwijze": {
+      "label": "Arbeitsweise",
+      "title": "So arbeite ich",
+      "subtitle": "Keine großen Worte, einfach machen.",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Kennenlernen",
+          "description": "Wir besprechen Ihre Wünsche, Ziele und Ihr Budget unverbindlich."
+        },
+        {
+          "number": "02",
+          "title": "Vorgehensplan",
+          "description": "Ich erstelle einen klaren Plan mit transparenten Kosten und Vereinbarungen."
+        },
+        {
+          "number": "03",
+          "title": "Umsetzung",
+          "description": "Ich entwickle, implementiere oder automatisiere — mit Blick für Qualität und Detail."
+        },
+        {
+          "number": "04",
+          "title": "Übergabe & Support",
+          "description": "Nach der Übergabe stehe ich für Fragen, Updates und weitere Unterstützung bereit."
         }
       ]
     },
@@ -355,8 +444,9 @@
       }
     },
     "footer": {
+      "tagline": "Freelance Webentwickler & KI-Berater",
       "copyright": "© 2025 Paul Boomkamp",
-      "tagline": "paul@boomkamponline.nl · boomkamponline.nl"
+      "kvk": "KvK: 90600805"
     },
     "hamburger": {
       "open": "Menü öffnen",

@@ -29,6 +29,7 @@
 
       currentLang = detectLanguage();
       renderServices();
+      renderWerkwijze();
       renderSelectOptions('branche', 'industry_options');
       renderSelectOptions('reden', 'reason_options');
       applyLanguage(currentLang);
@@ -85,6 +86,32 @@
       grid.appendChild(article);
       if (window.fadeObserver) {
         window.fadeObserver.observe(article);
+      }
+    });
+  }
+
+  // =====================================================================
+  // RENDER WERKWIJZE STEPS
+  // =====================================================================
+  function renderWerkwijze() {
+    var container = document.getElementById('werkwijze-steps');
+    if (!container) return;
+    container.innerHTML = '';
+    if (!contentData || !contentData[currentLang]) return;
+
+    var steps = contentData[currentLang].werkwijze.steps;
+    if (!steps || !Array.isArray(steps)) return;
+
+    steps.forEach(function (step) {
+      var div = document.createElement('div');
+      div.className = 'werkwijze-step fade-up';
+      div.innerHTML =
+        '<div class="werkwijze-number">' + step.number + '</div>' +
+        '<div class="werkwijze-title">' + step.title + '</div>' +
+        '<div class="werkwijze-desc">' + step.description + '</div>';
+      container.appendChild(div);
+      if (window.fadeObserver) {
+        window.fadeObserver.observe(div);
       }
     });
   }
@@ -162,6 +189,7 @@
 
     // Re-render dynamic content
     renderServices();
+    renderWerkwijze();
     renderSelectOptions('branche', 'industry_options');
     renderSelectOptions('reden', 'reason_options');
 
@@ -262,8 +290,8 @@
 
         var t = contentData ? contentData[currentLang] : null;
 
-        // Required fields
-        if (!contactpersoon || !email || !telefoonContact || !woonplaats || !branche || !reden || !bericht) {
+        // Required fields (only contactpersoon, email, bericht)
+        if (!contactpersoon || !email || !bericht) {
           statusEl.className = 'form-status error';
           statusEl.textContent = t ? getNested(t, 'contact.form.error_required') : 'Vul alle verplichte velden in.';
           return;

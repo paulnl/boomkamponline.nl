@@ -281,17 +281,6 @@
       color: #FF6B00;
       margin-bottom: 12px;
     }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('images/banner-top01.png');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      pointer-events: none;
-      z-index: 0;
-    }
     .hero-name .highlight {
       background: linear-gradient(135deg, #FF6B00, #ff8533);
       -webkit-background-clip: text;
@@ -642,6 +631,131 @@
       gap: 8px;
     }
 
+    /* ===== HERO TWO-COLUMN ===== */
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-visual img {
+      width: 100%;
+      height: auto;
+      max-width: 560px;
+    }
+
+    /* ===== HERO STATS ===== */
+    .hero-stats {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+    }
+    .hero-stat { display: flex; flex-direction: column; gap: 2px; }
+    .hero-stat-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #FF6B00;
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.8125rem;
+      color: #888;
+      font-weight: 500;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      height: 36px;
+      background: #e0e0e0;
+    }
+
+    /* ===== WERKWIJZE ===== */
+    .werkwijze { background: #f9fafb; }
+    .werkwijze-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .werkwijze-step {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      border: 1px solid #eee;
+      position: relative;
+    }
+    .werkwijze-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #FF6B00;
+      opacity: 0.2;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .werkwijze-title {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1A1A2E;
+    }
+    .werkwijze-desc {
+      font-size: 0.9375rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER EXTENDED ===== */
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-tagline { color: #888; font-size: 0.875rem; margin-top: 8px; }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: #888; font-size: 0.9375rem; }
+    .footer-links a:hover { color: #FF6B00; text-decoration: none; }
+    .footer-bottom {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+      color: #666;
+    }
+    .footer-bottom a { color: #666; }
+    .footer-bottom a:hover { color: #FF6B00; }
+
+    /* ===== WHATSAPP FAB ===== */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+      text-decoration: none;
+    }
+
     /* ===== SCROLL ANIMATIONS ===== */
     .fade-up {
       opacity: 0;
@@ -690,6 +804,8 @@
         opacity: 1;
         pointer-events: auto;
       }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
       .hero-name { font-size: 2.25rem; }
       .hero-tagline { font-size: 1.125rem; }
       .section-title { font-size: 1.625rem; }
@@ -704,12 +820,14 @@
       .form-grid { grid-template-columns: 1fr; }
       .form-card { padding: 24px 20px; }
       .contact-info-card { padding: 28px 24px; }
+      .werkwijze-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 480px) {
       .hero-name { font-size: 1.875rem; }
       .hero { padding: 100px 0 60px; }
       .diensten-grid { grid-template-columns: 1fr; }
+      .werkwijze-grid { grid-template-columns: 1fr; }
       .form-card { padding: 20px 16px; }
       .contact-info-card { padding: 24px 20px; }
     }
@@ -722,7 +840,7 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a href="#" class="logo" aria-label="BoomkampOnline home">
-        <img src="images/logo-full-dark.png" alt="BoomkampOnline" height="32" style="height:32px; width:auto;">
+        <img src="images/logo-full-dark.png" alt="BoomkampOnline" height="32" style="height:32px; width:auto;" loading="lazy">
       </a>
       <nav class="nav" id="main-nav" role="navigation" aria-label="Hoofdnavigatie">
         <a href="#diensten" data-i18n="nav.services">Diensten</a>
@@ -748,16 +866,39 @@
       <div class="hero-blob hero-blob--accent"></div>
       <div class="hero-grid"></div>
     </div>
-    <div class="container hero-content">
-      <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
-      <h1 class="hero-name fade-up">
-        <span class="highlight">Paul Boomkamp</span>
-      </h1>
-      <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
-      <a href="#contact" class="hero-cta fade-up">
-        <span data-i18n="hero.cta_button">Neem contact op</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
+          <h1 class="hero-name fade-up">
+            <span class="highlight">Paul Boomkamp</span>
+          </h1>
+          <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
+          <a href="#contact" class="hero-cta fade-up">
+            <span data-i18n="hero.cta_button">Neem contact op</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <div class="hero-stats fade-up">
+            <div class="hero-stat">
+              <span class="hero-stat-number" data-i18n="hero.badge_number">25+</span>
+              <span class="hero-stat-label" data-i18n="hero.badge_label">jaar ervaring</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">50+</span>
+              <span class="hero-stat-label">projecten afgerond</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-number">3</span>
+              <span class="hero-stat-label">talen</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual fade-up">
+          <img src="images/banner-top01.png" alt="Webdevelopment en AI illustratie" width="600" height="500" loading="eager">
+        </div>
+      </div>
     </div>
   </section>
 
@@ -772,6 +913,18 @@
     </div>
   </section>
 
+  <!-- ===== WERKWIJZE ===== -->
+  <section class="section werkwijze" id="werkwijze">
+    <div class="container">
+      <span class="section-label fade-up" data-i18n="werkwijze.label">Werkwijze</span>
+      <h2 class="section-title fade-up" data-i18n="werkwijze.title">Zo werk ik</h2>
+      <p class="section-subtitle fade-up" data-i18n="werkwijze.subtitle">Geen grote verhalen, gewoon doen.</p>
+      <div class="werkwijze-grid" id="werkwijze-steps">
+        <!-- Dynamisch gevuld door main.js vanuit content.json werkwijze.steps -->
+      </div>
+    </div>
+  </section>
+
   <!-- ===== OVER MIJ ===== -->
   <section class="section over-mij" id="over-mij" aria-label="Over mij">
     <div class="container">
@@ -779,7 +932,7 @@
       <h2 class="section-title fade-up" data-i18n="about.title">Wie is Paul Boomkamp?</h2>
       <div class="over-grid">
         <div class="over-foto fade-up">
-          <img src="images/paul.png" alt="Paul Boomkamp" style="width:100%;height:100%;object-fit:cover;">
+          <img src="images/paul.png" alt="Paul Boomkamp" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
         </div>
         <div class="over-content fade-up">
           <h3 data-i18n="about.subtitle">Ruim 25 jaar ervaring in webdevelopment en systeembeheer</h3>
@@ -858,16 +1011,16 @@
                 <input type="tel" id="telefoon_bedrijf" name="telefoon_bedrijf" autocomplete="tel" data-i18n-placeholder="contact.form.phone_company_placeholder" placeholder="+31 6 12345678">
               </div>
               <div class="form-group">
-                <label for="telefoon_contact"><span data-i18n="contact.form.phone_contact">Telefoon contactpersoon</span><span class="required-star" aria-hidden="true">*</span></label>
-                <input type="tel" id="telefoon_contact" name="telefoon_contact" required autocomplete="tel" data-i18n-placeholder="contact.form.phone_contact_placeholder" placeholder="+31 6 12345678" aria-required="true">
+                <label for="telefoon_contact"><span data-i18n="contact.form.phone_contact">Telefoon contactpersoon</span></label>
+                <input type="tel" id="telefoon_contact" name="telefoon_contact" autocomplete="tel" data-i18n-placeholder="contact.form.phone_contact_placeholder" placeholder="+31 6 12345678">
               </div>
               <div class="form-group">
-                <label for="woonplaats"><span data-i18n="contact.form.city">Woonplaats</span><span class="required-star" aria-hidden="true">*</span></label>
-                <input type="text" id="woonplaats" name="woonplaats" required autocomplete="address-level2" data-i18n-placeholder="contact.form.city_placeholder" placeholder="Plaatsnaam" aria-required="true">
+                <label for="woonplaats"><span data-i18n="contact.form.city">Woonplaats</span></label>
+                <input type="text" id="woonplaats" name="woonplaats" autocomplete="address-level2" data-i18n-placeholder="contact.form.city_placeholder" placeholder="Plaatsnaam">
               </div>
               <div class="form-group">
-                <label for="branche"><span data-i18n="contact.form.industry">Branche</span><span class="required-star" aria-hidden="true">*</span></label>
-                <select id="branche" name="branche" required aria-required="true">
+                <label for="branche"><span data-i18n="contact.form.industry">Branche</span></label>
+                <select id="branche" name="branche">
                   <option value="" disabled selected data-i18n="contact.form.industry_placeholder">Kies uw branche</option>
                   <option value="IT & Technologie" data-i18n="contact.form.industry_opt1">IT &amp; Technologie</option>
                   <option value="Zorg & Welzijn" data-i18n="contact.form.industry_opt2">Zorg &amp; Welzijn</option>
@@ -882,8 +1035,8 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="reden"><span data-i18n="contact.form.reason">Waarvoor belt u?</span><span class="required-star" aria-hidden="true">*</span></label>
-                <select id="reden" name="reden" required aria-required="true">
+                <label for="reden"><span data-i18n="contact.form.reason">Waarvoor belt u?</span></label>
+                <select id="reden" name="reden">
                   <option value="" disabled selected data-i18n="contact.form.reason_placeholder">Kies een reden</option>
                   <option value="Nieuwe website" data-i18n="contact.form.reason_opt1">Nieuwe website</option>
                   <option value="Website onderhoud" data-i18n="contact.form.reason_opt2">Website onderhoud</option>
@@ -916,11 +1069,30 @@
   <!-- ===== FOOTER ===== -->
   <footer class="footer" role="contentinfo">
     <div class="container footer-inner">
-      <span>&copy; 2025 Paul Boomkamp</span>
-      <span><a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a> · boomkamponline.nl</span>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-tagline" data-i18n="footer.tagline">Freelance webontwikkelaar & AI-consultant</p>
+        </div>
+        <div class="footer-links">
+          <a href="#diensten" data-i18n="nav.services">Diensten</a>
+          <a href="#over-mij" data-i18n="nav.about">Over mij</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">&copy; 2025 Paul Boomkamp</span>
+        <span data-i18n="footer.kvk">KvK: 90600805</span>
+        <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
+      </div>
     </div>
   </footer>
 
   <!-- Translations loaded from content.json via main.js -->
+
+  <a href="https://wa.me/31623493326" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+    </svg>
+  </a>
 </body>
 </html>
