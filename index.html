@@ -958,6 +958,236 @@
       .form-card { padding: 20px 16px; }
       .contact-info-card { padding: 24px 20px; }
     }
+
+    /* ===== REFERENTIES SLIDER ===== */
+    .referenties-section {
+      background: #f9fafb;
+      overflow: hidden;
+    }
+
+    .ref-slider-wrapper {
+      position: relative;
+      margin-top: 48px;
+      overflow: hidden;
+    }
+
+    .ref-slider {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    /* ===== REFERENTIE KAART ===== */
+    .ref-card {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 0 4px;
+    }
+
+    .ref-card-inner {
+      background: #ffffff;
+      border: 1px solid #eeeeee;
+      border-radius: 20px;
+      padding: 40px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 48px;
+      align-items: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.05);
+    }
+
+    /* Linker kolom */
+    .ref-card-left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .ref-logo-wrap {
+      height: 56px;
+      display: flex;
+      align-items: center;
+    }
+
+    .ref-logo-wrap img {
+      max-height: 48px;
+      max-width: 180px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .ref-logo-text {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1A1A2E;
+    }
+
+    .ref-sector {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #FF6B00;
+      background: #fff0e6;
+      padding: 4px 12px;
+      border-radius: 20px;
+      width: fit-content;
+    }
+
+    .ref-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .ref-tag {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #555;
+      background: #f0f0f0;
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+
+    .ref-resultaat {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 14px 16px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      font-size: 0.875rem;
+      color: #166534;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .ref-resultaat::before {
+      content: '\2713';
+      font-weight: 800;
+      color: #16a34a;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Rechter kolom */
+    .ref-card-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .ref-quote-mark {
+      font-size: 4rem;
+      line-height: 0.8;
+      color: #FF6B00;
+      opacity: 0.3;
+      font-family: Georgia, serif;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .ref-quote {
+      font-size: 1.0625rem;
+      color: #333;
+      line-height: 1.75;
+      font-style: italic;
+      margin: 0 0 20px 0;
+    }
+
+    .ref-author {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: #1A1A2E;
+    }
+
+    .ref-url {
+      font-size: 0.8125rem;
+      color: #FF6B00;
+      text-decoration: none;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .ref-url:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== NAVIGATIE PIJLEN ===== */
+    .ref-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #1A1A2E;
+      transition: all 0.2s;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .ref-nav:hover {
+      background: #FF6B00;
+      border-color: #FF6B00;
+      color: #ffffff;
+      box-shadow: 0 4px 16px rgba(255,107,0,0.25);
+    }
+
+    .ref-nav--prev { left: -16px; }
+    .ref-nav--next { right: -16px; }
+
+    /* Verberg pijlen als er maar 1 item is */
+    .ref-nav.hidden { display: none; }
+
+    /* ===== DOTS ===== */
+    .ref-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .ref-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ddd;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.25s;
+    }
+
+    .ref-dot.active {
+      background: #FF6B00;
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .ref-card-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 28px 24px;
+      }
+
+      .ref-nav--prev { left: 0; }
+      .ref-nav--next { right: 0; }
+
+      .ref-quote { font-size: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .ref-card-inner { padding: 24px 20px; }
+    }
   </style>
   <script src="main.js" defer></script>
 </head>
@@ -1066,20 +1296,36 @@
     </div>
   </section>
 
-  <!-- ===== REFERENTIES ===== -->
-  <section class="section referenties" id="referenties">
+  <!-- ===== REFERENTIES SLIDER ===== -->
+  <section class="section referenties-section" id="referenties">
     <div class="container">
-      <span class="section-label" data-i18n="referenties.label">Ervaring met</span>
-      <div class="tech-grid">
-        <div class="tech-item">WordPress</div>
-        <div class="tech-item">TYPO3</div>
-        <div class="tech-item">Laravel</div>
-        <div class="tech-item">PHP</div>
-        <div class="tech-item">n8n</div>
-        <div class="tech-item">AI / LLM</div>
-        <div class="tech-item">Cloudflare</div>
-        <div class="tech-item">Linux</div>
+      <span class="section-label" data-i18n="referenties.label">Referenties</span>
+      <h2 class="section-title" data-i18n="referenties.title">Wat klanten zeggen</h2>
+      <p class="section-subtitle" data-i18n="referenties.subtitle"></p>
+
+      <!-- Slider wrapper -->
+      <div class="ref-slider-wrapper">
+        <div class="ref-slider" id="ref-slider">
+          <!-- Dynamisch gevuld door main.js -->
+        </div>
+
+        <!-- Navigatie pijlen -->
+        <button class="ref-nav ref-nav--prev" id="ref-prev" aria-label="Vorige referentie">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        <button class="ref-nav ref-nav--next" id="ref-next" aria-label="Volgende referentie">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
       </div>
+
+      <!-- Dots navigatie -->
+      <div class="ref-dots" id="ref-dots"></div>
     </div>
   </section>
 

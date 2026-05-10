@@ -206,7 +206,22 @@
       ]
     },
     "referenties": {
-      "label": "Ervaring met"
+      "label": "Referenties",
+      "title": "Wat klanten zeggen",
+      "subtitle": "Een greep uit de projecten waar ik aan heb meegewerkt.",
+      "items": [
+        {
+          "id": "kieskunstgras",
+          "bedrijf": "Kieskunstgras.nl",
+          "url": "https://kieskunstgras.nl",
+          "logo": "images/kieskunstgras_v1.png",
+          "sector": "Tuin & buitenruimte",
+          "diensten": ["Website bouwen", "SEO", "Contactformulier"],
+          "quote": "Paul heeft onze website volledig opnieuw gebouwd. Het resultaat is snel, overzichtelijk en levert aantoonbaar meer leads op via het contactformulier.",
+          "naam": "Kieskunstgras.nl",
+          "resultaat": "Meer leadgeneratie via geautomatiseerd contactformulier"
+        }
+      ]
     }
   },
   "en": {
@@ -416,7 +431,22 @@
       ]
     },
     "referenties": {
-      "label": "Experience with"
+      "label": "References",
+      "title": "What clients say",
+      "subtitle": "A selection of projects I have worked on.",
+      "items": [
+        {
+          "id": "kieskunstgras",
+          "bedrijf": "Kieskunstgras.nl",
+          "url": "https://kieskunstgras.nl",
+          "logo": "images/kieskunstgras_v1.png",
+          "sector": "Garden & outdoor",
+          "diensten": ["Website development", "SEO", "Contact form"],
+          "quote": "Paul completely rebuilt our website. The result is fast, clear and demonstrably generates more leads through the contact form.",
+          "naam": "Kieskunstgras.nl",
+          "resultaat": "More lead generation via automated contact form"
+        }
+      ]
     }
   },
   "de": {
@@ -626,7 +656,22 @@
       ]
     },
     "referenties": {
-      "label": "Erfahrung mit"
+      "label": "Referenzen",
+      "title": "Was Kunden sagen",
+      "subtitle": "Eine Auswahl der Projekte, an denen ich mitgewirkt habe.",
+      "items": [
+        {
+          "id": "kieskunstgras",
+          "bedrijf": "Kieskunstgras.nl",
+          "url": "https://kieskunstgras.nl",
+          "logo": "images/kieskunstgras_v1.png",
+          "sector": "Garten & Außenbereich",
+          "diensten": ["Webentwicklung", "SEO", "Kontaktformular"],
+          "quote": "Paul hat unsere Website komplett neu aufgebaut. Das Ergebnis ist schnell, übersichtlich und generiert nachweislich mehr Leads über das Kontaktformular.",
+          "naam": "Kieskunstgras.nl",
+          "resultaat": "Mehr Lead-Generierung über automatisiertes Kontaktformular"
+        }
+      ]
     }
   }
 }

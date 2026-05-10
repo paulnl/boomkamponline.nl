@@ -220,6 +220,13 @@
     renderWerkwijze();
     // Opties zijn statisch in HTML met data-i18n — worden vertaald door de handler hierboven
 
+    // Referenties slider opbouwen
+    var refItems = t.referenties ? t.referenties.items : null;
+    if (refItems) {
+      currentSlide = 0; // Reset bij taalwissel
+      buildSlider(refItems);
+    }
+
     // data-current-lang is al aan het begin van deze functie gezet
 
     // Hamburger aria-label
@@ -409,6 +416,110 @@
       elements.forEach(function (el) { el.classList.add('visible'); });
     }
   }
+
+  // =====================================================================
+  // REFERENTIES SLIDER
+  // =====================================================================
+  var currentSlideRef = 0;
+  var totalSlidesRef = 0;
+
+  function buildSlider(items) {
+    var slider = document.getElementById('ref-slider');
+    var dotsContainer = document.getElementById('ref-dots');
+    var prevBtn = document.getElementById('ref-prev');
+    var nextBtn = document.getElementById('ref-next');
+
+    if (!slider || !items || items.length === 0) return;
+
+    totalSlidesRef = items.length;
+
+    // Kaartjes bouwen
+    slider.innerHTML = items.map(function (item) {
+      var logoHtml = item.logo
+        ? '<img src="' + item.logo + '" alt="' + item.bedrijf + ' logo" loading="lazy" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\'"><span class="ref-logo-text" style="display:none">' + item.bedrijf + '</span>'
+        : '<span class="ref-logo-text">' + item.bedrijf + '</span>';
+
+      var resultaatHtml = item.resultaat
+        ? '<div class="ref-resultaat">' + item.resultaat + '</div>'
+        : '';
+
+      var urlHtml = item.url
+        ? '<a href="' + item.url + '" class="ref-url" target="_blank" rel="noopener noreferrer">' + item.url.replace('https://', '') + '</a>'
+        : '';
+
+      return '<div class="ref-card">' +
+        '<div class="ref-card-inner">' +
+          '<div class="ref-card-left">' +
+            '<div class="ref-logo-wrap">' + logoHtml + '</div>' +
+            '<span class="ref-sector">' + item.sector + '</span>' +
+            '<div class="ref-tags">' +
+              item.diensten.map(function (d) { return '<span class="ref-tag">' + d + '</span>'; }).join('') +
+            '</div>' +
+            resultaatHtml +
+          '</div>' +
+          '<div class="ref-card-right">' +
+            '<span class="ref-quote-mark">&ldquo;</span>' +
+            '<p class="ref-quote">' + item.quote + '</p>' +
+            '<span class="ref-author">' + item.naam + '</span>' +
+            urlHtml +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    // Dots bouwen
+    if (dotsContainer) {
+      dotsContainer.innerHTML = items.map(function (_, i) {
+        return '<button class="ref-dot' + (i === 0 ? ' active' : '') + '" ' +
+               'aria-label="Ga naar referentie ' + (i + 1) + '" ' +
+               'onclick="goToSlide(' + i + ')"></button>';
+      }).join('');
+    }
+
+    // Pijlen verbergen als maar 1 item
+    if (totalSlidesRef <= 1) {
+      if (prevBtn) prevBtn.classList.add('hidden');
+      if (nextBtn) nextBtn.classList.add('hidden');
+      if (dotsContainer) dotsContainer.style.display = 'none';
+    }
+
+    // Event listeners pijlen
+    if (prevBtn) prevBtn.addEventListener('click', function () { goToSlide(currentSlideRef - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { goToSlide(currentSlideRef + 1); });
+
+    // Touch/swipe support
+    (function () {
+      var touchStartX = 0;
+      slider.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      slider.addEventListener('touchend', function (e) {
+        var diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          goToSlide(diff > 0 ? currentSlideRef + 1 : currentSlideRef - 1);
+        }
+      }, { passive: true });
+    })();
+  }
+
+  function goToSlide(index) {
+    var slider = document.getElementById('ref-slider');
+    var dots = document.querySelectorAll('.ref-dot');
+
+    if (!slider || totalSlidesRef === 0) return;
+
+    // Loop rond
+    currentSlideRef = ((index % totalSlidesRef) + totalSlidesRef) % totalSlidesRef;
+
+    slider.style.transform = 'translateX(-' + currentSlideRef * 100 + '%)';
+
+    dots.forEach(function (dot, i) {
+      dot.classList.toggle('active', i === currentSlideRef);
+    });
+  }
+
+  // Maak goToSlide globaal beschikbaar (voor onclick in dots)
+  window.goToSlide = goToSlide;
 
   // =====================================================================
   // START
