@@ -238,6 +238,10 @@
     if (contentData && contentData[lang] && lang !== currentLang) {
       applyLanguage(lang);
     }
+    // Forceer active class op de juiste knop (fallback)
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
   };
 
   // =====================================================================
