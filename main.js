@@ -213,6 +213,7 @@
 
     // Huidige taal bijwerken op html element (CSS gebruikt data-current-lang voor oranje markering)
     document.documentElement.setAttribute('data-current-lang', lang);
+    console.log('[BoomkampOnline] applyLanguage: data-current-lang set to', lang);
 
     // Hamburger aria-label
     var hamburger = document.getElementById('hamburger');
@@ -234,11 +235,13 @@
   // GLOBAL switchLang — called from inline onclick if needed
   // =====================================================================
   window.switchLang = function (lang) {
+    console.log('[BoomkampOnline] switchLang called with:', lang, 'currentLang:', currentLang);
     if (contentData && contentData[lang] && lang !== currentLang) {
       applyLanguage(lang);
     }
     // Fallback: zet data-current-lang (CSS gebruikt dit voor oranje markering)
     document.documentElement.setAttribute('data-current-lang', lang);
+    console.log('[BoomkampOnline] data-current-lang set to:', document.documentElement.getAttribute('data-current-lang'));
   };
 
   // =====================================================================
