@@ -232,6 +232,17 @@
         "naam": "Schuco-Varianto.nl",
         "resultaat": "Volledige TYPO3 website met catalogus van mechanische en elektrische modellen"
       }
+      ,{
+        "id": "sandrabedrukt",
+        "bedrijf": "SandraBedrukt.nl",
+        "url": "https://sandrabedrukt.nl",
+        "logo": "images/sandrabedruktLogo.png",
+        "sector": "Cadeaus & gepersonaliseerde producten",
+        "diensten": ["Website bouwen", "SEO", "Snelle laadtijd"],
+        "quote": "Ik wilde een website die er verzorgd uitziet maar niet ingewikkeld is — snel, duidelijk en makkelijk te vinden via Google. Paul heeft precies dat geleverd. De site laadt razendsnel, is overzichtelijk ingedeeld en trekt bezoekers aan via zoekopdrachten als 'mok met naam' en 'kraamcadeau met opdruk'. Precies wat ik nodig had.",
+        "naam": "Sandra – SandraBedrukt.nl",
+        "resultaat": "Snelle, clean website die goed scoort op relevante zoekopdrachten"
+      }
       ]
     }
   },
@@ -468,6 +479,17 @@
         "naam": "Schuco-Varianto.nl",
         "resultaat": "Complete TYPO3 website with catalogue of mechanical and electrical models"
       }
+      ,{
+        "id": "sandrabedrukt",
+        "bedrijf": "SandraBedrukt.nl",
+        "url": "https://sandrabedrukt.nl",
+        "logo": "images/sandrabedruktLogo.png",
+        "sector": "Gifts & personalised products",
+        "diensten": ["Website development", "SEO", "Fast loading"],
+        "quote": "I wanted a website that looks clean but isn't complicated — fast, clear and easy to find on Google. Paul delivered exactly that. The site loads quickly, is well-organised and attracts visitors through searches like 'mug with name' and 'personalised baby gift'. Exactly what I needed.",
+        "naam": "Sandra – SandraBedrukt.nl",
+        "resultaat": "Fast, clean website that ranks well for relevant search queries"
+      }
       ]
     }
   },
@@ -703,6 +725,17 @@
         "quote": "Schuco-Varianto.nl ist eine informative Website über die Blechspielzeugautos der Varianto-Serie von Schuco — eine beliebte Sammlung aus den 1950er Jahren. Die Website basiert auf TYPO3 und bietet einen übersichtlichen Katalog aller mechanischen und elektrischen Modelle, einschließlich Zubehör und historischem Hintergrund. Ein Projekt, das Liebe zum Detail und Begeisterung für das Thema erfordert.",
         "naam": "Schuco-Varianto.nl",
         "resultaat": "Vollständige TYPO3-Website mit Katalog mechanischer und elektrischer Modelle"
+      }
+      ,{
+        "id": "sandrabedrukt",
+        "bedrijf": "SandraBedrukt.nl",
+        "url": "https://sandrabedrukt.nl",
+        "logo": "images/sandrabedruktLogo.png",
+        "sector": "Geschenke & personalisierte Produkte",
+        "diensten": ["Webentwicklung", "SEO", "Schnelle Ladezeit"],
+        "quote": "Ich wollte eine Website, die gepflegt aussieht, aber unkompliziert ist — schnell, übersichtlich und leicht über Google auffindbar. Paul hat genau das geliefert. Die Website lädt sehr schnell, ist klar strukturiert und zieht Besucher über Suchanfragen wie 'Tasse mit Namen' und 'personalisiertes Babygeschenk' an. Genau das, was ich brauchte.",
+        "naam": "Sandra – SandraBedrukt.nl",
+        "resultaat": "Schnelle, saubere Website mit guter Platzierung für relevante Suchanfragen"
       }
       ]
     }
