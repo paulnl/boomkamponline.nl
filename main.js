@@ -223,7 +223,7 @@
     // Referenties slider opbouwen
     var refItems = t.referenties ? t.referenties.items : null;
     if (refItems) {
-      currentSlide = 0; // Reset bij taalwissel
+      currentSlideRef = 0; // Reset bij taalwissel
       buildSlider(refItems);
     }
 
