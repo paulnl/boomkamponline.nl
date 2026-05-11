@@ -221,6 +221,17 @@
           "naam": "Kieskunstgras.nl",
           "resultaat": "Meer leadgeneratie via geautomatiseerd contactformulier"
         }
+      ,{
+        "id": "schuco-varianto",
+        "bedrijf": "Schuco-Varianto.nl",
+        "url": "https://schuco-varianto.nl",
+        "logo": "images/logo_schuco.png",
+        "sector": "Verzamelen & nostalgie",
+        "diensten": ["Website bouwen", "TYPO3", "Content & catalogus"],
+        "quote": "Schuco-Varianto.nl is een informatieve website over de blikken speelgoedauto's uit de Varianto-serie van Schuco — een geliefde collectie uit de jaren vijftig. De site is gebouwd op TYPO3 en biedt een overzichtelijke catalogus van alle mechanische en elektrische modellen, inclusief accessoires en historische achtergrond. Een project dat vraagt om aandacht voor detail en liefde voor het onderwerp.",
+        "naam": "Schuco-Varianto.nl",
+        "resultaat": "Volledige TYPO3 website met catalogus van mechanische en elektrische modellen"
+      }
       ]
     }
   },
@@ -446,6 +457,17 @@
           "naam": "Kieskunstgras.nl",
           "resultaat": "More lead generation via automated contact form"
         }
+      ,{
+        "id": "schuco-varianto",
+        "bedrijf": "Schuco-Varianto.nl",
+        "url": "https://schuco-varianto.nl",
+        "logo": "images/logo_schuco.png",
+        "sector": "Collecting & nostalgia",
+        "diensten": ["Website development", "TYPO3", "Content & catalogue"],
+        "quote": "Schuco-Varianto.nl is an informative website about the tin toy cars from Schuco's Varianto series — a beloved collection from the 1950s. The site is built on TYPO3 and offers a clear catalogue of all mechanical and electrical models, including accessories and historical background. A project that demands attention to detail and a passion for the subject.",
+        "naam": "Schuco-Varianto.nl",
+        "resultaat": "Complete TYPO3 website with catalogue of mechanical and electrical models"
+      }
       ]
     }
   },
@@ -671,6 +693,17 @@
           "naam": "Kieskunstgras.nl",
           "resultaat": "Mehr Lead-Generierung über automatisiertes Kontaktformular"
         }
+      ,{
+        "id": "schuco-varianto",
+        "bedrijf": "Schuco-Varianto.nl",
+        "url": "https://schuco-varianto.nl",
+        "logo": "images/logo_schuco.png",
+        "sector": "Sammeln & Nostalgie",
+        "diensten": ["Webentwicklung", "TYPO3", "Inhalt & Katalog"],
+        "quote": "Schuco-Varianto.nl ist eine informative Website über die Blechspielzeugautos der Varianto-Serie von Schuco — eine beliebte Sammlung aus den 1950er Jahren. Die Website basiert auf TYPO3 und bietet einen übersichtlichen Katalog aller mechanischen und elektrischen Modelle, einschließlich Zubehör und historischem Hintergrund. Ein Projekt, das Liebe zum Detail und Begeisterung für das Thema erfordert.",
+        "naam": "Schuco-Varianto.nl",
+        "resultaat": "Vollständige TYPO3-Website mit Katalog mechanischer und elektrischer Modelle"
+      }
       ]
     }
   }
