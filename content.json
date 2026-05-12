@@ -243,6 +243,17 @@
         "naam": "Sandra – SandraBedrukt.nl",
         "resultaat": "Snelle, clean website die goed scoort op relevante zoekopdrachten"
       }
+      ,{
+        "id": "gerben-deventer",
+        "bedrijf": "Gerben, Deventer",
+        "url": "",
+        "logo": "",
+        "sector": "Smart Home & IoT",
+        "diensten": ["IoT integratie", "Energiebeheer", "Automatisering"],
+        "quote": "Mijn huis staat vol slimme apparaten, maar de stroomkosten liepen toch op. Paul heeft een systeem gebouwd dat mijn energieverbruik koppelt aan de actuele stroomprijs van mijn flexibele contract. Zware apparaten zoals de wasmachine en het laden van mijn auto starten nu automatisch op het goedkoopste moment van de dag. Het resultaat: mijn installatie is structureel rendabel geworden.",
+        "naam": "Gerben — Deventer",
+        "resultaat": "Structureel rendabele energiehuishouding via slim flexibel stroomcontract"
+      }
       ]
     }
   },
@@ -490,6 +501,17 @@
         "naam": "Sandra – SandraBedrukt.nl",
         "resultaat": "Fast, clean website that ranks well for relevant search queries"
       }
+      ,{
+        "id": "gerben-deventer",
+        "bedrijf": "Gerben, Deventer",
+        "url": "",
+        "logo": "",
+        "sector": "Smart Home & IoT",
+        "diensten": ["IoT integration", "Energy management", "Automation"],
+        "quote": "My house is full of smart devices, but the electricity costs kept adding up. Paul built a system that links my energy consumption to the live price of my flexible electricity contract. Heavy appliances like the washing machine and car charging now start automatically at the cheapest time of day. The result: my setup has become structurally profitable.",
+        "naam": "Gerben — Deventer",
+        "resultaat": "Structurally profitable energy management via smart flexible electricity contract"
+      }
       ]
     }
   },
@@ -736,6 +758,17 @@
         "quote": "Ich wollte eine Website, die gepflegt aussieht, aber unkompliziert ist — schnell, übersichtlich und leicht über Google auffindbar. Paul hat genau das geliefert. Die Website lädt sehr schnell, ist klar strukturiert und zieht Besucher über Suchanfragen wie 'Tasse mit Namen' und 'personalisiertes Babygeschenk' an. Genau das, was ich brauchte.",
         "naam": "Sandra – SandraBedrukt.nl",
         "resultaat": "Schnelle, saubere Website mit guter Platzierung für relevante Suchanfragen"
+      }
+      ,{
+        "id": "gerben-deventer",
+        "bedrijf": "Gerben, Deventer",
+        "url": "",
+        "logo": "",
+        "sector": "Smart Home & IoT",
+        "diensten": ["IoT-Integration", "Energiemanagement", "Automatisierung"],
+        "quote": "Mein Haus ist voll mit smarten Geräten, aber die Stromkosten stiegen trotzdem. Paul hat ein System entwickelt, das meinen Energieverbrauch mit dem aktuellen Preis meines flexiblen Stromvertrags verknüpft. Stromintensive Geräte wie Waschmaschine und Autoladen starten jetzt automatisch zum günstigsten Zeitpunkt des Tages. Das Ergebnis: meine Installation ist dauerhaft rentabel geworden.",
+        "naam": "Gerben — Deventer",
+        "resultaat": "Dauerhaft rentables Energiemanagement über smarten flexiblen Stromvertrag"
       }
       ]
     }
