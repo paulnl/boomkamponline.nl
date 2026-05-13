@@ -2,7 +2,7 @@
 layout: post
 title: "Website laten bouwen: een complete checklist — waar moet je op letten?"
 description: "Een website laten bouwen is spannend en kostbaar. Met deze checklist weet je precies waar je op moet letten — van doelstelling tot oplevering en verder."
-date: 2026-05-20
+date: 2025-07-05
 category: "Webdevelopment"
 lang: nl
 post_id: "website-laten-bouwen-checklist"
