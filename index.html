@@ -11,14 +11,19 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Preload hero banner voor snelle LCP -->
-  <link rel="preload" as="image" href="images/banner-top01.webp" type="image/webp"
+  <!-- Preload banner desktop -->
+  <link rel="preload" as="image"
+        href="images/banner-top01.webp"
+        type="image/webp"
+        media="(min-width: 769px)"
         fetchpriority="high">
-  <!-- Preload mobiele banner -->
+
+  <!-- Preload banner mobiel -->
   <link rel="preload" as="image"
         href="images/banner-top01-mobile.webp"
         type="image/webp"
-        media="(max-width: 768px)">
+        media="(max-width: 768px)"
+        fetchpriority="high">
   <title data-i18n="meta.title">Paul Boomkamp – Freelance Webontwikkelaar &amp; AI-consultant | BoomkampOnline.NL</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="Meer dan 25 jaar ervaring in webontwikkeling, SEO en AI-implementatie. Ik bouw websites die werken en help bedrijven slimmer te werken met AI. Beschikbaar als ZZP'er.">
   <meta name="author" content="Paul Boomkamp">
@@ -784,17 +789,36 @@
       gap: 8px;
     }
 
-    /* ===== HERO BANNER BACKGROUND ===== */
-    .hero::before {
-      content: '';
+    /* ===== HERO BANNER (img, vervangt ::before) ===== */
+    .hero-banner-img {
       position: absolute;
       inset: 0;
-      background-image: url('images/banner-top01.webp');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       z-index: 0;
+      overflow: hidden;
+    }
+
+    .hero-banner-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .hero-banner-img img {
+        object-position: right center;
+        opacity: 0.55;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-banner-img img {
+        opacity: 0.4;
+      }
     }
 
     /* ===== HERO STATS ===== */
@@ -921,14 +945,6 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      /* Mobiele banner = kleinere afbeelding */
-      .hero::before {
-        background-image: url('images/banner-top01-mobile.webp');
-        background-size: contain;
-        background-position: top right;
-        opacity: 0.5;
-      }
-
       .hamburger { display: flex; }
       .nav {
         position: fixed;
@@ -1264,7 +1280,7 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a href="#" class="logo" aria-label="BoomkampOnline home">
-        <img src="images/logo-full-dark.png" alt="BoomkampOnline.NL logo" height="32" style="height:32px; width:auto;" loading="lazy">
+        <img src="images/logo-full-dark.png" alt="BoomkampOnline.NL logo" width="197" height="32" style="height:32px; width:auto;" loading="lazy">
       </a>
       <nav class="nav" id="main-nav" role="navigation" aria-label="Hoofdnavigatie">
         <a href="#diensten" data-i18n="nav.diensten">Diensten</a>
@@ -1285,6 +1301,30 @@
   <main id="main-content" role="main">
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero" aria-label="Introductie">
+    <!-- Hero banner afbeelding — gepreload voor snelle LCP -->
+    <picture class="hero-banner-img" aria-hidden="true">
+      <source
+        srcset="images/banner-top01-mobile.webp"
+        media="(max-width: 768px)"
+        type="image/webp"
+        width="768"
+        height="500">
+      <source
+        srcset="images/banner-top01.webp"
+        media="(min-width: 769px)"
+        type="image/webp"
+        width="1920"
+        height="700">
+      <img
+        src="images/banner-top01.webp"
+        alt=""
+        aria-hidden="true"
+        width="1920"
+        height="700"
+        fetchpriority="high"
+        decoding="async"
+        loading="eager">
+    </picture>
     <div class="hero-bg" aria-hidden="true">
       <div class="hero-blob hero-blob--orange"></div>
       <div class="hero-blob hero-blob--dark"></div>

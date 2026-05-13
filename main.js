@@ -436,7 +436,7 @@
     // Kaartjes bouwen
     slider.innerHTML = items.map(function (item) {
       var logoHtml = item.logo
-        ? '<img src="' + item.logo + '" alt="' + item.bedrijf + ' logo" loading="lazy" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\'"><span class="ref-logo-text" style="display:none">' + item.bedrijf + '</span>'
+        ? '<img src="' + item.logo + '" alt="' + item.bedrijf + ' logo" width="180" height="48" loading="lazy" decoding="async" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\'"><span class="ref-logo-text" style="display:none">' + item.bedrijf + '</span>'
         : '<span class="ref-logo-text">' + item.bedrijf + '</span>';
 
       var resultaatHtml = item.resultaat
