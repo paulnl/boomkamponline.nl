@@ -2,7 +2,7 @@
 layout: post
 title: "Building a website: a complete checklist — what to look out for"
 description: "Having a website built is exciting and expensive. This checklist covers everything you need to consider — from goals to launch and beyond."
-date: 2026-05-20
+date: 2025-07-05
 category: "Web Development"
 lang: en
 post_id: "website-laten-bouwen-checklist"
