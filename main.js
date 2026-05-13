@@ -423,6 +423,18 @@
   var currentSlideRef = 0;
   var totalSlidesRef = 0;
 
+  function getLogoHtml(item) {
+    if (!item.logo) {
+      return '<span class="ref-logo-text">' + item.bedrijf + '</span>';
+    }
+    var webp = item.logo.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+    return '<picture>' +
+      '<source srcset="' + webp + '" type="image/webp">' +
+      '<img src="' + item.logo + '" alt="' + item.bedrijf + ' logo" width="180" height="48" loading="lazy" decoding="async" style="max-height:48px; width:auto; object-fit:contain;" onerror="this.closest(\'picture\').style.display=\'none\'; this.closest(\'picture\').nextElementSibling.style.display=\'block\'">' +
+      '</picture>' +
+      '<span class="ref-logo-text" style="display:none">' + item.bedrijf + '</span>';
+  }
+
   function buildSlider(items) {
     var slider = document.getElementById('ref-slider');
     var dotsContainer = document.getElementById('ref-dots');
@@ -435,9 +447,7 @@
 
     // Kaartjes bouwen
     slider.innerHTML = items.map(function (item) {
-      var logoHtml = item.logo
-        ? '<img src="' + item.logo + '" alt="' + item.bedrijf + ' logo" width="180" height="48" loading="lazy" decoding="async" onerror="this.style.display=\'none\'; this.nextElementSibling.style.display=\'block\'"><span class="ref-logo-text" style="display:none">' + item.bedrijf + '</span>'
-        : '<span class="ref-logo-text">' + item.bedrijf + '</span>';
+      var logoHtml = getLogoHtml(item);
 
       var resultaatHtml = item.resultaat
         ? '<div class="ref-resultaat">' + item.resultaat + '</div>'

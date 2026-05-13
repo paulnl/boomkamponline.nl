@@ -1,4 +1,4 @@
-const CACHE_NAME = 'boomkamp-v1';
+const CACHE_NAME = 'boomkamp-v2';
 const ASSETS = [
   '/',
   '/index.html',
@@ -8,6 +8,9 @@ const ASSETS = [
   '/images/banner-top01-mobile.webp',
   '/images/paul.png',
   '/images/logo-full-dark.png',
+  '/images/kieskunstgras_v1.webp',
+  '/images/sandrabedruktLogo.webp',
+  '/images/logo_schuco.webp',
 ];
 
 self.addEventListener('install', event => {
