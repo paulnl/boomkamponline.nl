@@ -14,6 +14,11 @@
   <!-- Preload hero banner voor snelle LCP -->
   <link rel="preload" as="image" href="images/banner-top01.webp" type="image/webp"
         fetchpriority="high">
+  <!-- Preload mobiele banner -->
+  <link rel="preload" as="image"
+        href="images/banner-top01-mobile.webp"
+        type="image/webp"
+        media="(max-width: 768px)">
   <title data-i18n="meta.title">Paul Boomkamp – Freelance Webontwikkelaar &amp; AI-consultant | BoomkampOnline.NL</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="Meer dan 25 jaar ervaring in webontwikkeling, SEO en AI-implementatie. Ik bouw websites die werken en help bedrijven slimmer te werken met AI. Beschikbaar als ZZP'er.">
   <meta name="author" content="Paul Boomkamp">
@@ -119,6 +124,12 @@
     /* ===== RESET & BASE ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+    /* Tekst zichtbaar tijdens font laden */
+    @font-face {
+      font-family: 'Inter';
+      font-display: swap;
+      src: local('Inter Regular'), local('Inter-Regular');
+    }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #fff;
@@ -910,6 +921,14 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
+      /* Mobiele banner = kleinere afbeelding */
+      .hero::before {
+        background-image: url('images/banner-top01-mobile.webp');
+        background-size: contain;
+        background-position: top right;
+        opacity: 0.5;
+      }
+
       .hamburger { display: flex; }
       .nav {
         position: fixed;
@@ -945,6 +964,10 @@
         opacity: 1;
         pointer-events: auto;
       }
+      .hero {
+        min-height: 50vh;
+        padding: 100px 0 60px;
+      }
       .hero-name { font-size: 2.25rem; }
       .hero-tagline { font-size: 1.125rem; }
       .section-title { font-size: 1.625rem; }
@@ -960,15 +983,28 @@
       .form-card { padding: 24px 20px; }
       .contact-info-card { padding: 28px 24px; }
       .werkwijze-grid { grid-template-columns: 1fr 1fr; }
+      /* Statistieken mobiel */
+      .hero-stats {
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .hero-stat-divider {
+        display: none;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero-name { font-size: 1.875rem; }
+      .hero-name { font-size: 2rem; }
       .hero { padding: 100px 0 60px; }
       .diensten-grid { grid-template-columns: 1fr; }
       .werkwijze-grid { grid-template-columns: 1fr; }
       .form-card { padding: 20px 16px; }
       .contact-info-card { padding: 24px 20px; }
+      .hero-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
     }
 
     /* ===== REFERENTIES SLIDER ===== */
@@ -1368,7 +1404,7 @@
       <h2 class="section-title fade-up" data-i18n="about.title">Wie is Paul Boomkamp?</h2>
       <div class="over-grid">
         <div class="over-foto fade-up">
-          <img src="images/paul.png" alt="Paul Boomkamp – freelance webontwikkelaar en AI-consultant" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+          <img src="images/paul.png" alt="Paul Boomkamp – freelance webontwikkelaar en AI-consultant" width="240" height="240" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
         </div>
         <div class="over-content fade-up">
           <h3 data-i18n="about.subtitle">Ruim 25 jaar ervaring in webdevelopment en systeembeheer</h3>
