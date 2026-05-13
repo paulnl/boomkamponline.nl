@@ -87,6 +87,35 @@ permalink: /blog/
       color: #666;
     }
 
+    /* Taalfilter tabs */
+    .lang-filters {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .lang-filter-btn {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 7px 18px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: transparent;
+      color: #666;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .lang-filter-btn:hover {
+      border-color: #FF6B00;
+      color: #FF6B00;
+    }
+    .lang-filter-btn.active {
+      background: #1A1A2E;
+      color: #fff;
+      border-color: #1A1A2E;
+    }
+
     /* Posts grid */
     .posts-section { padding: 48px 0 80px; }
     .posts-grid {
@@ -221,9 +250,17 @@ permalink: /blog/
 
       <section class="posts-section">
         {% if site.posts.size > 0 %}
-        <div class="posts-grid">
+
+        <div class="lang-filters" role="tablist" aria-label="Filter op taal">
+          <button class="lang-filter-btn active" data-filter="all" role="tab" aria-selected="true">Alle</button>
+          <button class="lang-filter-btn" data-filter="nl" role="tab" aria-selected="false">🇳🇱 Nederlands</button>
+          <button class="lang-filter-btn" data-filter="en" role="tab" aria-selected="false">🇬🇧 English</button>
+          <button class="lang-filter-btn" data-filter="de" role="tab" aria-selected="false">🇩🇪 Deutsch</button>
+        </div>
+
+        <div class="posts-grid" id="posts-grid">
           {% for post in site.posts %}
-          <article class="post-card">
+          <article class="post-card" data-lang="{{ post.lang }}">
             <div class="post-meta">
               <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
               <span class="lang-badge {{ post.lang }}">{{ post.lang | upcase }}</span>
@@ -265,7 +302,55 @@ permalink: /blog/
     </div>
   </main>
 
-  <footer class="footer">
+  <script>
+  (function() {
+    var filterBtns = document.querySelectorAll('.lang-filter-btn');
+    var posts = document.querySelectorAll('.post-card');
+    var grid = document.getElementById('posts-grid');
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var lang = this.getAttribute('data-filter');
+
+        // Update active tab
+        filterBtns.forEach(function(b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        this.classList.add('active');
+        this.setAttribute('aria-selected', 'true');
+
+        // Filter posts
+        var visibleCount = 0;
+        posts.forEach(function(post) {
+          if (lang === 'all' || post.getAttribute('data-lang') === lang) {
+            post.style.display = '';
+            visibleCount++;
+          } else {
+            post.style.display = 'none';
+          }
+        });
+
+        // Update no-results bericht
+        var noResults = grid.querySelector('.no-results');
+        if (visibleCount === 0) {
+          if (!noResults) {
+            noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.style.cssText = 'text-align:center;padding:48px 0;color:#999;';
+            grid.appendChild(noResults);
+          }
+          var label = { nl: 'Nederlands', en: 'English', de: 'Deutsch' }[lang] || lang;
+          noResults.innerHTML = '<p>Geen artikelen in <strong>' + label + '</strong>.</p><p style="margin-top:8px">Probeer een andere taal.</p>';
+        } else if (noResults) {
+          noResults.remove();
+        }
+      });
+    });
+  })();
+</script>
+
+<footer class="footer">
     <p>
       <a href="/">boomkamponline.nl</a>
       &nbsp;&middot;&nbsp;
