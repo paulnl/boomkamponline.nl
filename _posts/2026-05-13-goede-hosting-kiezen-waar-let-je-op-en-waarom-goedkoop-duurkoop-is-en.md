@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Goede hosting kiezen: waar let je op? (en waarom goedkoop duurkoop is)"
+description: "Wat hosting inhoudt en waarom €5/maand anders is dan €30/maand. Praktisch advies vanuit systeembeheer-expertise."
+date: 2026-05-13
+category: "Webdevelopment"
+lang: en
+post_id: "hosting-kiezen"
+---
+
+Hosting is something most business owners only think about when their website is slow or down. But good hosting is the foundation of a successful website — it affects speed, security, and Google ranking.
+
+## Why does hosting matter?
+
+* How fast your website loads
+* How reliable your site is
+* How secure your site is
+* What you can do (PHP version, databases, CDN)
+
+## Shared vs VPS vs Dedicated
+
+Shared hosting (€5-€15/month) — Cheap, but slow and less secure.
+VPS (€20-€60/month) — More control, better performance. Recommended for most professional websites.
+Dedicated server (€80-€300/month) — For large sites with heavy traffic.
+
+## What to look for
+
+1. Speed — Choose a hoster with servers in Europe
+2. SSL — Must be included for free
+3. Backups — Daily backups you can restore yourself
+4. Support — Available within 30 minutes
+5. Uptime — Minimum 99.9%
+
+Cheap hosting is tempting, but you get what you pay for. Invest in good hosting.
