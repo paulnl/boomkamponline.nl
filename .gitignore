@@ -6,3 +6,6 @@ _site/
 # Bundler
 .bundle/
 vendor/
+
+# Cron sync log
+cron-sync.log
