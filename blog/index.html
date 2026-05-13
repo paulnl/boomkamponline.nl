@@ -252,8 +252,8 @@ permalink: /blog/
         {% if site.posts.size > 0 %}
 
         <div class="lang-filters" role="tablist" aria-label="Filter op taal">
-          <button class="lang-filter-btn active" data-filter="all" role="tab" aria-selected="true">Alle</button>
-          <button class="lang-filter-btn" data-filter="nl" role="tab" aria-selected="false">🇳🇱 Nederlands</button>
+          <button class="lang-filter-btn" data-filter="all" role="tab" aria-selected="false">Alle</button>
+          <button class="lang-filter-btn active" data-filter="nl" role="tab" aria-selected="true">🇳🇱 Nederlands</button>
           <button class="lang-filter-btn" data-filter="en" role="tab" aria-selected="false">🇬🇧 English</button>
           <button class="lang-filter-btn" data-filter="de" role="tab" aria-selected="false">🇩🇪 Deutsch</button>
         </div>
@@ -354,11 +354,14 @@ permalink: /blog/
       });
     });
 
-    // URL parameter uitlezen (?lang=nl)
+    // URL parameter uitlezen (?lang=nl), anders standaard Nederlands
     var urlParams = new URLSearchParams(window.location.search);
     var urlLang = urlParams.get('lang');
     if (urlLang && ['nl', 'en', 'de'].indexOf(urlLang) !== -1) {
       filterByLang(urlLang);
+    } else {
+      // Geen parameter: standaard Nederlands
+      filterByLang('nl');
     }
   })();
 </script>
