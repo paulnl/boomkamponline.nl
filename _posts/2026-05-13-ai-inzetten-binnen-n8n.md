@@ -2,7 +2,7 @@
 layout: post
 title: "AI inzetten binnen n8n: zo bouw je slimme workflows met kunstmatige intelligentie"
 description: "n8n heeft ingebouwde ondersteuning voor AI-modellen zoals OpenAI, Claude en lokale LLMs. In dit artikel laat ik zien hoe je AI kunt toevoegen aan je automatiseringen — zonder een regel code."
-date: 2026-05-13
+date: 2025-05-20
 category: "Automatisering"
 lang: nl
 ---
