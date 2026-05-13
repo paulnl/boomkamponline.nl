@@ -1,0 +1,47 @@
+Hosting is iets waar de meeste ondernemers pas over nadenken als hun website traag is of platligt. Maar goede hosting is de basis van een succesvolle website — het beïnvloedt snelheid, veiligheid en vindbaarheid in Google.
+
+In dit artikel leg ik uit waar je op moet letten en waarom de hosting van €5 per maand vaak niet de beste keuze is.
+
+## Waarom maakt hosting uit?
+
+Je hosting bepaalt:
+* Hoe snel je website laadt (belangrijk voor Google ranking)
+* Hoe betrouwbaar je site is (geen downtime)
+* Hoe veilig je site is (bescherming tegen aanvallen)
+* Wat je kunt doen (welke PHP-versie, databases, CDN)
+
+## De soorten hosting
+
+Gedeelde hosting (€5-€15/maand)
+Je deelt een server met tientallen andere websites. Goedkoop, maar traag en onveilig. Als een andere site op dezelfde server wordt aangevallen, kan die van jou ook platgaan.
+
+VPS (€20-€60/maand)
+Een virtuele server waar je alleen op zit. Meer controle, betere prestaties. Geschikt voor de meeste professionele websites.
+
+Dedicated server (€80-€300/maand)
+Een fysieke server helemaal voor jou. Voor grote sites met veel verkeer.
+
+Managed hosting (€15-€50/maand)
+De hoster regelt updates, backups en beveiliging. Jij hoeft alleen je site te beheren. Dit is wat ik aanraad voor de meeste MKB-klanten.
+
+## Waar let je op bij hosting?
+
+1. Snelheid — Kies een hoster met goede servers in Europa (of Nederland)
+2. SSL — Moet gratis inbegrepen zijn (Let's Encrypt)
+3. Back-ups — Dagelijkse back-ups die je zelf kunt terugzetten
+4. Support — Bereikbaar binnen 30 minuten bij storingen
+5. Uptime — Minimaal 99,9%
+6. PHP-versie — Ondersteunt de nieuwste PHP-versies
+7. Staging-omgeving — Om wijzigingen te testen voordat je ze live zet
+
+## Hosting voor WordPress vs TYPO3
+
+| Aspect | WordPress | TYPO3 |
+|--------|-----------|-------|
+| Minimale eisen | Laag (PHP + MySQL) | Hoger (PHP 8.x + optimalisatie) |
+| Aanbevolen hosting | Managed WordPress (€15-€30/m) | VPS (€25-€50/m) |
+| CDN | Wenselijk | Wenselijk |
+
+## ConclusieGoedkope hosting is verleidelijk, maar uiteindelijk duurkoop. Investeer in goede hosting — je website is het visitekaartje van je bedrijf. Voor de meeste MKB'ers is een managed hostingpakket van €20-€40 per maand de beste keuze.
+
+Advies nodig over hosting? Neem contact op.
