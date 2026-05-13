@@ -18,6 +18,13 @@
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
   <meta property="article:author" content="Paul Boomkamp">
 
+  <!-- Hreflang alternates -->
+  {% assign translations = site.posts | where: "post_id", page.post_id %}
+  {% for t in translations %}
+  <link rel="alternate" hreflang="{{ t.lang }}" href="https://boomkamponline.nl{{ t.url }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="https://boomkamponline.nl{{ page.url }}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
@@ -212,6 +219,43 @@
     }
     .back-to-blog:hover { color: #FF6B00; }
 
+    /* Taalwissel */
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 32px;
+      padding-top: 8px;
+    }
+    .lang-switch-label {
+      font-size: 0.75rem;
+      color: #999;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .lang-switch a {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #999;
+      border: 1px solid #ddd;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .lang-switch a:hover {
+      color: #FF6B00;
+      border-color: #FF6B00;
+      text-decoration: none;
+    }
+    .lang-switch a.active {
+      color: #fff;
+      background: #FF6B00;
+      border-color: #FF6B00;
+    }
+
     /* Footer */
     .footer {
       background: #1A1A2E;
@@ -240,7 +284,24 @@
   <main>
     <div class="article-wrap">
 
-      <a href="/blog/" class="back-to-blog">← Alle artikelen</a>
+      <a href="/blog/" class="back-to-blog">← {% case page.lang %}{% when "nl" %}Alle artikelen{% when "en" %}All articles{% when "de" %}Alle Artikel{% endcase %}</a>
+
+      {% if page.post_id %}
+      {% assign translations = site.posts | where: "post_id", page.post_id | sort: "lang" %}
+      {% if translations.size > 1 %}
+      <div class="lang-switch">
+        <span class="lang-switch-label">{% case page.lang %}{% when "nl" %}Ook beschikbaar in:{% when "en" %}Also available in:{% when "de" %}Auch verfügbar in:{% endcase %}</span>
+        {% assign lang_names = "nl|Nederlands,en|English,de|Deutsch" | split: "," %}
+        {% for t in translations %}
+          {% if t.lang == page.lang %}
+          <a href="#" class="active">{{ t.lang | upcase }}</a>
+          {% else %}
+          <a href="{{ t.url | relative_url }}">{{ t.lang | upcase }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+      {% endif %}
 
       <div class="article-meta">
         <span class="article-date">{{ page.date | date: "%-d %B %Y" }}</span>
@@ -260,9 +321,20 @@
       </div>
 
       <div class="article-cta">
+        {% case page.lang %}
+        {% when "nl" %}
         <h3>Hulp nodig met een project?</h3>
         <p>Neem contact op — ik denk graag met je mee.</p>
         <a href="/#contact">Neem contact op</a>
+        {% when "en" %}
+        <h3>Need help with a project?</h3>
+        <p>Get in touch — I'll be happy to discuss it with you.</p>
+        <a href="/#contact">Get in touch</a>
+        {% when "de" %}
+        <h3>Hilfe bei einem Projekt?</h3>
+        <p>Kontaktieren Sie mich — ich denke gerne mit Ihnen.</p>
+        <a href="/#contact">Kontakt aufnehmen</a>
+        {% endcase %}
       </div>
 
     </div>
@@ -272,7 +344,7 @@
     <p>
       <a href="/">boomkamponline.nl</a>
       &nbsp;&middot;&nbsp;
-      <a href="/blog/">Blog</a>
+      <a href="/blog/">{% case page.lang %}{% when "nl" %}Blog{% when "en" %}Blog{% when "de" %}Blog{% endcase %}</a>
       &nbsp;&middot;&nbsp;
       <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
     </p>

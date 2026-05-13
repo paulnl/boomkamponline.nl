@@ -5,6 +5,7 @@ description: "Met een combinatie van slimme verlichting, een thuisaccu en een AI
 date: 2025-06-08
 category: "AI"
 lang: nl
+post_id: "huisautomatisering-energie"
 ---
 
 Een paar jaar geleden begon ik te experimenteren met huisautomatisering. 

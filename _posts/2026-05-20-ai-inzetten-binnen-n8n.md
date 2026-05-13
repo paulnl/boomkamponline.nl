@@ -5,6 +5,7 @@ description: "n8n heeft ingebouwde ondersteuning voor AI-modellen zoals OpenAI, 
 date: 2025-05-20
 category: "Automatisering"
 lang: nl
+post_id: "ai-in-n8n"
 ---
 
 n8n is al krachtig als je er formulieren, e-mails en spreadsheets mee koppelt. 

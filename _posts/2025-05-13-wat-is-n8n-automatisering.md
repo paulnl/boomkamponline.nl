@@ -5,6 +5,7 @@ description: "n8n is een open-source automatiseringstool waarmee je herhaalde ta
 date: 2025-05-13
 category: "Automatisering"
 lang: nl
+post_id: "n8n-introductie"
 ---
 
 Veel bedrijven besteden uren per week aan taken die een computer ook kan doen. 

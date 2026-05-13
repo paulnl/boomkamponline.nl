@@ -122,6 +122,20 @@ permalink: /blog/
       padding: 3px 10px;
       border-radius: 20px;
     }
+    .lang-badge {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #fff;
+      background: #1A1A2E;
+      padding: 2px 8px;
+      border-radius: 4px;
+      line-height: 1.4;
+    }
+    .lang-badge.en { background: #2b6cb0; }
+    .lang-badge.de { background: #c0392b; }
+    .lang-badge.nl { background: #1A1A2E; }
     .post-title {
       font-size: 1.25rem;
       font-weight: 700;
@@ -146,6 +160,28 @@ permalink: /blog/
       gap: 4px;
     }
     .post-readmore:hover { text-decoration: none; opacity: 0.8; }
+    .post-langs {
+      margin-bottom: 14px;
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .post-lang-link {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid #ddd;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .post-lang-link:hover {
+      color: #FF6B00;
+      border-color: #FF6B00;
+      text-decoration: none;
+    }
 
     /* Geen posts */
     .no-posts {
@@ -190,6 +226,7 @@ permalink: /blog/
           <article class="post-card">
             <div class="post-meta">
               <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
+              <span class="lang-badge {{ post.lang }}">{{ post.lang | upcase }}</span>
               {% if post.category %}
               <span class="post-tag">{{ post.category }}</span>
               {% endif %}
@@ -200,8 +237,20 @@ permalink: /blog/
             <p class="post-excerpt">
               {{ post.excerpt | strip_html | truncatewords: 40 }}
             </p>
+            <div class="post-langs">
+              {% assign translations = site.posts | where: "post_id", post.post_id | sort: "lang" %}
+              {% for t in translations %}
+                {% if t.lang != post.lang %}
+                <a href="{{ t.url | relative_url }}" class="post-lang-link">{{ t.lang | upcase }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
             <a href="{{ post.url | relative_url }}" class="post-readmore">
-              Lees verder →
+              {% case post.lang %}
+                {% when "nl" %}Lees verder →
+                {% when "en" %}Read more →
+                {% when "de" %}Weiterlesen →
+              {% endcase %}
             </a>
           </article>
           {% endfor %}
