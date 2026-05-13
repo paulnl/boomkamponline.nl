@@ -2,7 +2,7 @@
 layout: post
 title: "Website bauen lassen: eine vollständige Checkliste — worauf Sie achten müssen"
 description: "Eine Website bauen zu lassen ist spannend und kostspielig. Diese Checkliste zeigt Ihnen genau, worauf Sie achten müssen — von der Zielsetzung bis zur Übergabe und darüber hinaus."
-date: 2026-05-20
+date: 2025-07-05
 category: "Webentwicklung"
 lang: de
 post_id: "website-laten-bouwen-checklist"
