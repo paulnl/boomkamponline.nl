@@ -1,0 +1,283 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'nl' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} — BoomkampOnline.NL</title>
+  <meta name="description" content="{{ page.description | default: page.excerpt | strip_html | truncatewords: 30 }}">
+  <link rel="canonical" href="https://boomkamponline.nl{{ page.url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description | default: page.excerpt | strip_html | truncatewords: 30 }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://boomkamponline.nl{{ page.url }}">
+  <meta property="og:image" content="https://boomkamponline.nl/images/og-image.jpg">
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:author" content="Paul Boomkamp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        media="print" onload="this.media='all'">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #1A1A2E;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #FF6B00; }
+    a:hover { opacity: 0.8; }
+
+    /* Header */
+    .header {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .logo-link {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #1A1A2E;
+      text-decoration: none;
+    }
+    .logo-link span { color: #FF6B00; }
+    .back-link {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #666;
+      text-decoration: none;
+    }
+    .back-link:hover { color: #FF6B00; }
+
+    /* Artikel */
+    .article-wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .article-date {
+      font-size: 0.875rem;
+      color: #999;
+      font-weight: 500;
+    }
+    .article-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #FF6B00;
+      background: #fff0e6;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .article-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .article-description {
+      font-size: 1.125rem;
+      color: #555;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 1.6;
+    }
+
+    /* Artikel content */
+    .article-content { font-size: 1.0625rem; line-height: 1.8; }
+    .article-content h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      color: #1A1A2E;
+    }
+    .article-content h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      color: #1A1A2E;
+    }
+    .article-content p { margin-bottom: 20px; color: #333; }
+    .article-content ul, .article-content ol {
+      margin: 0 0 20px 24px;
+      color: #333;
+    }
+    .article-content li { margin-bottom: 8px; }
+    .article-content code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.875em;
+      font-family: 'Courier New', monospace;
+    }
+    .article-content pre {
+      background: #1A1A2E;
+      color: #e8e8e8;
+      padding: 20px 24px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin-bottom: 24px;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .article-content pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+      font-size: inherit;
+    }
+    .article-content blockquote {
+      border-left: 4px solid #FF6B00;
+      padding: 12px 20px;
+      margin: 24px 0;
+      background: #fff8f0;
+      border-radius: 0 8px 8px 0;
+      color: #444;
+      font-style: italic;
+    }
+    .article-content img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 24px 0;
+    }
+    .article-content a { font-weight: 500; }
+
+    /* CTA onderaan */
+    .article-cta {
+      margin-top: 56px;
+      padding: 36px;
+      background: linear-gradient(135deg, #1A1A2E, #2a2a45);
+      border-radius: 16px;
+      text-align: center;
+    }
+    .article-cta h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .article-cta p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9375rem;
+      margin-bottom: 20px;
+    }
+    .article-cta a {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      padding: 13px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .article-cta a:hover { opacity: 0.9; }
+
+    /* Terug link */
+    .back-to-blog {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #666;
+      text-decoration: none;
+      margin-bottom: 36px;
+    }
+    .back-to-blog:hover { color: #FF6B00; }
+
+    /* Footer */
+    .footer {
+      background: #1A1A2E;
+      color: #999;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    .footer a { color: #FF6B00; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .article-title { font-size: 1.625rem; }
+      .article-wrap { padding: 40px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo-link">BoomkampOnline<span>.NL</span></a>
+      <a href="/blog/" class="back-link">← Blog</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="article-wrap">
+
+      <a href="/blog/" class="back-to-blog">← Alle artikelen</a>
+
+      <div class="article-meta">
+        <span class="article-date">{{ page.date | date: "%-d %B %Y" }}</span>
+        {% if page.category %}
+        <span class="article-tag">{{ page.category }}</span>
+        {% endif %}
+      </div>
+
+      <h1 class="article-title">{{ page.title }}</h1>
+
+      {% if page.description %}
+      <p class="article-description">{{ page.description }}</p>
+      {% endif %}
+
+      <div class="article-content">
+        {{ content }}
+      </div>
+
+      <div class="article-cta">
+        <h3>Hulp nodig met een project?</h3>
+        <p>Neem contact op — ik denk graag met je mee.</p>
+        <a href="/#contact">Neem contact op</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <a href="/">boomkamponline.nl</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/blog/">Blog</a>
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
+    </p>
+    <p style="margin-top: 8px;">© 2025 Paul Boomkamp</p>
+  </footer>
+
+</body>
+</html>

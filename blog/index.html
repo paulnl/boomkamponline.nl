@@ -1,0 +1,231 @@
+---
+layout: null
+title: "Blog — BoomkampOnline.NL"
+description: "Praktische artikelen over webdevelopment, SEO en AI door Paul Boomkamp"
+permalink: /blog/
+---
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — BoomkampOnline.NL</title>
+  <meta name="description" content="Praktische artikelen over webdevelopment, SEO en AI door Paul Boomkamp">
+  <link rel="canonical" href="https://boomkamponline.nl/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+        media="print" onload="this.media='all'">
+  <link rel="icon" type="image/svg+xml" href="/data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231A1A2E'/%3E%3Ctext x='50' y='68' font-family='Inter,sans-serif' font-size='56' font-weight='800' fill='%23FF6B00' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #1A1A2E;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #FF6B00; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    .header {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .logo-link {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: #1A1A2E;
+      text-decoration: none;
+    }
+    .logo-link span { color: #FF6B00; }
+    .back-link {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #666;
+    }
+    .back-link:hover { color: #FF6B00; text-decoration: none; }
+
+    /* Hero */
+    .blog-hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .blog-label {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FF6B00;
+      margin-bottom: 12px;
+    }
+    .blog-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .blog-subtitle {
+      font-size: 1.0625rem;
+      color: #666;
+    }
+
+    /* Posts grid */
+    .posts-section { padding: 48px 0 80px; }
+    .posts-grid {
+      display: grid;
+      gap: 28px;
+    }
+    .post-card {
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .post-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    }
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .post-date {
+      font-size: 0.8125rem;
+      color: #999;
+      font-weight: 500;
+    }
+    .post-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #FF6B00;
+      background: #fff0e6;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .post-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .post-title a { color: inherit; }
+    .post-title a:hover { color: #FF6B00; text-decoration: none; }
+    .post-excerpt {
+      font-size: 0.9375rem;
+      color: #555;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .post-readmore {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #FF6B00;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .post-readmore:hover { text-decoration: none; opacity: 0.8; }
+
+    /* Geen posts */
+    .no-posts {
+      text-align: center;
+      padding: 64px 0;
+      color: #999;
+    }
+    .no-posts p { margin-bottom: 8px; }
+
+    /* Footer */
+    .footer {
+      background: #1A1A2E;
+      color: #999;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 0.875rem;
+    }
+    .footer a { color: #FF6B00; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="logo-link">BoomkampOnline<span>.NL</span></a>
+      <a href="/" class="back-link">← Terug naar de site</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="blog-hero">
+        <span class="blog-label">Blog</span>
+        <h1 class="blog-title">Praktische kennis, geen theorie</h1>
+        <p class="blog-subtitle">Artikelen over webdevelopment, SEO en AI — geschreven vanuit de praktijk.</p>
+      </div>
+
+      <section class="posts-section">
+        {% if site.posts.size > 0 %}
+        <div class="posts-grid">
+          {% for post in site.posts %}
+          <article class="post-card">
+            <div class="post-meta">
+              <span class="post-date">{{ post.date | date: "%-d %B %Y" }}</span>
+              {% if post.category %}
+              <span class="post-tag">{{ post.category }}</span>
+              {% endif %}
+            </div>
+            <h2 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h2>
+            <p class="post-excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 40 }}
+            </p>
+            <a href="{{ post.url | relative_url }}" class="post-readmore">
+              Lees verder →
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="no-posts">
+          <p>Eerste artikel komt binnenkort.</p>
+          <p>Abonneer via <a href="/blog/feed.xml">RSS</a>.</p>
+        </div>
+        {% endif %}
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>
+      <a href="/">boomkamponline.nl</a>
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/blog/feed.xml">RSS</a>
+    </p>
+    <p style="margin-top: 8px;">© 2025 Paul Boomkamp</p>
+  </footer>
+
+</body>
+</html>

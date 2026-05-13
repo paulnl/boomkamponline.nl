@@ -1,0 +1,57 @@
+# ===== BOOMKAMPONLINE.NL — Jekyll configuratie =====
+
+title: "BoomkampOnline.NL — Blog"
+description: "Praktische artikelen over webdevelopment, SEO en AI door Paul Boomkamp"
+url: "https://boomkamponline.nl"
+baseurl: ""
+author:
+  name: "Paul Boomkamp"
+  email: "paul@boomkamponline.nl"
+
+# Taal
+lang: "nl"
+
+# Exclude - alleen build artifacts en docs, geen statische site bestanden
+# (index.html, main.js, etc: die horen in _site, onveranderd gekopieerd)
+exclude:
+  - README.md
+  - instructies.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+
+# Include de images map
+include:
+  - images
+
+# Blog instellingen
+permalink: /blog/:year/:month/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Paul Boomkamp"
+      lang: "nl"
+
+# Plugins (standaard GitHub Pages plugins)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Feed
+feed:
+  path: /blog/feed.xml
+
+# Markdown verwerking
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
