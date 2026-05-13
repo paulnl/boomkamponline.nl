@@ -11,6 +11,9 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Preload hero banner voor snelle LCP -->
+  <link rel="preload" as="image" href="images/banner-top01.webp" type="image/webp"
+        fetchpriority="high">
   <title data-i18n="meta.title">Paul Boomkamp – Freelance Webontwikkelaar &amp; AI-consultant | BoomkampOnline.NL</title>
   <meta name="description" data-i18n-attr="content:meta.description" content="Meer dan 25 jaar ervaring in webontwikkeling, SEO en AI-implementatie. Ik bouw websites die werken en help bedrijven slimmer te werken met AI. Beschikbaar als ZZP'er.">
   <meta name="author" content="Paul Boomkamp">
@@ -42,9 +45,18 @@
   <meta name="twitter:description" content="Meer dan 25 jaar ervaring in webontwikkeling, SEO en AI.">
   <meta name="twitter:image" content="https://boomkamponline.nl/images/og-image.jpg">
 
+  <!-- Google Fonts non-blocking -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+  </noscript>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231A1A2E'/%3E%3Ctext x='50' y='68' font-family='Inter,sans-serif' font-size='56' font-weight='800' fill='%23FF6B00' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 
   <!-- Structured data -->
@@ -285,18 +297,18 @@
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
-      color: #999;
+      color: #666;
       cursor: pointer;
       transition: all 0.25s;
       font-family: 'Inter', sans-serif;
       line-height: 1;
     }
-    .lang-btn:hover { color: #555; }
+    .lang-btn:hover { color: #444; }
     /* ===== HERO FUNCTION ===== */
     .hero-function {
       font-size: 1rem;
       font-weight: 500;
-      color: #888;
+      color: #666;
       margin: -8px 0 16px;
     }
 
@@ -766,7 +778,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('images/banner-top01.png');
+      background-image: url('images/banner-top01.webp');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -792,7 +804,7 @@
     }
     .hero-stat-label {
       font-size: 0.8125rem;
-      color: #888;
+      color: #666;
       font-weight: 500;
     }
     .hero-stat-divider {
@@ -1188,6 +1200,25 @@
     @media (max-width: 480px) {
       .ref-card-inner { padding: 24px 20px; }
     }
+
+    /* ===== TIKDOELEN MINIMUMGROOTTE (toegankelijkheid) ===== */
+    .nav a,
+    .lang-btn,
+    .ref-nav,
+    .ref-dot {
+      min-height: 44px;
+      min-width: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lang-btn {
+      width: 36px;
+      height: 36px;
+      min-width: 44px;
+      min-height: 44px;
+    }
   </style>
   <script src="main.js" defer></script>
 </head>
@@ -1215,6 +1246,7 @@
     </div>
   </header>
 
+  <main id="main-content" role="main">
   <!-- ===== HERO ===== -->
   <section class="hero" id="hero" aria-label="Introductie">
     <div class="hero-bg" aria-hidden="true">
@@ -1468,6 +1500,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer" role="contentinfo">
