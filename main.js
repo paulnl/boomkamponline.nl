@@ -157,6 +157,11 @@
     // Huidige taal op html zetten (vóór render functies, zodat CSS altijd klopt)
     document.documentElement.setAttribute('data-current-lang', lang);
 
+    // Blog link updaten met taal parameter
+    document.querySelectorAll('.blog-link').forEach(function(el) {
+      el.href = '/blog/?lang=' + lang;
+    });
+
     var t = contentData[lang];
     if (!t) return;
 
