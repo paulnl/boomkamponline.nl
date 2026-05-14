@@ -531,16 +531,19 @@ permalink: /blog/
       msg.textContent = '';
       msg.className = 'newsletter-msg';
 
-      fetch('https://n8n.synapsisai.nl/webhook/nieuwsbrief-inschrijven', {
+      var data = {
+        type: 'nieuwsbrief',
+        email: emailVal,
+        naam: naam.value.trim() || '',
+        taal: taal.value,
+        datum: new Date().toISOString().split('T')[0],
+        bron: 'Blog footer'
+      };
+
+      fetch('https://n8n.synapsisai.nl/webhook/beb1ca46-b6a4-4afd-afb7-75367472088f', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: emailVal,
-          naam: naam.value.trim() || '',
-          taal: taal.value,
-          datum: new Date().toISOString().split('T')[0],
-          bron: 'Blog footer'
-        })
+        body: JSON.stringify(data)
       })
       .then(function(resp) {
         if (!resp.ok) throw new Error('Serverfout: ' + resp.status);

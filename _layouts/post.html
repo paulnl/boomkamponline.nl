@@ -511,10 +511,11 @@
       msg.textContent = '';
       msg.className = 'newsletter-msg';
 
-      fetch('https://n8n.synapsisai.nl/webhook/nieuwsbrief-inschrijven', {
+      fetch('https://n8n.synapsisai.nl/webhook/beb1ca46-b6a4-4afd-afb7-75367472088f', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          type: 'nieuwsbrief',
           email: emailVal,
           naam: naam.value.trim() || '',
           taal: taal.value,
