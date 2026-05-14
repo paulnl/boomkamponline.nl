@@ -288,13 +288,17 @@
         hamburger.setAttribute('aria-label', label || (open ? 'Menu sluiten' : 'Menu openen'));
       });
 
-      document.querySelectorAll('#main-nav a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          nav.classList.remove('open');
-          hamburger.classList.remove('open');
-          hamburger.setAttribute('aria-expanded', 'false');
-          var label = contentData ? getNested(contentData[currentLang], 'hamburger.open') : '';
-          hamburger.setAttribute('aria-label', label || 'Menu openen');
+      function closeNav() {
+        nav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        var label = contentData ? getNested(contentData[currentLang], 'hamburger.open') : '';
+        hamburger.setAttribute('aria-label', label || 'Menu openen');
+      }
+
+      document.querySelectorAll('#main-nav a, #main-nav .lang-btn').forEach(function (el) {
+        el.addEventListener('click', function () {
+          closeNav();
         });
       });
     }

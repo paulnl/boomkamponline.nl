@@ -1271,6 +1271,55 @@
       min-width: 44px;
       min-height: 44px;
     }
+
+    /* ===== MOBILE LANG SWITCHER IN NAV ===== */
+    .lang-switcher--mobile { display: none; }
+
+    @media (max-width: 768px) {
+      .lang-switcher--mobile {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        padding: 16px 0 4px;
+        margin-top: 12px;
+        border-top: 1px solid #eee;
+        width: 100%;
+        background: transparent;
+        border-radius: 0;
+      }
+      .lang-switcher--mobile .lang-btn {
+        width: 52px;
+        height: 44px;
+        font-size: 0.8125rem;
+      }
+      .header .lang-switcher:not(.lang-switcher--mobile) {
+        display: none;
+      }
+      /* Hamburger prominenter op mobiel */
+      .hamburger {
+        background: #f0f0f0;
+        border-radius: 10px;
+        padding: 8px;
+        width: 44px;
+        height: 44px;
+        margin-left: 4px;
+      }
+      .hamburger.open {
+        background: #1A1A2E;
+      }
+      .hamburger.open span {
+        background: #fff;
+      }
+      /* Mobiele nav beter leesbaar */
+      .nav a {
+        font-size: 1.0625rem;
+        padding: 14px 16px;
+      }
+      .nav-cta {
+        margin-top: 8px;
+        padding: 14px 20px !important;
+      }
+    }
   </style>
   <script src="main.js" defer></script>
 </head>
@@ -1287,6 +1336,11 @@
         <a href="#over-mij" data-i18n="nav.over">Over mij</a>
         <a href="/blog/" class="blog-link" data-i18n="nav.blog">Blog</a>
         <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switcher lang-switcher--mobile">
+          <button class="lang-btn" data-lang="nl" aria-label="Nederlands" title="Nederlands">NL</button>
+          <button class="lang-btn" data-lang="en" aria-label="English" title="English">EN</button>
+          <button class="lang-btn" data-lang="de" aria-label="Deutsch" title="Deutsch">DE</button>
+        </div>
       </nav>
       <div class="lang-switcher">
         <button class="lang-btn" data-lang="nl" aria-label="Nederlands" title="Nederlands" onclick="switchLang('nl')">NL</button>
