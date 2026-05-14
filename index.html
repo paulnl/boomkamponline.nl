@@ -925,6 +925,11 @@
       display: flex;
       gap: 8px;
     }
+    .footer-nieuwsbrief-input-full {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 8px;
+    }
     .footer-nieuwsbrief-input {
       flex: 1;
       padding: 10px 14px;
@@ -1716,6 +1721,8 @@
         <div class="footer-nieuwsbrief">
           <span class="footer-nieuwsbrief-label" data-i18n="footer.newsletter_label">Blijf op de hoogte</span>
           <form class="footer-nieuwsbrief-form" id="footer-nieuwsbrief-form">
+            <input type="text" class="footer-nieuwsbrief-input footer-nieuwsbrief-input-full" id="footer-nieuwsbrief-naam"
+              placeholder="Je naam" autocomplete="name" data-i18n-placeholder="footer.newsletter_name_placeholder">
             <div class="footer-nieuwsbrief-row">
               <input type="email" class="footer-nieuwsbrief-input" id="footer-nieuwsbrief-email"
                 placeholder="jouw@email.nl" required autocomplete="email">
@@ -1743,6 +1750,7 @@
     if (!form) return;
 
     var email = document.getElementById('footer-nieuwsbrief-email');
+    var naam = document.getElementById('footer-nieuwsbrief-naam');
     var submitBtn = document.getElementById('footer-nieuwsbrief-submit');
     var msg = document.getElementById('footer-nieuwsbrief-msg');
 
@@ -1766,7 +1774,7 @@
       var data = {
         type: 'nieuwsbrief',
         email: emailVal,
-        naam: '',
+        naam: naam ? naam.value.trim() : '',
         taal: taal,
         datum: new Date().toISOString().split('T')[0],
         bron: 'Footer'

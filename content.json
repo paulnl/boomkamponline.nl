@@ -173,6 +173,7 @@
       "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freelance webontwikkelaar & AI-consultant",
       "newsletter_label": "Blijf op de hoogte",
+      "newsletter_name_placeholder": "Je naam",
       "newsletter_btn": "Inschrijven"
     },
     "about": {
@@ -433,6 +434,7 @@
       "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freelance web developer & AI consultant",
       "newsletter_label": "Stay informed",
+      "newsletter_name_placeholder": "Your name",
       "newsletter_btn": "Subscribe"
     },
     "about": {
@@ -693,6 +695,7 @@
       "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freiberuflicher Webentwickler & KI-Berater",
       "newsletter_label": "Bleiben Sie informiert",
+      "newsletter_name_placeholder": "Ihr Name",
       "newsletter_btn": "Anmelden"
     },
     "about": {
