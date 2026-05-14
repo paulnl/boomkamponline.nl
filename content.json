@@ -172,7 +172,8 @@
     "footer": {
       "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freelance webontwikkelaar & AI-consultant",
-      "kvk": "KvK: 90600805"
+      "newsletter_label": "Blijf op de hoogte",
+      "newsletter_btn": "Inschrijven"
     },
     "about": {
       "label": "Over mij",
@@ -431,7 +432,8 @@
     "footer": {
       "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freelance web developer & AI consultant",
-      "kvk": "Chamber of Commerce: 90600805"
+      "newsletter_label": "Stay informed",
+      "newsletter_btn": "Subscribe"
     },
     "about": {
       "label": "About me",
@@ -690,7 +692,8 @@
     "footer": {
       "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freiberuflicher Webentwickler & KI-Berater",
-      "kvk": "KvK: 90600805"
+      "newsletter_label": "Bleiben Sie informiert",
+      "newsletter_btn": "Anmelden"
     },
     "about": {
       "label": "Über mich",

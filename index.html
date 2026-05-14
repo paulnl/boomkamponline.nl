@@ -909,6 +909,72 @@
     .footer-bottom a { color: #666; }
     .footer-bottom a:hover { color: #FF6B00; }
 
+    /* ===== FOOTER NEWSLETTER ===== */
+    .footer-nieuwsbrief {
+      flex: 1;
+      min-width: 260px;
+      max-width: 380px;
+    }
+    .footer-nieuwsbrief-label {
+      font-size: 0.8125rem;
+      color: #aaa;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .footer-nieuwsbrief-row {
+      display: flex;
+      gap: 8px;
+    }
+    .footer-nieuwsbrief-input {
+      flex: 1;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.875rem;
+      color: #fff;
+      background: rgba(255,255,255,0.06);
+      transition: border-color 0.2s, background 0.2s;
+      min-width: 0;
+    }
+    .footer-nieuwsbrief-input::placeholder { color: #888; }
+    .footer-nieuwsbrief-input:focus {
+      outline: none;
+      border-color: #FF6B00;
+      background: rgba(255,107,0,0.08);
+    }
+    .footer-nieuwsbrief-btn {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      background: #FF6B00;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .footer-nieuwsbrief-btn:hover {
+      background: #e85d00;
+      transform: translateY(-1px);
+    }
+    .footer-nieuwsbrief-btn:active { transform: translateY(0); }
+    .footer-nieuwsbrief-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .footer-nieuwsbrief-msg {
+      margin-top: 8px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      min-height: 20px;
+    }
+    .footer-nieuwsbrief-msg.success { color: #22c55e; }
+    .footer-nieuwsbrief-msg.error { color: #ef4444; }
+
     /* ===== WHATSAPP FAB ===== */
     .whatsapp-fab {
       position: fixed;
@@ -1647,11 +1713,21 @@
           <a href="/blog/" class="blog-link" data-i18n="nav.blog">Blog</a>
           <a href="#contact" data-i18n="nav.contact">Contact</a>
         </div>
+        <div class="footer-nieuwsbrief">
+          <span class="footer-nieuwsbrief-label" data-i18n="footer.newsletter_label">Blijf op de hoogte</span>
+          <form class="footer-nieuwsbrief-form" id="footer-nieuwsbrief-form">
+            <div class="footer-nieuwsbrief-row">
+              <input type="email" class="footer-nieuwsbrief-input" id="footer-nieuwsbrief-email"
+                placeholder="jouw@email.nl" required autocomplete="email">
+              <button type="submit" class="footer-nieuwsbrief-btn" id="footer-nieuwsbrief-submit"
+                data-i18n="footer.newsletter_btn">Inschrijven</button>
+            </div>
+            <div class="footer-nieuwsbrief-msg" id="footer-nieuwsbrief-msg"></div>
+          </form>
+        </div>
       </div>
       <div class="footer-bottom">
         <span data-i18n="footer.copyright">&copy; 2025 Paul Boomkamp – BoomkampOnline.NL</span>
-        <span class="footer-sep">&middot;</span>
-        <span data-i18n="footer.kvk">KvK: 90600805</span>
         <span class="footer-sep">&middot;</span>
         <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
       </div>
@@ -1659,6 +1735,69 @@
   </footer>
 
   <!-- Translations loaded from content.json via main.js -->
+
+  <script>
+  // Footer nieuwsbrief formulier
+  (function() {
+    var form = document.getElementById('footer-nieuwsbrief-form');
+    if (!form) return;
+
+    var email = document.getElementById('footer-nieuwsbrief-email');
+    var submitBtn = document.getElementById('footer-nieuwsbrief-submit');
+    var msg = document.getElementById('footer-nieuwsbrief-msg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var emailVal = email.value.trim();
+      if (!emailVal || !emailVal.includes('@')) {
+        msg.textContent = 'Voer een geldig e-mailadres in.';
+        msg.className = 'footer-nieuwsbrief-msg error';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Bezig...';
+      msg.textContent = '';
+      msg.className = 'footer-nieuwsbrief-msg';
+
+      var taal = document.documentElement.lang || 'nl';
+
+      var data = {
+        type: 'nieuwsbrief',
+        email: emailVal,
+        naam: '',
+        taal: taal,
+        datum: new Date().toISOString().split('T')[0],
+        bron: 'Footer'
+      };
+
+      fetch('https://n8n.synapsisai.nl/webhook/0312f578-7935-412a-a367-59f88343d769', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(function(resp) {
+        if (!resp.ok) throw new Error('Serverfout: ' + resp.status);
+        return resp.json();
+      })
+      .then(function() {
+        msg.textContent = '\u2705 Gelukt! Je ontvangt binnenkort de eerste nieuwsbrief.';
+        msg.className = 'footer-nieuwsbrief-msg success';
+        form.reset();
+      })
+      .catch(function(err) {
+        msg.textContent = '\u274c Er ging iets mis. Probeer het later opnieuw of mail naar paul@boomkamponline.nl.';
+        msg.className = 'footer-nieuwsbrief-msg error';
+        console.error('Nieuwsbrief error:', err);
+      })
+      .finally(function() {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Inschrijven';
+      });
+    });
+  })();
+  </script>
 
   <a href="https://wa.me/31623493326" class="whatsapp-fab" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
