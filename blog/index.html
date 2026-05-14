@@ -220,6 +220,107 @@ permalink: /blog/
     }
     .no-posts p { margin-bottom: 8px; }
 
+    /* Nieuwsbrief */
+    .newsletter {
+      background: #f8f8fc;
+      border-top: 1px solid #eee;
+      padding: 56px 0;
+    }
+    .newsletter-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .newsletter-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1A1A2E;
+      margin-bottom: 8px;
+    }
+    .newsletter-desc {
+      font-size: 0.9375rem;
+      color: #666;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .newsletter-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .newsletter-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 12px 18px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      color: #1A1A2E;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .newsletter-input:focus {
+      outline: none;
+      border-color: #FF6B00;
+      box-shadow: 0 0 0 3px rgba(255,107,0,0.1);
+    }
+    .newsletter-input::placeholder { color: #aaa; }
+    .newsletter-select {
+      padding: 12px 18px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      color: #1A1A2E;
+      background: #fff;
+      cursor: pointer;
+      min-width: 130px;
+    }
+    .newsletter-select:focus {
+      outline: none;
+      border-color: #FF6B00;
+    }
+    .newsletter-btn {
+      padding: 12px 36px;
+      border: none;
+      border-radius: 10px;
+      background: #1A1A2E;
+      color: #fff;
+      font-family: inherit;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .newsletter-btn:hover {
+      background: #FF6B00;
+      transform: translateY(-1px);
+    }
+    .newsletter-btn:active {
+      transform: translateY(0);
+    }
+    .newsletter-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .newsletter-msg {
+      margin-top: 12px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      min-height: 24px;
+    }
+    .newsletter-msg.success { color: #22c55e; }
+    .newsletter-msg.error { color: #ef4444; }
+
     /* Footer */
     .footer {
       background: #1A1A2E;
@@ -302,6 +403,45 @@ permalink: /blog/
     </div>
   </main>
 
+  <!-- Nieuwsbrief sectie -->
+  <section class="newsletter" id="nieuwsbrief">
+    <div class="container">
+      <div class="newsletter-inner">
+        <h2 class="newsletter-title">📬 Blijf op de hoogte</h2>
+        <p class="newsletter-desc">
+          Ontvang maandelijkse praktische artikelen over webdevelopment, AI en SEO.
+          Geen spam, alleen waardevolle inzichten.
+        </p>
+        <form class="newsletter-form" id="nieuwsbrief-form">
+          <div class="newsletter-row">
+            <input type="email" class="newsletter-input" id="nieuwsbrief-email"
+                   placeholder="Jouw e-mailadres" required autocomplete="email">
+            <input type="text" class="newsletter-input" id="nieuwsbrief-naam"
+                   placeholder="Jouw naam (optioneel)" autocomplete="name">
+            <select class="newsletter-select" id="nieuwsbrief-taal">
+              <option value="Nederlands">🇳🇱 Nederlands</option>
+              <option value="English">🇬🇧 English</option>
+              <option value="Deutsch">🇩🇪 Deutsch</option>
+            </select>
+            <button type="submit" class="newsletter-btn" id="nieuwsbrief-submit">Inschrijven</button>
+          </div>
+          <div class="newsletter-msg" id="nieuwsbrief-msg"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>
+      <a href="/">boomkamponline.nl</a>
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
+      &nbsp;&middot;&nbsp;
+      <a href="/blog/feed.xml">RSS</a>
+    </p>
+    <p style="margin-top: 8px;">© 2026 Paul Boomkamp</p>
+  </footer>
+
   <script>
   (function() {
     var filterBtns = document.querySelectorAll('.lang-filter-btn');
@@ -364,18 +504,65 @@ permalink: /blog/
       filterByLang('nl');
     }
   })();
-</script>
 
-<footer class="footer">
-    <p>
-      <a href="/">boomkamponline.nl</a>
-      &nbsp;&middot;&nbsp;
-      <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
-      &nbsp;&middot;&nbsp;
-      <a href="/blog/feed.xml">RSS</a>
-    </p>
-    <p style="margin-top: 8px;">© 2025 Paul Boomkamp</p>
-  </footer>
+  // Nieuwsbrief formulier
+  (function() {
+    var form = document.getElementById('nieuwsbrief-form');
+    var email = document.getElementById('nieuwsbrief-email');
+    var naam = document.getElementById('nieuwsbrief-naam');
+    var taal = document.getElementById('nieuwsbrief-taal');
+    var submitBtn = document.getElementById('nieuwsbrief-submit');
+    var msg = document.getElementById('nieuwsbrief-msg');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var emailVal = email.value.trim();
+      if (!emailVal || !emailVal.includes('@')) {
+        msg.textContent = 'Voer een geldig e-mailadres in.';
+        msg.className = 'newsletter-msg error';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Bezig...';
+      msg.textContent = '';
+      msg.className = 'newsletter-msg';
+
+      fetch('https://n8n.synapsisai.nl/webhook/nieuwsbrief-inschrijven', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: emailVal,
+          naam: naam.value.trim() || '',
+          taal: taal.value,
+          datum: new Date().toISOString().split('T')[0],
+          bron: 'Blog footer'
+        })
+      })
+      .then(function(resp) {
+        if (!resp.ok) throw new Error('Serverfout: ' + resp.status);
+        return resp.json();
+      })
+      .then(function(data) {
+        msg.textContent = '✅ Gelukt! Je ontvangt binnenkort de eerste nieuwsbrief.';
+        msg.className = 'newsletter-msg success';
+        form.reset();
+      })
+      .catch(function(err) {
+        msg.textContent = '❌ Er ging iets mis. Probeer het later opnieuw of mail naar paul@boomkamponline.nl.';
+        msg.className = 'newsletter-msg error';
+        console.error('Nieuwsbrief error:', err);
+      })
+      .finally(function() {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Inschrijven';
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>

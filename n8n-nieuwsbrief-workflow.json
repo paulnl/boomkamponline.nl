@@ -1,0 +1,91 @@
+{
+  "name": "Nieuwsbrief Inschrijvingen",
+  "nodes": [
+    {
+      "id": "webhook-1",
+      "name": "Webhook ontvanger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "parameters": {
+        "path": "nieuwsbrief-inschrijven",
+        "httpMethod": "POST",
+        "options": {}
+      },
+      "webhookId": "nieuwsbrief-inschrijven"
+    },
+    {
+      "id": "notion-1",
+      "name": "Notion - Nieuwsbrief toevoegen",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [550, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.notion.com/v1/pages",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer JOUW_NOTION_TOKEN"
+            },
+            {
+              "name": "Notion-Version",
+              "value": "2022-06-28"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"parent\": {\n    \"type\": \"database_id\",\n    \"database_id\": \"360b793a926781aba4d7fb0f1de1b50b\"\n  },\n  \"properties\": {\n    \"Email\": {\n      \"title\": [\n        {\n          \"text\": {\n            \"content\": \"{{ $json.body.email }}\"\n          }\n        }\n      ]\n    },\n    \"Naam\": {\n      \"rich_text\": [\n        {\n          \"text\": {\n            \"content\": \"{{ $json.body.naam }}\"\n          }\n        }\n      ]\n    },\n    \"Taal\": {\n      \"select\": {\n        \"name\": \"{{ $json.body.taal }}\"\n      }\n    },\n    \"Inschrijfdatum\": {\n      \"date\": {\n        \"start\": \"{{ $json.body.datum || $now }}\"\n      }\n    },\n    \"Actief\": {\n      \"checkbox\": true\n    },\n    \"Bron\": {\n      \"select\": {\n        \"name\": \"Blog footer\"\n      }\n    }\n  }\n}"
+      }
+    },
+    {
+      "id": "respond-1",
+      "name": "Antwoord",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [850, 300],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"success\": true,\n  \"message\": \"Inschrijving gelukt!\"\n}"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook ontvanger": {
+      "main": [
+        [
+          {
+            "node": "Notion - Nieuwsbrief toevoegen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion - Nieuwsbrief toevoegen": {
+      "main": [
+        [
+          {
+            "node": "Antwoord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [],
+  "active": false
+}
