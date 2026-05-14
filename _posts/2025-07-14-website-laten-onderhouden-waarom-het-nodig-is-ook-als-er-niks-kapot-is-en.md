@@ -2,7 +2,7 @@
 layout: post
 title: "Website laten onderhouden: waarom het nodig is (ook als er niks kapot is)"
 description: "Waarom een website onderhoud nodig heeft, ook als hij 'gewoon werkt'. Updates, backups, security en wat er misgaat zonder onderhoud — eerlijk en zonder bangmakerij."
-date: 2026-05-14
+date: 2025-07-14
 category: "Webdevelopment"
 lang: en
 post_id: "website-onderhoud"
