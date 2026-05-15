@@ -183,6 +183,63 @@
     }
     .article-content a { font-weight: 500; }
 
+    /* Tabellen */
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      overflow-x: auto;
+      display: block;
+    }
+    .article-content table thead {
+      display: table-header-group;
+    }
+    .article-content table tbody {
+      display: table-row-group;
+    }
+    .article-content table tr {
+      display: table-row;
+    }
+    .article-content th {
+      background: #1A1A2E;
+      color: #fff;
+      font-weight: 600;
+      text-align: left;
+      padding: 12px 16px;
+      white-space: nowrap;
+    }
+    .article-content th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+    .article-content th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+    .article-content td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .article-content tr:nth-child(even) td {
+      background: #f8f8fc;
+    }
+    .article-content tr:hover td {
+      background: #fff4eb;
+    }
+    .article-content table p {
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .article-content table {
+        font-size: 0.8125rem;
+      }
+      .article-content th,
+      .article-content td {
+        padding: 8px 10px;
+      }
+    }
+
     /* CTA onderaan */
     .article-cta {
       margin-top: 56px;
