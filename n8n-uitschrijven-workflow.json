@@ -1,0 +1,175 @@
+{
+  "name": "Nieuwsbrief Uitschrijven",
+  "nodes": [
+    {
+      "id": "webhook-uitschrijven",
+      "name": "Webhook ontvanger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "parameters": {
+        "path": "uitschrijven",
+        "httpMethod": "POST",
+        "options": {}
+      },
+      "webhookId": "uitschrijven"
+    },
+    {
+      "id": "notion-update",
+      "name": "Notion - Actief=false",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [550, 200],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.notion.com/v1/databases/360b793a926781aba4d7fb0f1de1b50b/query",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer JOUW_NOTION_TOKEN"
+            },
+            {
+              "name": "Notion-Version",
+              "value": "2022-06-28"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"filter\": {\n    \"property\": \"Email\",\n    \"title\": {\n      \"equals\": \"{{ $json.body.email }}\"\n    }\n  }\n}"
+      }
+    },
+    {
+      "id": "notion-patch",
+      "name": "Notion - Update pagina",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [550, 400],
+      "parameters": {
+        "method": "PATCH",
+        "url": "https://api.notion.com/v1/pages/{{ $json.results[0].id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer JOUW_NOTION_TOKEN"
+            },
+            {
+              "name": "Notion-Version",
+              "value": "2022-06-28"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"properties\": {\n    \"Actief\": {\n      \"checkbox\": false\n    }\n  }\n}"
+      }
+    },
+    {
+      "id": "brevo-unsubscribe",
+      "name": "Brevo - Uitschrijven",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [850, 300],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.brevo.com/v3/contacts/lists/3/contacts/remove",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api-key",
+              "value": "JOUW_BREVO_API_KEY"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"emails\": [\"{{ $('Webhook ontvanger').first().json.body.email }}\"]\n}"
+      }
+    },
+    {
+      "id": "respond-uitschrijven",
+      "name": "Antwoord",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1150, 300],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"success\": true,\n  \"message\": \"Uitschrijving verwerkt\"\n}"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook ontvanger": {
+      "main": [
+        [
+          {
+            "node": "Notion - Actief=false",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion - Actief=false": {
+      "main": [
+        [
+          {
+            "node": "Notion - Update pagina",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion - Update pagina": {
+      "main": [
+        [
+          {
+            "node": "Brevo - Uitschrijven",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Brevo - Uitschrijven": {
+      "main": [
+        [
+          {
+            "node": "Antwoord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [],
+  "active": false
+}
