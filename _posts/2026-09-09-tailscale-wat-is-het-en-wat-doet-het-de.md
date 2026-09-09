@@ -6,7 +6,7 @@ date: 2026-09-09
 category: "Automatisierung"
 lang: de
 post_id: "tailscale"
-image: /images/tailscale-og.jpg
+image: /images/tailscale-og-de.jpg
 ---
 
 Die Frage, die ich am häufigsten über Tailscale bekomme, in Cafés und in Mails: 'Das funktioniert doch einfach wie ein VPN, oder?' Meistens antworte ich: Lesen Sie weiter. Denn Tailscale ist genau das, was viele Unternehmer meinen, wenn sie 'ein VPN für mein Unternehmen' sagen - nur ohne die Konfigurations-Marathons.
