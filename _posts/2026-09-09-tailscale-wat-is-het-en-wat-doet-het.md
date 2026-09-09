@@ -6,6 +6,7 @@ date: 2026-09-09
 category: "Automatisering"
 lang: nl
 post_id: "tailscale"
+image: /images/tailscale-og.jpg
 ---
 
 De vraag die ik het vaakst over Tailscale krijg, in cafés en in mailtjes: 'Dat werkt toch gewoon met een VPN?' Meestal antwoord ik dan: lees even verder. Want Tailscale is precies wat veel ondernemers zoeken als ze 'VPN voor mijn bedrijf' bedoelen, maar dan zonder de config-marathons.
