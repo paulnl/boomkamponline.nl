@@ -385,6 +385,15 @@
             });
           })
           .then(function () {
+            if (typeof gtag === 'function') {
+              gtag('event', 'qualify_lead', {
+                'form_name': 'contact_formulier',
+                'reden': document.getElementById('reden')?.value || 'onbekend',
+                'branche': document.getElementById('branche')?.value || 'onbekend'
+              });
+            } else {
+              console.warn('[BoomkampOnline] gtag niet geladen bij formulierverzending');
+            }
             statusEl.className = 'form-status success';
             statusEl.textContent = t ? getNested(t, 'contact.form.success') : 'Bedankt voor je bericht!';
             form.reset();
