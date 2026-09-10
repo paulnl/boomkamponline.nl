@@ -394,6 +394,13 @@
             } else {
               console.warn('[BoomkampOnline] gtag niet geladen bij formulierverzending');
             }
+            if (typeof umami !== 'undefined' && typeof umami.track === 'function') {
+              umami.track('qualify_lead', {
+                form_name: 'contact_formulier',
+                reden: document.getElementById('reden')?.value || 'onbekend',
+                branche: document.getElementById('branche')?.value || 'onbekend'
+              });
+            }
             statusEl.className = 'form-status success';
             statusEl.textContent = t ? getNested(t, 'contact.form.success') : 'Bedankt voor je bericht!';
             form.reset();
