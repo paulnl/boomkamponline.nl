@@ -437,6 +437,28 @@
       font-size: 0.875rem;
     }
     .footer a { color: #FF6B00; text-decoration: none; }
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      margin-top: 12px;
+    }
+    .footer-social a {
+      color: #999;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      transition: color 0.2s, background 0.2s;
+    }
+    .footer-social a:hover {
+      color: #FF6B00;
+      background: rgba(255,255,255,0.08);
+      text-decoration: none;
+    }
 
     @media (max-width: 768px) {
       .article-title { font-size: 1.625rem; }
@@ -555,6 +577,17 @@
       <a href="/blog/">{% case page.lang %}{% when "nl" %}Blog{% when "en" %}Blog{% when "de" %}Blog{% endcase %}</a>
       &nbsp;&middot;&nbsp;
       <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
+    </p>
+    <p class="footer-social">
+      <a href="https://www.facebook.com/boomkamponline" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/boomkamponline.nl/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://bsky.app/profile/boomkamponline.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 2.73 0 3.381c0 .654.377 5.497.594 6.287C.99 10.905 2.98 11.626 5.68 12 2.98 12.374.99 13.095.594 14.332.377 15.122 0 19.965 0 20.619c0 .651.139 1.473.902 1.816.659.299 1.664.621 4.3-1.24 2.752-1.942 5.711-5.881 6.798-7.995.793 1.535-.66 4.139-3.788 6.261 2.004.687 4.666 1.422 6.788 1.422 2.122 0 4.784-.735 6.788-1.422-3.128-2.122-4.581-4.726-3.788-6.261 1.087 2.114 4.046 6.053 6.798 7.995 2.636 1.861 3.641 1.539 4.3 1.24.763-.343.902-1.165.902-1.816 0-.654-.377-5.497-.594-6.287C21.01 13.095 19.02 12.374 16.32 12c2.7-.374 4.69-1.095 5.086-2.332.217-.79.594-5.633.594-6.287 0-.651-.139-1.473-.902-1.816C20.641.734 19.636.412 17 2.805 14.046 4.747 11.087 8.686 12 10.8z"/></svg>
+      </a>
     </p>
     <p style="margin-top: 8px;">© 2026 Paul Boomkamp</p>
   </footer>
