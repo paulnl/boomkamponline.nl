@@ -321,12 +321,14 @@
       line-height: 1;
     }
     .lang-btn:hover { color: #444; }
-    /* ===== HERO FUNCTION ===== */
-    .hero-function {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #666;
-      margin: -8px 0 16px;
+    /* ===== HERO NAME (h1) ===== */
+    .hero-name {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #1A1A2E;
+      margin: 0 0 20px;
+      letter-spacing: -0.02em;
     }
 
     /* ===== REFERENTIES ===== */
@@ -520,6 +522,170 @@
       color: #666;
       line-height: 1.6;
     }
+    .dienst-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #f0f0f0;
+    }
+    .dienst-price {
+      display: inline-block;
+      background: #FFF0E6;
+      color: #e05e00;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .dienst-link {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #FF6B00;
+      text-decoration: none;
+    }
+    .dienst-link:hover { color: #e05e00; text-decoration: underline; }
+
+    /* ===== INSTAP (Remote Technical Fix) ===== */
+    .instap { background: #f9fafb; }
+    .instap-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 20px;
+      padding: 40px 36px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+    }
+    .instap-badge {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .instap-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+    .instap-desc { color: #666; max-width: 520px; margin: 0 auto 18px; line-height: 1.6; }
+    .instap-price {
+      display: inline-block;
+      font-size: 1.375rem;
+      font-weight: 800;
+      color: #1A1A2E;
+      background: #FFF0E6;
+      border-radius: 999px;
+      padding: 8px 22px;
+      margin-bottom: 18px;
+    }
+    .instap-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 22px;
+      margin-bottom: 20px;
+    }
+    .instap-list li {
+      position: relative;
+      font-size: 0.9375rem;
+      color: #444;
+      padding-left: 22px;
+    }
+    .instap-list li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      color: #FF6B00;
+      font-weight: 700;
+    }
+    .instap-note { font-size: 0.8125rem; color: #999; margin-bottom: 22px; }
+    .instap-cta {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(255,107,0,0.25);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    .instap-cta:hover { background: #e05e00; color: #fff; box-shadow: 0 6px 20px rgba(255,107,0,0.35); }
+
+    /* ===== WERK (case studies homepage) ===== */
+    .werk { background: #fff; }
+    .werk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .werk-card {
+      background: #f9fafb;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .werk-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+    }
+    .werk-tag {
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #FF6B00;
+      background: #FFF0E6;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .werk-title { font-size: 1.0625rem; font-weight: 700; line-height: 1.4; }
+    .werk-summary { font-size: 0.875rem; color: #666; line-height: 1.6; flex: 1; }
+    .werk-read { font-size: 0.875rem; font-weight: 600; color: #FF6B00; text-decoration: none; }
+    .werk-read:hover { text-decoration: underline; }
+    .werk-more { text-align: center; margin-top: 40px; }
+    .werk-more a {
+      display: inline-block;
+      border: 2px solid #FF6B00;
+      color: #FF6B00;
+      font-weight: 600;
+      padding: 11px 26px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .werk-more a:hover { background: #FF6B00; color: #fff; }
+
+    /* ===== CTA BAND ===== */
+    .cta-band { background: #1A1A2E; }
+    .cta-band-inner { text-align: center; max-width: 720px; }
+    .cta-band-title { color: #fff; font-size: 1.625rem; font-weight: 800; margin-bottom: 12px; }
+    .cta-band-text { color: #bbb; margin-bottom: 24px; }
+    .cta-band-btn {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff;
+      font-weight: 600;
+      padding: 13px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(255,107,0,0.3);
+      transition: background 0.2s;
+    }
+    .cta-band-btn:hover { background: #e05e00; color: #fff; }
 
     /* ===== OVER MIJ ===== */
     .over-mij { background: #f9fafb; }
@@ -1429,6 +1595,7 @@
       </a>
       <nav class="nav" id="main-nav" role="navigation" aria-label="Hoofdnavigatie">
         <a href="#diensten" data-i18n="nav.diensten">Diensten</a>
+        <a href="/work/" class="work-link" data-i18n="nav.werk">Werk</a>
         <a href="#over-mij" data-i18n="nav.over">Over mij</a>
         <a href="/blog/" class="blog-link" data-i18n="nav.blog">Blog</a>
         <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
@@ -1483,12 +1650,9 @@
       <div class="hero-grid"></div>
     </div>
     <div class="container hero-content">
-      <p class="hero-greeting fade-up" data-i18n="hero.greeting">Hallo, ik ben</p>
-      <h1 class="hero-name fade-up">
-        <span class="highlight">Paul Boomkamp</span>
-      </h1>
-      <p class="hero-function fade-up" data-i18n="hero.function">Freelance Webontwikkelaar &amp; AI-consultant</p>
-      <p class="hero-tagline fade-up" data-i18n="hero.tagline">Websites. SEO. AI. Beschikbaar als ZZP'er.</p>
+      <p class="hero-greeting fade-up" data-i18n="hero.name">Paul Boomkamp</p>
+      <h1 class="hero-name fade-up" data-i18n="hero.function">Remote PHP, Laravel, Linux &amp; Automation Support</h1>
+      <p class="hero-tagline fade-up" data-i18n="hero.tagline">Ik help kleine bedrijven en bureaus met websites, servers en automatisering &mdash; zonder langlopende contracten.</p>
       <a href="#contact" class="hero-cta fade-up">
         <span data-i18n="hero.cta_button">Neem contact op</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -1520,6 +1684,40 @@
       <p class="section-subtitle fade-up" data-i18n="diensten.subtitle">Van het bouwen van een nieuwe website tot AI-advies — ik werk als zelfstandige en denk graag met je mee.</p>
       <div class="diensten-grid" id="diensten-grid">
         <!-- Dynamisch gevuld door main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTAP (Remote Technical Fix) ===== -->
+  <section class="section instap" id="instap" aria-label="Remote Technical Fix">
+    <div class="container">
+      <div class="instap-card fade-up">
+        <span class="instap-badge" data-i18n="instap.label">Snelle hulp</span>
+        <h2 class="instap-title" data-i18n="instap.title">Remote Technical Fix</h2>
+        <p class="instap-desc" data-i18n="instap.description">Een concreet technisch probleem dat je blokkeert? Ik analyseer en los het op &mdash; meestal binnen 48 uur.</p>
+        <div class="instap-price" data-i18n="instap.price">$30&ndash;35 per probleem</div>
+        <ul class="instap-list">
+          <li data-i18n="instap.includes_0">Analyse en diagnose</li>
+          <li data-i18n="instap.includes_1">De oplossing zelf</li>
+          <li data-i18n="instap.includes_2">Korte uitleg van de oorzaak</li>
+        </ul>
+        <p class="instap-note" data-i18n="instap.note">Geen abonnement, geen verrassingen achteraf. Prijs en aanpak bevestigd v&oacute;&oacute;rdat ik start.</p>
+        <a href="#contact" class="instap-cta" data-i18n="instap.cta">Stuur je probleem</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WERK (case studies) ===== -->
+  <section class="section werk" id="werk" aria-label="Case studies">
+    <div class="container">
+      <span class="section-label fade-up" data-i18n="werk.label">Recent werk</span>
+      <h2 class="section-title fade-up" data-i18n="werk.title">Case studies</h2>
+      <p class="section-subtitle fade-up" data-i18n="werk.subtitle">Een greep uit projecten waarbij ik websites, servers en automatisering heb opgelost.</p>
+      <div class="werk-grid" id="werk-grid">
+        <!-- Dynamisch gevuld door main.js -->
+      </div>
+      <div class="werk-more fade-up">
+        <a href="/work/" class="work-link" data-i18n="werk.more_label">Bekijk alle case studies &rarr;</a>
       </div>
     </div>
   </section>
@@ -1608,6 +1806,15 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
+  <!-- ===== CTA BAND ===== -->
+  <section class="section cta-band" id="cta-band" aria-label="Aanbod">
+    <div class="container cta-band-inner fade-up">
+      <h2 class="cta-band-title" data-i18n="cta_home.title">Technisch probleem? Pak het vandaag aan.</h2>
+      <p class="cta-band-text" data-i18n="cta_home.text">Stuur je probleem en je krijgt binnen &eacute;&eacute;n werkdag een concreet voorstel. Geen lange trajecten, geen contracten.</p>
+      <a href="#contact" class="cta-band-btn" data-i18n="cta_home.button">Vraag een gratis eerste beoordeling aan</a>
+    </div>
+  </section>
+
   <section class="section contact" id="contact" aria-label="Contact">
     <div class="container">
       <span class="section-label fade-up" data-i18n="contact.label">Contact</span>
@@ -1702,12 +1909,11 @@
                 <label for="reden"><span data-i18n="contact.form.reason">Waarvoor belt u?</span></label>
                 <select id="reden" name="reden">
                   <option value="" disabled selected data-i18n="contact.form.reason_placeholder">Kies een reden</option>
-                  <option value="Nieuwe website laten bouwen" data-i18n="contact.form.reason_opt_0">Nieuwe website laten bouwen</option>
-                  <option value="Bestaande website verbeteren" data-i18n="contact.form.reason_opt_1">Bestaande website verbeteren</option>
-                  <option value="SEO &amp; vindbaarheid" data-i18n="contact.form.reason_opt_2">SEO &amp; vindbaarheid</option>
-                  <option value="AI advies of implementatie" data-i18n="contact.form.reason_opt_3">AI advies of implementatie</option>
-                  <option value="ZZP / detachering" data-i18n="contact.form.reason_opt_4">ZZP / detachering</option>
-                  <option value="Iets anders" data-i18n="contact.form.reason_opt_5">Iets anders</option>
+                  <option value="PHP/Laravel ontwikkeling of onderhoud" data-i18n="contact.form.reason_opt_0">PHP/Laravel ontwikkeling of onderhoud</option>
+                  <option value="Linux/server beheer" data-i18n="contact.form.reason_opt_1">Linux/server beheer</option>
+                  <option value="n8n automatisering" data-i18n="contact.form.reason_opt_2">n8n automatisering</option>
+                  <option value="Remote Technical Fix" data-i18n="contact.form.reason_opt_3">Remote Technical Fix</option>
+                  <option value="Iets anders" data-i18n="contact.form.reason_opt_4">Iets anders</option>
                 </select>
               </div>
               <div class="form-group full-width">

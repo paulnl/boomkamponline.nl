@@ -10,16 +10,18 @@
       "diensten": "Diensten",
       "over": "Over mij",
       "blog": "Blog",
-      "contact": "Contact"
+      "contact": "Contact",
+      "werk": "Werk"
     },
     "hero": {
       "greeting": "Hallo, ik ben",
       "name": "Paul Boomkamp",
-      "tagline": "Ik bouw websites die werken, zorg dat je gevonden wordt en help je slimmer werken met AI.",
-      "cta": "Laten we kennismaken",
+      "tagline": "Ik help kleine bedrijven en bureaus met websites, servers en automatisering — zonder langlopende contracten.",
+      "cta": "Technisch probleem? Vraag een gratis eerste beoordeling aan",
       "badge_number": "25+",
       "badge_label": "jaar ervaring in webdevelopment",
-      "function": "Freelance Webontwikkelaar & AI-consultant"
+      "function": "Remote PHP, Laravel, Linux & Automation Support",
+      "cta_button": "Technisch probleem? Vraag een gratis eerste beoordeling aan"
     },
     "diensten": {
       "label": "Wat ik doe",
@@ -27,26 +29,28 @@
       "subtitle": "Ik werk het liefst direct met de opdrachtgever. Geen tussenpersonen, geen standaard pakketten — maar een oplossing die bij jouw situatie past.",
       "items": [
         {
-          "icon": "monitor",
-          "title": "Website bouwen",
-          "description": "Van een eenvoudige presentatiesite tot een complexe webapplicatie. Ik werk met WordPress, TYPO3 of bouw volledig op maat — afhankelijk van wat jij nodig hebt."
+          "icon": "code",
+          "title": "PHP & Laravel",
+          "description": "Ontwikkeling, onderhoud en reparaties voor websites en webapplicaties op PHP en Laravel — van kleine fixes tot complete features.",
+          "price": "vanaf $25",
+          "url": "/services/php-laravel/"
         },
         {
-          "icon": "search",
-          "title": "SEO & vindbaarheid",
-          "description": "Gevonden worden in Google begint met een goed fundament. Ik kijk naar technische SEO, paginasnelheid, structuur en content — en geef je concrete stappen."
+          "icon": "server",
+          "title": "Linux & servers",
+          "description": "Serverbeheer, hardening, migraties en Docker. Ik zorg dat je servers stabiel, snel en veilig draaien.",
+          "price": "vanaf $30",
+          "url": "/services/linux-server/"
         },
         {
-          "icon": "cpu",
-          "title": "AI advies & automatisering",
-          "description": "AI hoeft niet ingewikkeld te zijn. Ik help je begrijpen wat er mogelijk is en zet concrete tools op — van slimme workflows met n8n tot chatbots en AI-integraties."
-        },
-        {
-          "icon": "user",
-          "title": "Beschikbaar als ZZP'er",
-          "description": "Behoefte aan een extra paar handen? Ik ben inzetbaar als programmeur, voor helpdesk-ondersteuning of voor het afhandelen van afspraken en klantcontact."
+          "icon": "zap",
+          "title": "n8n & automatisering",
+          "description": "Slimme workflows die herhaalwerk automatiseren: leads, notificaties, integraties tussen apps en AI.",
+          "price": "vanaf $50",
+          "url": "/services/n8n-automation/"
         }
-      ]
+      ],
+      "link_label": "Meer info →"
     },
     "over": {
       "label": "Over mij",
@@ -133,11 +137,10 @@
         "reason": "Waarvoor belt u?",
         "reason_placeholder": "Kies een reden",
         "reason_options": [
-          "Nieuwe website laten bouwen",
-          "Bestaande website verbeteren",
-          "SEO & vindbaarheid",
-          "AI advies of implementatie",
-          "ZZP / detachering",
+          "PHP/Laravel ontwikkeling of onderhoud",
+          "Linux/server beheer",
+          "n8n automatisering",
+          "Remote Technical Fix",
           "Iets anders"
         ],
         "message": "Bericht",
@@ -155,11 +158,11 @@
         "sector_opt_6": "Horeca & toerisme",
         "sector_opt_7": "Overheid & non-profit",
         "sector_opt_8": "Anders",
-        "reason_opt_0": "Nieuwe website laten bouwen",
-        "reason_opt_1": "Bestaande website verbeteren",
-        "reason_opt_2": "SEO & vindbaarheid",
-        "reason_opt_3": "AI advies of implementatie",
-        "reason_opt_4": "ZZP / detachering",
+        "reason_opt_0": "PHP/Laravel ontwikkeling of onderhoud",
+        "reason_opt_1": "Linux/server beheer",
+        "reason_opt_2": "n8n automatisering",
+        "reason_opt_3": "Remote Technical Fix",
+        "reason_opt_4": "Iets anders",
         "reason_opt_5": "Iets anders"
       }
     },
@@ -219,46 +222,293 @@
           "url": "https://kieskunstgras.nl",
           "logo": "images/kieskunstgras_v1.png",
           "sector": "Tuin & buitenruimte",
-          "diensten": ["Website bouwen", "SEO", "Contactformulier"],
+          "diensten": [
+            "Website bouwen",
+            "SEO",
+            "Contactformulier"
+          ],
           "quote": "Paul heeft onze website volledig opnieuw gebouwd. Het resultaat is snel, overzichtelijk en levert aantoonbaar meer leads op via het contactformulier.",
           "naam": "Kieskunstgras.nl",
           "resultaat": "Meer leadgeneratie via geautomatiseerd contactformulier"
+        },
+        {
+          "id": "schuco-varianto",
+          "bedrijf": "Schuco-Varianto.nl",
+          "url": "https://schuco-varianto.nl",
+          "logo": "images/logo_schuco.png",
+          "sector": "Verzamelen & nostalgie",
+          "diensten": [
+            "Website bouwen",
+            "TYPO3",
+            "Content & catalogus"
+          ],
+          "quote": "Schuco-Varianto.nl is een informatieve website over de blikken speelgoedauto's uit de Varianto-serie van Schuco — een geliefde collectie uit de jaren vijftig. De site is gebouwd op TYPO3 en biedt een overzichtelijke catalogus van alle mechanische en elektrische modellen, inclusief accessoires en historische achtergrond. Een project dat vraagt om aandacht voor detail en liefde voor het onderwerp.",
+          "naam": "Schuco-Varianto.nl",
+          "resultaat": "Volledige TYPO3 website met catalogus van mechanische en elektrische modellen"
+        },
+        {
+          "id": "sandrabedrukt",
+          "bedrijf": "SandraBedrukt.nl",
+          "url": "https://sandrabedrukt.nl",
+          "logo": "images/sandrabedruktLogo.png",
+          "sector": "Cadeaus & gepersonaliseerde producten",
+          "diensten": [
+            "Website bouwen",
+            "SEO",
+            "Snelle laadtijd"
+          ],
+          "quote": "Ik wilde een website die er verzorgd uitziet maar niet ingewikkeld is — snel, duidelijk en makkelijk te vinden via Google. Paul heeft precies dat geleverd. De site laadt razendsnel, is overzichtelijk ingedeeld en trekt bezoekers aan via zoekopdrachten als 'mok met naam' en 'kraamcadeau met opdruk'. Precies wat ik nodig had.",
+          "naam": "Sandra – SandraBedrukt.nl",
+          "resultaat": "Snelle, clean website die goed scoort op relevante zoekopdrachten"
+        },
+        {
+          "id": "gerben-deventer",
+          "bedrijf": "Gerben, Deventer",
+          "url": "",
+          "logo": "",
+          "sector": "Smart Home & IoT",
+          "diensten": [
+            "IoT integratie",
+            "Energiebeheer",
+            "Automatisering"
+          ],
+          "quote": "Mijn huis staat vol slimme apparaten, maar de stroomkosten liepen toch op. Paul heeft een systeem gebouwd dat mijn energieverbruik koppelt aan de actuele stroomprijs van mijn flexibele contract. Zware apparaten zoals de wasmachine en het laden van mijn auto starten nu automatisch op het goedkoopste moment van de dag. Het resultaat: mijn installatie is structureel rendabel geworden.",
+          "naam": "Gerben — Deventer",
+          "resultaat": "Structureel rendabele energiehuishouding via slim flexibel stroomcontract"
         }
-      ,{
-        "id": "schuco-varianto",
-        "bedrijf": "Schuco-Varianto.nl",
-        "url": "https://schuco-varianto.nl",
-        "logo": "images/logo_schuco.png",
-        "sector": "Verzamelen & nostalgie",
-        "diensten": ["Website bouwen", "TYPO3", "Content & catalogus"],
-        "quote": "Schuco-Varianto.nl is een informatieve website over de blikken speelgoedauto's uit de Varianto-serie van Schuco — een geliefde collectie uit de jaren vijftig. De site is gebouwd op TYPO3 en biedt een overzichtelijke catalogus van alle mechanische en elektrische modellen, inclusief accessoires en historische achtergrond. Een project dat vraagt om aandacht voor detail en liefde voor het onderwerp.",
-        "naam": "Schuco-Varianto.nl",
-        "resultaat": "Volledige TYPO3 website met catalogus van mechanische en elektrische modellen"
-      }
-      ,{
-        "id": "sandrabedrukt",
-        "bedrijf": "SandraBedrukt.nl",
-        "url": "https://sandrabedrukt.nl",
-        "logo": "images/sandrabedruktLogo.png",
-        "sector": "Cadeaus & gepersonaliseerde producten",
-        "diensten": ["Website bouwen", "SEO", "Snelle laadtijd"],
-        "quote": "Ik wilde een website die er verzorgd uitziet maar niet ingewikkeld is — snel, duidelijk en makkelijk te vinden via Google. Paul heeft precies dat geleverd. De site laadt razendsnel, is overzichtelijk ingedeeld en trekt bezoekers aan via zoekopdrachten als 'mok met naam' en 'kraamcadeau met opdruk'. Precies wat ik nodig had.",
-        "naam": "Sandra – SandraBedrukt.nl",
-        "resultaat": "Snelle, clean website die goed scoort op relevante zoekopdrachten"
-      }
-      ,{
-        "id": "gerben-deventer",
-        "bedrijf": "Gerben, Deventer",
-        "url": "",
-        "logo": "",
-        "sector": "Smart Home & IoT",
-        "diensten": ["IoT integratie", "Energiebeheer", "Automatisering"],
-        "quote": "Mijn huis staat vol slimme apparaten, maar de stroomkosten liepen toch op. Paul heeft een systeem gebouwd dat mijn energieverbruik koppelt aan de actuele stroomprijs van mijn flexibele contract. Zware apparaten zoals de wasmachine en het laden van mijn auto starten nu automatisch op het goedkoopste moment van de dag. Het resultaat: mijn installatie is structureel rendabel geworden.",
-        "naam": "Gerben — Deventer",
-        "resultaat": "Structureel rendabele energiehuishouding via slim flexibel stroomcontract"
-      }
       ]
-    }
+    },
+    "instap": {
+      "label": "Snelle hulp",
+      "title": "Remote Technical Fix",
+      "description": "Eén concreet technisch probleem dat je blokkeert? Ik analyseer en los het op — meestal binnen 48 uur, tegen een vast tarief.",
+      "price": "$30–35 per probleem",
+      "note": "Geen abonnement, geen verrassingen achteraf. Prijs en aanpak bevestigd vóórdat ik start.",
+      "cta": "Stuur je probleem",
+      "includes_0": "Analyse en diagnose",
+      "includes_1": "De oplossing zelf",
+      "includes_2": "Korte uitleg van de oorzaak"
+    },
+    "cta_home": {
+      "title": "Technisch probleem? Pak het vandaag aan.",
+      "text": "Stuur je probleem en je krijgt binnen één werkdag een concreet voorstel. Geen lange trajecten, geen contracten.",
+      "button": "Vraag een gratis eerste beoordeling aan"
+    },
+    "werk": {
+      "label": "Recent werk",
+      "title": "Case studies",
+      "subtitle": "Een greep uit projecten waarbij ik websites, servers en automatisering heb opgelost en verbeterd.",
+      "items": [
+        {
+          "id": "n8n-cloudflare",
+          "title": "Leadworkflow via n8n + Cloudflare",
+          "summary": "Een handmatige lead-afhandeling vervangen door een geautomatiseerde workflow: formulier naar database, e-mail en opvolging in één keten.",
+          "tag": "n8n · Cloudflare"
+        },
+        {
+          "id": "laravel-shop",
+          "title": "Laravel-webapplicatie: update en nieuwe module",
+          "summary": "Een verouderde Laravel-applicatie gestabiliseerd, geüpdatet en uitgebreid met een nieuwe module — zonder downtime.",
+          "tag": "PHP · Laravel"
+        },
+        {
+          "id": "linux-docker",
+          "title": "Server op orde: Docker-migratie en hardening",
+          "summary": "Een rommelige server omgezet naar overzichtelijke Docker-containers met automatische back-ups en betere security.",
+          "tag": "Linux · Docker"
+        },
+        {
+          "id": "webform-demo",
+          "title": "Demo: van webformulier naar opvolging",
+          "summary": "Een proof-of-concept waarbij een webformulier direct een database-invoer, bevestigingsmail en follow-up-taak aanmaakt.",
+          "tag": "Webform → n8n → database → e-mail"
+        }
+      ],
+      "read_label": "Lees de case →",
+      "more_label": "Bekijk alle case studies →"
+    },
+    "work_page": {
+      "label": "Mijn werk",
+      "title": "Case studies",
+      "intro": "Elke case in drie stappen: probleem, aanpak en resultaat. De voorbeelden zijn waar nodig geanonimiseerd.",
+      "back": "Terug naar home",
+      "cta": "Wil je iets vergelijkbaars laten bouwen?",
+      "cta_sub": "Beschrijf je situatie en je krijgt binnen één werkdag een concreet voorstel.",
+      "cta_button": "Neem contact op",
+      "cases": [
+        {
+          "id": "n8n-cloudflare",
+          "title": "Leadworkflow via n8n en Cloudflare",
+          "client": "MKB-bedrijf in de dienstverlening",
+          "probleem": "Offertes en leadgegevens kwamen binnen via gemailde PDF's en handmatige invoer in Excel. Gegevens gingen verloren en de opvolging was traag.",
+          "aanpak": "Ik bouwde een n8n-workflow achter het bestaande webformulier, beveiligd via Cloudflare. Elke inzending wordt gevalideerd, opgeslagen in een database en gekoppeld aan een bevestigingsmail en een follow-up-taak voor de verkoper.",
+          "resultaat": "Geen verloren leads meer. De opvolgtijd ging van gemiddeld twee dagen naar enkele uren, zonder extra softwarekosten."
+        },
+        {
+          "id": "laravel-shop",
+          "title": "Laravel-webapplicatie: update en nieuwe module",
+          "client": "Online dienstverlener",
+          "probleem": "Een Laravel-applicatie draaide op een verouderde versie met beveiligingsrisico's. Nieuwe wensen stapelden zich op, maar niemand durfde de code aan te raken.",
+          "aanpak": "Ik heb de applicatie stap voor stap geüpdatet (met tests en back-ups per stap), de deployments gestandaardiseerd en daarna een nieuwe module opgeleverd voor de meest gevraagde functionaliteit.",
+          "resultaat": "Een actuele, veilige codebase en een werkende uitbreiding — zonder downtime en zonder dat het bedrijf op slot zat."
+        },
+        {
+          "id": "linux-docker",
+          "title": "Server op orde: Docker-migratie en hardening",
+          "client": "Klein IT-bedrijf",
+          "probleem": "Een oude server draaide meerdere diensten direct op het systeem: onoverzichtelijk, geen back-ups en bekende kwetsbaarheden open.",
+          "aanpak": "Ik heb alle diensten omgezet naar Docker-containers met duidelijke configuratie, automatische back-ups ingericht, SSH-hardening toegepast en monitoring opgezet voor schijfruimte en uptime.",
+          "resultaat": "Een overzichtelijke en herbouwbare server, automatische back-ups die ook getest worden, en meldingen voordat iets uitvalt."
+        },
+        {
+          "id": "webform-demo",
+          "title": "Demo: van webformulier naar opvolging",
+          "client": "Proof-of-concept voor een klant",
+          "probleem": "Klanten wilden zien hoe een webformulier zonder handmatig werk de rest van het proces kon starten: opslaan, bevestigen en opvolgen.",
+          "aanpak": "Ik bouwde een complete demo-omgeving: statisch formulier als front-end, n8n als werkflow-motor, een database voor de inzendingen en e-mailstappen voor bevestiging en interne melding.",
+          "resultaat": "Een werkende referentie-omgeving in één dag, die later ook daadwerkelijk als basis voor de productie-workflow is gebruikt."
+        }
+      ],
+      "labels": {
+        "probleem": "Probleem",
+        "aanpak": "Aanpak",
+        "resultaat": "Resultaat"
+      },
+      "meta_description": "Case studies: websites, servers en automatisering opgelost — n8n, Laravel, Linux/Docker. Elke case in probleem, aanpak en resultaat."
+    },
+    "services_page": {
+      "label": "Diensten",
+      "title": "Wat ik voor je kan doen",
+      "intro": "Remote ondersteuning per project of per uur — zonder langlopende contracten. Richtprijzen staan per dienst, een exacte offerte krijg je binnen één werkdag.",
+      "phpLaravel": {
+        "title": "PHP & Laravel ontwikkeling",
+        "subtitle": "Ontwikkeling, onderhoud en reparaties voor websites en webapplicaties.",
+        "intro": "Van een kapot formulier tot een complete nieuwe module: ik werk in PHP, Laravel, WordPress en TYPO3 en los problemen op in bestaande codebases.",
+        "what_title": "Wat ik doe",
+        "what": [
+          "Bugs en storingen oplossen",
+          "Nieuwe features en modules bouwen",
+          "Laravel- en PHP-upgrades (veilig, met tests)",
+          "Code-review en performance-verbeteringen",
+          "Integraties met API's, betalingen en externe systemen"
+        ],
+        "price_title": "Richtprijzen",
+        "prices": [
+          {
+            "label": "Kleine fix of bug",
+            "price": "$25–100"
+          },
+          {
+            "label": "Feature of module",
+            "price": "$100–300"
+          },
+          {
+            "label": "Groter project of maatwerk",
+            "price": "$300–400+"
+          },
+          {
+            "label": "Maandelijks onderhoud",
+            "price": "$75–300 / maand"
+          }
+        ],
+        "price_note": "Alle prijzen zijn richtprijzen. Je ontvangt altijd eerst een concrete offerte — akkoord vooraf, geen verrassingen achteraf.",
+        "cta": "Heb je een PHP- of Laravel-probleem?",
+        "cta_sub": "Beschrijf kort wat er speelt en je krijgt binnen één werkdag een concreet voorstel.",
+        "cta_button": "Vraag een voorstel aan",
+        "meta_description": "PHP en Laravel ontwikkeling en onderhoud: bugs, nieuwe modules, upgrades en integraties. Richtprijzen vanaf $25, remote."
+      },
+      "linuxServer": {
+        "title": "Linux & serverbeheer",
+        "subtitle": "Stabiele, snelle en veilige servers — remote beheerd.",
+        "intro": "Ik help bij serverproblemen, migraties en beveiliging op Debian/Ubuntu, met Docker, Nginx, databases en back-ups.",
+        "what_title": "Wat ik doe",
+        "what": [
+          "Serverstoringen opsporen en oplossen",
+          "Migraties (server, domein of mail)",
+          "Security-hardening: SSH, firewalls, updates",
+          "Docker-containers opzetten en beheren",
+          "Back-ups en monitoring inrichten"
+        ],
+        "price_title": "Richtprijzen",
+        "prices": [
+          {
+            "label": "Losse check of fix",
+            "price": "$30–150"
+          },
+          {
+            "label": "Migratie of herinrichting",
+            "price": "$150–400"
+          },
+          {
+            "label": "Maandelijks beheer",
+            "price": "$75–300 / maand"
+          }
+        ],
+        "price_note": "Alle prijzen zijn richtprijzen. Je ontvangt altijd eerst een concrete offerte — akkoord vooraf, geen verrassingen achteraf.",
+        "cta": "Loopt je server vast of is hij onveilig?",
+        "cta_sub": "Stuur me een korte beschrijving en je krijgt binnen één werkdag een plan van aanpak.",
+        "cta_button": "Vraag een voorstel aan",
+        "meta_description": "Linux serverbeheer, migraties, security-hardening en Docker. Stabiele en veilige servers, remote beheerd. Vanaf $30."
+      },
+      "n8nAutomation": {
+        "title": "n8n & automatisering",
+        "subtitle": "Workflows die herhaalwerk voor je doen.",
+        "intro": "Ik ontwerp en bouw n8n-workflows die systemen met elkaar verbinden: formulieren, e-mail, databases, API's en AI.",
+        "what_title": "Wat ik doe",
+        "what": [
+          "Workflows ontwerpen en bouwen (leadmanagement, notificaties, rapportages)",
+          "Webhooks en formulierkoppelingen",
+          "Integraties met API's, Google Workspace, databases en AI",
+          "Bestaande workflows debuggen en verbeteren",
+          "Documentatie en overdracht aan je eigen team"
+        ],
+        "price_title": "Richtprijzen",
+        "prices": [
+          {
+            "label": "Simpele workflow",
+            "price": "$50–150"
+          },
+          {
+            "label": "Complexe workflow of integratie",
+            "price": "$150–250"
+          },
+          {
+            "label": "Maandelijks beheer en uitbreiding",
+            "price": "$75–300 / maand"
+          }
+        ],
+        "price_note": "Alle prijzen zijn richtprijzen. Je ontvangt altijd eerst een concrete offerte — akkoord vooraf, geen verrassingen achteraf.",
+        "cta": "Doe je werk handmatig in meerdere systemen?",
+        "cta_sub": "Vertel me welke handmatige stappen je doet en ik bouw er een workflow omheen.",
+        "cta_button": "Vraag een voorstel aan",
+        "meta_description": "n8n workflows en automatisering: formulieren, e-mail, databases en AI koppelen. Richtprijzen vanaf $50, remote."
+      },
+      "items": [
+        {
+          "url": "/services/php-laravel/",
+          "name": "PHP & Laravel ontwikkeling",
+          "price": "5–400+",
+          "desc": "Ontwikkeling, onderhoud en reparaties voor websites en webapplicaties op PHP, Laravel, WordPress en TYPO3."
+        },
+        {
+          "url": "/services/linux-server/",
+          "name": "Linux & serverbeheer",
+          "price": "0–150",
+          "desc": "Serverstoringen oplossen, migraties, security-hardening en Docker — remote beheerd."
+        },
+        {
+          "url": "/services/n8n-automation/",
+          "name": "n8n & automatisering",
+          "price": "0–250",
+          "desc": "Slimme workflows die systemen verbinden en herhaalwerk automatiseren: formulieren, e-mail, databases en AI."
+        }
+      ],
+      "note": "Beschikbaar per project, per uur of als maandelijks onderhoud. Remote vanaf elke locatie — geen langlopende contracten, geen verrassingen achteraf.",
+      "meta_description": "Remote PHP, Laravel, Linux en n8n support: ontwikkeling, serverbeheer en automatisering voor bedrijven. Zonder langlopende contracten."
+    },
+    "meta.description": "Remote PHP-, Laravel- en Linux-support en n8n-automatisering. Effectieve hulp voor developers en bedrijven.",
+    "meta.ogtitle": "BoomkampOnline — Remote PHP, Laravel, Linux & Automatisering",
+    "meta.ogdescription": "Remote PHP-, Laravel- en Linux-support en n8n-automatisering. Effectieve hulp voor developers en bedrijven."
   },
   "en": {
     "meta": {
@@ -271,16 +521,18 @@
       "diensten": "Services",
       "over": "About",
       "blog": "Blog",
-      "contact": "Contact"
+      "contact": "Contact",
+      "werk": "My work"
     },
     "hero": {
       "greeting": "Hi, I'm",
       "name": "Paul Boomkamp",
-      "tagline": "I build websites that work, make sure you get found, and help you work smarter with AI.",
-      "cta": "Let's talk",
+      "tagline": "I help small businesses and agencies fix websites, servers and automation problems — no long-term contracts required.",
+      "cta": "Got a technical problem? Get a free initial assessment",
       "badge_number": "25+",
       "badge_label": "years of web development experience",
-      "function": "Freelance Web Developer & AI Consultant"
+      "function": "Remote PHP, Laravel, Linux & Automation Support",
+      "cta_button": "Got a technical problem? Get a free initial assessment"
     },
     "diensten": {
       "label": "What I do",
@@ -288,26 +540,28 @@
       "subtitle": "I prefer working directly with the client. No middlemen, no standard packages — just a solution that fits your situation.",
       "items": [
         {
-          "icon": "monitor",
-          "title": "Website development",
-          "description": "From a simple brochure site to a complex web application. I work with WordPress, TYPO3 or build fully custom — depending on what you actually need."
+          "icon": "code",
+          "title": "PHP & Laravel",
+          "description": "Development, maintenance and fixes for websites and web apps built on PHP and Laravel — from small hotfixes to complete features.",
+          "price": "from $25",
+          "url": "/services/php-laravel/"
         },
         {
-          "icon": "search",
-          "title": "SEO & visibility",
-          "description": "Being found on Google starts with a solid foundation. I look at technical SEO, page speed, structure and content — and give you concrete steps forward."
+          "icon": "server",
+          "title": "Linux & servers",
+          "description": "Server administration, hardening, migrations and Docker. I keep your servers stable, fast and secure.",
+          "price": "from $30",
+          "url": "/services/linux-server/"
         },
         {
-          "icon": "cpu",
-          "title": "AI advice & automation",
-          "description": "AI doesn't have to be complicated. I help you understand what's possible and set up concrete tools — from smart workflows with n8n to chatbots and AI integrations."
-        },
-        {
-          "icon": "user",
-          "title": "Available as freelancer",
-          "description": "Need an extra pair of hands? I'm available as a programmer, for helpdesk support or for handling appointments and customer contact."
+          "icon": "zap",
+          "title": "n8n & automation",
+          "description": "Smart workflows that take over repetitive work: leads, notifications, integrations between apps and AI.",
+          "price": "from $50",
+          "url": "/services/n8n-automation/"
         }
-      ]
+      ],
+      "link_label": "More info →"
     },
     "over": {
       "label": "About me",
@@ -394,11 +648,10 @@
         "reason": "Reason for contact",
         "reason_placeholder": "Choose a reason",
         "reason_options": [
-          "Build a new website",
-          "Improve existing website",
-          "SEO & visibility",
-          "AI advice or implementation",
-          "Freelance / secondment",
+          "PHP/Laravel development or maintenance",
+          "Linux/server administration",
+          "n8n automation",
+          "Remote Technical Fix",
           "Something else"
         ],
         "message": "Message",
@@ -416,11 +669,11 @@
         "sector_opt_6": "Hospitality & tourism",
         "sector_opt_7": "Government & non-profit",
         "sector_opt_8": "Other",
-        "reason_opt_0": "Build a new website",
-        "reason_opt_1": "Improve existing website",
-        "reason_opt_2": "SEO & visibility",
-        "reason_opt_3": "AI advice or implementation",
-        "reason_opt_4": "Freelance / secondment",
+        "reason_opt_0": "PHP/Laravel development or maintenance",
+        "reason_opt_1": "Linux/server administration",
+        "reason_opt_2": "n8n automation",
+        "reason_opt_3": "Remote Technical Fix",
+        "reason_opt_4": "Something else",
         "reason_opt_5": "Something else"
       }
     },
@@ -480,46 +733,293 @@
           "url": "https://kieskunstgras.nl",
           "logo": "images/kieskunstgras_v1.png",
           "sector": "Garden & outdoor",
-          "diensten": ["Website development", "SEO", "Contact form"],
+          "diensten": [
+            "Website development",
+            "SEO",
+            "Contact form"
+          ],
           "quote": "Paul completely rebuilt our website. The result is fast, clear and demonstrably generates more leads through the contact form.",
           "naam": "Kieskunstgras.nl",
           "resultaat": "More lead generation via automated contact form"
+        },
+        {
+          "id": "schuco-varianto",
+          "bedrijf": "Schuco-Varianto.nl",
+          "url": "https://schuco-varianto.nl",
+          "logo": "images/logo_schuco.png",
+          "sector": "Collecting & nostalgia",
+          "diensten": [
+            "Website development",
+            "TYPO3",
+            "Content & catalogue"
+          ],
+          "quote": "Schuco-Varianto.nl is an informative website about the tin toy cars from Schuco's Varianto series — a beloved collection from the 1950s. The site is built on TYPO3 and offers a clear catalogue of all mechanical and electrical models, including accessories and historical background. A project that demands attention to detail and a passion for the subject.",
+          "naam": "Schuco-Varianto.nl",
+          "resultaat": "Complete TYPO3 website with catalogue of mechanical and electrical models"
+        },
+        {
+          "id": "sandrabedrukt",
+          "bedrijf": "SandraBedrukt.nl",
+          "url": "https://sandrabedrukt.nl",
+          "logo": "images/sandrabedruktLogo.png",
+          "sector": "Gifts & personalised products",
+          "diensten": [
+            "Website development",
+            "SEO",
+            "Fast loading"
+          ],
+          "quote": "I wanted a website that looks clean but isn't complicated — fast, clear and easy to find on Google. Paul delivered exactly that. The site loads quickly, is well-organised and attracts visitors through searches like 'mug with name' and 'personalised baby gift'. Exactly what I needed.",
+          "naam": "Sandra – SandraBedrukt.nl",
+          "resultaat": "Fast, clean website that ranks well for relevant search queries"
+        },
+        {
+          "id": "gerben-deventer",
+          "bedrijf": "Gerben, Deventer",
+          "url": "",
+          "logo": "",
+          "sector": "Smart Home & IoT",
+          "diensten": [
+            "IoT integration",
+            "Energy management",
+            "Automation"
+          ],
+          "quote": "My house is full of smart devices, but the electricity costs kept adding up. Paul built a system that links my energy consumption to the live price of my flexible electricity contract. Heavy appliances like the washing machine and car charging now start automatically at the cheapest time of day. The result: my setup has become structurally profitable.",
+          "naam": "Gerben — Deventer",
+          "resultaat": "Structurally profitable energy management via smart flexible electricity contract"
         }
-      ,{
-        "id": "schuco-varianto",
-        "bedrijf": "Schuco-Varianto.nl",
-        "url": "https://schuco-varianto.nl",
-        "logo": "images/logo_schuco.png",
-        "sector": "Collecting & nostalgia",
-        "diensten": ["Website development", "TYPO3", "Content & catalogue"],
-        "quote": "Schuco-Varianto.nl is an informative website about the tin toy cars from Schuco's Varianto series — a beloved collection from the 1950s. The site is built on TYPO3 and offers a clear catalogue of all mechanical and electrical models, including accessories and historical background. A project that demands attention to detail and a passion for the subject.",
-        "naam": "Schuco-Varianto.nl",
-        "resultaat": "Complete TYPO3 website with catalogue of mechanical and electrical models"
-      }
-      ,{
-        "id": "sandrabedrukt",
-        "bedrijf": "SandraBedrukt.nl",
-        "url": "https://sandrabedrukt.nl",
-        "logo": "images/sandrabedruktLogo.png",
-        "sector": "Gifts & personalised products",
-        "diensten": ["Website development", "SEO", "Fast loading"],
-        "quote": "I wanted a website that looks clean but isn't complicated — fast, clear and easy to find on Google. Paul delivered exactly that. The site loads quickly, is well-organised and attracts visitors through searches like 'mug with name' and 'personalised baby gift'. Exactly what I needed.",
-        "naam": "Sandra – SandraBedrukt.nl",
-        "resultaat": "Fast, clean website that ranks well for relevant search queries"
-      }
-      ,{
-        "id": "gerben-deventer",
-        "bedrijf": "Gerben, Deventer",
-        "url": "",
-        "logo": "",
-        "sector": "Smart Home & IoT",
-        "diensten": ["IoT integration", "Energy management", "Automation"],
-        "quote": "My house is full of smart devices, but the electricity costs kept adding up. Paul built a system that links my energy consumption to the live price of my flexible electricity contract. Heavy appliances like the washing machine and car charging now start automatically at the cheapest time of day. The result: my setup has become structurally profitable.",
-        "naam": "Gerben — Deventer",
-        "resultaat": "Structurally profitable energy management via smart flexible electricity contract"
-      }
       ]
-    }
+    },
+    "instap": {
+      "label": "Fast help",
+      "title": "Remote Technical Fix",
+      "description": "One concrete technical problem blocking you? I analyse and solve it — usually within 48 hours, at a fixed rate.",
+      "price": "$30–35 per issue",
+      "note": "No subscription, no surprises afterwards. Price and approach confirmed before I start.",
+      "cta": "Send your problem",
+      "includes_0": "Analysis & diagnosis",
+      "includes_1": "The fix itself",
+      "includes_2": "A short explanation of the cause"
+    },
+    "cta_home": {
+      "title": "Technical problem? Tackle it today.",
+      "text": "Send your problem and get a concrete proposal within one business day. No long projects, no contracts.",
+      "button": "Get a free initial assessment"
+    },
+    "werk": {
+      "label": "Recent work",
+      "title": "Case studies",
+      "subtitle": "A selection of projects where I fixed and improved websites, servers and automation.",
+      "items": [
+        {
+          "id": "n8n-cloudflare",
+          "title": "Lead workflow with n8n + Cloudflare",
+          "summary": "Replaced a manual lead handling process with an automated workflow: form to database, email and follow-up in one chain.",
+          "tag": "n8n · Cloudflare"
+        },
+        {
+          "id": "laravel-shop",
+          "title": "Laravel web app: update and new module",
+          "summary": "Stabilised and upgraded an outdated Laravel application and added a new module — without downtime.",
+          "tag": "PHP · Laravel"
+        },
+        {
+          "id": "linux-docker",
+          "title": "Server sorted: Docker migration & hardening",
+          "summary": "Migrated a messy server to clear Docker containers with automated backups and better security.",
+          "tag": "Linux · Docker"
+        },
+        {
+          "id": "webform-demo",
+          "title": "Demo: from web form to follow-up",
+          "summary": "A proof of concept where a web form directly creates a database entry, confirmation email and follow-up task.",
+          "tag": "Webform → n8n → database → email"
+        }
+      ],
+      "read_label": "Read the case study →",
+      "more_label": "View all case studies →"
+    },
+    "work_page": {
+      "label": "My work",
+      "title": "Case studies",
+      "intro": "Each case in three steps: problem, approach and result. Examples are anonymised where needed.",
+      "back": "Back to homepage",
+      "cta": "Want something similar built?",
+      "cta_sub": "Describe your situation and get a concrete proposal within one business day.",
+      "cta_button": "Get in touch",
+      "cases": [
+        {
+          "id": "n8n-cloudflare",
+          "title": "Lead workflow with n8n and Cloudflare",
+          "client": "SME in business services",
+          "probleem": "Quotes and lead data arrived via emailed PDFs and manual entry into Excel. Data got lost and follow-up was slow.",
+          "aanpak": "I built an n8n workflow behind the existing web form, secured via Cloudflare. Every submission is validated, stored in a database and linked to a confirmation email and a follow-up task for the salesperson.",
+          "resultaat": "No more lost leads. Follow-up time dropped from two days on average to a few hours, without extra software costs."
+        },
+        {
+          "id": "laravel-shop",
+          "title": "Laravel web app: update and new module",
+          "client": "Online service provider",
+          "probleem": "A Laravel application ran on an outdated version with security risks. New requests piled up, but nobody dared touch the code.",
+          "aanpak": "I updated the application step by step (with tests and backups at every step), standardised deployments, and then delivered a new module for the most requested functionality.",
+          "resultaat": "An up-to-date, secure codebase and a working extension — without downtime and without blocking the business."
+        },
+        {
+          "id": "linux-docker",
+          "title": "Server sorted: Docker migration & hardening",
+          "client": "Small IT company",
+          "probleem": "An old server ran multiple services directly on the system: unclear, no backups and known vulnerabilities left open.",
+          "aanpak": "I converted all services to Docker containers with clear configuration, set up automated backups, applied SSH hardening and added monitoring for disk space and uptime.",
+          "resultaat": "A clear, rebuildable server, automated backups that are also tested, and alerts before something goes down."
+        },
+        {
+          "id": "webform-demo",
+          "title": "Demo: from web form to follow-up",
+          "client": "Proof of concept for a client",
+          "probleem": "Clients wanted to see how a web form could start the rest of the process without manual work: storing, confirming and following up.",
+          "aanpak": "I built a complete demo environment: a static form as front end, n8n as workflow engine, a database for submissions and email steps for confirmation and internal notification.",
+          "resultaat": "A working reference environment in one day, which was later actually used as the basis for the production workflow."
+        }
+      ],
+      "labels": {
+        "probleem": "Problem",
+        "aanpak": "Approach",
+        "resultaat": "Result"
+      },
+      "meta_description": "Case studies: websites, servers and automation solved — n8n, Laravel, Linux/Docker. Each case in problem, approach and result."
+    },
+    "services_page": {
+      "label": "Services",
+      "title": "What I can do for you",
+      "intro": "Remote support per project or per hour — without long-term contracts. Indicative prices per service; an exact quote within one business day.",
+      "phpLaravel": {
+        "title": "PHP & Laravel development",
+        "subtitle": "Development, maintenance and repairs for websites and web applications.",
+        "intro": "From a broken form to a complete new module: I work in PHP, Laravel, WordPress and TYPO3 and solve problems in existing codebases.",
+        "what_title": "What I do",
+        "what": [
+          "Fixing bugs and outages",
+          "Building new features and modules",
+          "Laravel and PHP upgrades (safe, with tests)",
+          "Code review and performance improvements",
+          "Integrations with APIs, payments and external systems"
+        ],
+        "price_title": "Indicative prices",
+        "prices": [
+          {
+            "label": "Small fix or bug",
+            "price": "$25–100"
+          },
+          {
+            "label": "Feature or module",
+            "price": "$100–300"
+          },
+          {
+            "label": "Larger project or custom work",
+            "price": "$300–400+"
+          },
+          {
+            "label": "Monthly maintenance",
+            "price": "$75–300 / month"
+          }
+        ],
+        "price_note": "All prices are indicative. You always receive a concrete quote first — approval upfront, no surprises afterwards.",
+        "cta": "Stuck on a PHP or Laravel problem?",
+        "cta_sub": "Briefly describe the issue and get a concrete proposal within one business day.",
+        "cta_button": "Request a proposal",
+        "meta_description": "PHP and Laravel development and maintenance: bugs, new modules, upgrades and integrations. Indicative prices from $25, remote."
+      },
+      "linuxServer": {
+        "title": "Linux & server administration",
+        "subtitle": "Stable, fast and secure servers — managed remotely.",
+        "intro": "I help with server issues, migrations and security on Debian/Ubuntu, using Docker, Nginx, databases and backups.",
+        "what_title": "What I do",
+        "what": [
+          "Finding and fixing server outages",
+          "Migrations (server, domain or mail)",
+          "Security hardening: SSH, firewalls, updates",
+          "Setting up and managing Docker containers",
+          "Setting up backups and monitoring"
+        ],
+        "price_title": "Indicative prices",
+        "prices": [
+          {
+            "label": "Single check or fix",
+            "price": "$30–150"
+          },
+          {
+            "label": "Migration or reorganisation",
+            "price": "$150–400"
+          },
+          {
+            "label": "Monthly administration",
+            "price": "$75–300 / month"
+          }
+        ],
+        "price_note": "All prices are indicative. You always receive a concrete quote first — approval upfront, no surprises afterwards.",
+        "cta": "Is your server stuck or insecure?",
+        "cta_sub": "Send me a short description and get a plan of action within one business day.",
+        "cta_button": "Request a proposal",
+        "meta_description": "Linux server administration, migrations, security hardening and Docker. Stable, secure servers managed remotely. From $30."
+      },
+      "n8nAutomation": {
+        "title": "n8n & automation",
+        "subtitle": "Workflows that do the repetitive work for you.",
+        "intro": "I design and build n8n workflows that connect systems: forms, email, databases, APIs and AI.",
+        "what_title": "What I do",
+        "what": [
+          "Designing and building workflows (lead management, notifications, reports)",
+          "Webhooks and form integrations",
+          "Integrations with APIs, Google Workspace, databases and AI",
+          "Debugging and improving existing workflows",
+          "Documentation and handover to your own team"
+        ],
+        "price_title": "Indicative prices",
+        "prices": [
+          {
+            "label": "Simple workflow",
+            "price": "$50–150"
+          },
+          {
+            "label": "Complex workflow or integration",
+            "price": "$150–250"
+          },
+          {
+            "label": "Monthly management and extension",
+            "price": "$75–300 / month"
+          }
+        ],
+        "price_note": "All prices are indicative. You always receive a concrete quote first — approval upfront, no surprises afterwards.",
+        "cta": "Doing manual work across multiple systems?",
+        "cta_sub": "Tell me which manual steps you do and I'll build a workflow around them.",
+        "cta_button": "Request a proposal",
+        "meta_description": "n8n workflows and automation: connect forms, email, databases and AI. Indicative prices from $50, remote."
+      },
+      "items": [
+        {
+          "url": "/services/php-laravel/",
+          "name": "PHP & Laravel development",
+          "price": "5–400+",
+          "desc": "Development, maintenance and fixes for websites and web apps on PHP, Laravel, WordPress and TYPO3."
+        },
+        {
+          "url": "/services/linux-server/",
+          "name": "Linux & server administration",
+          "price": "0–150",
+          "desc": "Fixing server outages, migrations, security hardening and Docker — managed remotely."
+        },
+        {
+          "url": "/services/n8n-automation/",
+          "name": "n8n & automation",
+          "price": "0–250",
+          "desc": "Smart workflows connecting systems and automating repetitive work: forms, email, databases and AI."
+        }
+      ],
+      "note": "Available per project, per hour or as monthly maintenance. Remote from any location — no long-term contracts, no surprises afterwards.",
+      "meta_description": "Remote PHP, Laravel, Linux and n8n support: development, server administration and automation for businesses. No long-term contracts."
+    },
+    "meta.description": "Remote PHP, Laravel and Linux support plus n8n automation. Effective help for developers and businesses.",
+    "meta.ogtitle": "BoomkampOnline — Remote PHP, Laravel, Linux & Automation",
+    "meta.ogdescription": "Remote PHP, Laravel and Linux support plus n8n automation. Effective help for developers and businesses."
   },
   "de": {
     "meta": {
@@ -532,16 +1032,18 @@
       "diensten": "Leistungen",
       "over": "Über mich",
       "blog": "Blog",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "werk": "Projekte"
     },
     "hero": {
       "greeting": "Hallo, ich bin",
       "name": "Paul Boomkamp",
-      "tagline": "Ich entwickle funktionierende Websites, sorge für Ihre Auffindbarkeit und helfe Ihnen, intelligenter mit KI zu arbeiten.",
-      "cta": "Jetzt Kontakt aufnehmen",
+      "tagline": "Ich helfe kleinen Unternehmen und Agenturen bei Websites, Servern und Automatisierung — ohne langfristige Verträge.",
+      "cta": "Technisches Problem? Kostenlose Ersteinschätzung anfordern",
       "badge_number": "25+",
       "badge_label": "Jahre Erfahrung in der Webentwicklung",
-      "function": "Freelance Webentwickler & KI-Berater"
+      "function": "Remote PHP-, Laravel-, Linux- & Automatisierungs-Support",
+      "cta_button": "Technisches Problem? Kostenlose Ersteinschätzung anfordern"
     },
     "diensten": {
       "label": "Meine Leistungen",
@@ -549,26 +1051,28 @@
       "subtitle": "Ich arbeite am liebsten direkt mit dem Auftraggeber zusammen. Keine Zwischenhändler, keine Standardpakete — sondern eine Lösung, die zu Ihrer Situation passt.",
       "items": [
         {
-          "icon": "monitor",
-          "title": "Webentwicklung",
-          "description": "Von einer einfachen Präsentationsseite bis zur komplexen Webanwendung. Ich arbeite mit WordPress, TYPO3 oder entwickle vollständig individuell — je nach Bedarf."
+          "icon": "code",
+          "title": "PHP & Laravel",
+          "description": "Entwicklung, Wartung und Reparaturen für Websites und Webanwendungen auf PHP und Laravel — von kleinen Fixes bis zu kompletten Features.",
+          "price": "ab $25",
+          "url": "/services/php-laravel/"
         },
         {
-          "icon": "search",
-          "title": "SEO & Sichtbarkeit",
-          "description": "Bei Google gefunden zu werden beginnt mit einem soliden Fundament. Ich analysiere technische SEO, Ladezeiten, Struktur und Inhalte — und gebe Ihnen konkrete Handlungsschritte."
+          "icon": "server",
+          "title": "Linux & Server",
+          "description": "Serververwaltung, Härtung, Migrationen und Docker. Ich sorge dafür, dass Ihre Server stabil, schnell und sicher laufen.",
+          "price": "ab $30",
+          "url": "/services/linux-server/"
         },
         {
-          "icon": "cpu",
-          "title": "KI-Beratung & Automatisierung",
-          "description": "KI muss nicht kompliziert sein. Ich helfe Ihnen zu verstehen, was möglich ist, und setze konkrete Lösungen um — von intelligenten Workflows mit n8n bis zu Chatbots und KI-Integrationen."
-        },
-        {
-          "icon": "user",
-          "title": "Verfügbar als Freiberufler",
-          "description": "Brauchen Sie zusätzliche Unterstützung? Ich bin als Programmierer, für Helpdesk-Support oder für die Bearbeitung von Terminen und Kundenkontakten einsetzbar."
+          "icon": "zap",
+          "title": "n8n & Automatisierung",
+          "description": "Intelligente Workflows, die wiederkehrende Arbeit übernehmen: Leads, Benachrichtigungen, Integrationen zwischen Apps und KI.",
+          "price": "ab $50",
+          "url": "/services/n8n-automation/"
         }
-      ]
+      ],
+      "link_label": "Mehr Infos →"
     },
     "over": {
       "label": "Über mich",
@@ -655,12 +1159,11 @@
         "reason": "Grund der Anfrage",
         "reason_placeholder": "Grund auswählen",
         "reason_options": [
-          "Neue Website erstellen lassen",
-          "Bestehende Website verbessern",
-          "SEO & Sichtbarkeit",
-          "KI-Beratung oder -Implementierung",
-          "Freiberufler / Arbeitnehmerüberlassung",
-          "Sonstiges"
+          "PHP/Laravel-Entwicklung oder Wartung",
+          "Linux/Server-Verwaltung",
+          "n8n-Automatisierung",
+          "Remote Technical Fix",
+          "Etwas anderes"
         ],
         "message": "Nachricht",
         "message_placeholder": "Beschreiben Sie kurz, was Sie suchen. Je mehr Kontext Sie geben, desto besser kann ich Ihnen helfen.",
@@ -677,12 +1180,12 @@
         "sector_opt_6": "Gastgewerbe & Tourismus",
         "sector_opt_7": "Öffentlicher Sektor & Non-Profit",
         "sector_opt_8": "Sonstiges",
-        "reason_opt_0": "Neue Website erstellen lassen",
-        "reason_opt_1": "Bestehende Website verbessern",
-        "reason_opt_2": "SEO & Sichtbarkeit",
-        "reason_opt_3": "KI-Beratung oder -Implementierung",
-        "reason_opt_4": "Freiberufler / Arbeitnehmerüberlassung",
-        "reason_opt_5": "Sonstiges"
+        "reason_opt_0": "PHP/Laravel-Entwicklung oder Wartung",
+        "reason_opt_1": "Linux/Server-Verwaltung",
+        "reason_opt_2": "n8n-Automatisierung",
+        "reason_opt_3": "Remote Technical Fix",
+        "reason_opt_4": "Etwas anderes",
+        "reason_opt_5": "Etwas anderes"
       }
     },
     "hamburger": {
@@ -741,45 +1244,292 @@
           "url": "https://kieskunstgras.nl",
           "logo": "images/kieskunstgras_v1.png",
           "sector": "Garten & Außenbereich",
-          "diensten": ["Webentwicklung", "SEO", "Kontaktformular"],
+          "diensten": [
+            "Webentwicklung",
+            "SEO",
+            "Kontaktformular"
+          ],
           "quote": "Paul hat unsere Website komplett neu aufgebaut. Das Ergebnis ist schnell, übersichtlich und generiert nachweislich mehr Leads über das Kontaktformular.",
           "naam": "Kieskunstgras.nl",
           "resultaat": "Mehr Lead-Generierung über automatisiertes Kontaktformular"
+        },
+        {
+          "id": "schuco-varianto",
+          "bedrijf": "Schuco-Varianto.nl",
+          "url": "https://schuco-varianto.nl",
+          "logo": "images/logo_schuco.png",
+          "sector": "Sammeln & Nostalgie",
+          "diensten": [
+            "Webentwicklung",
+            "TYPO3",
+            "Inhalt & Katalog"
+          ],
+          "quote": "Schuco-Varianto.nl ist eine informative Website über die Blechspielzeugautos der Varianto-Serie von Schuco — eine beliebte Sammlung aus den 1950er Jahren. Die Website basiert auf TYPO3 und bietet einen übersichtlichen Katalog aller mechanischen und elektrischen Modelle, einschließlich Zubehör und historischem Hintergrund. Ein Projekt, das Liebe zum Detail und Begeisterung für das Thema erfordert.",
+          "naam": "Schuco-Varianto.nl",
+          "resultaat": "Vollständige TYPO3-Website mit Katalog mechanischer und elektrischer Modelle"
+        },
+        {
+          "id": "sandrabedrukt",
+          "bedrijf": "SandraBedrukt.nl",
+          "url": "https://sandrabedrukt.nl",
+          "logo": "images/sandrabedruktLogo.png",
+          "sector": "Geschenke & personalisierte Produkte",
+          "diensten": [
+            "Webentwicklung",
+            "SEO",
+            "Schnelle Ladezeit"
+          ],
+          "quote": "Ich wollte eine Website, die gepflegt aussieht, aber unkompliziert ist — schnell, übersichtlich und leicht über Google auffindbar. Paul hat genau das geliefert. Die Website lädt sehr schnell, ist klar strukturiert und zieht Besucher über Suchanfragen wie 'Tasse mit Namen' und 'personalisiertes Babygeschenk' an. Genau das, was ich brauchte.",
+          "naam": "Sandra – SandraBedrukt.nl",
+          "resultaat": "Schnelle, saubere Website mit guter Platzierung für relevante Suchanfragen"
+        },
+        {
+          "id": "gerben-deventer",
+          "bedrijf": "Gerben, Deventer",
+          "url": "",
+          "logo": "",
+          "sector": "Smart Home & IoT",
+          "diensten": [
+            "IoT-Integration",
+            "Energiemanagement",
+            "Automatisierung"
+          ],
+          "quote": "Mein Haus ist voll mit smarten Geräten, aber die Stromkosten stiegen trotzdem. Paul hat ein System entwickelt, das meinen Energieverbrauch mit dem aktuellen Preis meines flexiblen Stromvertrags verknüpft. Stromintensive Geräte wie Waschmaschine und Autoladen starten jetzt automatisch zum günstigsten Zeitpunkt des Tages. Das Ergebnis: meine Installation ist dauerhaft rentabel geworden.",
+          "naam": "Gerben — Deventer",
+          "resultaat": "Dauerhaft rentables Energiemanagement über smarten flexiblen Stromvertrag"
         }
-      ,{
-        "id": "schuco-varianto",
-        "bedrijf": "Schuco-Varianto.nl",
-        "url": "https://schuco-varianto.nl",
-        "logo": "images/logo_schuco.png",
-        "sector": "Sammeln & Nostalgie",
-        "diensten": ["Webentwicklung", "TYPO3", "Inhalt & Katalog"],
-        "quote": "Schuco-Varianto.nl ist eine informative Website über die Blechspielzeugautos der Varianto-Serie von Schuco — eine beliebte Sammlung aus den 1950er Jahren. Die Website basiert auf TYPO3 und bietet einen übersichtlichen Katalog aller mechanischen und elektrischen Modelle, einschließlich Zubehör und historischem Hintergrund. Ein Projekt, das Liebe zum Detail und Begeisterung für das Thema erfordert.",
-        "naam": "Schuco-Varianto.nl",
-        "resultaat": "Vollständige TYPO3-Website mit Katalog mechanischer und elektrischer Modelle"
-      }
-      ,{
-        "id": "sandrabedrukt",
-        "bedrijf": "SandraBedrukt.nl",
-        "url": "https://sandrabedrukt.nl",
-        "logo": "images/sandrabedruktLogo.png",
-        "sector": "Geschenke & personalisierte Produkte",
-        "diensten": ["Webentwicklung", "SEO", "Schnelle Ladezeit"],
-        "quote": "Ich wollte eine Website, die gepflegt aussieht, aber unkompliziert ist — schnell, übersichtlich und leicht über Google auffindbar. Paul hat genau das geliefert. Die Website lädt sehr schnell, ist klar strukturiert und zieht Besucher über Suchanfragen wie 'Tasse mit Namen' und 'personalisiertes Babygeschenk' an. Genau das, was ich brauchte.",
-        "naam": "Sandra – SandraBedrukt.nl",
-        "resultaat": "Schnelle, saubere Website mit guter Platzierung für relevante Suchanfragen"
-      }
-      ,{
-        "id": "gerben-deventer",
-        "bedrijf": "Gerben, Deventer",
-        "url": "",
-        "logo": "",
-        "sector": "Smart Home & IoT",
-        "diensten": ["IoT-Integration", "Energiemanagement", "Automatisierung"],
-        "quote": "Mein Haus ist voll mit smarten Geräten, aber die Stromkosten stiegen trotzdem. Paul hat ein System entwickelt, das meinen Energieverbrauch mit dem aktuellen Preis meines flexiblen Stromvertrags verknüpft. Stromintensive Geräte wie Waschmaschine und Autoladen starten jetzt automatisch zum günstigsten Zeitpunkt des Tages. Das Ergebnis: meine Installation ist dauerhaft rentabel geworden.",
-        "naam": "Gerben — Deventer",
-        "resultaat": "Dauerhaft rentables Energiemanagement über smarten flexiblen Stromvertrag"
-      }
       ]
-    }
+    },
+    "instap": {
+      "label": "Schnelle Hilfe",
+      "title": "Remote Technical Fix",
+      "description": "Ein konkretes technisches Problem blockiert Sie? Ich analysiere und löse es — meist innerhalb von 48 Stunden, zu einem festen Preis.",
+      "price": "$30–35 pro Problem",
+      "note": "Kein Abo, keine Überraschungen im Nachhinein. Preis und Vorgehen werden vor dem Start bestätigt.",
+      "cta": "Problem senden",
+      "includes_0": "Analyse & Diagnose",
+      "includes_1": "Die Lösung selbst",
+      "includes_2": "Kurze Erklärung der Ursache"
+    },
+    "cta_home": {
+      "title": "Technisches Problem? Gehen Sie es heute an.",
+      "text": "Senden Sie Ihr Problem und Sie erhalten innerhalb eines Werktags einen konkreten Vorschlag. Keine langen Projekte, keine Verträge.",
+      "button": "Kostenlose Ersteinschätzung anfordern"
+    },
+    "werk": {
+      "label": "Aktuelle Arbeiten",
+      "title": "Fallbeispiele",
+      "subtitle": "Eine Auswahl von Projekten, in denen ich Websites, Server und Automatisierung repariert und verbessert habe.",
+      "items": [
+        {
+          "id": "n8n-cloudflare",
+          "title": "Lead-Workflow mit n8n + Cloudflare",
+          "summary": "Manuelle Leadbearbeitung durch einen automatisierten Workflow ersetzt: Formular zu Datenbank, E-Mail und Nachverfolgung in einer Kette.",
+          "tag": "n8n · Cloudflare"
+        },
+        {
+          "id": "laravel-shop",
+          "title": "Laravel-Webanwendung: Update und neues Modul",
+          "summary": "Eine veraltete Laravel-Anwendung stabilisiert, aktualisiert und um ein neues Modul erweitert — ohne Ausfallzeit.",
+          "tag": "PHP · Laravel"
+        },
+        {
+          "id": "linux-docker",
+          "title": "Server in Ordnung: Docker-Migration & Härtung",
+          "summary": "Einen unübersichtlichen Server in klare Docker-Container mit automatischen Backups und besserer Sicherheit überführt.",
+          "tag": "Linux · Docker"
+        },
+        {
+          "id": "webform-demo",
+          "title": "Demo: vom Webformular zur Nachverfolgung",
+          "summary": "Ein Proof of Concept, bei dem ein Webformular direkt einen Datenbankeintrag, eine Bestätigungsmail und eine Folgeaufgabe erzeugt.",
+          "tag": "Webform → n8n → Datenbank → E-Mail"
+        }
+      ],
+      "read_label": "Fallbeispiel lesen →",
+      "more_label": "Alle Fallbeispiele ansehen →"
+    },
+    "work_page": {
+      "label": "Meine Arbeiten",
+      "title": "Fallbeispiele",
+      "intro": "Jeder Fall in drei Schritten: Problem, Vorgehen und Ergebnis. Beispiele sind bei Bedarf anonymisiert.",
+      "back": "Zurück zur Startseite",
+      "cta": "Möchten Sie etwas Ähnliches bauen lassen?",
+      "cta_sub": "Beschreiben Sie Ihre Situation und Sie erhalten innerhalb eines Werktags einen konkreten Vorschlag.",
+      "cta_button": "Kontakt aufnehmen",
+      "cases": [
+        {
+          "id": "n8n-cloudflare",
+          "title": "Lead-Workflow mit n8n und Cloudflare",
+          "client": "KMU im Dienstleistungsbereich",
+          "probleem": "Angebote und Lead-Daten kamen per E-Mail-PDF und manueller Eingabe in Excel. Daten gingen verloren und die Nachverfolgung war langsam.",
+          "aanpak": "Ich habe einen n8n-Workflow hinter dem bestehenden Webformular gebaut, abgesichert über Cloudflare. Jede Einreichung wird validiert, in einer Datenbank gespeichert und mit einer Bestätigungsmail und einer Folgeaufgabe für den Verkäufer verknüpft.",
+          "resultaat": "Keine verlorenen Leads mehr. Die Reaktionszeit sank von durchschnittlich zwei Tagen auf wenige Stunden — ohne zusätzliche Softwarekosten."
+        },
+        {
+          "id": "laravel-shop",
+          "title": "Laravel-Webanwendung: Update und neues Modul",
+          "client": "Online-Dienstleister",
+          "probleem": "Eine Laravel-Anwendung lief auf einer veralteten Version mit Sicherheitsrisiken. Neue Wünsche stapelten sich, aber niemand traute sich an den Code.",
+          "aanpak": "Ich habe die Anwendung Schritt für Schritt aktualisiert (mit Tests und Backups pro Schritt), die Deployments standardisiert und anschließend ein neues Modul für die meistgefragte Funktion geliefert.",
+          "resultaat": "Eine aktuelle, sichere Codebasis und eine funktionierende Erweiterung — ohne Ausfallzeit und ohne den Betrieb zu blockieren."
+        },
+        {
+          "id": "linux-docker",
+          "title": "Server in Ordnung: Docker-Migration & Härtung",
+          "client": "Kleines IT-Unternehmen",
+          "probleem": "Ein alter Server lief mit mehreren Diensten direkt im System: unübersichtlich, keine Backups und bekannte Schwachstellen offen.",
+          "aanpak": "Ich habe alle Dienste in Docker-Container mit klarer Konfiguration überführt, automatische Backups eingerichtet, SSH-Härtung angewendet und Monitoring für Speicherplatz und Uptime aufgebaut.",
+          "resultaat": "Ein übersichtlicher, wiederaufbaubarer Server, automatische und getestete Backups und Warnungen vor Ausfällen."
+        },
+        {
+          "id": "webform-demo",
+          "title": "Demo: vom Webformular zur Nachverfolgung",
+          "client": "Proof of Concept für einen Kunden",
+          "probleem": "Kunden wollten sehen, wie ein Webformular ohne manuelle Arbeit den restlichen Prozess starten kann: Speichern, Bestätigen und Nachverfolgen.",
+          "aanpak": "Ich habe eine komplette Demo-Umgebung gebaut: statisches Formular als Frontend, n8n als Workflow-Engine, eine Datenbank für Einreichungen und E-Mail-Schritte für Bestätigung und interne Meldung.",
+          "resultaat": "Eine funktionierende Referenzumgebung in einem Tag, die später tatsächlich als Basis für den Produktions-Workflow verwendet wurde."
+        }
+      ],
+      "labels": {
+        "probleem": "Problem",
+        "aanpak": "Vorgehen",
+        "resultaat": "Ergebnis"
+      },
+      "meta_description": "Fallbeispiele: Websites, Server und Automatisierung gelöst — n8n, Laravel, Linux/Docker. Jeder Fall in Problem, Vorgehen und Ergebnis."
+    },
+    "services_page": {
+      "label": "Leistungen",
+      "title": "Was ich für Sie tun kann",
+      "intro": "Remote-Unterstützung pro Projekt oder pro Stunde — ohne langfristige Verträge. Richtpreise pro Leistung; ein konkretes Angebot innerhalb eines Werktags.",
+      "phpLaravel": {
+        "title": "PHP- & Laravel-Entwicklung",
+        "subtitle": "Entwicklung, Wartung und Reparaturen für Websites und Webanwendungen.",
+        "intro": "Von einem defekten Formular bis zu einem kompletten neuen Modul: Ich arbeite mit PHP, Laravel, WordPress und TYPO3 und löse Probleme in bestehenden Codebasen.",
+        "what_title": "Was ich mache",
+        "what": [
+          "Fehler und Ausfälle beheben",
+          "Neue Features und Module bauen",
+          "Laravel- und PHP-Upgrades (sicher, mit Tests)",
+          "Code-Review und Performance-Verbesserungen",
+          "Integrationen mit APIs, Zahlungen und externen Systemen"
+        ],
+        "price_title": "Richtpreise",
+        "prices": [
+          {
+            "label": "Kleiner Fix oder Fehler",
+            "price": "$25–100"
+          },
+          {
+            "label": "Feature oder Modul",
+            "price": "$100–300"
+          },
+          {
+            "label": "Größeres Projekt oder Sonderanfertigung",
+            "price": "$300–400+"
+          },
+          {
+            "label": "Monatliche Wartung",
+            "price": "$75–300 / Monat"
+          }
+        ],
+        "price_note": "Alle Preise sind Richtpreise. Sie erhalten immer zuerst ein konkretes Angebot — Freigabe im Voraus, keine Überraschungen im Nachhinein.",
+        "cta": "Hängen Sie bei einem PHP- oder Laravel-Problem fest?",
+        "cta_sub": "Beschreiben Sie kurz das Problem und Sie erhalten innerhalb eines Werktags einen konkreten Vorschlag.",
+        "cta_button": "Angebot anfordern",
+        "meta_description": "PHP- und Laravel-Entwicklung und Wartung: Fehler, neue Module, Upgrades und Integrationen. Richtpreise ab $25, remote."
+      },
+      "linuxServer": {
+        "title": "Linux- & Serververwaltung",
+        "subtitle": "Stabile, schnelle und sichere Server — remote verwaltet.",
+        "intro": "Ich helfe bei Serverproblemen, Migrationen und Sicherheit auf Debian/Ubuntu — mit Docker, Nginx, Datenbanken und Backups.",
+        "what_title": "Was ich mache",
+        "what": [
+          "Serverausfälle finden und beheben",
+          "Migrationen (Server, Domain oder Mail)",
+          "Security-Härtung: SSH, Firewalls, Updates",
+          "Docker-Container einrichten und verwalten",
+          "Backups und Monitoring einrichten"
+        ],
+        "price_title": "Richtpreise",
+        "prices": [
+          {
+            "label": "Einzelner Check oder Fix",
+            "price": "$30–150"
+          },
+          {
+            "label": "Migration oder Neuordnung",
+            "price": "$150–400"
+          },
+          {
+            "label": "Monatliche Verwaltung",
+            "price": "$75–300 / Monat"
+          }
+        ],
+        "price_note": "Alle Preise sind Richtpreise. Sie erhalten immer zuerst ein konkretes Angebot — Freigabe im Voraus, keine Überraschungen im Nachhinein.",
+        "cta": "Ist Ihr Server festgefahren oder unsicher?",
+        "cta_sub": "Senden Sie mir eine kurze Beschreibung und Sie erhalten innerhalb eines Werktags einen Aktionsplan.",
+        "cta_button": "Angebot anfordern",
+        "meta_description": "Linux-Serververwaltung, Migrationen, Security-Härtung und Docker. Stabile und sichere Server, remote verwaltet. Ab $30."
+      },
+      "n8nAutomation": {
+        "title": "n8n & Automatisierung",
+        "subtitle": "Workflows, die die wiederkehrende Arbeit für Sie erledigen.",
+        "intro": "Ich entwerfe und baue n8n-Workflows, die Systeme verbinden: Formulare, E-Mail, Datenbanken, APIs und KI.",
+        "what_title": "Was ich mache",
+        "what": [
+          "Workflows entwerfen und bauen (Lead-Management, Benachrichtigungen, Berichte)",
+          "Webhooks und Formular-Integrationen",
+          "Integrationen mit APIs, Google Workspace, Datenbanken und KI",
+          "Bestehende Workflows debuggen und verbessern",
+          "Dokumentation und Übergabe an Ihr Team"
+        ],
+        "price_title": "Richtpreise",
+        "prices": [
+          {
+            "label": "Einfacher Workflow",
+            "price": "$50–150"
+          },
+          {
+            "label": "Komplexer Workflow oder Integration",
+            "price": "$150–250"
+          },
+          {
+            "label": "Monatliche Verwaltung und Erweiterung",
+            "price": "$75–300 / Monat"
+          }
+        ],
+        "price_note": "Alle Preise sind Richtpreise. Sie erhalten immer zuerst ein konkretes Angebot — Freigabe im Voraus, keine Überraschungen im Nachhinein.",
+        "cta": "Erledigen Sie manuelle Arbeit in mehreren Systemen?",
+        "cta_sub": "Erzählen Sie mir, welche manuellen Schritte Sie tun, und ich baue einen Workflow darum.",
+        "cta_button": "Angebot anfordern",
+        "meta_description": "n8n-Workflows und Automatisierung: Formulare, E-Mail, Datenbanken und KI verbinden. Richtpreise ab $50, remote."
+      },
+      "items": [
+        {
+          "url": "/services/php-laravel/",
+          "name": "PHP- & Laravel-Entwicklung",
+          "price": "5–400+",
+          "desc": "Entwicklung, Wartung und Reparaturen für Websites und Webanwendungen auf PHP, Laravel, WordPress und TYPO3."
+        },
+        {
+          "url": "/services/linux-server/",
+          "name": "Linux- & Serververwaltung",
+          "price": "0–150",
+          "desc": "Serverausfälle beheben, Migrationen, Security-Härtung und Docker — remote verwaltet."
+        },
+        {
+          "url": "/services/n8n-automation/",
+          "name": "n8n & Automatisierung",
+          "price": "0–250",
+          "desc": "Intelligente Workflows, die Systeme verbinden und wiederkehrende Arbeit automatisieren: Formulare, E-Mail, Datenbanken und KI."
+        }
+      ],
+      "note": "Verfügbar pro Projekt, pro Stunde oder als monatliche Wartung. Remote von jedem Standort — keine langfristigen Verträge, keine Überraschungen im Nachhinein.",
+      "meta_description": "Remote PHP-, Laravel-, Linux- und n8n-Support: Entwicklung, Serververwaltung und Automatisierung für Unternehmen. Ohne langfristige Verträge."
+    },
+    "meta.description": "Remote PHP-, Laravel- und Linux-Support sowie n8n-Automatisierung. Effektive Hilfe für Entwickler und Unternehmen.",
+    "meta.ogtitle": "BoomkampOnline — Remote PHP, Laravel, Linux & Automatisierung",
+    "meta.ogdescription": "Remote PHP-, Laravel- und Linux-Support sowie n8n-Automatisierung. Effektive Hilfe für Entwickler und Unternehmen."
   }
 }

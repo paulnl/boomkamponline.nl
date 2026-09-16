@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="nl" data-current-lang="nl">
+<head>
+  <script defer src="https://analytics.boomkamponline.nl/script.js" data-website-id="0dbbbbec-b1a8-48e4-a68e-ddc4e7b4895b"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBK4QM8TES"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KBK4QM8TES');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>n8n &amp; automatisering — BoomkampOnline.NL</title>
+  <meta name="description" content="n8n workflows en automatisering: formulieren, e-mail, databases en AI koppelen. Richtprijzen vanaf $50, remote." data-i18n-attr="content:services_page.n8nAutomation.meta_description">
+  <link rel="canonical" href="https://boomkamponline.nl/services/n8n-automation/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+        media="print" onload="this.media='all'">
+  <link rel="icon" type="image/svg+xml" href="/data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231A1A2E'/%3E%3Ctext x='50' y='68' font-family='Inter,sans-serif' font-size='56' font-weight='800' fill='%23FF6B00' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fff;
+      color: #1A1A2E;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: #FF6B00; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header (zelfde als homepage & blog) */
+    .header {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: box-shadow 0.3s ease;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.08); }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+      gap: 16px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .logo { display: flex; align-items: center; flex-shrink: 0; line-height: 1; }
+    .nav { display: flex; gap: 6px; align-items: center; }
+    .nav a {
+      position: relative;
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #0f0f1a;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: calc(100% - 28px);
+      height: 2px;
+      background: #FF6B00;
+      border-radius: 1px;
+      transition: transform 0.25s ease;
+    }
+    .nav a:hover { color: #FF6B00; background: rgba(255,107,0,0.06); text-decoration: none; }
+    .nav a:hover::after { transform: translateX(-50%) scaleX(1); }
+    .nav-cta {
+      background: #FF6B00 !important;
+      color: #fff !important;
+      padding: 9px 20px !important;
+      border-radius: 8px;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(255,107,0,0.2);
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: #e05e00 !important; }
+    .lang-switcher { display: flex; gap: 2px; align-items: center; }
+    .lang-btn {
+      background: none;
+      border: none;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: #666;
+      cursor: pointer;
+      padding: 6px 8px;
+      line-height: 1;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.25s;
+    }
+    .lang-btn:hover { color: #444; }
+    html[data-current-lang="nl"] .lang-btn[data-lang="nl"],
+    html[data-current-lang="en"] .lang-btn[data-lang="en"],
+    html[data-current-lang="de"] .lang-btn[data-lang="de"] { color: #FF6B00; }
+
+    /* Pagina */
+    .breadcrumb { font-size: 0.8125rem; color: #999; margin: 32px 0 8px; }
+    .breadcrumb a { color: #FF6B00; }
+    .page-title { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; margin: 8px 0 8px; }
+    .page-subtitle { font-size: 1.25rem; color: #FF6B00; font-weight: 600; margin-bottom: 16px; }
+    .page-intro { font-size: 1.0625rem; color: #555; max-width: 700px; }
+    .h2-section { font-size: 1.375rem; font-weight: 800; margin: 40px 0 8px; }
+    .what-list { list-style: none; display: grid; gap: 12px; margin: 20px 0 8px; }
+    .what-list li { position: relative; padding-left: 30px; font-size: 1rem; color: #333; }
+    .what-list li::before { content: '\2713'; position: absolute; left: 0; color: #FF6B00; font-weight: 700; }
+    .prices-box { margin-top: 20px; }
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding: 18px 24px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      list-style: none;
+    }
+    .price-row .price-label { font-weight: 600; color: #1A1A2E; }
+    .price-row .price-value { color: #FF6B00; font-weight: 700; white-space: nowrap; }
+    .price-note { font-size: 0.875rem; color: #999; margin-top: 12px; }
+
+    /* CTA box */
+    .cta-box {
+      margin: 56px 0 64px;
+      background: #1A1A2E;
+      border-radius: 20px;
+      padding: 44px 40px;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-box h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; }
+    .cta-box p { color: #bbb; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .cta-btn {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff;
+      font-weight: 600;
+      padding: 13px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(255,107,0,0.3);
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #e05e00; color: #fff; text-decoration: none; }
+
+    /* Footer (compact) */
+    .footer {
+      border-top: 1px solid #eee;
+      padding: 32px 0;
+      text-align: center;
+      color: #999;
+      font-size: 0.875rem;
+    }
+    .footer .tagline { color: #666; margin-bottom: 4px; }
+
+    @media (max-width: 768px) {
+      .nav { display: none; }
+      .page-title { font-size: 1.875rem; }
+      .cta-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="BoomkampOnline home">
+        <img src="/images/logo-full-dark.png" alt="BoomkampOnline.NL logo" width="197" height="32" style="height:32px; width:auto;" loading="lazy">
+      </a>
+      <nav class="nav" role="navigation" aria-label="Hoofdnavigatie">
+        <a href="/services/" data-i18n="nav.diensten">Diensten</a>
+        <a href="/work/" class="work-link" data-i18n="nav.werk">Werk</a>
+        <a href="/blog/" class="blog-link" data-i18n="nav.blog">Blog</a>
+        <a href="/#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="nl" aria-label="Nederlands" title="Nederlands" onclick="switchLang('nl')">NL</button>
+        <button class="lang-btn" data-lang="en" aria-label="English" title="English" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" data-lang="de" aria-label="Deutsch" title="Deutsch" onclick="switchLang('de')">DE</button>
+      </div>
+    </div>
+  </header>
+
+  <main role="main">
+    <div class="container">
+      <p class="breadcrumb"><a href="/">BoomkampOnline</a> / <a href="/services/" data-i18n="nav.diensten">Diensten</a> / <span data-i18n="services_page.n8nAutomation.title">n8n &amp; automatisering</span></p>
+      <h1 class="page-title" data-i18n="services_page.n8nAutomation.title">n8n &amp; automatisering</h1>
+      <p class="page-subtitle" data-i18n="services_page.n8nAutomation.subtitle">Workflows die herhaalwerk voor je doen.</p>
+      <p class="page-intro" data-i18n="services_page.n8nAutomation.intro">Ik ontwerp en bouw n8n-workflows die systemen met elkaar verbinden: formulieren, e-mail, databases, API's en AI.</p>
+
+      <h2 class="h2-section" data-i18n="services_page.n8nAutomation.what_title">Wat ik doe</h2>
+      <ul class="what-list" data-i18n-list="services_page.n8nAutomation.what"></ul>
+
+      <h2 class="h2-section" data-i18n="services_page.n8nAutomation.price_title">Richtprijzen</h2>
+      <ul class="prices-box" data-i18n-list="services_page.n8nAutomation.prices"></ul>
+      <p class="price-note" data-i18n="services_page.n8nAutomation.price_note">Alle prijzen zijn richtprijzen. Je ontvangt altijd eerst een concrete offerte &mdash; akkoord vooraf, geen verrassingen achteraf.</p>
+
+      <section class="cta-box" aria-label="Contact">
+        <h2 data-i18n="services_page.n8nAutomation.cta">Doe je werk handmatig in meerdere systemen?</h2>
+        <p data-i18n="services_page.n8nAutomation.cta_sub">Vertel me welke handmatige stappen je doet en ik bouw er een workflow omheen.</p>
+        <a href="/#contact" class="cta-btn" data-i18n="services_page.n8nAutomation.cta_button">Vraag een voorstel aan</a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="tagline" data-i18n="footer.tagline">Freelance webontwikkelaar &amp; AI-consultant</div>
+    <span data-i18n="footer.copyright">&copy; 2025 Paul Boomkamp &ndash; BoomkampOnline.NL</span>
+  </footer>
+
+  <script src="/page-i18n.js"></script>
+</body>
+</html>

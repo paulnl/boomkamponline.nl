@@ -421,26 +421,26 @@
       }
     }
 
-    /* CTA onderaan */
-    .article-cta {
+    /* CTA-blok (include cta.html) */
+    .cta-blog {
       margin-top: 56px;
       padding: 36px;
       background: linear-gradient(135deg, #1A1A2E, #2a2a45);
       border-radius: 16px;
       text-align: center;
     }
-    .article-cta h3 {
+    .cta-blog-title {
       font-size: 1.25rem;
       font-weight: 700;
       color: #fff;
       margin-bottom: 10px;
     }
-    .article-cta p {
+    .cta-blog-text {
       color: rgba(255,255,255,0.65);
       font-size: 0.9375rem;
       margin-bottom: 20px;
     }
-    .article-cta a {
+    .cta-blog-btn {
       display: inline-block;
       background: #FF6B00;
       color: #fff;
@@ -450,7 +450,7 @@
       border-radius: 8px;
       text-decoration: none;
     }
-    .article-cta a:hover { opacity: 0.9; }
+    .cta-blog-btn:hover { opacity: 0.9; }
 
     /* Terug link */
     .back-to-blog {
@@ -712,22 +712,7 @@
         {{ content }}
       </div>
 
-      <div class="article-cta">
-        {% case page.lang %}
-        {% when "nl" %}
-        <h3>Hulp nodig met een project?</h3>
-        <p>Neem contact op — ik denk graag met je mee.</p>
-        <a href="/#contact">Neem contact op</a>
-        {% when "en" %}
-        <h3>Need help with a project?</h3>
-        <p>Get in touch — I'll be happy to discuss it with you.</p>
-        <a href="/#contact">Get in touch</a>
-        {% when "de" %}
-        <h3>Hilfe bei einem Projekt?</h3>
-        <p>Kontaktieren Sie mich — ich denke gerne mit Ihnen.</p>
-        <a href="/#contact">Kontakt aufnehmen</a>
-        {% endcase %}
-      </div>
+      {% include cta.html %}
 
     </div>
   </main>

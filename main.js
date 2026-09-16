@@ -29,6 +29,7 @@
 
       currentLang = detectLanguage();
       renderServices();
+      renderWerk();
       renderWerkwijze();
       applyLanguage(currentLang);
       bindEvents();
@@ -69,7 +70,10 @@
     monitor: '<polyline points="23 7 13 17 8 12 1 19"/><polyline points="16 7 23 7 23 14"/>',
     search: '<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>',
     cpu: '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/>',
-    user: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>'
+    user: '<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+    code: '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+    server: '<rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/>',
+    zap: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'
   };
   function renderServices() {
     var grid = document.getElementById('diensten-grid');
@@ -84,10 +88,48 @@
       var iconSvg = ICON_MAP[item.icon] || '';
       var article = document.createElement('article');
       article.className = 'dienst-card fade-up';
+
+      var priceHtml = item.price
+        ? '<span class="dienst-price">' + item.price + '</span>'
+        : '';
+      var linkLabel = contentData[currentLang].diensten.link_label || 'Meer info →';
+      var linkHtml = item.url
+        ? '<a class="dienst-link" href="' + item.url + '">' + linkLabel + '</a>'
+        : '';
+
       article.innerHTML =
         '<div class="dienst-icon"><svg viewBox="0 0 24 24">' + iconSvg + '</svg></div>' +
         '<div class="dienst-title">' + item.title + '</div>' +
-        '<div class="dienst-desc">' + item.description + '</div>';
+        '<div class="dienst-desc">' + item.description + '</div>' +
+        '<div class="dienst-footer">' + priceHtml + linkHtml + '</div>';
+      grid.appendChild(article);
+      if (window.fadeObserver) {
+        window.fadeObserver.observe(article);
+      }
+    });
+  }
+
+  // =====================================================================
+  // RENDER WERK CARDS (homepage case studies)
+  // =====================================================================
+  function renderWerk() {
+    var grid = document.getElementById('werk-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    if (!contentData || !contentData[currentLang]) return;
+
+    var items = contentData[currentLang].werk.items;
+    if (!items || !Array.isArray(items)) return;
+
+    items.forEach(function (item) {
+      var article = document.createElement('article');
+      article.className = 'werk-card fade-up';
+      var readLabel = contentData[currentLang].werk.read_label || 'Lees de case →';
+      article.innerHTML =
+        '<div class="werk-tag">' + (item.tag || '') + '</div>' +
+        '<h3 class="werk-title">' + item.title + '</h3>' +
+        '<p class="werk-summary">' + item.summary + '</p>' +
+        '<a class="werk-read" href="/work/?lang=' + currentLang + '">' + readLabel + '</a>';
       grid.appendChild(article);
       if (window.fadeObserver) {
         window.fadeObserver.observe(article);
@@ -162,6 +204,11 @@
       el.href = '/blog/?lang=' + lang;
     });
 
+    // Werk link updaten met taal parameter
+    document.querySelectorAll('.work-link').forEach(function(el) {
+      el.href = '/work/?lang=' + lang;
+    });
+
     var t = contentData[lang];
     if (!t) return;
 
@@ -222,6 +269,7 @@
 
     // Re-render dynamic content
     renderServices();
+    renderWerk();
     renderWerkwijze();
     // Opties zijn statisch in HTML met data-i18n — worden vertaald door de handler hierboven
 

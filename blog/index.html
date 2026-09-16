@@ -271,6 +271,13 @@ permalink: /blog/
       font-size: 1.0625rem;
       color: #666;
     }
+    .blog-intro {
+      margin-top: 16px;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #666;
+      max-width: 640px;
+    }
 
     /* Taalfilter tabs */
     .lang-filters {
@@ -303,6 +310,37 @@ permalink: /blog/
 
     /* Posts grid */
     .posts-section { padding: 48px 0 80px; }
+
+    /* CTA-blok (include cta.html) */
+    .cta-blog {
+      margin-top: 56px;
+      padding: 36px;
+      background: linear-gradient(135deg, #1A1A2E, #2a2a45);
+      border-radius: 16px;
+      text-align: center;
+    }
+    .cta-blog-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .cta-blog-text {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9375rem;
+      margin-bottom: 20px;
+    }
+    .cta-blog-btn {
+      display: inline-block;
+      background: #FF6B00;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9375rem;
+      padding: 13px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .cta-blog-btn:hover { opacity: 0.9; }
     .posts-grid {
       display: grid;
       gap: 28px;
@@ -574,6 +612,7 @@ permalink: /blog/
         <span class="blog-label">Blog</span>
         <h1 class="blog-title">Praktische kennis, geen theorie</h1>
         <p class="blog-subtitle">Artikelen over webdevelopment, SEO en AI — geschreven vanuit de praktijk.</p>
+        <p class="blog-intro">Elke week een praktisch artikel. En heb je een concreet project — een PHP/Laravel-website, server of n8n-automatisering? Daar help ik ook remote bij.</p>
       </div>
 
       <section class="posts-section">
@@ -627,6 +666,8 @@ permalink: /blog/
         </div>
         {% endif %}
       </section>
+
+      {% include cta.html %}
     </div>
   </main>
 
