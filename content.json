@@ -487,19 +487,19 @@
         {
           "url": "/services/php-laravel/",
           "name": "PHP & Laravel ontwikkeling",
-          "price": "5–400+",
+          "price": "$25–400+",
           "desc": "Ontwikkeling, onderhoud en reparaties voor websites en webapplicaties op PHP, Laravel, WordPress en TYPO3."
         },
         {
           "url": "/services/linux-server/",
           "name": "Linux & serverbeheer",
-          "price": "0–150",
+          "price": "$30–150",
           "desc": "Serverstoringen oplossen, migraties, security-hardening en Docker — remote beheerd."
         },
         {
           "url": "/services/n8n-automation/",
           "name": "n8n & automatisering",
-          "price": "0–250",
+          "price": "$50–250",
           "desc": "Slimme workflows die systemen verbinden en herhaalwerk automatiseren: formulieren, e-mail, databases en AI."
         }
       ],
@@ -998,19 +998,19 @@
         {
           "url": "/services/php-laravel/",
           "name": "PHP & Laravel development",
-          "price": "5–400+",
+          "price": "$25–400+",
           "desc": "Development, maintenance and fixes for websites and web apps on PHP, Laravel, WordPress and TYPO3."
         },
         {
           "url": "/services/linux-server/",
           "name": "Linux & server administration",
-          "price": "0–150",
+          "price": "$30–150",
           "desc": "Fixing server outages, migrations, security hardening and Docker — managed remotely."
         },
         {
           "url": "/services/n8n-automation/",
           "name": "n8n & automation",
-          "price": "0–250",
+          "price": "$50–250",
           "desc": "Smart workflows connecting systems and automating repetitive work: forms, email, databases and AI."
         }
       ],
@@ -1509,19 +1509,19 @@
         {
           "url": "/services/php-laravel/",
           "name": "PHP- & Laravel-Entwicklung",
-          "price": "5–400+",
+          "price": "$25–400+",
           "desc": "Entwicklung, Wartung und Reparaturen für Websites und Webanwendungen auf PHP, Laravel, WordPress und TYPO3."
         },
         {
           "url": "/services/linux-server/",
           "name": "Linux- & Serververwaltung",
-          "price": "0–150",
+          "price": "$30–150",
           "desc": "Serverausfälle beheben, Migrationen, Security-Härtung und Docker — remote verwaltet."
         },
         {
           "url": "/services/n8n-automation/",
           "name": "n8n & Automatisierung",
-          "price": "0–250",
+          "price": "$50–250",
           "desc": "Intelligente Workflows, die Systeme verbinden und wiederkehrende Arbeit automatisieren: Formulare, E-Mail, Datenbanken und KI."
         }
       ],
