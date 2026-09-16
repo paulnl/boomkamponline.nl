@@ -201,11 +201,47 @@
     }
     .h2-section { font-size: 1.375rem; font-weight: 800; margin: 40px 0 8px; }
     .price-note { font-size: 0.875rem; color: #999; margin-top: 12px; }
+    .price-block-title { font-size: 1rem; font-weight: 700; color: #1A1A2E; margin: 24px 0 10px; }
+
+    /* Dienstblokken op overzichtspagina */
+    .service-block {
+      background: #f9fafb;
+      border: 1px solid #eee;
+      border-radius: 16px;
+      padding: 32px 28px;
+      margin-bottom: 28px;
+    }
+    .service-block h3 { font-size: 1.375rem; font-weight: 800; margin-bottom: 4px; color: #1A1A2E; }
+    .service-block .section-subtitle { font-size: 0.9375rem; color: #555; margin-bottom: 16px; }
+    .service-block p { color: #444; margin-bottom: 12px; }
+    .price-table { margin-top: 20px; }
+    .price-table-header, .price-table-row {
+      display: grid;
+      grid-template-columns: 1fr repeat(3, 1fr);
+      gap: 8px;
+      align-items: center;
+    }
+    .price-table-header {
+      border-bottom: 2px solid #FF6B00;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+    }
+    .price-table-row {
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .pt-cell { padding: 0 8px; }
+    .pt-label { font-weight: 600; color: #1A1A2E; font-size: 0.9375rem; }
+    .pt-col { font-weight: 700; color: #FF6B00; font-size: 0.9375rem; text-align: center; }
+    .pt-value { text-align: center; font-size: 0.9375rem; color: #333; }
+    .service-block p + p { margin-top: 0; }
 
     @media (max-width: 768px) {
       .nav { display: none; }
       .page-title { font-size: 1.875rem; }
       .cta-box { padding: 36px 24px; }
+      .price-table-header, .price-table-row { grid-template-columns: 1fr repeat(3, 1fr); font-size: 0.8125rem; }
+      .pt-cell { padding: 0 4px; }
     }
   </style>
 </head>
@@ -218,6 +254,7 @@
       <nav class="nav" role="navigation" aria-label="Hoofdnavigatie">
         <a href="/services/" data-i18n="nav.diensten">Diensten</a>
         <a href="/work/" class="work-link" data-i18n="nav.werk">Werk</a>
+        <a href="/#over-mij" data-i18n="nav.over">Over mij</a>
         <a href="/blog/" class="blog-link" data-i18n="nav.blog">Blog</a>
         <a href="/#contact" class="nav-cta" data-i18n="nav.contact">Contact</a>
       </nav>
@@ -235,7 +272,7 @@
       <h1 class="page-title" data-i18n="services_page.title">Wat ik voor je kan doen</h1>
       <p class="page-intro" data-i18n="services_page.intro">Remote ondersteuning per project of per uur &mdash; zonder langlopende contracten. Richtprijzen staan per dienst, een exacte offerte krijg je binnen &eacute;&eacute;n werkdag.</p>
 
-      <ul class="service-list" data-i18n-list="services_page.items"></ul>
+      <div id="service-blocks"></div>
 
       <p class="page-note" data-i18n="services_page.note">Beschikbaar per project, per uur of als maandelijks onderhoud. Remote vanaf elke locatie &mdash; geen langlopende contracten.</p>
 
@@ -249,7 +286,7 @@
 
   <footer class="footer" role="contentinfo">
     <div class="tagline" data-i18n="footer.tagline">Freelance webontwikkelaar &amp; AI-consultant</div>
-    <span data-i18n="footer.copyright">&copy; 2025 Paul Boomkamp &ndash; BoomkampOnline.NL</span>
+    <span data-i18n="footer.copyright">&copy; 2026 Paul Boomkamp &ndash; BoomkampOnline.NL</span>
   </footer>
 
   <script src="/page-i18n.js"></script>

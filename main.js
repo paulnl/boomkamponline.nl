@@ -64,6 +64,15 @@
   }
 
   // =====================================================================
+  // {YEAR}-TOKEN → huidig jaartal (footer.copyright e.d.)
+  // =====================================================================
+  function replaceYearTokens(str) {
+    if (typeof str !== 'string') return str;
+    var year = new Date().getFullYear().toString();
+    return str.replace(/\{YEAR\}/g, year);
+  }
+
+  // =====================================================================
   // RENDER SERVICES CARDS
   // =====================================================================
   var ICON_MAP = {
@@ -226,6 +235,7 @@
       var key = el.getAttribute('data-i18n');
       var text = getNested(t, key);
       if (text === undefined) return;
+      text = replaceYearTokens(text);
       if (el.tagName === 'META') {
         el.setAttribute('content', text);
       } else {
@@ -237,14 +247,14 @@
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-html');
       var html = getNested(t, key);
-      if (html !== undefined) el.innerHTML = html;
+      if (html !== undefined) el.innerHTML = replaceYearTokens(html);
     });
 
     // ----- data-i18n-placeholder → placeholder attribute -----
     document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-placeholder');
       var text = getNested(t, key);
-      if (text !== undefined) el.setAttribute('placeholder', text);
+      if (text !== undefined) el.setAttribute('placeholder', replaceYearTokens(text));
     });
 
     // ----- data-i18n-attr → any attribute -----
@@ -256,7 +266,7 @@
       var attr = val.substring(0, colonPos);
       var key = val.substring(colonPos + 1);
       var text = getNested(t, key);
-      if (text !== undefined) el.setAttribute(attr, text);
+      if (text !== undefined) el.setAttribute(attr, replaceYearTokens(text));
     });
 
     // ----- Meta tags expliciet bijwerken (redundant met data-i18n-attr, maar veilig) -----
@@ -508,13 +518,21 @@
       '<span class="ref-logo-text" style="display:none">' + item.bedrijf + '</span>';
   }
 
+  var refEventsBound = false;
+
   function buildSlider(items) {
     var slider = document.getElementById('ref-slider');
     var dotsContainer = document.getElementById('ref-dots');
     var prevBtn = document.getElementById('ref-prev');
     var nextBtn = document.getElementById('ref-next');
+    var section = document.getElementById('referenties');
 
-    if (!slider || !items || items.length === 0) return;
+    // Lege/ontbrekende data → hele sectie verbergen (bugfix "lege referenties-sectie")
+    if (!slider || !items || items.length === 0) {
+      if (section) section.style.display = 'none';
+      return;
+    }
+    if (section) section.style.display = '';
 
     totalSlidesRef = items.length;
 
@@ -564,14 +582,19 @@
       if (prevBtn) prevBtn.classList.add('hidden');
       if (nextBtn) nextBtn.classList.add('hidden');
       if (dotsContainer) dotsContainer.style.display = 'none';
+    } else {
+      if (prevBtn) prevBtn.classList.remove('hidden');
+      if (nextBtn) nextBtn.classList.remove('hidden');
+      if (dotsContainer) dotsContainer.style.display = '';
     }
 
-    // Event listeners pijlen
-    if (prevBtn) prevBtn.addEventListener('click', function () { goToSlide(currentSlideRef - 1); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { goToSlide(currentSlideRef + 1); });
+    // Event listeners pijlen — onclick property vervangt de vorige handler
+    // zodat er bij elke taalwissel GEEN dubbele listeners opstapelen.
+    if (prevBtn) prevBtn.onclick = function () { goToSlide(currentSlideRef - 1); };
+    if (nextBtn) nextBtn.onclick = function () { goToSlide(currentSlideRef + 1); };
 
-    // Touch/swipe support
-    (function () {
+    // Touch/swipe support — één keer binden (refEventsBound-flag)
+    if (!refEventsBound && slider) {
       var touchStartX = 0;
       slider.addEventListener('touchstart', function (e) {
         touchStartX = e.touches[0].clientX;
@@ -582,7 +605,8 @@
           goToSlide(diff > 0 ? currentSlideRef + 1 : currentSlideRef - 1);
         }
       }, { passive: true });
-    })();
+      refEventsBound = true;
+    }
   }
 
   function goToSlide(index) {

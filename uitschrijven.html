@@ -303,7 +303,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-bottom">
-        <span>&copy; 2025 Paul Boomkamp &ndash; BoomkampOnline.NL</span>
+        <span>&copy; <span id="year-auto">2025</span> Paul Boomkamp &ndash; BoomkampOnline.NL</span>
         <span class="footer-sep">&middot;</span>
         <a href="mailto:paul@boomkamponline.nl">paul@boomkamponline.nl</a>
       </div>
@@ -317,6 +317,10 @@
       var msg = document.getElementById('unsubscribe-msg');
       var formDiv = document.getElementById('unsubscribe-form');
       var successDiv = document.getElementById('unsubscribe-success');
+
+      // Dynamisch jaartal in footer
+      var yearEl = document.getElementById('year-auto');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
 
       // Haal email uit URL parameter
       var params = new URLSearchParams(window.location.search);

@@ -173,7 +173,7 @@
     "nav_label": "Hoofdnavigatie",
     "og_locale": "nl_NL",
     "footer": {
-      "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
+      "copyright": "© {YEAR} Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freelance webontwikkelaar & AI-consultant",
       "newsletter_label": "Blijf op de hoogte",
       "newsletter_name_placeholder": "Je naam",
@@ -322,6 +322,48 @@
           "title": "Demo: van webformulier naar opvolging",
           "summary": "Een proof-of-concept waarbij een webformulier direct een database-invoer, bevestigingsmail en follow-up-taak aanmaakt.",
           "tag": "Webform → n8n → database → e-mail"
+        },
+        {
+          "id": "kunstgras-landing",
+          "title": "Website voor Kunstgras",
+          "tag": "HTML/CSS · Notion",
+          "summary": "Een lichte HTML/CSS-landingspagina, snel ladend, met formulieren die automatisch per e-mail worden afgeleverd en in Notion worden gelogd."
+        },
+        {
+          "id": "schuco-varianto",
+          "title": "Verzamel Website Schuco-Varianto",
+          "tag": "TYPO3",
+          "summary": "Een TYPO3-website voor een verzamelaarsgemeenschap met geschiedenis, identificatiegidsen en een zelf uitbreidbare catalogus."
+        },
+        {
+          "id": "nexum-netwerk",
+          "title": "Nexum netwerk register",
+          "tag": "Maatwerk tool",
+          "summary": "Een zelfgebouwde netwerkdocumentatietool: hardware, netwerken, VLAN's en verbindingen op één plek — multi-tenant, met dashboard en API."
+        },
+        {
+          "id": "switchboard",
+          "title": "Switchboard multitool",
+          "tag": "Docker · Automatisering",
+          "summary": "Een multitool voor AI-agents, MCP-servers, Kanban-workflows en geautomatiseerde taken — alles vanuit één Docker-container."
+        },
+        {
+          "id": "papertrader",
+          "title": "PaperTrader oefentool",
+          "tag": "Webapplicatie",
+          "summary": "Een risicovrije aandelensimulator met live marktdata en virtueel geld — handmatig of via een geautomatiseerde agent-modus."
+        },
+        {
+          "id": "wizzo-wereld",
+          "title": "Wizzo Wereld onderwijs",
+          "tag": "Webapplicatie",
+          "summary": "Een speels, retro-stijl leerplatform voor jonge kinderen, met privacy als kernvereiste: geen accounts, geen persoonsgegevens."
+        },
+        {
+          "id": "n8n-monitoring-agent",
+          "title": "N8N AI Agent voor servermonitoring",
+          "tag": "n8n · AI-agent",
+          "summary": "Een autonome n8n-agent die uptime bewaakt, storingen via SSH onderzoekt en meldt — fixes pas na menselijke goedkeuring."
         }
       ],
       "read_label": "Lees de case →",
@@ -367,6 +409,62 @@
           "probleem": "Klanten wilden zien hoe een webformulier zonder handmatig werk de rest van het proces kon starten: opslaan, bevestigen en opvolgen.",
           "aanpak": "Ik bouwde een complete demo-omgeving: statisch formulier als front-end, n8n als werkflow-motor, een database voor de inzendingen en e-mailstappen voor bevestiging en interne melding.",
           "resultaat": "Een werkende referentie-omgeving in één dag, die later ook daadwerkelijk als basis voor de productie-workflow is gebruikt."
+        },
+        {
+          "id": "kunstgras-landing",
+          "title": "Website voor Kunstgras",
+          "client": "Kieskunstgras.nl",
+          "probleem": "De bestaande website was te zwaar en laadde te langzaam. Leads uit het contactformulier moesten bovendien handmatig worden overgenomen.",
+          "aanpak": "Een lichte, volledig HTML/CSS-landingspagina gebouwd, geoptimaliseerd voor snelle laadtijd — geen zware frameworks. De formulieren leveren automatisch een e-mail af en worden gelogd in Notion.",
+          "resultaat": "Een razendsnelle landingspagina met een doorzoekbaar overzicht van elke lead in Notion — zonder handwerk."
+        },
+        {
+          "id": "schuco-varianto",
+          "title": "Verzamel Website Schuco-Varianto",
+          "client": "Schuco-Varianto.nl",
+          "probleem": "Een niche-verzamelaarsgemeenschap had een centrale plek nodig voor geschiedenis, identificatiegidsen en een groeiende modelcatalogus.",
+          "aanpak": "Een complete TYPO3-website gebouwd met gestructureerd contentbeheer, zodat de klant de catalogus zelfstandig kan uitbreiden.",
+          "resultaat": "Een beheersbare community-site die de klant zelf actueel houdt — zonder tussenkomst van een ontwikkelaar."
+        },
+        {
+          "id": "nexum-netwerk",
+          "title": "Nexum netwerk register",
+          "client": "Eigen project — prijsklasse geeft aan wat vergelijkbaar klantwerk zou kosten.",
+          "probleem": "Netwerkdocumentatie verspreid over meerdere spreadsheets: hardware, netwerken, VLAN's en onderlinge verbindingen stonden niet op één plek.",
+          "aanpak": "Een webtool ontworpen en gebouwd voor het bijhouden van hardware, netwerken, VLAN's en verbindingen — multi-tenant, met een duidelijk dashboard en API-toegang.",
+          "resultaat": "Alle netwerkdocumentatie op één plek, doorzoekbaar en via API ontsloten — geen verspreide spreadsheets meer."
+        },
+        {
+          "id": "switchboard",
+          "title": "Switchboard multitool",
+          "client": "Eigen project — prijsklasse geeft aan wat vergelijkbaar klantwerk zou kosten.",
+          "probleem": "AI-agents, MCP-servers, Kanban-workflows en geautomatiseerde taken draaiden verspreid over losse omgevingen, zonder centraal beheer.",
+          "aanpak": "Een multitool gebouwd voor het beheren van AI-agents, MCP-servers, Kanban-workflows en geautomatiseerde taken — alles vanuit één Docker-container.",
+          "resultaat": "End-to-end automatiseringsdenken in de praktijk: van infrastructuur tot workflow-orchestratie vanuit één beheeromgeving."
+        },
+        {
+          "id": "papertrader",
+          "title": "PaperTrader oefentool",
+          "client": "PaperTrader",
+          "probleem": "Leren beleggen zonder risico is lastig: oefenen met echt geld is kostbaar, en simulaties zonder live data zijn weinig realistisch.",
+          "aanpak": "Een risicovrije aandelensimulator gebouwd met echte, live marktdata maar virtueel geld — met zowel een handmatige als een geautomatiseerde 'agent'-modus.",
+          "resultaat": "Gebruikers kunnen hun eigen beslissingen naast een geautomatiseerde strategie leggen — veilig leren, zonder risico."
+        },
+        {
+          "id": "wizzo-wereld",
+          "title": "Wizzo Wereld onderwijs",
+          "client": "Wizzo Wereld",
+          "probleem": "Een leerplatform voor jonge kinderen dat speels is én privacyvriendelijk: geen accounts, geen persoonsgegevens.",
+          "aanpak": "Een speels, retro-stijl leerplatform gebouwd: klokkijken, optellen/aftrekken, tafels en aardrijkskunde via korte interactieve spelletjes. Privacy als kernvereiste — een kind kiest alleen een naam, wachtwoord en lievelingsdier, meer wordt niet opgeslagen.",
+          "resultaat": "Een veilige, speelse leeromgeving waarin geen persoonsgegevens worden opgeslagen."
+        },
+        {
+          "id": "n8n-monitoring-agent",
+          "title": "N8N AI Agent for Automated Server Monitoring",
+          "client": "Eigen project — prijsklasse geeft aan wat vergelijkbaar klantwerk zou kosten.",
+          "probleem": "Website-storingen werden pas laat ontdekt en elke storing moest handmatig worden onderzocht op de server.",
+          "aanpak": "Een autonome n8n-agent gebouwd die website-uptime bewaakt. Bij een storing logt de agent via SSH in op de server, onderzoekt host en Docker-containers en stuurt een Telegram-melding met de bevindingen — met een menselijke goedkeuringsstap voordat een fix automatisch wordt toegepast.",
+          "resultaat": "Storingen worden snel ontdekt én onderzocht; fixes worden alleen toegepast na menselijke goedkeuring."
         }
       ],
       "labels": {
@@ -415,7 +513,42 @@
         "cta": "Heb je een PHP- of Laravel-probleem?",
         "cta_sub": "Beschrijf kort wat er speelt en je krijgt binnen één werkdag een concreet voorstel.",
         "cta_button": "Vraag een voorstel aan",
-        "meta_description": "PHP en Laravel ontwikkeling en onderhoud: bugs, nieuwe modules, upgrades en integraties. Richtprijzen vanaf $25, remote."
+        "meta_description": "PHP en Laravel ontwikkeling en onderhoud: bugs, nieuwe modules, upgrades en integraties. Richtprijzen vanaf $25, remote.",
+        "body_p1": "Een bug in je PHP- of Laravel-applicatie, een kapotte feature, of een API die niet meer werkt? Ik onderzoek het probleem, leg in duidelijke taal uit wat er mis is, en los het op — met 20+ jaar PHP-ervaring en hands-on Laravel- en TYPO3-werk.",
+        "body_p2": "Wat ik oppak: bugfixes, foutafhandeling, database-issues, API-koppelingen, formulierproblemen, performance-issues en kleine nieuwe features op bestaande code.",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Prijs",
+              "values": [
+                "$35",
+                "$75",
+                "$150"
+              ]
+            },
+            {
+              "label": "Inhoud",
+              "values": [
+                "Diagnose + kleine fix (1 issue)",
+                "Meerdere fixes / kleine feature",
+                "Grotere feature of meerdere gekoppelde issues"
+              ]
+            },
+            {
+              "label": "Levertijd",
+              "values": [
+                "2 dagen",
+                "4 dagen",
+                "7 dagen"
+              ]
+            }
+          ]
+        }
       },
       "linuxServer": {
         "title": "Linux & serverbeheer",
@@ -448,7 +581,42 @@
         "cta": "Loopt je server vast of is hij onveilig?",
         "cta_sub": "Stuur me een korte beschrijving en je krijgt binnen één werkdag een plan van aanpak.",
         "cta_button": "Vraag een voorstel aan",
-        "meta_description": "Linux serverbeheer, migraties, security-hardening en Docker. Stabiele en veilige servers, remote beheerd. Vanaf $30."
+        "meta_description": "Linux serverbeheer, migraties, security-hardening en Docker. Stabiele en veilige servers, remote beheerd. Vanaf $30.",
+        "body_p1": "Server die vastloopt? SSL dat niet werkt, site plat, een Docker-container die zich misdraagt, of DNS verkeerd geconfigureerd? Ik diagnosticeer en fix Linux-serverproblemen op afstand — van snelle troubleshooting tot volledige migraties.",
+        "body_p2": "Wat ik oppak: Apache/Nginx-configuratie, SSL/DNS-issues, Docker-troubleshooting, back-ups, security hardening en site-migraties.",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Prijs",
+              "values": [
+                "$30",
+                "$75",
+                "$150"
+              ]
+            },
+            {
+              "label": "Inhoud",
+              "values": [
+                "Eén probleem diagnosticeren + fixen",
+                "Server configureren/hardenen",
+                "Volledige migratie"
+              ]
+            },
+            {
+              "label": "Levertijd",
+              "values": [
+                "1 dag",
+                "3 dagen",
+                "5 dagen"
+              ]
+            }
+          ]
+        }
       },
       "n8nAutomation": {
         "title": "n8n & automatisering",
@@ -481,7 +649,42 @@
         "cta": "Doe je werk handmatig in meerdere systemen?",
         "cta_sub": "Vertel me welke handmatige stappen je doet en ik bouw er een workflow omheen.",
         "cta_button": "Vraag een voorstel aan",
-        "meta_description": "n8n workflows en automatisering: formulieren, e-mail, databases en AI koppelen. Richtprijzen vanaf $50, remote."
+        "meta_description": "n8n workflows en automatisering: formulieren, e-mail, databases en AI koppelen. Richtprijzen vanaf $50, remote.",
+        "body_p1": "Stop met handmatig data overtypen tussen je formulier, CRM, e-mail en spreadsheets. Ik bouw n8n-automatiseringen die je tools aan elkaar koppelen, zodat elke lead, order of taak automatisch doorstroomt — met meldingen zodat niets wordt gemist.",
+        "body_p2": "Voorbeeld: \"Ik automatiseer je leadformulier zodat elke nieuwe lead automatisch wordt opgeslagen, gemeld en opgevolgd.\"",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Prijs",
+              "values": [
+                "$50",
+                "$125",
+                "$250"
+              ]
+            },
+            {
+              "label": "Inhoud",
+              "values": [
+                "Eén simpele workflow (2 stappen)",
+                "Workflow met meerdere API's/voorwaarden",
+                "Volledig geautomatiseerd proces + documentatie"
+              ]
+            },
+            {
+              "label": "Levertijd",
+              "values": [
+                "2 dagen",
+                "4 dagen",
+                "7 dagen"
+              ]
+            }
+          ]
+        }
       },
       "items": [
         {
@@ -504,7 +707,10 @@
         }
       ],
       "note": "Beschikbaar per project, per uur of als maandelijks onderhoud. Remote vanaf elke locatie — geen langlopende contracten, geen verrassingen achteraf.",
-      "meta_description": "Remote PHP, Laravel, Linux en n8n support: ontwikkeling, serverbeheer en automatisering voor bedrijven. Zonder langlopende contracten."
+      "meta_description": "Remote PHP, Laravel, Linux en n8n support: ontwikkeling, serverbeheer en automatisering voor bedrijven. Zonder langlopende contracten.",
+      "details_heading": "Diensten in detail",
+      "price_heading": "Richtprijzen",
+      "more_label": "Meer informatie"
     },
     "meta.description": "Remote PHP-, Laravel- en Linux-support en n8n-automatisering. Effectieve hulp voor developers en bedrijven.",
     "meta.ogtitle": "BoomkampOnline — Remote PHP, Laravel, Linux & Automatisering",
@@ -684,7 +890,7 @@
     "nav_label": "Main navigation",
     "og_locale": "en_GB",
     "footer": {
-      "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
+      "copyright": "© {YEAR} Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freelance web developer & AI consultant",
       "newsletter_label": "Stay informed",
       "newsletter_name_placeholder": "Your name",
@@ -833,6 +1039,48 @@
           "title": "Demo: from web form to follow-up",
           "summary": "A proof of concept where a web form directly creates a database entry, confirmation email and follow-up task.",
           "tag": "Webform → n8n → database → email"
+        },
+        {
+          "id": "kunstgras-landing",
+          "title": "Fast Landing Page for Artificial Grass Supplier",
+          "tag": "HTML/CSS · Notion",
+          "summary": "A lightweight HTML/CSS landing page, fast loading, with forms automatically delivered by email and logged in Notion."
+        },
+        {
+          "id": "schuco-varianto",
+          "title": "TYPO3 Collector Community Site",
+          "tag": "TYPO3",
+          "summary": "A TYPO3 website for a collector community with history, identification guides and a catalogue the client can expand themselves."
+        },
+        {
+          "id": "nexum-netwerk",
+          "title": "Nexum — Self-Built Network Documentation Tool",
+          "tag": "Custom tool",
+          "summary": "A self-built network documentation tool: hardware, networks, VLANs and connections in one place — multi-tenant, with dashboard and API."
+        },
+        {
+          "id": "switchboard",
+          "title": "Switchboard — Docker Automation & Ops Dashboard",
+          "tag": "Docker · Automation",
+          "summary": "A multi-tool for AI agents, MCP servers, Kanban workflows and automated tasks — all from a single Docker container."
+        },
+        {
+          "id": "papertrader",
+          "title": "PaperTrader — Practice Stock Trading Tool",
+          "tag": "Web app",
+          "summary": "A risk-free stock simulator with live market data and virtual money — manual or via an automated agent mode."
+        },
+        {
+          "id": "wizzo-wereld",
+          "title": "Wizzo Wereld — Playful Learning App for Kids",
+          "tag": "Web app",
+          "summary": "A playful, retro-style learning platform for young children, with privacy as a core requirement: no accounts, no personal data."
+        },
+        {
+          "id": "n8n-monitoring-agent",
+          "title": "N8N AI Agent for Automated Server Monitoring",
+          "tag": "n8n · AI agent",
+          "summary": "An autonomous n8n agent that monitors uptime, investigates outages via SSH and notifies — fixes only after human approval."
         }
       ],
       "read_label": "Read the case study →",
@@ -878,6 +1126,62 @@
           "probleem": "Clients wanted to see how a web form could start the rest of the process without manual work: storing, confirming and following up.",
           "aanpak": "I built a complete demo environment: a static form as front end, n8n as workflow engine, a database for submissions and email steps for confirmation and internal notification.",
           "resultaat": "A working reference environment in one day, which was later actually used as the basis for the production workflow."
+        },
+        {
+          "id": "kunstgras-landing",
+          "title": "Fast Landing Page for Artificial Grass Supplier",
+          "client": "Kieskunstgras.nl",
+          "probleem": "The existing website was too heavy and loaded too slowly. Leads from the contact form also had to be copied over manually.",
+          "aanpak": "Built a lightweight, pure HTML/CSS landing page optimised for fast loading — no heavy frameworks. Forms are automatically delivered by email and logged in Notion.",
+          "resultaat": "A fast-loading landing page with a searchable overview of every lead in Notion — no manual work."
+        },
+        {
+          "id": "schuco-varianto",
+          "title": "TYPO3 Collector Community Site",
+          "client": "Schuco-Varianto.nl",
+          "probleem": "A niche collector community needed one central place for history, identification guides and a growing model catalogue.",
+          "aanpak": "Built a complete TYPO3 website with structured content management, so the client can expand the catalogue themselves.",
+          "resultaat": "A manageable community site that the client keeps up to date independently — without involving a developer."
+        },
+        {
+          "id": "nexum-netwerk",
+          "title": "Nexum — Self-Built Network Documentation Tool",
+          "client": "Own project — the price range indicates what comparable client work would cost.",
+          "probleem": "Network documentation scattered across multiple spreadsheets: hardware, networks, VLANs and connections were not in one place.",
+          "aanpak": "Designed and built a web tool for tracking hardware, networks, VLANs and connections — multi-tenant, with a clear dashboard and API access.",
+          "resultaat": "All network documentation in one place, searchable and accessible via API — no more scattered spreadsheets."
+        },
+        {
+          "id": "switchboard",
+          "title": "Switchboard — Docker Automation & Ops Dashboard",
+          "client": "Own project — the price range indicates what comparable client work would cost.",
+          "probleem": "AI agents, MCP servers, Kanban workflows and automated tasks ran scattered across separate environments, with no central management.",
+          "aanpak": "Built a multi-tool for managing AI agents, MCP servers, Kanban workflows and automated tasks — all from a single Docker container.",
+          "resultaat": "End-to-end automation thinking in practice: from infrastructure to workflow orchestration from one management environment."
+        },
+        {
+          "id": "papertrader",
+          "title": "PaperTrader — Practice Stock Trading Tool",
+          "client": "PaperTrader",
+          "probleem": "Learning to trade without risk is hard: practising with real money is expensive, and simulations without live data are unrealistic.",
+          "aanpak": "Built a risk-free stock simulator with real, live market data but virtual money — with both a manual and an automated 'agent' mode.",
+          "resultaat": "Users can compare their own decisions against an automated strategy — safe learning, without risk."
+        },
+        {
+          "id": "wizzo-wereld",
+          "title": "Wizzo Wereld — Playful Learning App for Kids",
+          "client": "Wizzo Wereld",
+          "probleem": "A learning platform for young children that is playful and privacy-friendly: no accounts, no personal data.",
+          "aanpak": "Built a playful, retro-style learning platform: telling time, adding/subtracting, multiplication tables and geography through short interactive games. Privacy as a core requirement — a child only picks a name, password and favourite animal; nothing else is stored.",
+          "resultaat": "A safe, playful learning environment that stores no personal data."
+        },
+        {
+          "id": "n8n-monitoring-agent",
+          "title": "N8N AI Agent for Automated Server Monitoring",
+          "client": "Own project — the price range indicates what comparable client work would cost.",
+          "probleem": "Website outages were discovered late, and every incident had to be investigated manually on the server.",
+          "aanpak": "Built an autonomous n8n agent that monitors website uptime. When a site goes down, the agent logs into the server via SSH, investigates host and Docker containers, and sends a Telegram notification with findings — with a human approval step before a fix is applied automatically.",
+          "resultaat": "Outages are detected and investigated quickly; fixes are only applied after human approval."
         }
       ],
       "labels": {
@@ -926,7 +1230,42 @@
         "cta": "Stuck on a PHP or Laravel problem?",
         "cta_sub": "Briefly describe the issue and get a concrete proposal within one business day.",
         "cta_button": "Request a proposal",
-        "meta_description": "PHP and Laravel development and maintenance: bugs, new modules, upgrades and integrations. Indicative prices from $25, remote."
+        "meta_description": "PHP and Laravel development and maintenance: bugs, new modules, upgrades and integrations. Indicative prices from $25, remote.",
+        "body_p1": "Got a PHP or Laravel application with a bug, a broken feature, or an API that stopped working? I investigate the issue, explain what's wrong in plain terms, and fix it — with 20+ years of PHP experience and hands-on Laravel and TYPO3 work.",
+        "body_p2": "What I handle: bug fixes, error debugging, database issues, API integrations, form fixes, performance issues, and small new features on existing codebases.",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Price",
+              "values": [
+                "$35",
+                "$75",
+                "$150"
+              ]
+            },
+            {
+              "label": "Contents",
+              "values": [
+                "Diagnosis + small fix (1 issue)",
+                "Multiple fixes / small feature",
+                "Larger feature or multiple linked issues"
+              ]
+            },
+            {
+              "label": "Delivery",
+              "values": [
+                "2 days",
+                "4 days",
+                "7 days"
+              ]
+            }
+          ]
+        }
       },
       "linuxServer": {
         "title": "Linux & server administration",
@@ -959,7 +1298,42 @@
         "cta": "Is your server stuck or insecure?",
         "cta_sub": "Send me a short description and get a plan of action within one business day.",
         "cta_button": "Request a proposal",
-        "meta_description": "Linux server administration, migrations, security hardening and Docker. Stable, secure servers managed remotely. From $30."
+        "meta_description": "Linux server administration, migrations, security hardening and Docker. Stable, secure servers managed remotely. From $30.",
+        "body_p1": "Server acting up? SSL not working, site down, Docker container misbehaving, or DNS misconfigured? I remotely diagnose and fix Linux server issues — from quick troubleshooting to full migrations.",
+        "body_p2": "What I handle: Apache/Nginx configuration, SSL/DNS issues, Docker troubleshooting, backups, security hardening, and site migrations.",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Price",
+              "values": [
+                "$30",
+                "$75",
+                "$150"
+              ]
+            },
+            {
+              "label": "Contents",
+              "values": [
+                "Diagnose and fix one issue",
+                "Configure/harden a server",
+                "Full migration"
+              ]
+            },
+            {
+              "label": "Delivery",
+              "values": [
+                "1 day",
+                "3 days",
+                "5 days"
+              ]
+            }
+          ]
+        }
       },
       "n8nAutomation": {
         "title": "n8n & automation",
@@ -992,7 +1366,42 @@
         "cta": "Doing manual work across multiple systems?",
         "cta_sub": "Tell me which manual steps you do and I'll build a workflow around them.",
         "cta_button": "Request a proposal",
-        "meta_description": "n8n workflows and automation: connect forms, email, databases and AI. Indicative prices from $50, remote."
+        "meta_description": "n8n workflows and automation: connect forms, email, databases and AI. Indicative prices from $50, remote.",
+        "body_p1": "Stop copying data by hand between your form, CRM, email and spreadsheets. I build n8n automations that connect your tools so every lead, order or task flows through automatically — with notifications so nothing gets missed.",
+        "body_p2": "Example: \"I will automate your lead form so every new lead is automatically stored, notified and followed up.\"",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Price",
+              "values": [
+                "$50",
+                "$125",
+                "$250"
+              ]
+            },
+            {
+              "label": "Contents",
+              "values": [
+                "One simple workflow (2 steps)",
+                "Workflow with multiple APIs/conditions",
+                "Fully automated process + documentation"
+              ]
+            },
+            {
+              "label": "Delivery",
+              "values": [
+                "2 days",
+                "4 days",
+                "7 days"
+              ]
+            }
+          ]
+        }
       },
       "items": [
         {
@@ -1015,7 +1424,10 @@
         }
       ],
       "note": "Available per project, per hour or as monthly maintenance. Remote from any location — no long-term contracts, no surprises afterwards.",
-      "meta_description": "Remote PHP, Laravel, Linux and n8n support: development, server administration and automation for businesses. No long-term contracts."
+      "meta_description": "Remote PHP, Laravel, Linux and n8n support: development, server administration and automation for businesses. No long-term contracts.",
+      "details_heading": "Services in detail",
+      "price_heading": "Indicative prices",
+      "more_label": "More information"
     },
     "meta.description": "Remote PHP, Laravel and Linux support plus n8n automation. Effective help for developers and businesses.",
     "meta.ogtitle": "BoomkampOnline — Remote PHP, Laravel, Linux & Automation",
@@ -1195,7 +1607,7 @@
     "nav_label": "Hauptnavigation",
     "og_locale": "de_DE",
     "footer": {
-      "copyright": "© 2025 Paul Boomkamp – BoomkampOnline.NL",
+      "copyright": "© {YEAR} Paul Boomkamp – BoomkampOnline.NL",
       "tagline": "Freiberuflicher Webentwickler & KI-Berater",
       "newsletter_label": "Bleiben Sie informiert",
       "newsletter_name_placeholder": "Ihr Name",
@@ -1344,6 +1756,48 @@
           "title": "Demo: vom Webformular zur Nachverfolgung",
           "summary": "Ein Proof of Concept, bei dem ein Webformular direkt einen Datenbankeintrag, eine Bestätigungsmail und eine Folgeaufgabe erzeugt.",
           "tag": "Webform → n8n → Datenbank → E-Mail"
+        },
+        {
+          "id": "kunstgras-landing",
+          "title": "Schnelle Landingpage für Kunstgras-Anbieter",
+          "tag": "HTML/CSS · Notion",
+          "summary": "Eine leichte HTML/CSS-Landingpage mit schneller Ladezeit — Formulare werden automatisch per E-Mail zugestellt und in Notion protokolliert."
+        },
+        {
+          "id": "schuco-varianto",
+          "title": "TYPO3-Sammlerseite für Schuco-Varianto",
+          "tag": "TYPO3",
+          "summary": "Eine TYPO3-Website für eine Sammler-Community mit Geschichte, Bestimmungsguides und einem selbst erweiterbaren Katalog."
+        },
+        {
+          "id": "nexum-netwerk",
+          "title": "Nexum — selbst gebautes Netzwerk-Dokumentationstool",
+          "tag": "Eigenentwicklung",
+          "summary": "Ein selbst gebautes Netzwerk-Dokumentationstool: Hardware, Netzwerke, VLANs und Verbindungen an einem Ort — multi-tenant, mit Dashboard und API."
+        },
+        {
+          "id": "switchboard",
+          "title": "Switchboard — Docker-Automatisierung & Ops-Dashboard",
+          "tag": "Docker · Automatisierung",
+          "summary": "Ein Multitool für KI-Agenten, MCP-Server, Kanban-Workflows und automatisierte Aufgaben — alles aus einem Docker-Container."
+        },
+        {
+          "id": "papertrader",
+          "title": "PaperTrader — Übungstool für den Aktienhandel",
+          "tag": "Webanwendung",
+          "summary": "Eine risikofreie Aktiensimulation mit Live-Marktdaten und virtuellem Geld — manuell oder per automatisiertem Agent-Modus."
+        },
+        {
+          "id": "wizzo-wereld",
+          "title": "Wizzo Wereld — spielerische Lern-App für Kinder",
+          "tag": "Webanwendung",
+          "summary": "Eine verspielte Lernplattform im Retro-Stil für junge Kinder, mit Datenschutz als Kernanforderung: keine Konten, keine personenbezogenen Daten."
+        },
+        {
+          "id": "n8n-monitoring-agent",
+          "title": "N8N-KI-Agent für automatisiertes Server-Monitoring",
+          "tag": "n8n · KI-Agent",
+          "summary": "Ein autonomer n8n-Agent, der die Verfügbarkeit überwacht, Ausfälle per SSH untersucht und meldet — Fixes nur nach menschlicher Freigabe."
         }
       ],
       "read_label": "Fallbeispiel lesen →",
@@ -1389,6 +1843,62 @@
           "probleem": "Kunden wollten sehen, wie ein Webformular ohne manuelle Arbeit den restlichen Prozess starten kann: Speichern, Bestätigen und Nachverfolgen.",
           "aanpak": "Ich habe eine komplette Demo-Umgebung gebaut: statisches Formular als Frontend, n8n als Workflow-Engine, eine Datenbank für Einreichungen und E-Mail-Schritte für Bestätigung und interne Meldung.",
           "resultaat": "Eine funktionierende Referenzumgebung in einem Tag, die später tatsächlich als Basis für den Produktions-Workflow verwendet wurde."
+        },
+        {
+          "id": "kunstgras-landing",
+          "title": "Schnelle Landingpage für Kunstgras-Anbieter",
+          "client": "Kieskunstgras.nl",
+          "probleem": "Die bestehende Website war zu schwer und lud zu langsam. Leads aus dem Kontaktformular mussten zudem manuell übernommen werden.",
+          "aanpak": "Eine leichte, komplett HTML/CSS-basierte Landingpage gebaut, optimiert für schnelle Ladezeiten — keine schweren Frameworks. Die Formulare werden automatisch per E-Mail zugestellt und in Notion protokolliert.",
+          "resultaat": "Eine schnelle Landingpage mit durchsuchbarer Übersicht jedes Leads in Notion — ganz ohne Handarbeit."
+        },
+        {
+          "id": "schuco-varianto",
+          "title": "TYPO3-Sammlerseite für Schuco-Varianto",
+          "client": "Schuco-Varianto.nl",
+          "probleem": "Eine Nischen-Sammler-Community brauchte einen zentralen Ort für Geschichte, Bestimmungsguides und einen wachsenden Modellkatalog.",
+          "aanpak": "Eine komplette TYPO3-Website mit strukturiertem Content-Management gebaut, damit der Kunde den Katalog selbst erweitern kann.",
+          "resultaat": "Eine pflegbare Community-Seite, die der Kunde eigenständig aktuell hält — ohne Entwickler."
+        },
+        {
+          "id": "nexum-netwerk",
+          "title": "Nexum — selbst gebautes Netzwerk-Dokumentationstool",
+          "client": "Eigenprojekt — die Preisspanne zeigt, was vergelijkbare Kundenarbeit kosten würde.",
+          "probleem": "Netzwerkdokumentation verteilt auf mehrere Tabellenkalkulationen: Hardware, Netzwerke, VLANs und Verbindungen waren nicht an einem Ort.",
+          "aanpak": "Ein Webtool entworfen und gebaut zur Pflege von Hardware, Netzwerken, VLANs und Verbindungen — multi-tenant, mit übersichtlichem Dashboard und API-Zugriff.",
+          "resultaat": "Die gesamte Netzwerkdokumentation an einem Ort, durchsuchbar und per API zugänglich — keine verstreuten Tabellen mehr."
+        },
+        {
+          "id": "switchboard",
+          "title": "Switchboard — Docker-Automatisierung & Ops-Dashboard",
+          "client": "Eigenprojekt — die Preisspanne zeigt, was vergelijkbare Kundenarbeit kosten würde.",
+          "probleem": "KI-Agenten, MCP-Server, Kanban-Workflows und automatisierte Aufgaben liefen verstreut über separate Umgebungen — ohne zentrale Verwaltung.",
+          "aanpak": "Ein Multitool gebaut zur Verwaltung von KI-Agenten, MCP-Servern, Kanban-Workflows und automatisierten Aufgaben — alles aus einem Docker-Container.",
+          "resultaat": "End-to-end-Automatisierung in der Praxis: von der Infrastruktur bis zur Workflow-Orchestrierung aus einer Verwaltungsumgebung."
+        },
+        {
+          "id": "papertrader",
+          "title": "PaperTrader — Übungstool für den Aktienhandel",
+          "client": "PaperTrader",
+          "probleem": "Risikofrei das Investieren zu lernen ist schwierig: Üben mit echtem Geld ist teuer, und Simulationen ohne Live-Daten sind unrealistisch.",
+          "aanpak": "Eine risikofreie Aktiensimulation mit echten Live-Marktdaten, aber virtuellem Geld gebaut — mit manuellem und automatisiertem 'Agent'-Modus.",
+          "resultaat": "Nutzer können eigene Entscheidungen mit einer automatisierten Strategie vergleichen — sicheres Lernen ohne Risiko."
+        },
+        {
+          "id": "wizzo-wereld",
+          "title": "Wizzo Wereld — spielerische Lern-App für Kinder",
+          "client": "Wizzo Wereld",
+          "probleem": "Eine Lernplattform für junge Kinder, die spielerisch und datenschutzfreundlich ist: keine Konten, keine personenbezogenen Daten.",
+          "aanpak": "Eine verspielte Lernplattform im Retro-Stil gebaut: Uhrzeit lesen, Addieren/Subtrahieren, Einmaleins und Geografie über kurze interaktive Spiele. Datenschutz als Kernanforderung — ein Kind wählt nur Name, Passwort und Lieblingstier; mehr wird nicht gespeichert.",
+          "resultaat": "Eine sichere, spielerische Lernumgebung, die keine personenbezogenen Daten speichert."
+        },
+        {
+          "id": "n8n-monitoring-agent",
+          "title": "N8N-KI-Agent für automatisiertes Server-Monitoring",
+          "client": "Eigenprojekt — die Preisspanne zeigt, was vergelijkbare Kundenarbeit kosten würde.",
+          "probleem": "Website-Ausfälle wurden erst spät erkannt und jeder Vorfall musste manuell auf dem Server untersucht werden.",
+          "aanpak": "Ein autonomer n8n-Agent gebaut, der die Website-Verfügbarkeit überwacht. Bei einem Ausfall loggt sich der Agent per SSH auf dem Server ein, untersucht Host und Docker-Container und sendet eine Telegram-Benachrichtigung mit den Ergebnissen — mit einem menschlichen Freigabeschritt, bevor ein Fix automatisch angewendet wird.",
+          "resultaat": "Ausfälle werden schnell erkannt und untersucht; Fixes werden nur nach menschlicher Freigabe angewendet."
         }
       ],
       "labels": {
@@ -1437,7 +1947,42 @@
         "cta": "Hängen Sie bei einem PHP- oder Laravel-Problem fest?",
         "cta_sub": "Beschreiben Sie kurz das Problem und Sie erhalten innerhalb eines Werktags einen konkreten Vorschlag.",
         "cta_button": "Angebot anfordern",
-        "meta_description": "PHP- und Laravel-Entwicklung und Wartung: Fehler, neue Module, Upgrades und Integrationen. Richtpreise ab $25, remote."
+        "meta_description": "PHP- und Laravel-Entwicklung und Wartung: Fehler, neue Module, Upgrades und Integrationen. Richtpreise ab $25, remote.",
+        "body_p1": "Ein Fehler in Ihrer PHP- oder Laravel-Anwendung, eine kaputte Funktion oder eine API, die nicht mehr funktioniert? Ich untersuche das Problem, erkläre in verständlicher Sprache, was falsch läuft, und löse es — mit über 20 Jahren PHP-Erfahrung und praktischer Arbeit mit Laravel und TYPO3.",
+        "body_p2": "Was ich übernehme: Bugfixes, Fehlerbehandlung, Datenbankprobleme, API-Anbindungen, Formularprobleme, Performance-Probleme und kleine neue Features auf bestehendem Code.",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Preis",
+              "values": [
+                "$35",
+                "$75",
+                "$150"
+              ]
+            },
+            {
+              "label": "Inhalt",
+              "values": [
+                "Diagnose + kleiner Fix (1 Problem)",
+                "Mehrere Fixes / kleines Feature",
+                "Größeres Feature oder mehrere zusammenhängende Probleme"
+              ]
+            },
+            {
+              "label": "Lieferzeit",
+              "values": [
+                "2 Tage",
+                "4 Tage",
+                "7 Tage"
+              ]
+            }
+          ]
+        }
       },
       "linuxServer": {
         "title": "Linux- & Serververwaltung",
@@ -1470,7 +2015,42 @@
         "cta": "Ist Ihr Server festgefahren oder unsicher?",
         "cta_sub": "Senden Sie mir eine kurze Beschreibung und Sie erhalten innerhalb eines Werktags einen Aktionsplan.",
         "cta_button": "Angebot anfordern",
-        "meta_description": "Linux-Serververwaltung, Migrationen, Security-Härtung und Docker. Stabile und sichere Server, remote verwaltet. Ab $30."
+        "meta_description": "Linux-Serververwaltung, Migrationen, Security-Härtung und Docker. Stabile und sichere Server, remote verwaltet. Ab $30.",
+        "body_p1": "Server hängt? SSL funktioniert nicht, Website ist down, ein Docker-Container benimmt sich daneben oder DNS ist falsch konfiguriert? Ich diagnostiziere und behebe Linux-Serverprobleme remote — von schnellem Troubleshooting bis zu vollständigen Migrationen.",
+        "body_p2": "Was ich übernehme: Apache/Nginx-Konfiguration, SSL/DNS-Probleme, Docker-Troubleshooting, Backups, Security-Härtung und Website-Migrationen.",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Preis",
+              "values": [
+                "$30",
+                "$75",
+                "$150"
+              ]
+            },
+            {
+              "label": "Inhalt",
+              "values": [
+                "Ein Problem diagnostizieren + beheben",
+                "Server konfigurieren/härten",
+                "Vollständige Migration"
+              ]
+            },
+            {
+              "label": "Lieferzeit",
+              "values": [
+                "1 Tag",
+                "3 Tage",
+                "5 Tage"
+              ]
+            }
+          ]
+        }
       },
       "n8nAutomation": {
         "title": "n8n & Automatisierung",
@@ -1503,7 +2083,42 @@
         "cta": "Erledigen Sie manuelle Arbeit in mehreren Systemen?",
         "cta_sub": "Erzählen Sie mir, welche manuellen Schritte Sie tun, und ich baue einen Workflow darum.",
         "cta_button": "Angebot anfordern",
-        "meta_description": "n8n-Workflows und Automatisierung: Formulare, E-Mail, Datenbanken und KI verbinden. Richtpreise ab $50, remote."
+        "meta_description": "n8n-Workflows und Automatisierung: Formulare, E-Mail, Datenbanken und KI verbinden. Richtpreise ab $50, remote.",
+        "body_p1": "Schluss mit dem manuellen Übertragen von Daten zwischen Formular, CRM, E-Mail und Tabellenkalkulationen. Ich baue n8n-Automatisierungen, die Ihre Tools miteinander verbinden, sodass jeder Lead, jede Bestellung und jede Aufgabe automatisch durchläuft — mit Benachrichtigungen, damit nichts übersehen wird.",
+        "body_p2": "Beispiel: \"Ich automatisiere Ihr Lead-Formular, sodass jeder neue Lead automatisch gespeichert, gemeldet und nachverfolgt wird.\"",
+        "price_table": {
+          "columns": [
+            "Basic",
+            "Standard",
+            "Premium"
+          ],
+          "rows": [
+            {
+              "label": "Preis",
+              "values": [
+                "$50",
+                "$125",
+                "$250"
+              ]
+            },
+            {
+              "label": "Inhalt",
+              "values": [
+                "Ein einfacher Workflow (2 Schritte)",
+                "Workflow mit mehreren APIs/Bedingungen",
+                "Vollständig automatisierter Prozess + Dokumentation"
+              ]
+            },
+            {
+              "label": "Lieferzeit",
+              "values": [
+                "2 Tage",
+                "4 Tage",
+                "7 Tage"
+              ]
+            }
+          ]
+        }
       },
       "items": [
         {
@@ -1526,7 +2141,10 @@
         }
       ],
       "note": "Verfügbar pro Projekt, pro Stunde oder als monatliche Wartung. Remote von jedem Standort — keine langfristigen Verträge, keine Überraschungen im Nachhinein.",
-      "meta_description": "Remote PHP-, Laravel-, Linux- und n8n-Support: Entwicklung, Serververwaltung und Automatisierung für Unternehmen. Ohne langfristige Verträge."
+      "meta_description": "Remote PHP-, Laravel-, Linux- und n8n-Support: Entwicklung, Serververwaltung und Automatisierung für Unternehmen. Ohne langfristige Verträge.",
+      "details_heading": "Leistungen im Detail",
+      "price_heading": "Richtpreise",
+      "more_label": "Mehr Informationen"
     },
     "meta.description": "Remote PHP-, Laravel- und Linux-Support sowie n8n-Automatisierung. Effektive Hilfe für Entwickler und Unternehmen.",
     "meta.ogtitle": "BoomkampOnline — Remote PHP, Laravel, Linux & Automatisierung",

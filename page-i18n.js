@@ -30,6 +30,13 @@
     return 'nl';
   }
 
+  // Vervang {YEAR} door huidig jaartal
+  function replaceYearTokens(str) {
+    if (typeof str !== 'string') return str;
+    var year = new Date().getFullYear().toString();
+    return str.replace(/\{YEAR\}/g, year);
+  }
+
   function applyLanguage(lang) {
     if (!contentData || !contentData[lang]) lang = 'nl';
     document.documentElement.lang = lang;
@@ -48,6 +55,7 @@
       var key = el.getAttribute('data-i18n');
       var text = getNested(t, key);
       if (text === undefined) return;
+      text = replaceYearTokens(text);
       if (el.tagName === 'META') {
         el.setAttribute('content', text);
       } else {
@@ -58,7 +66,7 @@
     document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-html');
       var html = getNested(t, key);
-      if (html !== undefined) el.innerHTML = html;
+      if (html !== undefined) el.innerHTML = replaceYearTokens(html);
     });
 
     document.querySelectorAll('[data-i18n-case]').forEach(function (el) {
@@ -84,14 +92,39 @@
     document.querySelectorAll('[data-i18n-list]').forEach(function (el) {
       var key = el.getAttribute('data-i18n-list');
       var list = getNested(t, key);
-      if (!list || !Array.isArray(list)) return;
+      if (!list) return;
+
+      // --- Price table rendering (diensten-overzichtspagina) ---
+      if (list.price_table && list.price_table.columns && list.price_table.rows) {
+        var pt = list.price_table;
+        var headerHtml = '<div class="price-table-header"><span class="pt-cell pt-label"></span>' +
+          pt.columns.map(function (c) { return '<span class="pt-cell pt-col">' + c + '</span>'; }).join('') +
+          '</div>';
+        var rowsHtml = pt.rows.map(function (row) {
+          return '<div class="price-table-row"><span class="pt-cell pt-label">' + row.label + '</span>' +
+            row.values.map(function (v) { return '<span class="pt-cell pt-value">' + v + '</span>'; }).join('') +
+            '</div>';
+        }).join('');
+        el.innerHTML =
+          '<div class="service-block">' +
+            '<h3 class="h2-section">' + replaceYearTokens(list.title || '') + '</h3>' +
+            '<p class="section-subtitle">' + replaceYearTokens(list.subtitle || '') + '</p>' +
+            (list.body_p1 ? '<p>' + replaceYearTokens(list.body_p1) + '</p>' : '') +
+            (list.body_p2 ? '<p>' + replaceYearTokens(list.body_p2) + '</p>' : '') +
+            '<div class="price-table">' + headerHtml + rowsHtml + '</div>' +
+          '</div>';
+        return;
+      }
+
+      // --- Array rendering (bestaand) ---
+      if (!Array.isArray(list)) return;
       el.innerHTML = list.map(function (item) {
         if (typeof item === 'string') {
-          return '<li>' + item + '</li>';
+          return '<li>' + replaceYearTokens(item) + '</li>';
         }
         var label = item.name || item.label || '';
-        var price = item.price ? '<strong class="price-value">' + item.price + '</strong>' : '';
-        var desc = item.desc ? '<span class="price-desc">' + item.desc + '</span>' : '';
+        var price = item.price ? '<strong class="price-value">' + replaceYearTokens(item.price) + '</strong>' : '';
+        var desc = item.desc ? '<span class="price-desc">' + replaceYearTokens(item.desc) + '</span>' : '';
         var itemHtml = '<span class="price-label">' + label + '</span>' + price + desc;
         if (item.url) {
           return '<li class="service-item"><a href="' + item.url + '">' + itemHtml + '</a></li>';
@@ -129,6 +162,63 @@
       ?.setAttribute('content', t.meta.ogtitle);
     document.querySelector('meta[property="og:description"]')
       ?.setAttribute('content', t.meta.ogdescription);
+
+    // Dienstblokken op de overzichtspagina renderen
+    renderServiceBlocks(lang);
+  }
+
+  // =====================================================================
+  // SERVICE BLOCKS RENDERING (diensten-overzichtspagina)
+  // Rendert individuele dienst-secties met titel, beschrijving en prijstabel
+  // =====================================================================
+  function renderServiceBlocks(lang) {
+    var container = document.getElementById('service-blocks');
+    if (!container) return;
+    if (!contentData || !contentData[lang]) return;
+
+    var sp = contentData[lang].services_page;
+    if (!sp) return;
+
+    var diensten = ['phpLaravel', 'linuxServer', 'n8nAutomation'];
+    var html = '';
+
+    diensten.forEach(function (key) {
+      var d = sp[key];
+      if (!d) return;
+
+      var priceTableHtml = '';
+      if (d.price_table && d.price_table.columns && d.price_table.rows) {
+        var pt = d.price_table;
+        var headerCells = pt.columns.map(function (c) {
+          return '<span class="pt-cell pt-col">' + c + '</span>';
+        }).join('');
+        var rowsHtml = pt.rows.map(function (row) {
+          var cells = row.values.map(function (v) {
+            return '<span class="pt-cell pt-value">' + v + '</span>';
+          }).join('');
+          return '<div class="price-table-row"><span class="pt-cell pt-label">' + row.label + '</span>' + cells + '</div>';
+        }).join('');
+        priceTableHtml =
+          '<div class="price-table">' +
+            '<div class="price-table-header"><span class="pt-cell pt-label"></span>' + headerCells + '</div>' +
+            rowsHtml +
+          '</div>';
+      }
+
+      html +=
+        '<div class="service-block">' +
+          '<h3 class="h2-section">' + replaceYearTokens(d.title || '') + '</h3>' +
+          '<p class="section-subtitle">' + replaceYearTokens(d.subtitle || '') + '</p>' +
+          (d.body_p1 ? '<p>' + replaceYearTokens(d.body_p1) + '</p>' : '') +
+          (d.body_p2 ? '<p>' + replaceYearTokens(d.body_p2) + '</p>' : '') +
+          (d.price_title ? '<h4 class="price-block-title">' + replaceYearTokens(d.price_title) + '</h4>' : '') +
+          priceTableHtml +
+          (d.price_note ? '<p class="price-note">' + replaceYearTokens(d.price_note) + '</p>' : '') +
+          (sp.more_label ? '<p class="price-note"><a href="/services/' + key.replace(/([A-Z])/g, '-$1').toLowerCase().replace(/^-/, '') + '/?lang=' + lang + '">' + sp.more_label + ' →</a></p>' : '') +
+        '</div>';
+    });
+
+    container.innerHTML = html;
   }
 
   window.switchLang = function (lang) {
