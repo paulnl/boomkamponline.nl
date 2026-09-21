@@ -2,7 +2,7 @@
 layout: post
 title: "GEO & AEO: zo zorg je dat ChatGPT en Perplexity jouw bedrijf aanbevelen"
 description: "What is GEO and AEO? How to get ChatGPT, Perplexity and other AI assistants to recommend your business — instead of just Google."
-date: 2026-09-22
+date: 2026-09-21
 category: "SEO"
 lang: en
 post_id: geo-aeo-seo
