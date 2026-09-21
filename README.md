@@ -45,3 +45,4 @@ Bij een foutmelding wordt de bezoeker gevraagd een email te sturen naar `paul@bo
 ## Aanpassingen doen
 
 Omdat alles in één `index.html` zit, kun je simpelweg het bestand bewerken en de wijzigingen naar GitHub pushen. Bij Cloudflare Pages en GitHub Pages wordt de site automatisch opnieuw gedeployed.
+ 
