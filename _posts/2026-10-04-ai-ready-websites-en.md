@@ -2,7 +2,7 @@
 layout: post
 title: "What Makes a Website AI-Ready in 2026?"
 description: "What makes a website AI-ready? Clear data, safe LLM integrations and a logical structure. Practical explanation, no jargon."
-date: 2026-10-05
+date: 2026-10-04
 category: "Web Development"
 lang: en
 post_id: "ai-ready-websites"

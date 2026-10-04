@@ -2,7 +2,7 @@
 layout: post
 title: "Was macht eine Website KI-tauglich? (2026)"
 description: "Was macht eine Website KI-tauglich? Klare Daten, sichere LLM-Integrationen und eine logische Struktur. Praktische Erklärung ohne Fachjargon."
-date: 2026-10-05
+date: 2026-10-04
 category: "Web Development"
 lang: de
 post_id: "ai-ready-websites"

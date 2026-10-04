@@ -2,7 +2,7 @@
 layout: post
 title: "Wat maakt een website AI-ready in 2026?"
 description: "Wat maakt een website AI-ready? Duidelijke data, veilige LLM-koppelingen en een logische structuur. Praktische uitleg, zonder jargon."
-date: 2026-10-05
+date: 2026-10-04
 category: "Web Development"
 lang: nl
 post_id: "ai-ready-websites"
