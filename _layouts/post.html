@@ -736,9 +736,9 @@
             <input type="text" class="newsletter-input" id="nieuwsbrief-naam"
                    placeholder="{% case page.lang %}{% when "nl" %}Jouw naam (optioneel){% when "en" %}Your name (optional){% when "de" %}Ihr Name (optional){% endcase %}" autocomplete="name">
             <select class="newsletter-select" id="nieuwsbrief-taal">
-              <option value="Nederlands" {% if page.lang == 'nl' %}selected{% endif %}>🇳🇱 Nederlands</option>
-              <option value="English" {% if page.lang == 'en' %}selected{% endif %}>🇬🇧 English</option>
-              <option value="Deutsch" {% if page.lang == 'de' %}selected{% endif %}>🇩🇪 Deutsch</option>
+              <option value="nl" {% if page.lang == 'nl' %}selected{% endif %}>🇳🇱 Nederlands</option>
+              <option value="en" {% if page.lang == 'en' %}selected{% endif %}>🇬🇧 English</option>
+              <option value="de" {% if page.lang == 'de' %}selected{% endif %}>🇩🇪 Deutsch</option>
             </select>
             <button type="submit" class="newsletter-btn" id="nieuwsbrief-submit">
               {% case page.lang %}{% when "nl" %}Inschrijven{% when "en" %}Subscribe{% when "de" %}Anmelden{% endcase %}
