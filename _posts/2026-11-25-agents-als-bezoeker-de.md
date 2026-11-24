@@ -2,7 +2,7 @@
 layout: post
 title: "Bald kommt kein Besucher, sondern ein Agent: Ist deine Website dafür bereit?"
 description: "KI-Agenten werden die neuen Besucher deiner Website. Was das Personal Agent Protocol ändert, warum Websites Agenten blockieren und was du jetzt regeln kannst."
-date: 2026-11-25
+date: 2026-11-24
 category: "Webentwicklung"
 lang: de
 post_id: "agents-als-bezoeker"

@@ -2,7 +2,7 @@
 layout: post
 title: "Soon it will not be a visitor, but an agent: is your website ready?"
 description: "AI agents are becoming the new visitors to your website. What the Personal Agent Protocol changes, why sites block agents, and what you can arrange today."
-date: 2026-11-25
+date: 2026-11-24
 category: "Web Development"
 lang: en
 post_id: "agents-als-bezoeker"

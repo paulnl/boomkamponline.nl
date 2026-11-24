@@ -2,7 +2,7 @@
 layout: post
 title: "Straks komt er geen bezoeker, maar een agent: is jouw website daar klaar voor?"
 description: "AI-agents worden de nieuwe bezoekers van je website. Wat het Personal Agent Protocol verandert, waarom sites agents blokkeren en wat jij nu al kunt regelen."
-date: 2026-11-25
+date: 2026-11-24
 category: "Webdevelopment"
 lang: nl
 post_id: "agents-als-bezoeker"
